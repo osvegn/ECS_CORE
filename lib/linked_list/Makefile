@@ -26,7 +26,9 @@ CFLAGS	=	-Wall -Wextra -Wshadow -I include
 
 ${NAME}: ${OBJ}
 	ar rc ${NAME} ${OBJ}
-	cp include/linked_list.h ../../include
+	cp include/*.h ../include
+	cp ${NAME} ../archive
+	make clean
 
 clean:
 	${RM} ${OBJ}

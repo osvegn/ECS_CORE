@@ -12,7 +12,7 @@
 
 typedef struct entity_s {
     unsigned int id;
-    char *name;
+    char name[256];
     linked_list_t *components;
 } entity_t;
 

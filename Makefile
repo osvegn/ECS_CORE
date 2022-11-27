@@ -29,20 +29,32 @@ linked_list:
 	make -C lib/linked_list
 	make -C lib/linked_list clean
 
-lib_clean:
+ecs:
+	make -C lib/ECS
+	make -C lib/ECS clean
+
+ecs_clean:
+	make -C lib/ECS clean
+
+ecs_fclean:
+	make -C lib/ECS fclean
+
+linked_list_clean:
 	make -C lib/linked_list clean
 
-lib_fclean:
+linked_list_fclean:
 	make -C lib/linked_list fclean
 
 all: ${OBJ}
 	${CC} -o ${NAME} ${OBJ} ${CFLAGS}
 
-clean: lib_clean
+clean: ecs_clean linked_list_clean
 	${RM} ${OBJ}
 
-fclean: clean lib_fclean
+fclean: clean ecs_fclean linked_list_fclean
 	${RM} ${NAME}
+	${RM} lib/include/*
+	${RM} lib/archive/*
 
 re: fclean ${NAME}
 

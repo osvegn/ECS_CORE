@@ -23,7 +23,7 @@ static const system_t systems[] =
     }
 };
 
-system_t construct_system(system_type_t type)
+system_t construct_system(unsigned int type)
 {
     return systems[type];
 }

@@ -8,14 +8,8 @@
 #ifndef COMPONENT_H_
 #define COMPONENT_H_
 
-typedef enum component_type_e {
-    COMPONENT_UNDEFINED,
-    POSITION,
-    MAX_COMPONENT_VALUE
-} component_type_t;
-
 typedef struct component_s {
-    component_type_t type;
+    unsigned int type;
     void *data;
 } component_t;
 

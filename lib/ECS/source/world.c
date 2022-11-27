@@ -47,7 +47,7 @@ bool contain_system(world_t *world, system_t *system)
     return false;
 }
 
-bool contain_system_by_type(world_t *world, system_type_t type)
+bool contain_system_by_type(world_t *world, unsigned int type)
 {
     linked_list_t *tmp = world->system_list;
     system_t *s = NULL;
@@ -66,7 +66,7 @@ int add_resource(world_t *world, resource_t *resource)
     return push_back_linked_list(world->resource_list, resource);
 }
 
-resource_t *get_resource_by_type(world_t *world, resource_type_t type)
+resource_t *get_resource_by_type(world_t *world, unsigned int type)
 {
     linked_list_t *list = world->resource_list;
     resource_t *r = NULL;

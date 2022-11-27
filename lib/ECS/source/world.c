@@ -7,7 +7,7 @@
 
 #include "world.h"
 
-void run_systems(world_t *world)
+int run_systems(world_t *world)
 {
     system_t *system = NULL;
     linked_list_t *tmp = world->system_list;
@@ -18,6 +18,7 @@ void run_systems(world_t *world)
             system->run((void *)world);
         tmp = tmp->next;
     }
+    return 0;
 }
 
 int add_system(world_t *world, system_t *system)

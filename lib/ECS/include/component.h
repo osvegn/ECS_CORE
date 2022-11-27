@@ -8,9 +8,6 @@
 #ifndef COMPONENT_H_
 #define COMPONENT_H_
 
-#include <stddef.h>
-#include <SFML/Graphics.h>
-
 typedef enum component_type_e {
     COMPONENT_UNDEFINED,
     POSITION,

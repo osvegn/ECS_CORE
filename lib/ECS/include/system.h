@@ -8,8 +8,6 @@
 #ifndef SYSTEM_H_
 #define SYSTEM_H_
 
-#include <stddef.h>
-
 typedef enum system_type_e {
     SYSTEM_UNDEFINED,
     DISPLAY_WINDOW,
@@ -22,6 +20,5 @@ typedef struct system_s {
 } system_t;
 
 system_t construct_system(system_type_t type);
-int display_window(void *);
 
 #endif /* !SYSTEM_H_ */

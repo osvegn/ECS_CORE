@@ -22,7 +22,4 @@ typedef struct resource_s {
     void *data;
 } resource_t;
 
-sfRenderWindow *get_window(resource_t *resource);
-resource_t *create_render_window(const sfVideoMode mode, const char *title, sfWindowStyle style, sfContextSettings *settings);
-
 #endif /* !RESOURCE_H_ */

@@ -32,6 +32,7 @@ typedef struct vector_s {
     void *pointer;
 
     void (*destructor)(struct vector_s *this);
+    int (*emplace)(struct vector_s *this, void *data, unsigned int index);
 } vector_t;
 
 int vector_constructor(vector_t *this, unsigned int element_size, unsigned int element_number);

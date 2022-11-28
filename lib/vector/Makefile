@@ -5,8 +5,7 @@
 ## Makefile
 ##
 
-SRC		=	source/constructor.c \
-			source/destructor.c \
+SRC		=	source/vector.c
 
 OBJ		=	${SRC:.c=.o}
 

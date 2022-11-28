@@ -50,9 +50,23 @@ typedef struct vector_s {
     /// @return 0, or -1 if an error occurs.
     int (*emplace_back)(struct vector_s *this, void *data);
 
+    /// @brief The print_at function prints an element at the given index
+    /// using print_fct function pointer.
+    /// The format dependant on how print_fct function pointer print the data.
+    /// @param this The vector on which print an element.
+    /// @param index The position of the element to print.
+    /// @param print_fct The function pointer used to know how to print an
+    /// element.
+    /// @return It returns the value of print_fct.
     int (*print_at)(struct vector_s *this, unsigned int index, int (*print_fct)(void *data));
 
-    int (*print)(struct vector_s *this);
+    /// @brief The print function prints all elements of the vector.
+    /// The format dependant on how print_fct function pointer print the data.
+    /// @param this The vector on which print all elements.
+    /// @param print_fct The function pointer used to know how to print an
+    /// element.
+    /// @return 0, or -1 if print_fct return -1.
+    int (*print)(struct vector_s *this, int (*print_fct)(void *data));
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

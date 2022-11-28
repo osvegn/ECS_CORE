@@ -8,6 +8,8 @@
 #include "vector.h"
 #include <stdlib.h>
 
+/// @brief This is the destructor of a vector. It free the pointer.
+/// @param this The vector to be free.
 static void destructor(vector_t *this)
 {
     if (this->pointer)
@@ -20,9 +22,8 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->pointer = malloc(this->element_size * element_number);
     if (!this->pointer)
         return - 1;
-    this->available_size = element_number;
     this->size = 0;
-    this->total_size = element_number;
+    this->capacity = element_number;
     this->destructor = &destructor;
     return 0;
 }

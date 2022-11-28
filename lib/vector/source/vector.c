@@ -11,8 +11,7 @@
 
 static int print_at(vector_t *this, unsigned int index, int (*print_fct)(void *data))
 {
-    print_fct(this->pointer + index * this->element_size);
-    return 0;
+    return print_fct(this->pointer + index * this->element_size);
 }
 
 /// @brief The emplace function adds an element at the given index.

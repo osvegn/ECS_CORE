@@ -50,7 +50,7 @@ typedef struct vector_s {
     /// @return 0, or -1 if an error occurs.
     int (*emplace_back)(struct vector_s *this, void *data);
 
-    int (*print_at)(struct vector_s *this, unsigned int index);
+    int (*print_at)(struct vector_s *this, unsigned int index, int (*print_fct)(void *data));
 
     int (*print)(struct vector_s *this);
 } vector_t;

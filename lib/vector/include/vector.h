@@ -69,6 +69,8 @@ typedef struct vector_s {
     int (*print)(struct vector_s *this, int (*print_fct)(void *data));
 
     int (*clear)(struct vector_s *this);
+
+    int (*erase)(struct vector_s *this, unsigned int index);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

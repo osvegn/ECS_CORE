@@ -17,6 +17,16 @@ static int clear(vector_t *this)
     return 0;
 }
 
+static int erase(vector_t *this, unsigned int index)
+{
+    if (index > this->size)
+        return -1;
+    memcpy(this->pointer + index * this->element_size, this->pointer + (index + 1) * this->element_size, (this->size - (index + 1)) * this->element_size);
+    this->size--;
+    this->available_size++;
+    return 0;
+}
+
 /// @brief The print_at function prints an element at the given index
 /// using print_fct function pointer.
 /// The format dependant on how print_fct function pointer print the data.
@@ -127,5 +137,6 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->print_at = &print_at;
     this->print = &print;
     this->clear = &clear;
+    this->erase = &erase;
     return 0;
 }

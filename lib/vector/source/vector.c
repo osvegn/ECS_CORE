@@ -12,7 +12,6 @@
 static int emplace(vector_t *this, void *data, unsigned int index)
 {
     void *ptr = NULL;
-    void *tmp = NULL;
 
     if (index > this->total_size)
         return -1;
@@ -24,15 +23,12 @@ static int emplace(vector_t *this, void *data, unsigned int index)
         this->available_size++;
     }
     ptr = this->pointer + index * this->element_size;
-    tmp = malloc((this->total_size - (index + 1)) * this->element_size);
-    if (!tmp)
-        return -1;
-    memcpy(tmp, ptr, this->element_size * (this->total_size - (index + 1)));
+    for (unsigned int i = this->size; i > index; i--) {
+        memcpy(this->pointer + i * this->element_size, this->pointer + (i - 1) * this->element_size, this->element_size);
+    }
     memcpy(ptr, data, this->element_size);
-    memcpy(ptr + this->element_size, tmp, this->element_size * (this->total_size - (index + 1)));
     this->available_size--;
     this->size++;
-    free(tmp);
     return 0;
 }
 

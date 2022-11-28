@@ -30,6 +30,10 @@ typedef struct vector_s {
 
     /// @brief The pointer to the memory.
     void *pointer;
+
+    void (*destructor)(struct vector_s *this);
 } vector_t;
+
+int vector_constructor(vector_t *this, unsigned int element_size, unsigned int element_number);
 
 #endif /* !VECTOR_H_ */

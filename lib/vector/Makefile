@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRC		=	
+SRC		=	source/constructor.c \
+			source/destructor.c \
 
 OBJ		=	${SRC:.c=.o}
 
@@ -30,3 +31,6 @@ fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
+
+debug: CFLAGS += -g
+debug: re

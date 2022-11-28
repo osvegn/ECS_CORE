@@ -10,6 +10,13 @@
 #include <string.h>
 #include <stdio.h>
 
+static int clear(vector_t *this)
+{
+    this->size = 0;
+    this->available_size = this->total_size;
+    return 0;
+}
+
 /// @brief The print_at function prints an element at the given index
 /// using print_fct function pointer.
 /// The format dependant on how print_fct function pointer print the data.
@@ -119,5 +126,6 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->emplace_back = &emplace_back;
     this->print_at = &print_at;
     this->print = &print;
+    this->clear = &clear;
     return 0;
 }

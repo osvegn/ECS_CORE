@@ -67,6 +67,8 @@ typedef struct vector_s {
     /// element.
     /// @return 0, or -1 if print_fct return -1.
     int (*print)(struct vector_s *this, int (*print_fct)(void *data));
+
+    int (*clear)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

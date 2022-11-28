@@ -27,6 +27,13 @@ static int erase(vector_t *this, unsigned int index)
     return 0;
 }
 
+static int pop_back(vector_t *this)
+{
+    this->size--;
+    this->available_size++;
+    return 0;
+}
+
 /// @brief The print_at function prints an element at the given index
 /// using print_fct function pointer.
 /// The format dependant on how print_fct function pointer print the data.

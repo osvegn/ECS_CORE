@@ -8,7 +8,7 @@
 #include "vector.h"
 #include <stdlib.h>
 
-/// @brief This is the destructor of a vector. It free the pointer.
+/// @brief This is the destructor of a vector. It frees the pointer.
 /// @param this The vector to be free.
 static void destructor(vector_t *this)
 {

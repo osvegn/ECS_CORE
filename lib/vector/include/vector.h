@@ -27,7 +27,7 @@ typedef struct vector_s {
     /// @brief The pointer to the memory.
     void *pointer;
 
-    /// @brief This is the destructor of a vector. It free the pointer.
+    /// @brief This is the destructor of a vector. It frees the pointer.
     /// @param this The vector to be free.
     void (*destructor)(struct vector_s *this);
 } vector_t;

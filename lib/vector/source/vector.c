@@ -17,9 +17,11 @@
 /// @param index The position of the element to print.
 /// @param print_fct The function pointer used to know how to print an
 /// element.
-/// @return It returns the value of print_fct.
+/// @return It returns the value of print_fct, or -1 if an error occurs.
 static int print_at(vector_t *this, unsigned int index, int (*print_fct)(void *data))
 {
+    if (index > this->size)
+        return -1;
     return print_fct(this->pointer + index * this->element_size);
 }
 

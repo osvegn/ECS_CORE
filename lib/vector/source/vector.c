@@ -32,6 +32,21 @@ static int emplace(vector_t *this, void *data, unsigned int index)
     return 0;
 }
 
+static int emplace_back(vector_t *this, void *data)
+{
+    if (!this->available_size) {
+        this->pointer = realloc(this->pointer, (this->total_size + 1) * this->element_size);
+        if (!this->pointer)
+            return -1;
+        this->total_size++;
+        this->available_size++;
+    }
+    memcpy(this->pointer + this->size * this->element_size, data, this->element_size);
+    this->available_size--;
+    this->size++;
+    return 0;
+}
+
 static void destructor(vector_t *this)
 {
     if (this->pointer)
@@ -49,5 +64,6 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->total_size = element_number;
     this->destructor = &destructor;
     this->emplace = &emplace;
+    this->emplace_back = &emplace_back;
     return 0;
 }

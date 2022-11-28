@@ -9,6 +9,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief The emplace function adds an element at the given index.
+/// It increases the capacity of the vector if needed.
+/// @param this The vector on which adds an element.
+/// @param data The data to be added.
+/// @param index The index where the data must be added.
+/// @return 0, or -1 if an error occurs.
 static int emplace(vector_t *this, void *data, unsigned int index)
 {
     void *ptr = NULL;
@@ -32,6 +38,11 @@ static int emplace(vector_t *this, void *data, unsigned int index)
     return 0;
 }
 
+/// @brief The emplace_back function adds an element at the end.
+/// It increases the capacity of the vector if needed.
+/// @param this The vector on which adds an element.
+/// @param data The data to be added.
+/// @return 0, or -1 if an error occurs.
 static int emplace_back(vector_t *this, void *data)
 {
     if (!this->available_size) {
@@ -47,6 +58,8 @@ static int emplace_back(vector_t *this, void *data)
     return 0;
 }
 
+/// @brief This is the destructor of a vector. It free the pointer.
+/// @param this The vector to be free.
 static void destructor(vector_t *this)
 {
     if (this->pointer)

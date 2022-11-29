@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-SRC		=	
+SRC		=	source/vector.c
 
 OBJ		=	${SRC:.c=.o}
 
@@ -30,3 +30,6 @@ fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
+
+debug: CFLAGS += -g
+debug: re

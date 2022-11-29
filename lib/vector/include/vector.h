@@ -18,20 +18,16 @@ typedef struct vector_s {
     /// @brief The size of an element.
     unsigned int element_size;
 
-    /// @brief The number of element in used.
+    /// @brief The number of element.
     unsigned int size;
 
-    /// @brief The number of element in memory.
-    unsigned int total_size;
-
-    /// @brief The number of element available in memory not used by the
-    /// vector.
-    unsigned int available_size;
+    /// @brief The capacity of element in the vector.
+    unsigned int capacity;
 
     /// @brief The pointer to the memory.
     void *pointer;
 
-    /// @brief This is the destructor of a vector. It free the pointer.
+    /// @brief This is the destructor of a vector. It frees the pointer.
     /// @param this The vector to be free.
     void (*destructor)(struct vector_s *this);
 

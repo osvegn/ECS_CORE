@@ -30,6 +30,21 @@ typedef struct vector_s {
     /// @brief This is the destructor of a vector. It frees the pointer.
     /// @param this The vector to be free.
     void (*destructor)(struct vector_s *this);
+
+    /// @brief The emplace function adds an element at the given index.
+    /// It increases the capacity of the vector if needed.
+    /// @param this The vector on which adds an element.
+    /// @param data The data to be added.
+    /// @param index The index where the data must be added.
+    /// @return 0, or -1 if an error occurs.
+    int (*emplace)(struct vector_s *this, void *data, unsigned int index);
+
+    /// @brief The emplace_back function adds an element at the end.
+    /// It increases the capacity of the vector if needed.
+    /// @param this The vector on which adds an element.
+    /// @param data The data to be added.
+    /// @return 0, or -1 if an error occurs.
+    int (*emplace_back)(struct vector_s *this, void *data);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

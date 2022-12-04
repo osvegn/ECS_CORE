@@ -91,6 +91,11 @@ typedef struct vector_s {
     /// @param this The vector on which find an element.
     /// @return A pointer to the last element.
     void *(*back)(struct vector_s *this);
+
+    /// @brief It returns a pointer to the first element of the vector.
+    /// @param this The vector on which find an element.
+    /// @return A pointer to the last element.
+    void *(*front)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

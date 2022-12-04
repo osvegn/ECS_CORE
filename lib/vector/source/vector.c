@@ -10,6 +10,14 @@
 #include <string.h>
 #include <stdio.h>
 
+/// @brief It returns a pointer to the first element of the vector.
+/// @param this The vector on which find an element.
+/// @return A pointer to the last element.
+static void *front(vector_t *this)
+{
+    return this->pointer;
+}
+
 /// @brief It returns a pointer to the last element of the vector.
 /// @param this The vector on which find an element.
 /// @return A pointer to the last element.
@@ -172,5 +180,6 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->pop_back = &pop_back;
     this->at = &at;
     this->back = &back;
+    this->front = &front;
     return 0;
 }

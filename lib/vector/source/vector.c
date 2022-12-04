@@ -8,6 +8,45 @@
 #include "vector.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+
+/// @brief The print_at function prints an element at the given index
+/// using print_fct function pointer.
+/// The format dependant on how print_fct function pointer print the data.
+/// @param this The vector on which print an element.
+/// @param index The position of the element to print.
+/// @param print_fct The function pointer used to know how to print an
+/// element.
+/// @return It returns the value of print_fct, or -1 if an error occurs.
+static int print_at(vector_t *this, unsigned int index, int (*print_fct)(void *data))
+{
+    if (index > this->size)
+        return -1;
+    return print_fct(this->pointer + index * this->element_size);
+}
+
+/// @brief The print function prints all elements of the vector.
+/// The format dependant on how print_fct function pointer print the data.
+/// @param this The vector on which print all elements.
+/// @param print_fct The function pointer used to know how to print an
+/// element.
+/// @return 0, or -1 if print_fct return -1.
+static int print(vector_t *this, int (*print_fct)(void *data))
+{
+    printf("[");
+    fflush(stdout);
+    for (unsigned int i = 0; i < this->size; i++) {
+        if (this->print_at(this, i, print_fct) < 0)
+            return -1;
+        if (i + 1 < this->size) {
+            printf(", ");
+            fflush(stdout);
+        }
+    }
+    printf("]\n");
+    fflush(stdout);
+    return 0;
+}
 
 /// @brief The emplace function adds an element at the given index.
 /// It increases the capacity of the vector if needed.
@@ -73,5 +112,7 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->destructor = &destructor;
     this->emplace = &emplace;
     this->emplace_back = &emplace_back;
+    this->print_at = &print_at;
+    this->print = &print;
     return 0;
 }

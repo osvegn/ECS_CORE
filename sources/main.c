@@ -5,9 +5,7 @@
 ** main
 */
 
-int my_hunter(void);
-
 int main(void)
 {
-    return my_hunter();
+    return 0;
 }

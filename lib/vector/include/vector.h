@@ -18,13 +18,13 @@
 typedef struct vector_s {
 
     /// @brief The size of an element.
-    unsigned int element_size;
+    unsigned int _element_size;
 
     /// @brief The number of element.
-    unsigned int size;
+    unsigned int _size;
 
     /// @brief The capacity of element in the vector.
-    unsigned int capacity;
+    unsigned int _capacity;
 
     /// @brief The pointer to the memory.
     void *pointer;
@@ -87,6 +87,11 @@ typedef struct vector_s {
     /// @param this The vector to be check.
     /// @return True, or false if the vector isn't empty.
     bool (*empty)(struct vector_s *this);
+
+    /// @brief It returns the this of the vector.
+    /// @param this The vector to be check.
+    /// @return The size of the vector as unsigned int.
+    unsigned int (*size)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

@@ -10,12 +10,20 @@
 #include <string.h>
 #include <stdio.h>
 
+/// @brief It returns the this of the vector.
+/// @param this The vector to be check.
+/// @return The size of the vector as unsigned int.
+static unsigned int size(vector_t *this)
+{
+    return this->_size;
+}
+
 /// @brief It returns if the vector is empty or not.
 /// @param this The vector to be check.
 /// @return True, or false if the vector isn't empty.
 static bool empty(vector_t *this)
 {
-    if (this->size)
+    if (this->_size)
         return false;
     return true;
 }
@@ -25,7 +33,7 @@ static bool empty(vector_t *this)
 /// @return 0.
 static int clear(vector_t *this)
 {
-    this->size = 0;
+    this->_size = 0;
     return 0;
 }
 
@@ -36,10 +44,10 @@ static int clear(vector_t *this)
 /// @return 0, or -1 if an error occurs.
 static int erase(vector_t *this, unsigned int index)
 {
-    if (index > this->size)
+    if (index > this->_size)
         return -1;
-    memcpy((char *)this->pointer + index * this->element_size, (char *)this->pointer + (index + 1) * this->element_size, (this->size - (index + 1)) * this->element_size);
-    this->size--;
+    memcpy((char *)this->pointer + index * this->_element_size, (char *)this->pointer + (index + 1) * this->_element_size, (this->_size - (index + 1)) * this->_element_size);
+    this->_size--;
     return 0;
 }
 
@@ -48,7 +56,7 @@ static int erase(vector_t *this, unsigned int index)
 /// @return 0.
 static int pop_back(vector_t *this)
 {
-    this->size--;
+    this->_size--;
     return 0;
 }
 
@@ -62,9 +70,9 @@ static int pop_back(vector_t *this)
 /// @return It returns the value of print_fct, or -1 if an error occurs.
 static int print_at(vector_t *this, unsigned int index, int (*print_fct)(void *data))
 {
-    if (index > this->size)
+    if (index > this->_size)
         return -1;
-    return print_fct((char *)this->pointer + index * this->element_size);
+    return print_fct((char *)this->pointer + index * this->_element_size);
 }
 
 /// @brief The print function prints all elements of the vector.
@@ -77,10 +85,10 @@ static int print(vector_t *this, int (*print_fct)(void *data))
 {
     printf("[");
     fflush(stdout);
-    for (unsigned int i = 0; i < this->size; i++) {
+    for (unsigned int i = 0; i < this->_size; i++) {
         if (this->print_at(this, i, print_fct) < 0)
             return -1;
-        if (i + 1 < this->size) {
+        if (i + 1 < this->_size) {
             printf(", ");
             fflush(stdout);
         }
@@ -100,20 +108,20 @@ static int emplace(vector_t *this, void *data, unsigned int index)
 {
     void *ptr = NULL;
 
-    if (index > this->capacity)
+    if (index > this->_capacity)
         return -1;
-    if (this->size == this->capacity) {
-        this->pointer = realloc(this->pointer, (this->capacity + 1) * this->element_size);
+    if (this->_size == this->_capacity) {
+        this->pointer = realloc(this->pointer, (this->_capacity + 1) * this->_element_size);
         if (!this->pointer)
             return -1;
-        this->capacity++;
+        this->_capacity++;
     }
-    ptr = (char *)this->pointer + index * this->element_size;
-    for (unsigned int i = this->size; i > index; i--) {
-        memcpy((char *)this->pointer + i * this->element_size, (char *)this->pointer + (i - 1) * this->element_size, this->element_size);
+    ptr = (char *)this->pointer + index * this->_element_size;
+    for (unsigned int i = this->_size; i > index; i--) {
+        memcpy((char *)this->pointer + i * this->_element_size, (char *)this->pointer + (i - 1) * this->_element_size, this->_element_size);
     }
-    memcpy(ptr, data, this->element_size);
-    this->size++;
+    memcpy(ptr, data, this->_element_size);
+    this->_size++;
     return 0;
 }
 
@@ -124,14 +132,14 @@ static int emplace(vector_t *this, void *data, unsigned int index)
 /// @return 0, or -1 if an error occurs.
 static int emplace_back(vector_t *this, void *data)
 {
-    if (this->size == this->capacity) {
-        this->pointer = realloc(this->pointer, (this->capacity + 1) * this->element_size);
+    if (this->_size == this->_capacity) {
+        this->pointer = realloc(this->pointer, (this->_capacity + 1) * this->_element_size);
         if (!this->pointer)
             return -1;
-        this->capacity++;
+        this->_capacity++;
     }
-    memcpy((char *)this->pointer + this->size * this->element_size, data, this->element_size);
-    this->size++;
+    memcpy((char *)this->pointer + this->_size * this->_element_size, data, this->_element_size);
+    this->_size++;
     return 0;
 }
 
@@ -145,12 +153,12 @@ static void destructor(vector_t *this)
 
 int vector_constructor(vector_t *this, unsigned int element_size, unsigned int element_number)
 {
-    this->element_size = element_size;
-    this->pointer = malloc(this->element_size * element_number);
+    this->_element_size = element_size;
+    this->pointer = malloc(this->_element_size * element_number);
     if (!this->pointer)
         return - 1;
-    this->size = 0;
-    this->capacity = element_number;
+    this->_size = 0;
+    this->_capacity = element_number;
     this->destructor = &destructor;
     this->emplace = &emplace;
     this->emplace_back = &emplace_back;

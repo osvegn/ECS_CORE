@@ -97,6 +97,11 @@ typedef struct vector_s {
     /// @param this The vector to be ckeck.
     /// @return The capacity of the vector as unsigned int.
     unsigned int (*capacity)(struct vector_s *this);
+
+    /// @brief It resizes the allocated memory to fix with the actual memory usage.
+    /// @param this The vector the to be udpate.
+    /// @return 0, or -1 if an error occurs.
+    int (*shrink_to_fit)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

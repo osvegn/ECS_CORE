@@ -10,6 +10,18 @@
 #include <string.h>
 #include <stdio.h>
 
+/// @brief It resizes the allocated memory to fix with the actual memory usage.
+/// @param this The vector the to be udpate.
+/// @return 0, or -1 if an error occurs.
+static int shrink_to_fit(vector_t *this)
+{
+    this->pointer = realloc(this->pointer, this->_size * this->_element_size);
+    if (!this->pointer)
+        return -1;
+    this->_capacity = this->_size;
+    return 0;
+}
+
 /// @brief It returns the capacity of the vector.
 /// @param this The vector to be ckeck.
 /// @return The capacity of the vector as unsigned int.
@@ -178,5 +190,6 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->empty = &empty;
     this->size = &size;
     this->capacity = &capacity;
+    this->shrink_to_fit = &shrink_to_fit;
     return 0;
 }

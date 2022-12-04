@@ -8,6 +8,8 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
 
+#include <stdbool.h>
+
 /// @brief The vector structure is used to store multiple data from the same
 /// type allong the memory.
 /// It stores some informations such as the size of an element, the number of
@@ -80,6 +82,11 @@ typedef struct vector_s {
     /// @param this The vector on which the element will be removed.
     /// @return 0.
     int (*pop_back)(struct vector_s *this);
+
+    /// @brief It returns if the vector is empty or not.
+    /// @param this The vector to be check.
+    /// @return True, or false if the vector isn't empty.
+    bool (*empty)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

@@ -10,6 +10,16 @@
 #include <string.h>
 #include <stdio.h>
 
+/// @brief It returns a pointer to the last element of the vector.
+/// @param this The vector on which find an element.
+/// @return A pointer to the last element.
+static void *back(vector_t *this)
+{
+    if (!this->pointer)
+        return NULL;
+    return (char *)this->pointer + this->size * this->element_size;
+}
+
 /// @brief It returns a pointer to the element ask at position index.
 /// @param this The vector on which find an element.
 /// @param index The position of the element in the vector.
@@ -161,5 +171,6 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->erase = &erase;
     this->pop_back = &pop_back;
     this->at = &at;
+    this->back = &back;
     return 0;
 }

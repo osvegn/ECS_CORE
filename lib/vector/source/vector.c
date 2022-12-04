@@ -36,7 +36,7 @@ static int print(vector_t *this, int (*print_fct)(void *data))
     printf("[");
     fflush(stdout);
     for (unsigned int i = 0; i < this->size; i++) {
-        if (print_fct(this->pointer + i * this->element_size) < 0)
+        if (this->print_at(this, i, print_fct) < 0)
             return -1;
         if (i + 1 < this->size) {
             printf(", ");

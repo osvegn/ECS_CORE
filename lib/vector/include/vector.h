@@ -92,6 +92,11 @@ typedef struct vector_s {
     /// @param this The vector to be check.
     /// @return The size of the vector as unsigned int.
     unsigned int (*size)(struct vector_s *this);
+
+    /// @brief It returns the capacity of the vector.
+    /// @param this The vector to be ckeck.
+    /// @return The capacity of the vector as unsigned int.
+    unsigned int (*capacity)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

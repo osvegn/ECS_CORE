@@ -10,6 +10,14 @@
 #include <string.h>
 #include <stdio.h>
 
+/// @brief It returns the capacity of the vector.
+/// @param this The vector to be ckeck.
+/// @return The capacity of the vector as unsigned int.
+static unsigned int capacity(vector_t *this)
+{
+    return this->_capacity;
+}
+
 /// @brief It returns the this of the vector.
 /// @param this The vector to be check.
 /// @return The size of the vector as unsigned int.
@@ -167,6 +175,8 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->clear = &clear;
     this->erase = &erase;
     this->pop_back = &pop_back;
-    this->empty &empty;
+    this->empty = &empty;
+    this->size = &size;
+    this->capacity = &capacity;
     return 0;
 }

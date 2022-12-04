@@ -80,6 +80,12 @@ typedef struct vector_s {
     /// @param this The vector on which the element will be removed.
     /// @return 0.
     int (*pop_back)(struct vector_s *this);
+
+    /// @brief It returns a pointer to the element ask at position index.
+    /// @param this The vector on which find an element.
+    /// @param index The position of the element in the vector.
+    /// @return A pointer to the element asked.
+    void *(*at)(struct vector_s *this, unsigned int index);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

@@ -19,6 +19,8 @@ ${NAME}: all
 
 all: ${OBJ}
 	ar rc ${NAME} ${OBJ}
+	mkdir -p ../include
+	mkdir -p ../archive
 	cp include/*.h ../include
 	cp ${NAME} ../archive
 	make clean

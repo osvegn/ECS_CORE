@@ -10,6 +10,41 @@
 #include <string.h>
 #include <stdio.h>
 
+/// @brief It clears the vector, by setting the size to 0.
+/// @param this The vector to be clear.
+/// @return 0.
+static int clear(vector_t *this)
+{
+    this->size = 0;
+    this->available_size = this->total_size;
+    return 0;
+}
+
+/// @brief It erases an element of a vector at a given index.
+/// It also moves all following elements in the vector.
+/// @param this The vector on which the element will be removed.
+/// @param index The element position on the vector to be removed.
+/// @return 0, or -1 if an error occurs.
+static int erase(vector_t *this, unsigned int index)
+{
+    if (index > this->size)
+        return -1;
+    memcpy(this->pointer + index * this->element_size, this->pointer + (index + 1) * this->element_size, (this->size - (index + 1)) * this->element_size);
+    this->size--;
+    this->available_size++;
+    return 0;
+}
+
+/// @brief It removes the last element of a vector.
+/// @param this The vector on which the element will be removed.
+/// @return 0.
+static int pop_back(vector_t *this)
+{
+    this->size--;
+    this->available_size++;
+    return 0;
+}
+
 /// @brief The print_at function prints an element at the given index
 /// using print_fct function pointer.
 /// The format dependant on how print_fct function pointer print the data.
@@ -114,5 +149,8 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->emplace_back = &emplace_back;
     this->print_at = &print_at;
     this->print = &print;
+    this->clear = &clear;
+    this->erase = &erase;
+    this->pop_back = &pop_back;
     return 0;
 }

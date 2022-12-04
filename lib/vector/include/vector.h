@@ -63,6 +63,23 @@ typedef struct vector_s {
     /// element.
     /// @return 0, or -1 if print_fct return -1.
     int (*print)(struct vector_s *this, int (*print_fct)(void *data));
+
+    /// @brief It clears the vector, by setting the size to 0.
+    /// @param this The vector to be clear.
+    /// @return 0.
+    int (*clear)(struct vector_s *this);
+
+    /// @brief It erases an element of a vector at a given index.
+    /// It also moves all following elements in the vector.
+    /// @param this The vector on which the element will be removed.
+    /// @param index The element position on the vector to be removed.
+    /// @return 0, or -1 if an error occurs.
+    int (*erase)(struct vector_s *this, unsigned int index);
+
+    /// @brief It removes the last element of a vector.
+    /// @param this The vector on which the element will be removed.
+    /// @return 0.
+    int (*pop_back)(struct vector_s *this);
 } vector_t;
 
 /// @brief This is the constructor of the vector structure.

@@ -16,7 +16,6 @@
 static int clear(vector_t *this)
 {
     this->size = 0;
-    this->available_size = this->total_size;
     return 0;
 }
 
@@ -29,9 +28,8 @@ static int erase(vector_t *this, unsigned int index)
 {
     if (index > this->size)
         return -1;
-    memcpy(this->pointer + index * this->element_size, this->pointer + (index + 1) * this->element_size, (this->size - (index + 1)) * this->element_size);
+    memcpy((char *)this->pointer + index * this->element_size, (char *)this->pointer + (index + 1) * this->element_size, (this->size - (index + 1)) * this->element_size);
     this->size--;
-    this->available_size++;
     return 0;
 }
 
@@ -41,7 +39,6 @@ static int erase(vector_t *this, unsigned int index)
 static int pop_back(vector_t *this)
 {
     this->size--;
-    this->available_size++;
     return 0;
 }
 
@@ -57,7 +54,7 @@ static int print_at(vector_t *this, unsigned int index, int (*print_fct)(void *d
 {
     if (index > this->size)
         return -1;
-    return print_fct(this->pointer + index * this->element_size);
+    return print_fct((char *)this->pointer + index * this->element_size);
 }
 
 /// @brief The print function prints all elements of the vector.
@@ -101,9 +98,9 @@ static int emplace(vector_t *this, void *data, unsigned int index)
             return -1;
         this->capacity++;
     }
-    ptr = this->pointer + index * this->element_size;
+    ptr = (char *)this->pointer + index * this->element_size;
     for (unsigned int i = this->size; i > index; i--) {
-        memcpy(this->pointer + i * this->element_size, this->pointer + (i - 1) * this->element_size, this->element_size);
+        memcpy((char *)this->pointer + i * this->element_size, (char *)this->pointer + (i - 1) * this->element_size, this->element_size);
     }
     memcpy(ptr, data, this->element_size);
     this->size++;
@@ -123,7 +120,7 @@ static int emplace_back(vector_t *this, void *data)
             return -1;
         this->capacity++;
     }
-    memcpy(this->pointer + this->size * this->element_size, data, this->element_size);
+    memcpy((char *)this->pointer + this->size * this->element_size, data, this->element_size);
     this->size++;
     return 0;
 }

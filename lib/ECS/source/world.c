@@ -26,14 +26,6 @@ int add_system(world_t *world, system_t *system)
     return push_back_linked_list(world->system_list, system);
 }
 
-
-// TO BE FIX
-int remove_system(world_t *world, system_t *system)
-{
-    (void *)system;
-    return remove_linked_list(world->system_list, 0);
-}
-
 bool contain_system(world_t *world, system_t *system)
 {
     linked_list_t *tmp = world->system_list;

@@ -90,4 +90,4 @@ int push_back_linked_list(linked_list_t *, void *);
 /// @return 0 if the element was removed, -1 if the index was out of bounds.
 int remove_linked_list(linked_list_t *, unsigned int);
 
-#endif /* !LINKED_LIST_H
+#endif /* !LINKED_LIST_H */

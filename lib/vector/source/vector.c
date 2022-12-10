@@ -36,6 +36,35 @@ static int swap(vector_t *this, unsigned int first_element, unsigned int second_
     return 0;
 }
 
+/// @brief It returns a pointer to the first element of the vector.
+/// @param this The vector on which find an element.
+/// @return A pointer to the last element.
+static void *front(vector_t *this)
+{
+    return this->pointer;
+}
+
+/// @brief It returns a pointer to the last element of the vector.
+/// @param this The vector on which find an element.
+/// @return A pointer to the last element.
+static void *back(vector_t *this)
+{
+    if (!this->pointer)
+        return NULL;
+    return (char *)this->pointer + this->_size * this->_element_size;
+}
+
+/// @brief It returns a pointer to the element ask at position index.
+/// @param this The vector on which find an element.
+/// @param index The position of the element in the vector.
+/// @return A pointer to the element asked.
+static void *at(vector_t *this, unsigned int index)
+{
+    if (index < this->_size || !this->pointer)
+        return NULL;
+    return (char *)this->pointer + index * this->_element_size;
+}
+
 /// @brief It resizes the allocated memory to fix with the actual memory usage.
 /// @param this The vector the to be udpate.
 /// @return 0, or -1 if an error occurs.
@@ -214,6 +243,9 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->erase = &erase;
     this->pop_back = &pop_back;
     this->swap = &swap;
+    this->at = &at;
+    this->back = &back;
+    this->front = &front;
     this->empty = &empty;
     this->size = &size;
     this->capacity = &capacity;

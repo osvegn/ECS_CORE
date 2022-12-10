@@ -90,6 +90,22 @@ typedef struct vector_s {
     /// @return 0, or -1 if an error occurs.
     int (*swap)(struct vector_s *this, unsigned int first_element, unsigned int second_element);
 
+    /// @brief It returns a pointer to the element ask at position index.
+    /// @param this The vector on which find an element.
+    /// @param index The position of the element in the vector.
+    /// @return A pointer to the element asked.
+    void *(*at)(struct vector_s *this, unsigned int index);
+
+    /// @brief It returns a pointer to the last element of the vector.
+    /// @param this The vector on which find an element.
+    /// @return A pointer to the last element.
+    void *(*back)(struct vector_s *this);
+
+    /// @brief It returns a pointer to the first element of the vector.
+    /// @param this The vector on which find an element.
+    /// @return A pointer to the last element.
+    void *(*front)(struct vector_s *this);
+
     /// @brief It returns if the vector is empty or not.
     /// @param this The vector to be check.
     /// @return True, or false if the vector isn't empty.

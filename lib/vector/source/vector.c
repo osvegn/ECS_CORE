@@ -10,6 +10,32 @@
 #include <string.h>
 #include <stdio.h>
 
+
+/// @brief It swaps two elements in the vector.
+/// @param this The vector_t object.
+/// @param first_element The index of the first element to swap.
+/// @param second_element the index of the second element to swap.
+/// @return 0, or -1 if an error occurs.
+static int swap(vector_t *this, unsigned int first_element, unsigned int second_element)
+{
+    void *tmp = NULL;
+    void *first = NULL;
+    void *second = NULL;
+
+    if (first_element > this->_size || second_element > this->_size)
+        return -1;
+    tmp = malloc(this->_element_size);
+    if (!tmp)
+        return -1;
+    first = (char *)this->pointer + first_element * this->_element_size;
+    second = (char *)this->pointer + second_element * this->_element_size;
+    memcpy(tmp, first, this->_element_size);
+    memcpy(first, second, this->_element_size);
+    memcpy(second, tmp, this->_element_size);
+    free(tmp);
+    return 0;
+}
+
 /// @brief It returns a pointer to the first element of the vector.
 /// @param this The vector on which find an element.
 /// @return A pointer to the last element.
@@ -216,6 +242,7 @@ int vector_constructor(vector_t *this, unsigned int element_size, unsigned int e
     this->clear = &clear;
     this->erase = &erase;
     this->pop_back = &pop_back;
+    this->swap = &swap;
     this->at = &at;
     this->back = &back;
     this->front = &front;

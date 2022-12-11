@@ -83,6 +83,13 @@ typedef struct vector_s {
     /// @return 0.
     int (*pop_back)(struct vector_s *this);
 
+    /// @brief It swaps two elements in the vector.
+    /// @param this The vector_t object.
+    /// @param first_element The index of the first element to swap.
+    /// @param second_element the index of the second element to swap.
+    /// @return 0, or -1 if an error occurs.
+    int (*swap)(struct vector_s *this, unsigned int first_element, unsigned int second_element);
+
     /// @brief It returns a pointer to the element ask at position index.
     /// @param this The vector on which find an element.
     /// @param index The position of the element in the vector.

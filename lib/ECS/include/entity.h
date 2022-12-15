@@ -8,7 +8,7 @@
 #ifndef ENTITY_H_
 #define ENTITY_H_
 
-#include "linked_list.h"
+#include "vector.h"
 
 /// @brief It's the structure of an entity. An entity contains an id,
 /// a name and a list of components.
@@ -22,7 +22,7 @@ typedef struct entity_s {
 
     /// @brief It stores a list of components.
     /// It describes what is the entity.
-    linked_list_t *components;
+    vector_t components;
 } entity_t;
 
 #endif /* !ENTITY_H_ */

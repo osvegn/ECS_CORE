@@ -35,4 +35,4 @@ jobs:
           cmake --build build
       
       - name: run tests
-        run: ./vector_tests >> $GITHUB_SUMMARY
+        run: ./vector_tests >> $GITHUB_STEP_SUMMARY

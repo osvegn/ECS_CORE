@@ -24,5 +24,12 @@ Test(construct_vector, construct_vector)
 
 Test(vector_emplace_back, vector_emplace_back)
 {
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
+    int data = 10;
+
+    cr_assert_eq(rvalue, 0);
+    vector.emplace_back(&vector, &data);
+    vector.constructor(&vector);
     cr_assert_eq(0, 0);
 }

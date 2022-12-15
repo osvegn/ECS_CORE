@@ -8,10 +8,7 @@ add_executable(${TARGET} ${SOURCE} ${VECTOR_SOURCE})
 
 add_test(${TARGET} ${TARGET})
 
-# set_target_properties(${TARGET}
-#     PROPERTIES
-#     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/
-# )
-# target_link_libraries(${TARGET}
-#     criterion
-# )
+set_target_properties(${TARGET}
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/
+)

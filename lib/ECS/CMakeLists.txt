@@ -12,5 +12,5 @@ target_include_directories(${TARGET}
 )
 
 target_link_libraries(${TARGET}
-    linked_list
+    vector
 )

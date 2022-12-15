@@ -20,6 +20,7 @@ Test(construct_vector, construct_vector)
 
     cr_assert_eq(rvalue, 0);
     vector.destructor(&vector);
+    cr_assert_eq(0, 0);
 }
 
 Test(vector_emplace_back, vector_emplace_back)
@@ -30,6 +31,41 @@ Test(vector_emplace_back, vector_emplace_back)
 
     cr_assert_eq(rvalue, 0);
     vector.emplace_back(&vector, &data);
-    vector.constructor(&vector);
+    rvalue = (int) *(int *)vector.at(&vector, 0);
+    cr_assert_eq(rvalue, 10);
+    vector.destructor(&vector);
     cr_assert_eq(0, 0);
+}
+
+Test(vector_emplace, vector_emplace)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
+    int data = 10;
+
+    cr_assert_eq(rvalue, 0);
+    vector.emplace(&vector, &data, 0);
+    rvalue = (int) *(int *)vector.at(&vector, 0);
+    cr_assert_eq(rvalue, 10);
+    vector.destructor(&vector);
+    cr_assert_eq(0, 0);
+}
+
+Test(vector_clear, vector_clear)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
+    int data = 10;
+
+    cr_assert_eq(rvalue, 0);
+    vector.emplace_back(&vector, &data);
+    vector.emplace_back(&vector, &data);
+    vector.emplace_back(&vector, &data);
+    vector.emplace_back(&vector, &data);
+    rvalue = vector.size(&vector);
+    cr_assert_eq(rvalue, 4);
+    vector.clear(&vector);
+    rvalue = vector.size(&vector);
+    cr_assert_eq(rvalue, 0);
+    vector.destructor(&vector);
 }

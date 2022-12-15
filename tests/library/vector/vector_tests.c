@@ -16,7 +16,13 @@ Test(a, a)
 Test(construct_vector, construct_vector)
 {
     vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
 
-    constru
-    cr_assert_eq()
+    cr_assert_eq(rvalue, 0);
+    vector.destructor(&vector);
+}
+
+Test(vector_emplace_back, vector_emplace_back)
+{
+    cr_assert_eq(0, 0);
 }

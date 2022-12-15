@@ -6,6 +6,7 @@
 */
 
 #include "world.h"
+#include <stddef.h>
 
 int run_systems(world_t *world)
 {

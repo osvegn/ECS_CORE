@@ -41,4 +41,4 @@ jobs:
         run: |
           echo "_____________" >> $GITHUB_STEP_SUMMARY
           gcovr -e tests >> $GITHUB_STEP_SUMMARY
-          gcovr -e tests branch >> $GITHUB_STEP_SUMMARY
+          gcovr -e tests --branch >> $GITHUB_STEP_SUMMARY

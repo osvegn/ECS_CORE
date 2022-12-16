@@ -9,6 +9,7 @@ on:
 jobs:
   coverage:
     runs-on: ubuntu-22.04
+    environment: Coverage
     steps:
       - name: Dependencies
         run: |
@@ -39,5 +40,10 @@ jobs:
 
       - name: coverage
         run: |
-          echo "_____________" >> $GITHUB_STEP_SUMMARY
-          gcovr -e tests --json-pretty --json >> $GITHUB_STEP_SUMMARY
+          gcovr -e tests --html-details coverage_report
+      
+      # - name: cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: .
+      #     key: ${{ runner.os }}-coverage_report

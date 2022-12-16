@@ -60,7 +60,7 @@ static void *back(vector_t *this)
 /// @return A pointer to the element asked.
 static void *at(vector_t *this, unsigned int index)
 {
-    if (index < this->_size || !this->pointer)
+    if (index >= this->_size || !this->pointer)
         return NULL;
     return (char *)this->pointer + index * this->_element_size;
 }

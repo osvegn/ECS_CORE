@@ -31,8 +31,6 @@ Test(vector_emplace_back, vector_emplace_back)
 
     cr_assert_eq(rvalue, 0);
     vector.emplace_back(&vector, &data);
-    rvalue = (int) *(int *)vector.at(&vector, 0);
-    cr_assert_eq(rvalue, 10);
     vector.destructor(&vector);
     cr_assert_eq(0, 0);
 }
@@ -45,8 +43,6 @@ Test(vector_emplace, vector_emplace)
 
     cr_assert_eq(rvalue, 0);
     vector.emplace(&vector, &data, 0);
-    rvalue = (int) *(int *)vector.at(&vector, 0);
-    cr_assert_eq(rvalue, 10);
     vector.destructor(&vector);
     cr_assert_eq(0, 0);
 }

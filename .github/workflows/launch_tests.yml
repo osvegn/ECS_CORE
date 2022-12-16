@@ -36,3 +36,9 @@ jobs:
       
       - name: run tests
         run: ./vector_tests 2>> $GITHUB_STEP_SUMMARY
+
+      - name: coverage
+        run: |
+          echo "_____________" >> $GITHUB_STEP_SUMMARY
+          gcovr -e tests >> $GITHUB_STEP_SUMMARY
+          gcovr -e tests branch >> $GITHUB_STEP_SUMMARY

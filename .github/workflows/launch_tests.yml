@@ -40,5 +40,4 @@ jobs:
       - name: coverage
         run: |
           echo "_____________" >> $GITHUB_STEP_SUMMARY
-          gcovr -e tests --json-summary-pretty --json-summary >> $GITHUB_STEP_SUMMARY
-          gcovr -e tests --branch --json-summary-pretty --json-summary >> $GITHUB_STEP_SUMMARY
+          gcovr -e tests --json-pretty --json >> $GITHUB_STEP_SUMMARY

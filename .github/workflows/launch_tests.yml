@@ -41,6 +41,12 @@ jobs:
       - name: coverage
         run: gcovr -e tests --html-details coverage_report
 
+      - name: Upload workflow output
+        uses: actions/upload-artifact@v3
+        with:
+          name: workflow-output
+          path: .
+
       # - name: cache
       #   uses: actions/cache@v3
       #   with:

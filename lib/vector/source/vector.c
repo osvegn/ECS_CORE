@@ -51,7 +51,7 @@ static void *back(vector_t *this)
 {
     if (!this->pointer)
         return NULL;
-    return (char *)this->pointer + this->_size * this->_element_size;
+    return (char *)this->pointer + (this->_size - 1) * this->_element_size;
 }
 
 /// @brief It returns a pointer to the element ask at position index.

@@ -34,6 +34,7 @@ jobs:
           ninja -C build
           sudo ninja -C build install
           sudo ldconfig
+          cd ..
 
       - name: Checkout Repository
         uses: actions/checkout@v3

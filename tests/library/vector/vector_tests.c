@@ -66,7 +66,7 @@ Test(vector_clear, vector_clear)
     vector.destructor(&vector);
 }
 
-Test(vector_at, vector_at)
+Test(vector_at, vector_at_valid)
 {
     vector_t vector;
     int rvalue = vector_constructor(&vector, sizeof(int), 0);
@@ -77,6 +77,31 @@ Test(vector_at, vector_at)
     rvalue = *(int *)vector.at(&vector, 0);
     cr_assert_eq(rvalue, 10);
     vector.destructor(&vector);
+}
+
+Test(vector_at, vector_at_too_high_index)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
+    int data = 10;
+    void *ptr;
+
+    cr_assert_eq(rvalue, 0);
+    vector.emplace_back(&vector, &data);
+    ptr = vector.at(&vector, 10);
+    cr_assert_eq(ptr, 0);
+    vector.destructor(&vector);
+}
+
+Test(vector_at, vector_at_invalid_pointer)
+{
+    vector_t vector;
+    void *ptr;
+
+    vector.pointer = NULL;
+    vector._size = 1;
+    ptr = vector.at(&vector, 0);
+    cr_assert_eq(ptr, 0);
 }
 
 Test(vector_front, vector_front)

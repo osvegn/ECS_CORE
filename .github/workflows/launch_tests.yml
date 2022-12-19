@@ -15,15 +15,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Cache Criterion
-        id: cache-criterion
-        uses: actions/cache@v3
-        with:
-          path: ./Criterion
-          key: ${{ runner.os }}-Criterion
+      # - name: Cache Criterion
+      #   id: cache-criterion
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ./Criterion
+      #     key: ${{ runner.os }}-Criterion
 
       - name: Install criterion
-        if: steps.cache-criterion.outputs.cache-hit != 'true'
+        # if: steps.cache-criterion.outputs.cache-hit != 'true'
         run: |
           sudo apt-get install gcovr
           sudo apt-get install meson

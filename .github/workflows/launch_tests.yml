@@ -10,12 +10,14 @@ on:
 jobs:
   coverage:
     runs-on: ubuntu-22.04
-    # environment: Coverage
     steps:
       - name: Dependencies
         run: |
           sudo apt-get update -y
           sudo apt-get upgrade -y
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Cache Criterion
         uses: actions/cache@v3
@@ -36,9 +38,6 @@ jobs:
           sudo ldconfig
           cd ..
 
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
       - name: Build tests
         run: |
           cmake -B build -DTESTING=ON
@@ -56,4 +55,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Coverage-report
-          path: ./
+          path: ./coverage

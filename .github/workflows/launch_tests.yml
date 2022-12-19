@@ -34,7 +34,9 @@ jobs:
           sudo ninja -C build install
       
       - name: Make criterion available
-        run: sudo ldconfig
+        run: |
+          cd Criterion
+          sudo ldconfig
 
       - name: Build tests
         run: |

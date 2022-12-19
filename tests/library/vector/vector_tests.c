@@ -96,8 +96,10 @@ Test(vector_at, vector_at_too_high_index)
 Test(vector_at, vector_at_invalid_pointer)
 {
     vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
     void *ptr;
 
+    free(vector.pointer);
     vector.pointer = NULL;
     vector._size = 1;
     ptr = vector.at(&vector, 0);
@@ -137,8 +139,10 @@ Test(vector_back, vector_back)
 Test(vector_back, vector_back_invalid_pointer)
 {
     vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
     void *ptr;
 
+    free(vector.pointer);
     vector.pointer = NULL;
     ptr = vector.back(&vector);
     cr_assert_eq(ptr, 0);

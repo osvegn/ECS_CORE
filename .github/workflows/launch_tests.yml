@@ -32,8 +32,9 @@ jobs:
           meson build
           ninja -C build
           sudo ninja -C build install
-          sudo ldconfig
-          cd ..
+      
+      - name: Make criterion available
+        run: sudo ldconfig
 
       - name: Build tests
         run: |

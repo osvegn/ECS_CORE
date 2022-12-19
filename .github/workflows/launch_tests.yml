@@ -64,3 +64,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: ./coverage
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_DIR: coverage

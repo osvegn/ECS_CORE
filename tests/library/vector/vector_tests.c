@@ -133,3 +133,13 @@ Test(vector_back, vector_back)
     cr_assert_eq(rvalue, 5);
     vector.destructor(&vector);
 }
+
+Test(vector_back, vector_back_invalid_pointer)
+{
+    vector_t vector;
+    void *ptr;
+
+    vector.pointer = NULL;
+    ptr = vector.back(&vector);
+    cr_assert_eq(ptr, 0);
+}

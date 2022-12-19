@@ -99,6 +99,7 @@ Test(vector_at, vector_at_invalid_pointer)
     int rvalue = vector_constructor(&vector, sizeof(int), 0);
     void *ptr;
 
+    cr_assert_eq(rvalue, 0);
     free(vector.pointer);
     vector.pointer = NULL;
     vector._size = 1;
@@ -142,6 +143,7 @@ Test(vector_back, vector_back_invalid_pointer)
     int rvalue = vector_constructor(&vector, sizeof(int), 0);
     void *ptr;
 
+    cr_assert_eq(rvalue, 0);
     free(vector.pointer);
     vector.pointer = NULL;
     ptr = vector.back(&vector);

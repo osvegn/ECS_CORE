@@ -249,3 +249,19 @@ Test(vector_shrink_to_fit, vector_shrink_to_fit)
     cr_assert_eq(vecotr.shrink_to_fit(&vector), 0);
     cr_assert_eq(vector.capacity(&vector), 0);
 }
+
+Test(vecotr_erase, vector_erase_valid)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 10);
+    int data = 10;
+
+    cr_assert_eq(rvalue, 0);
+    for (int i = 0; i < 10; i++) {
+        vector.emplace_back(&vector, &data);
+        data++;
+    }
+    cr_assert_eq(vector.erase(&vector, 1), 0);
+    cr_assert_eq(*(int *)vector.at(&vector, 1), 12);
+    vector.destructor(&vector);
+}

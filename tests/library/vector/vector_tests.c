@@ -161,3 +161,23 @@ Test(vector_capacity, vector_capacity)
     cr_assert_eq(data, 10);
     vector.destructor(&vector);
 }
+
+Test(vector_empty, vector_empty_true)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
+
+    cr_assert_eq(rvalue, 0);
+    cr_assert_eq(vector.empty(), true);
+}
+
+Test(vector_empty, vector_empty_false)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 0);
+    int data = 10;
+
+    cr_assert_eq(rvalue, 0);
+    vector.emplace_back(&vector, &data);
+    cr_assert_eq(vector.empty(), false);
+}

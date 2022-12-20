@@ -168,7 +168,7 @@ Test(vector_empty, vector_empty_true)
     int rvalue = vector_constructor(&vector, sizeof(int), 0);
 
     cr_assert_eq(rvalue, 0);
-    cr_assert_eq(vector.empty(), true);
+    cr_assert_eq(vector.empty(&vector), true);
 }
 
 Test(vector_empty, vector_empty_false)
@@ -179,5 +179,5 @@ Test(vector_empty, vector_empty_false)
 
     cr_assert_eq(rvalue, 0);
     vector.emplace_back(&vector, &data);
-    cr_assert_eq(vector.empty(), false);
+    cr_assert_eq(vector.empty(&vector), false);
 }

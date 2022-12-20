@@ -149,3 +149,16 @@ Test(vector_back, vector_back_invalid_pointer)
     ptr = vector.back(&vector);
     cr_assert_eq(ptr, 0);
 }
+
+Test(vector_capacity, vector_capacity)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 10);
+    void *ptr;
+    unsigned int data = 0;
+
+    cr_assert_eq(rvalue, 0);
+    data = vector.capacity(&vector);
+    cr_assert_eq(data, 10);
+    vector.destructor(&vector);
+}

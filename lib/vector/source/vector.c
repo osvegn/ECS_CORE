@@ -71,9 +71,9 @@ static void *at(vector_t *this, unsigned int index)
 static int shrink_to_fit(vector_t *this)
 {
     this->pointer = realloc(this->pointer, this->_size * this->_element_size);
+    this->_capacity = this->_size;
     if (!this->pointer)
         return -1;
-    this->_capacity = this->_size;
     return 0;
 }
 

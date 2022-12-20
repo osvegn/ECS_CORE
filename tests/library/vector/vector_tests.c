@@ -248,6 +248,7 @@ Test(vector_shrink_to_fit, vector_shrink_to_fit_failure)
     cr_assert_eq(vector.capacity(&vector), 10);
     cr_assert_eq(vector.shrink_to_fit(&vector), -1);
     cr_assert_eq(vector.capacity(&vector), 0);
+    vector.destructor(&vector);
 }
 
 Test(vector_shrink_to_fit, vector_shrink_to_fit_success)
@@ -261,6 +262,7 @@ Test(vector_shrink_to_fit, vector_shrink_to_fit_success)
     cr_assert_eq(vector.capacity(&vector), 10);
     cr_assert_eq(vector.shrink_to_fit(&vector), 0);
     cr_assert_eq(vector.capacity(&vector), 1);
+    vector.destructor(&vector);
 }
 
 Test(vecotr_erase, vector_erase_valid)

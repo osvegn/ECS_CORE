@@ -154,7 +154,6 @@ Test(vector_capacity, vector_capacity)
 {
     vector_t vector;
     int rvalue = vector_constructor(&vector, sizeof(int), 10);
-    void *ptr;
     unsigned int data = 0;
 
     cr_assert_eq(rvalue, 0);

@@ -246,7 +246,7 @@ Test(vector_shrink_to_fit, vector_shrink_to_fit)
 
     cr_assert_eq(rvalue, 0);
     cr_assert_eq(vector.capacity(&vector), 10);
-    cr_assert_eq(vecotr.shrink_to_fit(&vector), 0);
+    cr_assert_eq(vector.shrink_to_fit(&vector), 0);
     cr_assert_eq(vector.capacity(&vector), 0);
 }
 

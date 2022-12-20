@@ -239,15 +239,28 @@ Test(vector_swap, vector_swap_element2_invalid_size)
     vector.destructor(&vector);
 }
 
-Test(vector_shrink_to_fit, vector_shrink_to_fit)
+Test(vector_shrink_to_fit, vector_shrink_to_fit_failure)
 {
     vector_t vector;
     int rvalue = vector_constructor(&vector, sizeof(int), 10);
 
     cr_assert_eq(rvalue, 0);
     cr_assert_eq(vector.capacity(&vector), 10);
-    cr_assert_eq(vector.shrink_to_fit(&vector), 0);
+    cr_assert_eq(vector.shrink_to_fit(&vector), -1);
     cr_assert_eq(vector.capacity(&vector), 0);
+}
+
+Test(vector_shrink_to_fit, vector_shrink_to_fit_success)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 10);
+    int data = 10;
+
+    cr_assert_eq(rvalue, 0);
+    vector.emplace_back(&vector, &data);
+    cr_assert_eq(vector.capacity(&vector), 10);
+    cr_assert_eq(vector.shrink_to_fit(&vector), 0);
+    cr_assert_eq(vector.capacity(&vector), 1);
 }
 
 Test(vecotr_erase, vector_erase_valid)

@@ -238,3 +238,14 @@ Test(vector_swap, vector_swap_element2_invalid_size)
     cr_assert_eq(rvalue, 11);
     vector.destructor(&vector);
 }
+
+Test(vector_shrink_to_fit, vector_shrink_to_fit)
+{
+    vector_t vector;
+    int rvalue = vector_constructor(&vector, sizeof(int), 10);
+
+    cr_assert_eq(rvalue, 0);
+    cr_assert_eq(vector.capacity(&vector), 10);
+    cr_assert_eq(vecotr.shrink_to_fit(&vector), 0);
+    cr_assert_eq(vector.capacity(&vector), 0);
+}

@@ -35,7 +35,16 @@ typedef struct world_s {
 /// @return 0, or -1 if an error occurs.
 int run_systems(world_t *world);
 
+/// @brief It adds a system to the world
+/// @param world The world to add the system to.
+/// @param system The system to add to the world.
+/// @return The index of the system in the system list.
 int add_system(world_t *world, system_t system);
+
+/// @brief It removes a system from the world
+/// @param world The world to remove the system from.
+/// @param system The system to remove.
+/// @return A pointer to the system_t struct.
 int remove_system(world_t *world, system_t system);
 
 #endif /* !WORLD_H_ */

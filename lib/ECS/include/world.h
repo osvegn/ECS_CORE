@@ -38,29 +38,37 @@ int run_systems(world_t *world);
 /// @brief It adds a system to the world
 /// @param world The world to add the system to.
 /// @param system The system to add to the world.
-/// @return The index of the system in the system list.
+/// @return 0, or -1 if the system already exists.
 int add_system(world_t *world, system_t system);
 
 /// @brief It removes a system from the world
 /// @param world The world to remove the system from.
 /// @param system The system to remove.
-/// @return A pointer to the system_t struct.
+/// @return 0, or -1 if the system isn't found.
 int remove_system(world_t *world, system_t system);
 
 /// @brief It adds a resource to the world's resource list
-/// 
 /// @param world The world object
 /// @param resource The resource to add to the world.
-/// 
-/// @return The index of the resource in the resource list.
+/// @return 0, or -1 if the resource already exists.
 int add_resource(world_t *world, resource_t resource);
 
 /// @brief It removes a resource from the world's resource list
-/// 
 /// @param world The world that the resource is in.
 /// @param resource The resource to be removed.
-/// 
-/// @return the index of the resource in the resource list.
+/// @return 0, or -1 if the resoure isn't found.
 int remove_resource(world_t *world, resource_t resource);
+
+/// @brief It adds an entity to the world
+/// @param world The world to add the entity to.
+/// @param entity The entity to add to the world.
+/// @return 0, or -1 if the entity already exists.
+int add_entity(world_t *world, entity_t entity);
+
+/// @brief It removes an entity from the world
+/// @param world The world that the entity is in.
+/// @param entity The entity to remove from the world.
+/// @return 0, or -1 if the entity isn't found.
+int remove_entity(world_t *world, entity_t entity);
 
 #endif /* !WORLD_H_ */

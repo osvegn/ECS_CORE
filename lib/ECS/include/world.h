@@ -47,4 +47,7 @@ int add_system(world_t *world, system_t system);
 /// @return A pointer to the system_t struct.
 int remove_system(world_t *world, system_t system);
 
+int add_resource(world_t *world, resource_t resource);
+int remove_resource(world_t *world, resource_t resource);
+
 #endif /* !WORLD_H_ */

@@ -43,3 +43,25 @@ int remove_system(world_t *world, system_t system)
     }
     return -1;
 }
+
+int add_resource(world_t *world, resource_t resource)
+{
+    for (unsigned int i = 0; i < world->resource_list.size(&world->resource_list); i++) {
+        if (resource.type == (*(resource_t *)(world->resource_list.at(&world->resource_list, i))).type) {
+            return -1;
+        }
+    }
+    world->resource_list.emplace_back(&world->resource_list, &resource);
+    return 0;
+}
+
+int remove_resource(world_t *world, resource_t resource)
+{
+    for (unsigned int i = 0; i < world->resource_list.size(&world->resource_list); i++) {
+        if (resource.type == (*(resource_t *)(world->resource_list.at(&world->resource_list, i))).type) {
+            world->resource_list.erase(&world->resource_list, i);
+            return 0;
+        }
+    }
+    return -1;
+}

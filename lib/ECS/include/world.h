@@ -35,4 +35,7 @@ typedef struct world_s {
 /// @return 0, or -1 if an error occurs.
 int run_systems(world_t *world);
 
+int add_system(world_t *world, system_t system);
+int remove_system(world_t *world, system_t system);
+
 #endif /* !WORLD_H_ */

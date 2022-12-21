@@ -47,7 +47,20 @@ int add_system(world_t *world, system_t system);
 /// @return A pointer to the system_t struct.
 int remove_system(world_t *world, system_t system);
 
+/// @brief It adds a resource to the world's resource list
+/// 
+/// @param world The world object
+/// @param resource The resource to add to the world.
+/// 
+/// @return The index of the resource in the resource list.
 int add_resource(world_t *world, resource_t resource);
+
+/// @brief It removes a resource from the world's resource list
+/// 
+/// @param world The world that the resource is in.
+/// @param resource The resource to be removed.
+/// 
+/// @return the index of the resource in the resource list.
 int remove_resource(world_t *world, resource_t resource);
 
 #endif /* !WORLD_H_ */

@@ -2,6 +2,7 @@ set(ECS_TESTS_ROOT ${PROJECT_SOURCE_DIR}/tests/library/ECS)
 set(TARGET ecs_tests)
 set(SOURCE
     ${ECS_TESTS_ROOT}/world_entity_tests.c
+    ${ECS_TESTS_ROOT}/world_resource_tests.c
 )
 
 add_executable(${TARGET} ${SOURCE})

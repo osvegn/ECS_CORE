@@ -7,6 +7,7 @@ set(SOURCE
     ${ECS_SOURCE_ROOT}/world_resource.c
     ${ECS_SOURCE_ROOT}/world_system.c
 )
+set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 
 add_library(${TARGET} ${SOURCE})
 

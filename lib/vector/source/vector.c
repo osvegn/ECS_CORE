@@ -51,7 +51,7 @@ static void *back(vector_t *this)
 {
     if (!this->pointer)
         return NULL;
-    return (char *)this->pointer + this->_size * this->_element_size;
+    return (char *)this->pointer + (this->_size - 1) * this->_element_size;
 }
 
 /// @brief It returns a pointer to the element ask at position index.
@@ -60,7 +60,7 @@ static void *back(vector_t *this)
 /// @return A pointer to the element asked.
 static void *at(vector_t *this, unsigned int index)
 {
-    if (index < this->_size || !this->pointer)
+    if (index >= this->_size || !this->pointer)
         return NULL;
     return (char *)this->pointer + index * this->_element_size;
 }
@@ -71,9 +71,9 @@ static void *at(vector_t *this, unsigned int index)
 static int shrink_to_fit(vector_t *this)
 {
     this->pointer = realloc(this->pointer, this->_size * this->_element_size);
+    this->_capacity = this->_size;
     if (!this->pointer)
         return -1;
-    this->_capacity = this->_size;
     return 0;
 }
 

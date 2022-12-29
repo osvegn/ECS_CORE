@@ -137,4 +137,5 @@ typedef struct vector_s {
 /// @return 0, or -1 if an error occurs.
 int vector_constructor(vector_t *this, unsigned int element_size, unsigned int element_number);
 
+
 #endif /* !VECTOR_H_ */

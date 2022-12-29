@@ -20,6 +20,18 @@ Test(world_add_entity, world_add_entity)
 
     entity.id = 0;
     vector_constructor(&world.entity_list, sizeof(int), 0);
-    add_entity(&world, entity);
+    cr_assert_eq(add_entity(&world, entity), 0);
+    cr_assert_eq(world.entity_list.size(&world.entity_list), 1);
+}
+
+Test(world_add_entity, world_add_entity_failure)
+{
+    world_t world;
+    entity_t entity;
+
+    entity.id = 0;
+    vector_constructor(&world.entity_list, sizeof(int), 0);
+    cr_assert_eq(add_entity(&world, entity), 0);
+    cr_assert_eq(add_entity(&world, entity), -1);
     cr_assert_eq(world.entity_list.size(&world.entity_list), 1);
 }

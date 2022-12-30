@@ -71,4 +71,14 @@ int add_entity(world_t *world, entity_t entity);
 /// @return 0, or -1 if the entity isn't found.
 int remove_entity(world_t *world, entity_t entity);
 
+/// @brief It creates a new world by creating a new resource list, entity list, and system
+/// list
+/// @param world a pointer to the world_t struct
+/// @return 0, or -1 on failure
+int world_constructor(world_t *world);
+
+/// @brief It calls the destructor of each of the three lists in the world
+/// @param world The world to be destructed.
+void world_destructor(world_t *world);
+
 #endif /* !WORLD_H_ */

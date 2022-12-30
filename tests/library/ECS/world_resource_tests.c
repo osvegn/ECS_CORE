@@ -16,7 +16,7 @@ Test(world_add_resource, world_add_resource)
     resource.type = 0;
     vector_constructor(&world.resource_list, sizeof(int), 0);
     cr_assert_eq(add_resource(&world, resource), 0);
-    cr_assert_eq(world.resource_list.size(&world.entity_list), 1);
+    cr_assert_eq(world.resource_list.size(&world.resource_list), 1);
 }
 
 Test(world_add_resource, world_add_resource_failure)
@@ -28,7 +28,7 @@ Test(world_add_resource, world_add_resource_failure)
     vector_constructor(&world.resource_list, sizeof(int), 0);
     cr_assert_eq(add_resource(&world, resource), 0);
     cr_assert_eq(add_resource(&world, resource), -1);
-    cr_assert_eq(world.resource_list.size(&world.entity_list), 1);
+    cr_assert_eq(world.resource_list.size(&world.resource_list), 1);
 }
 
 Test(world_add_resource, world_add_resource_success_with_two_elements)
@@ -41,7 +41,7 @@ Test(world_add_resource, world_add_resource_success_with_two_elements)
     cr_assert_eq(add_resource(&world, resource), 0);
     resource.type = 1;
     cr_assert_eq(add_resource(&world, resource), 0);
-    cr_assert_eq(world.resource_list.size(&world.entity_list), 2);
+    cr_assert_eq(world.resource_list.size(&world.resource_list), 2);
 }
 
 Test(world_remove_resource, world_remove_resource)
@@ -55,7 +55,7 @@ Test(world_remove_resource, world_remove_resource)
     resource.type = 1;
     cr_assert_eq(add_resource(&world, resource), 0);
     cr_assert_eq(remove_resource(&world, resource), 0);
-    cr_assert_eq(world.resource_list.size(&world.entity_list), 1);
+    cr_assert_eq(world.resource_list.size(&world.resource_list), 1);
 }
 
 Test(world_remove_resource, world_remove_resource_failure)
@@ -70,5 +70,5 @@ Test(world_remove_resource, world_remove_resource_failure)
     cr_assert_eq(add_resource(&world, resource), 0);
     cr_assert_eq(remove_resource(&world, resource), 0);
     cr_assert_eq(remove_resource(&world, resource), -1);
-    cr_assert_eq(world.resource_list.size(&world.entity_list), 1);
+    cr_assert_eq(world.resource_list.size(&world.resource_list), 1);
 }

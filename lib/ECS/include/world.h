@@ -81,4 +81,9 @@ int world_constructor(world_t *world);
 /// @param world The world to be destructed.
 void world_destructor(world_t *world);
 
+
+bool contains_entity(world_t *world, entity_t entity);
+bool contains_resource(world_t *world, resource_t resource);
+bool contains_system(world_t *world, system_t system);
+
 #endif /* !WORLD_H_ */

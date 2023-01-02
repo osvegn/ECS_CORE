@@ -72,3 +72,24 @@ Test(world_remove_system, world_remove_system_failure)
     cr_assert_eq(remove_system(&world, system), -1);
     cr_assert_eq(world.system_list.size(&world.system_list), 1);
 }
+
+Test(world_contains_system, world_contains_system_success)
+{
+    world_t world;
+    system_t system;
+
+    system.type = 0;
+    world_constructor(&world);
+    add_system(&world, system);
+    cr_assert_eq(contains_system(&world, system), true);
+}
+
+Test(world_contains_system, world_contains_system_failure)
+{
+    world_t world;
+    system_t system;
+
+    system.type = 0;
+    world_constructor(&world);
+    cr_assert_eq(contains_system(&world, system), false);
+}

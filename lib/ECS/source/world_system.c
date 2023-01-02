@@ -41,3 +41,13 @@ int remove_system(world_t *world, system_t system)
     }
     return -1;
 }
+
+bool contains_system(world_t *world, system_t system)
+{
+    unsigned int index = find_system(&world->system_list, &system);
+
+    if (index < world->system_list.size(&world->system_list)) {
+        return true;
+    }
+    return false;
+}

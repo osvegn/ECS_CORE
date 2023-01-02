@@ -42,3 +42,12 @@ int remove_entity(world_t *world, entity_t entity)
     }
     return -1;
 }
+
+bool contains_entity(world_t *world, entity_t entity)
+{
+    unsigned int index = find_entity(&world->entity_list, &entity);
+
+    if (index < world->entity_list.size(&world->entity_list))
+        return true;
+    return false;
+}

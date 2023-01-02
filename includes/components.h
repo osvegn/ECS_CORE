@@ -11,6 +11,7 @@
 typedef enum component_type_e {
     UNDEFINED,
     POSITION,
+    VELOCITY,
     MAX_VALUE
 } component_type_t;
 

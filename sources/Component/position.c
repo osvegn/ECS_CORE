@@ -24,7 +24,7 @@ component_t *create_position(vector2i_t pos)
     return component;
 }
 
-void set_position(component_t *component, const vector2i pos)
+void set_position(component_t *component, const vector2i_t pos)
 {
     vector2i_t *position = component->data;
 

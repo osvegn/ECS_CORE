@@ -42,3 +42,13 @@ int remove_resource(world_t *world, resource_t resource)
     }
     return -1;
 }
+
+bool contains_resource(world_t *world, resource_t resource)
+{
+    unsigned int index = find_resource(&world->resource_list, &resource);
+
+    if (index < world->resource_list.size(&world->resource_list)) {
+        return true;
+    }
+    return false;
+}

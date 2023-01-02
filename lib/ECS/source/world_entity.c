@@ -51,3 +51,13 @@ bool contains_entity(world_t *world, entity_t entity)
         return true;
     return false;
 }
+
+entity_t *get_entity_by_id(world_t *world, unsigned int id)
+{
+    entity_t entity;
+    unsigned int index = 0;
+
+    entity.id = id;
+    index = find_entity(&world->entity_list, &entity);
+    return world->entity_list.at(&world->entity_list, index);
+}

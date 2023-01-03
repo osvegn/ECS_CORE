@@ -16,7 +16,7 @@ Test(entity_component, test_entity_constructor)
     cr_assert_eq(entity_constructor(&entity), 0);
 }
 
-Test(entity_component, test_entity_add_component)
+Test(entity_component, test_entity_add_component_success)
 {
     entity_t entity;
 
@@ -24,7 +24,7 @@ Test(entity_component, test_entity_add_component)
     cr_assert_eq(add_component(&entity, (component_t){0, 0}), 0);
 }
 
-Test(entity_component, test_entity_add_component)
+Test(entity_component, test_entity_add_component_failure)
 {
     entity_t entity;
 
@@ -33,7 +33,7 @@ Test(entity_component, test_entity_add_component)
     cr_assert_eq(add_component(&entity, (component_t){0, 0}), -1);
 }
 
-Test(entity_component, test_entity_remove_component)
+Test(entity_component, test_entity_remove_component_success)
 {
     entity_t entity;
 
@@ -42,7 +42,7 @@ Test(entity_component, test_entity_remove_component)
     cr_assert_eq(remove_component(&entity, (component_t){0, 0}), 0);
 }
 
-Test(entity_component, test_entity_remove_component)
+Test(entity_component, test_entity_remove_component_failure)
 {
     entity_t entity;
 

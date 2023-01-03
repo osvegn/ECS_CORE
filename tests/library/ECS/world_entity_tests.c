@@ -98,3 +98,16 @@ Test(world_contains_entity, world_contains_entity_failure)
     world_constructor(&world);
     cr_assert_eq(contains_entity(&world, entity), false);
 }
+
+Test(world_join_entities, world_join_entities_1)
+{
+    world_t world;
+    entity_t entity;
+    vector_t vector;
+
+    world_constructor(&world);
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){1, 0});
+    add_entity(&world, entity);
+    cr_assert_eq(join_entities(&world, &vector, 1, 0), 1);
+}

@@ -17,6 +17,9 @@ add_executable(${TARGET} ${MAIN} ${SOURCE})
 target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_ROOT}
 )
+target_link_libraries(${TARGET}
+    ecs
+)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(DetectCompiler)
 

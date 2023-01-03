@@ -120,3 +120,20 @@ Test(world_join_entities, world_join_entities_2)
     world_constructor(&world);
     cr_assert_eq(join_entities(&world, &vector, 0), -1);
 }
+
+Test(world_join_entities, world_join_entities_3)
+{
+    world_t world;
+    vector_t vector;
+    entity_t entity;
+    int expected_value = 2;
+
+    world_constructor(&world);
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){1, 0});
+    add_entity(&world, entity);
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){1, 0});
+    add_entity(&world, entity);
+    cr_assert_eq(join_entities(&world, &vector, 1, 0), expected_value);
+}

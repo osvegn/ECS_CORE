@@ -67,17 +67,17 @@ entity_t *get_entity_by_id(world_t *world, unsigned int id)
 int join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
 {
     va_list argptr;
-    unsigned int component;
+    int component;
     bool first_element = true;
 
     vector_constructor(entities, sizeof(void *), 0);
     va_start(argptr, type);
-    component = va_arg(argptr, unsigned int);
-    while (component != 0) {
+    for (unsigned index = 0; index < type; index++) {
+        component = va_arg(argptr, int);
         if (first_element) {
             for (unsigned int i = 0; i < world->entity_list.size(&world->entity_list); i++) {
                 if (contains_component(world->entity_list.at(&world->entity_list, i), (component_t){component, 0})) {
-                    entities->emplace_back(entities, world->entity_list.at(&world->entity_list, i)); // to be tested
+                    entities->emplace_back(entities, world->entity_list.at(&world->entity_list, i));
                 }
             }
             first_element = false;
@@ -90,7 +90,6 @@ int join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
             }
             entities->shrink_to_fit(entities);
         }
-        component = va_arg(argptr, unsigned int);
     }
     va_end(argptr);
     if (first_element)

@@ -51,7 +51,7 @@ int remove_component(entity_t *entity, component_t component)
 
 int entity_constructor(entity_t *entity)
 {
-    static id = 0;
+    static int id = 0;
 
     entity->id = id;
     id++;

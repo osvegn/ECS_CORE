@@ -5,6 +5,7 @@
 ** entity_component_tests
 */
 
+#include <criterion/criterion.h>
 #include "entity.h"
 #include "component.h"
 

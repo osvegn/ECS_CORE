@@ -109,7 +109,7 @@ Test(world_join_entities, world_join_entities_1)
     entity_constructor(&entity);
     add_component(&entity, (component_t){1, 0});
     add_entity(&world, entity);
-    cr_assert_eq(join_entities(&world, &vector, 1, 0), 1);
+    cr_assert_eq(join_entities(&world, &vector, 1, 1), 1);
 }
 
 Test(world_join_entities, world_join_entities_2)
@@ -135,5 +135,5 @@ Test(world_join_entities, world_join_entities_3)
     entity_constructor(&entity);
     add_component(&entity, (component_t){1, 0});
     add_entity(&world, entity);
-    cr_assert_eq(join_entities(&world, &vector, 1, 0), expected_value);
+    cr_assert_eq(join_entities(&world, &vector, 1, 1), expected_value);
 }

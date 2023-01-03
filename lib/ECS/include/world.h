@@ -99,4 +99,6 @@ bool contains_resource(world_t *world, resource_t resource);
 /// @return A boolean value.
 bool contains_system(world_t *world, system_t system);
 
+int join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
+
 #endif /* !WORLD_H_ */

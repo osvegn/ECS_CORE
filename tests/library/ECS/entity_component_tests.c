@@ -51,3 +51,21 @@ Test(entity_component, test_entity_remove_component_failure)
     remove_component(&entity, (component_t){0, 0});
     cr_assert_eq(remove_component(&entity, (component_t){0, 0}), -1);
 }
+
+Test(contains_component, test_entity_contains_component_success)
+{
+    entity_t entity;
+
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){0, 0});
+    cr_assert_eq(contains_component(&entity, (component_t){0, 0}), true);
+}
+
+Test(contains_component, test_entity_contains_component_failure)
+{
+    entity_t entity;
+
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){0, 0});
+    cr_assert_eq(contains_component(&entity, (component_t){1, 0}), false);
+}

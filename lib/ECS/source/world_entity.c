@@ -70,7 +70,7 @@ int join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
     int component;
     bool first_element = true;
 
-    vector_constructor(entities, sizeof(void *), 0);
+    vector_constructor(entities, sizeof(entity_t), 0);
     va_start(argptr, type);
     for (unsigned index = 0; index < type; index++) {
         component = va_arg(argptr, int);

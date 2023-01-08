@@ -143,7 +143,7 @@ Test(world_join_entities, world_join_entities_4)
     world_t world;
     vector_t vector;
     entity_t entity;
-    
+
     world_constructor(&world);
     entity_constructor(&entity);
     add_component(&entity, (component_t){1, 0});
@@ -159,7 +159,7 @@ Test(world_join_entities, world_join_entities_5)
     world_t world;
     vector_t vector;
     entity_t entity;
-    
+
     world_constructor(&world);
     entity_constructor(&entity);
     add_component(&entity, (component_t){1, 0});

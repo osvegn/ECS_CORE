@@ -56,8 +56,38 @@ int add_resource(world_t *world, resource_t resource);
 /// @brief It removes a resource from the world's resource list
 /// @param world The world that the resource is in.
 /// @param resource The resource to be removed.
-/// @return 0, or -1 if the resoure isn't found.
+/// @return 0, or -1 if the resource isn't found.
 int remove_resource(world_t *world, resource_t resource);
+
+/// @brief It removes a resource from the world's resource list.
+/// @param world The world that the resource is in.
+/// @param type The resource type to be removed.
+/// @return 0, or -1 if the resource isn't found.
+int remove_resource_by_type(world_t *world, unsigned int type);
+
+/// @brief It returns true if the resource is in the world's resource list
+/// @param world The world that contains the resource.
+/// @param resource The resource to check for.
+/// @return A boolean value.
+bool contains_resource(world_t *world, resource_t resource);
+
+/// @brief It returns if the resource is in the world's resource list or not.
+/// @param world The world that contains the resource.
+/// @param type The resource type to check for.
+/// @return True if the resource is found, false otherwise.
+bool contains_resource_by_type(world_t *world, unsigned int type);
+
+/// @brief It returns the resource contained in the world corresponding on the resource passed as parameter.
+/// @param world The world on which get the resource.
+/// @param resource The resource to be found.
+/// @return It returns a pointer to the resource asked, or 0 if it's not found.
+resource_t *get_resource(world_t *world, resource_t resource);
+
+/// @brief It returns the resource contained in the world corresponding on the resource type passed as parameter.
+/// @param world The world on which get the resource.
+/// @param type The resource to be found.
+/// @return It returns a pointer to the resource asked, or 0 if it's not found.
+resource_t *get_resource_by_type(world_t *world, unsigned int type);
 
 /// @brief It adds an entity to the world
 /// @param world The world to add the entity to.
@@ -86,12 +116,6 @@ void world_destructor(world_t *world);
 /// @param entity The entity to check for.
 /// @return A boolean value.
 bool contains_entity(world_t *world, entity_t entity);
-
-/// @brief It returns true if the resource is in the world's resource list
-/// @param world The world that contains the resource.
-/// @param resource The resource to check for.
-/// @return A boolean value.
-bool contains_resource(world_t *world, resource_t resource);
 
 /// @brief It returns true if the world contains the system, false otherwise
 /// @param world The world to add the system to.

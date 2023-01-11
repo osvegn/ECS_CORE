@@ -167,3 +167,40 @@ Test(world_join_entities, world_join_entities_5)
     add_entity(&world, entity);
     cr_assert_eq(join_entities(&world, &vector, 2, 1, 2), 1);
 }
+
+Test(world_join_entities, world_join_entities_6)
+{
+    world_t world;
+    vector_t vector;
+    entity_t entity;
+    vector_t *components;
+
+    world_constructor(&world);
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){1, 0});
+    add_entity(&world, entity);
+    join_entities(&world, &vector, 1, 1);
+    components = &(*(entity_t **)vector.at(&vector, 0))->components;
+    ((component_t *)components->at(components, 0))->data = (void *)1;
+    cr_assert_eq(((component_t *)entity.components.at(&entity.components, 0))->data, 1);
+}
+
+Test(world_join_entities, world_join_entities_7)
+{
+    world_t world;
+    vector_t vector;
+    entity_t entity;
+    vector_t *components;
+
+    world_constructor(&world);
+    entity_constructor(&entity);
+    add_component(&entity, (component_t){1, 0});
+    add_entity(&world, entity);
+    join_entities(&world, &vector, 1, 1);
+
+    add_component(*(entity_t **)vector.at(&vector, 0), (component_t){2, 0});
+    entity_t *ptr = get_entity_by_id(&world, 0);
+    cr_assert_eq(ptr->components.size(&ptr->components), 2);
+    components = &(*(entity_t **)vector.at(&vector, 0))->components;
+    cr_assert_eq(components->size(components), 2);
+}

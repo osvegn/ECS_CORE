@@ -100,5 +100,6 @@ bool contains_resource(world_t *world, resource_t resource);
 bool contains_system(world_t *world, system_t system);
 
 int join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
+entity_t *get_entity_by_id(world_t *world, unsigned int id);
 
 #endif /* !WORLD_H_ */

@@ -1,6 +1,4 @@
 #!/bin/bash
-mkdir -p build
-cd build
-cmake -DTESTING=ON ..
-cmake --build . -j
+cmake -B build -DTESTING=ON
+cmake --build build
 ctest --output-on-failure

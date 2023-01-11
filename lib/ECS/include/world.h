@@ -29,6 +29,18 @@ typedef struct world_s {
     vector_t entity_list;
 } world_t;
 
+/// @brief It creates a new world by creating a new resource list, entity list, and system
+/// list
+/// @param world a pointer to the world_t struct
+/// @return 0, or -1 on failure
+int world_constructor(world_t *world);
+
+/// @brief It calls the destructor of each of the three lists in the world
+/// @param world The world to be destructed.
+void world_destructor(world_t *world);
+
+    /// SYSTEM
+
 /// @brief It runs all systems which exists in the world.
 /// @param world The world which contains all systems to be run.
 /// It also contains all resources and entities that exists.
@@ -46,6 +58,38 @@ int add_system(world_t *world, system_t system);
 /// @param system The system to remove.
 /// @return 0, or -1 if the system isn't found.
 int remove_system(world_t *world, system_t system);
+
+/// @brief It removes a system from the world.
+/// @param world The world to remove the system from.
+/// @param type The system type to remove.
+/// @return 0, or -1 if the system type isn't found.
+int remove_system_by_type(world_t *world, unsigned int type);
+
+/// @brief It returns true if the world contains the system, false otherwise
+/// @param world The world to check for.
+/// @param system The system to check for.
+/// @return True if the system is found, false otherwise.
+bool contains_system(world_t *world, system_t system);
+
+/// @brief It checks if a system type exists in the system list of the world.
+/// @param world The world to check for.
+/// @param type The system type to check for.
+/// @return True if the system type if found, false otherwise.
+bool contains_system_by_type(world_t *world, unsigned int type);
+
+/// @brief It gets a system from the system list of the world.
+/// @param world The world on which get a system.
+/// @param system The system to be get in the world system list.
+/// @return A pointer to the corresponding system, 0 otherwise.
+system_t *get_system(world_t *world, system_t system);
+
+/// @brief It gets a system from the system list of the world.
+/// @param world The world on which get a system.
+/// @param type The system type to be get in the world system list.
+/// @return A pointer to the corresponding system, 0 otherwise.
+system_t *get_system_by_type(world_t *world, unsigned int type);
+
+    /// RESOURCE
 
 /// @brief It adds a resource to the world's resource list
 /// @param world The world object
@@ -89,6 +133,8 @@ resource_t *get_resource(world_t *world, resource_t resource);
 /// @return It returns a pointer to the resource asked, or 0 if it's not found.
 resource_t *get_resource_by_type(world_t *world, unsigned int type);
 
+    /// ENTITY
+
 /// @brief It adds an entity to the world
 /// @param world The world to add the entity to.
 /// @param entity The entity to add to the world.
@@ -101,27 +147,11 @@ int add_entity(world_t *world, entity_t entity);
 /// @return 0, or -1 if the entity isn't found.
 int remove_entity(world_t *world, entity_t entity);
 
-/// @brief It creates a new world by creating a new resource list, entity list, and system
-/// list
-/// @param world a pointer to the world_t struct
-/// @return 0, or -1 on failure
-int world_constructor(world_t *world);
-
-/// @brief It calls the destructor of each of the three lists in the world
-/// @param world The world to be destructed.
-void world_destructor(world_t *world);
-
 /// @brief It returns true if the entity is in the world, false otherwise
 /// @param world The world that the entity is in.
 /// @param entity The entity to check for.
 /// @return A boolean value.
 bool contains_entity(world_t *world, entity_t entity);
-
-/// @brief It returns true if the world contains the system, false otherwise
-/// @param world The world to add the system to.
-/// @param system The system to check for.
-/// @return A boolean value.
-bool contains_system(world_t *world, system_t system);
 
 int join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
 entity_t *get_entity_by_id(world_t *world, unsigned int id);

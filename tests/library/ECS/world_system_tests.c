@@ -153,7 +153,7 @@ Test(wolrd_get_system, world_get_system_success)
     system.type = 0;
     world_constructor(&world);
     add_system(&world, system);
-    cr_assert_neq(get_system(&world, (system_t){0, 0}), 0);
+    cr_assert_neq(get_system(&world, (system_t){0, 0, 0}), 0);
 }
 
 Test(wolrd_get_system, world_get_system_failure)
@@ -164,7 +164,7 @@ Test(wolrd_get_system, world_get_system_failure)
     system.type = 0;
     world_constructor(&world);
     add_system(&world, system);
-    cr_assert_eq(get_system(&world, (system_t){1, 0}), 0);
+    cr_assert_eq(get_system(&world, (system_t){1, 0, 0}), 0);
 }
 
 Test(wolrd_get_system, world_get_system_by_type_success)

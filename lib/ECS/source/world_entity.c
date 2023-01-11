@@ -56,7 +56,7 @@ int remove_entity(world_t *world, entity_t entity)
 
 int remove_entity_by_id(world_t *world, unsigned int id)
 {
-    unsigned int index = find_entity(&world->entity_list, id);
+    unsigned int index = find_entity_by_id(&world->entity_list, id);
 
     if (index < world->entity_list.size(&world->entity_list)) {
         world->entity_list.erase(&world->entity_list, index);

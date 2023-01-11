@@ -153,7 +153,18 @@ int remove_entity(world_t *world, entity_t entity);
 /// @return A boolean value.
 bool contains_entity(world_t *world, entity_t entity);
 
-int join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
+/// @brief Get an entity from the world entity list by his id.
+/// @param world The world on which find the entity.
+/// @param id The id of the entity to be found.
+/// @return A pointer to the entity, 0 otherwise.
 entity_t *get_entity_by_id(world_t *world, unsigned int id);
+
+/// @brief Initialize entities vector with entities which contain all components types asked.
+/// @param world The world on which find entities.
+/// @param entities The vector to store entities found.
+/// @param type The number of components to find.
+/// @param ... Components type to find.
+/// @return The number of entity find, or -1 otherwise.
+int join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
 
 #endif /* !WORLD_H_ */

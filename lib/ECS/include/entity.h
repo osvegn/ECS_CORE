@@ -9,6 +9,7 @@
 #define ENTITY_H_
 
 #include "vector.h"
+#include "component.h"
 
 /// @brief It's the structure of an entity. An entity contains an id,
 /// a name and a list of components.
@@ -24,5 +25,10 @@ typedef struct entity_s {
     /// It describes what is the entity.
     vector_t components;
 } entity_t;
+
+bool contains_component(entity_t *entity, component_t component);
+int entity_constructor(entity_t *entity);
+int remove_component(entity_t *entity, component_t component);
+int add_component(entity_t *entity, component_t component);
 
 #endif /* !ENTITY_H_ */

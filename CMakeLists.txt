@@ -5,7 +5,7 @@ project(${TARGET} LANGUAGES C)
 # VARIABLE PART
 set(TARGET our_rpg)
 set(SOURCE_ROOT ${PROJECT_SOURCE_DIR}/sources)
-set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
+set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/includes)
 set(MAIN
     ${SOURCE_ROOT}/main.c
 )
@@ -16,6 +16,9 @@ set(SOURCE
 add_executable(${TARGET} ${MAIN} ${SOURCE})
 target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_ROOT}
+)
+target_link_libraries(${TARGET}
+    ecs
 )
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(DetectCompiler)

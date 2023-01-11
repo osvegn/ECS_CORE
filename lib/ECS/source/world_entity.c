@@ -23,6 +23,15 @@ static unsigned int find_entity(vector_t *entity_list, entity_t *entity)
     return entity_list->size(entity_list);
 }
 
+static unsigned int find_entity_by_id(vector_t *entity_list, unsigned int id)
+{
+    for (unsigned int i = 0; i < entity_list->size(entity_list); i++) {
+        if (id == (*(entity_t *)(entity_list->at(entity_list, i))).id)
+            return i;
+    }
+    return entity_list->size(entity_list);
+}
+
 int add_entity(world_t *world, entity_t entity)
 {
     unsigned int index = find_entity(&world->entity_list, &entity);
@@ -45,6 +54,17 @@ int remove_entity(world_t *world, entity_t entity)
     return -1;
 }
 
+int remove_entity_by_id(world_t *world, unsigned int id)
+{
+    unsigned int index = find_entity(&world->entity_list, id);
+
+    if (index < world->entity_list.size(&world->entity_list)) {
+        world->entity_list.erase(&world->entity_list, index);
+        return 0;
+    }
+    return -1;
+}
+
 bool contains_entity(world_t *world, entity_t entity)
 {
     unsigned int index = find_entity(&world->entity_list, &entity);
@@ -54,13 +74,20 @@ bool contains_entity(world_t *world, entity_t entity)
     return false;
 }
 
+bool contains_entity_by_id(world_t *world, unsigned int id)
+{
+    unsigned int index = find_entity_by_id(&world->entity_list, id);
+
+    if (index < world->entity_list.size(&world->entity_list))
+        return true;
+    return false;
+}
+
 entity_t *get_entity_by_id(world_t *world, unsigned int id)
 {
-    entity_t entity;
     unsigned int index = 0;
 
-    entity.id = id;
-    index = find_entity(&world->entity_list, &entity);
+    index = find_entity_by_id(&world->entity_list, id);
     return world->entity_list.at(&world->entity_list, index);
 }
 

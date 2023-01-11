@@ -142,7 +142,7 @@ Test(world_contains_system, world_contains_system_by_type_failure)
     system.type = 0;
     world_constructor(&world);
     add_system(&world, system);
-    cr_assert_eq(contains_system_by_type(&world, 1), true);
+    cr_assert_eq(contains_system_by_type(&world, 1), false);
 }
 
 Test(wolrd_get_system, world_get_system_success)

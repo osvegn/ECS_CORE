@@ -81,4 +81,22 @@ int world_constructor(world_t *world);
 /// @param world The world to be destructed.
 void world_destructor(world_t *world);
 
+/// @brief It returns true if the entity is in the world, false otherwise
+/// @param world The world that the entity is in.
+/// @param entity The entity to check for.
+/// @return A boolean value.
+bool contains_entity(world_t *world, entity_t entity);
+
+/// @brief It returns true if the resource is in the world's resource list
+/// @param world The world that contains the resource.
+/// @param resource The resource to check for.
+/// @return A boolean value.
+bool contains_resource(world_t *world, resource_t resource);
+
+/// @brief It returns true if the world contains the system, false otherwise
+/// @param world The world to add the system to.
+/// @param system The system to check for.
+/// @return A boolean value.
+bool contains_system(world_t *world, system_t system);
+
 #endif /* !WORLD_H_ */

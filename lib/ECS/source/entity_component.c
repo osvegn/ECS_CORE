@@ -49,6 +49,17 @@ int remove_component(entity_t *entity, component_t component)
     return -1;
 }
 
+component_t *get_component(entity_t *entity, unsigned int type)
+{
+    if (entity->components.size(&entity->components) <= 0)
+        return 0;
+    for (unsigned int index = 0; index < entity->components.size(&entity->components); index++) {
+        if (((component_t *)entity->components.at(&entity->components, index))->type == type)
+            return entity->components.at(&entity->components, index);
+    }
+    return 0;
+}
+
 int entity_constructor(entity_t *entity)
 {
     static int id = 0;

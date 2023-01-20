@@ -30,5 +30,6 @@ bool contains_component(entity_t *entity, component_t component);
 int entity_constructor(entity_t *entity);
 int remove_component(entity_t *entity, component_t component);
 int add_component(entity_t *entity, component_t component);
+component_t *get_component(entity_t *entity, unsigned int type);
 
 #endif /* !ENTITY_H_ */

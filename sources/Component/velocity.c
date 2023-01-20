@@ -32,7 +32,7 @@ void set_velocity(component_t *component, const vector2i_t vel)
     velocity->y = vel.y;
 }
 
-vector2i_t *get_position(const component_t *component)
+vector2i_t *get_velocity(const component_t *component)
 {
     return (vector2i_t *)component->data;
 }

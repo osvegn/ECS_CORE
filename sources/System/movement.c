@@ -9,6 +9,15 @@
 #include "world.h"
 #include "components.h"
 #include "vector2i.h"
+#include "systems.h"
+
+int create_movement_system(system_t *system)
+{
+    system->type = MOVEMENT;
+    system->run = &movement;
+    system->active = true;
+    return 0;
+}
 
 int movement(void *world)
 {

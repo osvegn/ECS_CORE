@@ -8,6 +8,8 @@
 #ifndef COMPONENTS_H_
 #define COMPONENTS_H_
 
+#include "vector2i.h"
+
 typedef enum component_type_e {
     UNDEFINED,
     POSITION,
@@ -15,11 +17,11 @@ typedef enum component_type_e {
     MAX_VALUE
 } component_type_t;
 
-component_t *create_position(vector2i_t pos);
+int create_position(component_t *component, vector2i_t pos);
 void set_position(component_t *component, const vector2i_t pos);
 vector2i_t *get_position(const component_t *component);
 
-component_t *create_velocity(vector2i_t vel);
+int create_velocity(component_t *component, vector2i_t vel);
 void set_velocity(component_t *component, const vector2i_t vel);
 vector2i_t *get_velocity(const component_t *component);
 

@@ -20,12 +20,12 @@ void create_world(world_t *world)
 
     world_constructor(world);
     entity_constructor(&entity);
-    create_position(&component, (vector2i_t){10, 10});
+    position_constructor(&component, (vector2i_t){10, 10});
     entity_add_component(&entity, component);
-    create_velocity(&component, (vector2i_t){5, 2});
+    velocity_constructor(&component, (vector2i_t){5, 2});
     entity_add_component(&entity, component);
     world_add_entity(world, entity);
-    create_movement_system(&system);
+    movement_constructor(&system);
     world_add_system(world, system);
 }
 

@@ -7,9 +7,7 @@
  * Copyright (c) 2023 our_rpg
  */
 
-#include "component.h"
 #include "components.h"
-#include "vector2i.h"
 #include <stdlib.h>
 
 int velocity_constructor(component_t *component, vector2i_t vel)

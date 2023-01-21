@@ -7,7 +7,6 @@
  * Copyright (c) 2023 our_rpg
  */
 
-#include "component.h"
 #include "components.h"
 #include <stdlib.h>
 

@@ -10,8 +10,8 @@
 #ifndef COMPONENTS_H_
 #define COMPONENTS_H_
 
-#include "vector2i.h"
 #include "component.h"
+#include "vector2i.h"
 
 typedef enum component_type_e {
     C_UNDEFINED,

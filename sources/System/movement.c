@@ -7,10 +7,8 @@
  * Copyright (c) 2023 our_rpg
  */
 
-#include "system.h"
 #include "world.h"
 #include "components.h"
-#include "vector2i.h"
 #include "systems.h"
 
 int movement_constructor(system_t *system)

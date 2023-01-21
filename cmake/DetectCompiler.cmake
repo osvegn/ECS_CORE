@@ -9,7 +9,7 @@ if (CMAKE_COMPILER_IS_GNUCC)
   set(COMPILER_TYPE "gcc")
   ## Add the flags for the compilation ##
   add_compile_options(
-    "-Wall" "-Wextra" "-Werror" "-Wshadow"
+    "-Wall" "-Wextra" "-Wshadow"
   )
 
   ## TESTING ##

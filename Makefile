@@ -26,6 +26,6 @@ debug:
 	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Debug
 	${CC} --build ${BUILD}
 
-run_tests: clean
+run_tests:
 	${CC} -B ${BUILD} -DTESTING=ON
 	${CC} --build ${BUILD}

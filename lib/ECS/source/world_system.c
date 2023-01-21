@@ -20,7 +20,7 @@ static unsigned int find_system(vector_t *system_list, system_t *system)
     return system_list->size(system_list);
 }
 
-static unsigned int world_find_system_by_type(vector_t *system_list, unsigned int type)
+static unsigned int find_system_by_type(vector_t *system_list, unsigned int type)
 {
     for (unsigned int i = 0; i < system_list->size(system_list); i++) {
         if (type == (*(system_t *)(system_list->at(system_list, i))).type) {

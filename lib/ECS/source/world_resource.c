@@ -25,7 +25,7 @@ static unsigned int find_resource(vector_t *resource_list, resource_t *resource)
 /// @param resource_list The list of resources on which find the corresponding type.
 /// @param type The type of resource to find.
 /// @return The index of the resource type in the resource list, or list size if not found.
-static unsigned int world_find_resource_by_type(vector_t *resource_list, unsigned int type)
+static unsigned int find_resource_by_type(vector_t *resource_list, unsigned int type)
 {
     for (unsigned int i = 0; i < resource_list->size(resource_list); i++) {
         if (type == (*(resource_t *)(resource_list->at(resource_list, i))).type) {

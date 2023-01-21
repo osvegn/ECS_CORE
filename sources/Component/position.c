@@ -11,7 +11,7 @@
 #include "components.h"
 #include <stdlib.h>
 
-int create_position(component_t *component, vector2i_t pos)
+int position_constructor(component_t *component, vector2i_t pos)
 {
     vector2i_t *position = malloc(sizeof(vector2i_t));
 
@@ -24,7 +24,12 @@ int create_position(component_t *component, vector2i_t pos)
     return 0;
 }
 
-void set_position(component_t *component, const vector2i_t pos)
+void position_destructor(component_t *component)
+{
+    free(component->data);
+}
+
+void position_set(component_t *component, const vector2i_t pos)
 {
     vector2i_t *position = component->data;
 
@@ -32,7 +37,7 @@ void set_position(component_t *component, const vector2i_t pos)
     position->y = pos.y;
 }
 
-vector2i_t *get_position(const component_t *component)
+vector2i_t *position_get(const component_t *component)
 {
     return (vector2i_t *)component->data;
 }

@@ -13,7 +13,7 @@
 #include "vector2i.h"
 #include "systems.h"
 
-int create_movement_system(system_t *system)
+int movement_constructor(system_t *system)
 {
     system->type = MOVEMENT;
     system->run = &movement;

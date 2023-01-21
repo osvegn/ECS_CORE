@@ -12,7 +12,7 @@
 #include "vector2i.h"
 #include <stdlib.h>
 
-int create_velocity(component_t *component, vector2i_t vel)
+int velocity_constructor(component_t *component, vector2i_t vel)
 {
     vector2i_t *velocity = malloc(sizeof(vector2i_t));
 
@@ -25,7 +25,12 @@ int create_velocity(component_t *component, vector2i_t vel)
     return 0;
 }
 
-void set_velocity(component_t *component, const vector2i_t vel)
+void velocity_destructor(component_t *component)
+{
+    free(component->data);
+}
+
+void velocity_set(component_t *component, const vector2i_t vel)
 {
     vector2i_t *velocity = component->data;
 
@@ -33,7 +38,7 @@ void set_velocity(component_t *component, const vector2i_t vel)
     velocity->y = vel.y;
 }
 
-vector2i_t *get_velocity(const component_t *component)
+vector2i_t *velocity_get(const component_t *component)
 {
     return (vector2i_t *)component->data;
 }

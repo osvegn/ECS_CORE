@@ -109,7 +109,7 @@ Test(world_world_join_entities, world_world_join_entities_1)
 
     world_constructor(&world);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){1, 0});
     world_add_entity(&world, entity);
     cr_assert_eq(world_join_entities(&world, &vector, 1, 1), 1);
 }
@@ -132,10 +132,10 @@ Test(world_world_join_entities, world_world_join_entities_3)
 
     world_constructor(&world);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){1, 0});
     world_add_entity(&world, entity);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){1, 0});
     world_add_entity(&world, entity);
     cr_assert_eq(world_join_entities(&world, &vector, 1, 1), expected_value);
 }
@@ -148,10 +148,10 @@ Test(world_world_join_entities, world_world_join_entities_4)
 
     world_constructor(&world);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){1, 0});
     world_add_entity(&world, entity);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){2, 0});
+    entity_add_component(&entity, (component_t){2, 0});
     world_add_entity(&world, entity);
     cr_assert_eq(world_join_entities(&world, &vector, 2, 1, 2), 0);
 }
@@ -164,8 +164,8 @@ Test(world_world_join_entities, world_world_join_entities_5)
 
     world_constructor(&world);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
-    add_component(&entity, (component_t){2, 0});
+    entity_add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){2, 0});
     world_add_entity(&world, entity);
     cr_assert_eq(world_join_entities(&world, &vector, 2, 1, 2), 1);
 }
@@ -179,7 +179,7 @@ Test(world_world_join_entities, world_world_join_entities_6)
 
     world_constructor(&world);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){1, 0});
     world_add_entity(&world, entity);
     world_join_entities(&world, &vector, 1, 1);
     components = &(*(entity_t **)vector.at(&vector, 0))->components;
@@ -196,11 +196,11 @@ Test(world_world_join_entities, world_world_join_entities_7)
 
     world_constructor(&world);
     entity_constructor(&entity);
-    add_component(&entity, (component_t){1, 0});
+    entity_add_component(&entity, (component_t){1, 0});
     world_add_entity(&world, entity);
     world_join_entities(&world, &vector, 1, 1);
 
-    add_component(*(entity_t **)vector.at(&vector, 0), (component_t){2, 0});
+    entity_add_component(*(entity_t **)vector.at(&vector, 0), (component_t){2, 0});
     entity_t *ptr = world_get_entity_by_id(&world, 0);
     cr_assert_eq(ptr->components.size(&ptr->components), 2);
     components = &(*(entity_t **)vector.at(&vector, 0))->components;

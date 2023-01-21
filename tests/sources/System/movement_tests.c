@@ -21,9 +21,9 @@ void create_world(world_t *world)
     world_constructor(world);
     entity_constructor(&entity);
     create_position(&component, (vector2i_t){10, 10});
-    add_component(&entity, component);
+    entity_add_component(&entity, component);
     create_velocity(&component, (vector2i_t){5, 2});
-    add_component(&entity, component);
+    entity_add_component(&entity, component);
     world_add_entity(world, entity);
     create_movement_system(&system);
     world_add_system(world, system);
@@ -40,7 +40,7 @@ Test(run_movement_system, test01)
     world_run_systems(&world);
     world_join_entities(&world, &entities, 2, VELOCITY, POSITION);
     entity = *(entity_t **)entities.at(&entities, 0);
-    position = get_component(entity, POSITION)->data;
+    position = entity_get_component(entity, POSITION)->data;
     cr_assert_eq(position->x, 15);
     cr_assert_eq(position->y, 12);
 }

@@ -19,7 +19,7 @@ static unsigned int find_component(entity_t *entity, component_t *component)
     return entity->components.size(&entity->components);
 }
 
-bool contains_component(entity_t *entity, component_t component)
+bool entity_contains_component(entity_t *entity, component_t component)
 {
     unsigned int index = find_component(entity, &component);
 
@@ -29,7 +29,7 @@ bool contains_component(entity_t *entity, component_t component)
     return false;
 }
 
-int add_component(entity_t *entity, component_t component)
+int entity_add_component(entity_t *entity, component_t component)
 {
     unsigned int index = find_component(entity, &component);
 
@@ -40,7 +40,7 @@ int add_component(entity_t *entity, component_t component)
     return 0;
 }
 
-int remove_component(entity_t *entity, component_t component)
+int entity_remove_component(entity_t *entity, component_t component)
 {
     unsigned int index = find_component(entity, &component);
 
@@ -51,7 +51,7 @@ int remove_component(entity_t *entity, component_t component)
     return -1;
 }
 
-component_t *get_component(entity_t *entity, unsigned int type)
+component_t *entity_get_component(entity_t *entity, unsigned int type)
 {
     if (entity->components.size(&entity->components) <= 0)
         return 0;

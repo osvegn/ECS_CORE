@@ -18,56 +18,56 @@ Test(entity_component, test_entity_constructor)
     cr_assert_eq(entity_constructor(&entity), 0);
 }
 
-Test(entity_component, test_entity_add_component_success)
+Test(entity_component, test_entity_entity_add_component_success)
 {
     entity_t entity;
 
     entity_constructor(&entity);
-    cr_assert_eq(add_component(&entity, (component_t){0, 0}), 0);
+    cr_assert_eq(entity_add_component(&entity, (component_t){0, 0}), 0);
 }
 
-Test(entity_component, test_entity_add_component_failure)
+Test(entity_component, test_entity_entity_add_component_failure)
 {
     entity_t entity;
 
     entity_constructor(&entity);
-    add_component(&entity, (component_t){0, 0});
-    cr_assert_eq(add_component(&entity, (component_t){0, 0}), -1);
+    entity_add_component(&entity, (component_t){0, 0});
+    cr_assert_eq(entity_add_component(&entity, (component_t){0, 0}), -1);
 }
 
-Test(entity_component, test_entity_remove_component_success)
+Test(entity_component, test_entity_entity_remove_component_success)
 {
     entity_t entity;
 
     entity_constructor(&entity);
-    add_component(&entity, (component_t){0, 0});
-    cr_assert_eq(remove_component(&entity, (component_t){0, 0}), 0);
+    entity_add_component(&entity, (component_t){0, 0});
+    cr_assert_eq(entity_remove_component(&entity, (component_t){0, 0}), 0);
 }
 
-Test(entity_component, test_entity_remove_component_failure)
+Test(entity_component, test_entity_entity_remove_component_failure)
 {
     entity_t entity;
 
     entity_constructor(&entity);
-    add_component(&entity, (component_t){0, 0});
-    remove_component(&entity, (component_t){0, 0});
-    cr_assert_eq(remove_component(&entity, (component_t){0, 0}), -1);
+    entity_add_component(&entity, (component_t){0, 0});
+    entity_remove_component(&entity, (component_t){0, 0});
+    cr_assert_eq(entity_remove_component(&entity, (component_t){0, 0}), -1);
 }
 
-Test(contains_component, test_entity_contains_component_success)
+Test(entity_contains_component, test_entity_entity_contains_component_success)
 {
     entity_t entity;
 
     entity_constructor(&entity);
-    add_component(&entity, (component_t){0, 0});
-    cr_assert_eq(contains_component(&entity, (component_t){0, 0}), true);
+    entity_add_component(&entity, (component_t){0, 0});
+    cr_assert_eq(entity_contains_component(&entity, (component_t){0, 0}), true);
 }
 
-Test(contains_component, test_entity_contains_component_failure)
+Test(entity_contains_component, test_entity_entity_contains_component_failure)
 {
     entity_t entity;
 
     entity_constructor(&entity);
-    add_component(&entity, (component_t){0, 0});
-    cr_assert_eq(contains_component(&entity, (component_t){1, 0}), false);
+    entity_add_component(&entity, (component_t){0, 0});
+    cr_assert_eq(entity_contains_component(&entity, (component_t){1, 0}), false);
 }

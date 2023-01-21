@@ -33,8 +33,8 @@ int movement(void *world)
         return rvalue;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        components[0] = get_component(entity, POSITION)->data;
-        components[1] = get_component(entity, VELOCITY)->data;
+        components[0] = entity_get_component(entity, POSITION)->data;
+        components[1] = entity_get_component(entity, VELOCITY)->data;
         components[0]->x += components[1]->x;
         components[0]->y += components[1]->y;
     }

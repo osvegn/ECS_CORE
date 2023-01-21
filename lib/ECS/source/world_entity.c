@@ -106,7 +106,7 @@ int world_join_entities(world_t *world, vector_t *entities, unsigned int type, .
         component = va_arg(argptr, int);
         if (first_element) {
             for (unsigned int i = 0; i < world->entity_list.size(&world->entity_list); i++) {
-                if (contains_component(world->entity_list.at(&world->entity_list, i), (component_t){component, 0})) {
+                if (entity_contains_component(world->entity_list.at(&world->entity_list, i), (component_t){component, 0})) {
                     ptr = world->entity_list.at(&world->entity_list, i);
                     entities->emplace_back(entities, &ptr);
                 }
@@ -114,7 +114,7 @@ int world_join_entities(world_t *world, vector_t *entities, unsigned int type, .
             first_element = false;
         } else {
             for (unsigned int i = 0; i < entities->size(entities); i++) {
-                if (!contains_component(*(entity_t **)entities->at(entities, i), (component_t){component, 0})) {
+                if (!entity_contains_component(*(entity_t **)entities->at(entities, i), (component_t){component, 0})) {
                     entities->erase(entities, i);
                     i--;
                 }

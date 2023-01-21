@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** our_rpg [Codespaces]
-** File description:
-** world_resource
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/source/world_resource.c
+ * Path: /workspaces/our_rpg/lib/ECS/source
+ * Created Date: Sunday, January 15th 2023, 3:59:16 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include "world.h"
 
@@ -35,7 +37,7 @@ static unsigned int find_resource_by_type(vector_t *resource_list, unsigned int 
     return resource_list->size(resource_list);
 }
 
-int add_resource(world_t *world, resource_t resource)
+int world_add_resource(world_t *world, resource_t resource)
 {
     unsigned int index = find_resource(&world->resource_list, &resource);
 
@@ -46,7 +48,7 @@ int add_resource(world_t *world, resource_t resource)
     return 0;
 }
 
-int remove_resource(world_t *world, resource_t resource)
+int world_remove_resource(world_t *world, resource_t resource)
 {
     unsigned int index = find_resource(&world->resource_list, &resource);
 
@@ -57,7 +59,7 @@ int remove_resource(world_t *world, resource_t resource)
     return -1;
 }
 
-int remove_resource_by_type(world_t *world, unsigned int type)
+int world_remove_resource_by_type(world_t *world, unsigned int type)
 {
     unsigned int index = find_resource_by_type(&world->resource_list, type);
 
@@ -68,7 +70,7 @@ int remove_resource_by_type(world_t *world, unsigned int type)
     return -1;
 }
 
-bool contains_resource(world_t *world, resource_t resource)
+bool world_contains_resource(world_t *world, resource_t resource)
 {
     unsigned int index = find_resource(&world->resource_list, &resource);
 
@@ -78,7 +80,7 @@ bool contains_resource(world_t *world, resource_t resource)
     return false;
 }
 
-bool contains_resource_by_type(world_t *world, unsigned int type)
+bool world_contains_resource_by_type(world_t *world, unsigned int type)
 {
     unsigned int index = find_resource_by_type(&world->resource_list, type);
 
@@ -88,7 +90,7 @@ bool contains_resource_by_type(world_t *world, unsigned int type)
     return false;
 }
 
-resource_t *get_resource(world_t *world, resource_t resource)
+resource_t *world_get_resource(world_t *world, resource_t resource)
 {
     unsigned int index = find_resource(&world->resource_list, &resource);
 
@@ -98,7 +100,7 @@ resource_t *get_resource(world_t *world, resource_t resource)
     return 0;
 }
 
-resource_t *get_resource_by_type(world_t *world, unsigned int type)
+resource_t *world_get_resource_by_type(world_t *world, unsigned int type)
 {
     unsigned int index = find_resource_by_type(&world->resource_list, type);
 

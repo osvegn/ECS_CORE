@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** our_rpg
-** File description:
-** vector
-*/
+ * Filename: /workspaces/our_rpg/lib/vector/include/vector.h
+ * Path: /workspaces/our_rpg/lib/vector/include
+ * Created Date: Thursday, December 29th 2022, 10:41:19 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #ifndef VECTOR_H_
 #define VECTOR_H_

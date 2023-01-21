@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** our_rpg [Codespaces]
-** File description:
-** world_entity
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/source/world_entity.c
+ * Path: /workspaces/our_rpg/lib/ECS/source
+ * Created Date: Sunday, January 15th 2023, 3:59:16 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include "world.h"
 #include "component.h"
@@ -32,7 +34,7 @@ static unsigned int find_entity_by_id(vector_t *entity_list, unsigned int id)
     return entity_list->size(entity_list);
 }
 
-int add_entity(world_t *world, entity_t entity)
+int world_add_entity(world_t *world, entity_t entity)
 {
     unsigned int index = find_entity(&world->entity_list, &entity);
 
@@ -43,7 +45,7 @@ int add_entity(world_t *world, entity_t entity)
     return 0;
 }
 
-int remove_entity(world_t *world, entity_t entity)
+int world_remove_entity(world_t *world, entity_t entity)
 {
     unsigned int index = find_entity(&world->entity_list, &entity);
 
@@ -54,7 +56,7 @@ int remove_entity(world_t *world, entity_t entity)
     return -1;
 }
 
-int remove_entity_by_id(world_t *world, unsigned int id)
+int world_remove_entity_by_id(world_t *world, unsigned int id)
 {
     unsigned int index = find_entity_by_id(&world->entity_list, id);
 
@@ -65,7 +67,7 @@ int remove_entity_by_id(world_t *world, unsigned int id)
     return -1;
 }
 
-bool contains_entity(world_t *world, entity_t entity)
+bool world_contains_entity(world_t *world, entity_t entity)
 {
     unsigned int index = find_entity(&world->entity_list, &entity);
 
@@ -74,7 +76,7 @@ bool contains_entity(world_t *world, entity_t entity)
     return false;
 }
 
-bool contains_entity_by_id(world_t *world, unsigned int id)
+bool world_contains_entity_by_id(world_t *world, unsigned int id)
 {
     unsigned int index = find_entity_by_id(&world->entity_list, id);
 
@@ -83,7 +85,7 @@ bool contains_entity_by_id(world_t *world, unsigned int id)
     return false;
 }
 
-entity_t *get_entity_by_id(world_t *world, unsigned int id)
+entity_t *world_get_entity_by_id(world_t *world, unsigned int id)
 {
     unsigned int index = 0;
 
@@ -91,7 +93,7 @@ entity_t *get_entity_by_id(world_t *world, unsigned int id)
     return world->entity_list.at(&world->entity_list, index);
 }
 
-int join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
+int world_join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
 {
     va_list argptr;
     int component;
@@ -104,7 +106,7 @@ int join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
         component = va_arg(argptr, int);
         if (first_element) {
             for (unsigned int i = 0; i < world->entity_list.size(&world->entity_list); i++) {
-                if (contains_component(world->entity_list.at(&world->entity_list, i), (component_t){component, 0})) {
+                if (entity_contains_component(world->entity_list.at(&world->entity_list, i), (component_t){component, 0})) {
                     ptr = world->entity_list.at(&world->entity_list, i);
                     entities->emplace_back(entities, &ptr);
                 }
@@ -112,7 +114,7 @@ int join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
             first_element = false;
         } else {
             for (unsigned int i = 0; i < entities->size(entities); i++) {
-                if (!contains_component(*(entity_t **)entities->at(entities, i), (component_t){component, 0})) {
+                if (!entity_contains_component(*(entity_t **)entities->at(entities, i), (component_t){component, 0})) {
                     entities->erase(entities, i);
                     i--;
                 }

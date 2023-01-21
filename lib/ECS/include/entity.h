@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** my_my_hunter
-** File description:
-** entity
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/include/entity.h
+ * Path: /workspaces/our_rpg/lib/ECS/include
+ * Created Date: Sunday, January 15th 2023, 3:59:16 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #ifndef ENTITY_H_
 #define ENTITY_H_
@@ -26,9 +28,10 @@ typedef struct entity_s {
     vector_t components;
 } entity_t;
 
-bool contains_component(entity_t *entity, component_t component);
+bool entity_contains_component(entity_t *entity, component_t component);
 int entity_constructor(entity_t *entity);
-int remove_component(entity_t *entity, component_t component);
-int add_component(entity_t *entity, component_t component);
+int entity_remove_component(entity_t *entity, component_t component);
+int entity_add_component(entity_t *entity, component_t component);
+component_t *entity_get_component(entity_t *entity, unsigned int type);
 
 #endif /* !ENTITY_H_ */

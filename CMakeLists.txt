@@ -9,17 +9,14 @@ set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/includes)
 set(MAIN
     ${SOURCE_ROOT}/main.c
 )
-set(SOURCE
+set(GLOBAL_SOURCES
+    ${SOURCE_ROOT}/System/movement.c
+    ${SOURCE_ROOT}/Component/position.c
+    ${SOURCE_ROOT}/Component/velocity.c
 )
+set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
 
 # EXECUTABLE
-add_executable(${TARGET} ${MAIN} ${SOURCE})
-target_include_directories(${TARGET}
-    PUBLIC ${INCLUDE_ROOT}
-)
-target_link_libraries(${TARGET}
-    ecs
-)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(DetectCompiler)
 

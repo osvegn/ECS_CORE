@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2023
-** our_rpg [Codespaces]
-** File description:
-** entity_component
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/source/entity_component.c
+ * Path: /workspaces/our_rpg/lib/ECS/source
+ * Created Date: Sunday, January 15th 2023, 3:59:16 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include "entity.h"
 
@@ -17,7 +19,7 @@ static unsigned int find_component(entity_t *entity, component_t *component)
     return entity->components.size(&entity->components);
 }
 
-bool contains_component(entity_t *entity, component_t component)
+bool entity_contains_component(entity_t *entity, component_t component)
 {
     unsigned int index = find_component(entity, &component);
 
@@ -27,7 +29,7 @@ bool contains_component(entity_t *entity, component_t component)
     return false;
 }
 
-int add_component(entity_t *entity, component_t component)
+int entity_add_component(entity_t *entity, component_t component)
 {
     unsigned int index = find_component(entity, &component);
 
@@ -38,7 +40,7 @@ int add_component(entity_t *entity, component_t component)
     return 0;
 }
 
-int remove_component(entity_t *entity, component_t component)
+int entity_remove_component(entity_t *entity, component_t component)
 {
     unsigned int index = find_component(entity, &component);
 
@@ -47,6 +49,17 @@ int remove_component(entity_t *entity, component_t component)
         return 0;
     }
     return -1;
+}
+
+component_t *entity_get_component(entity_t *entity, unsigned int type)
+{
+    if (entity->components.size(&entity->components) <= 0)
+        return 0;
+    for (unsigned int index = 0; index < entity->components.size(&entity->components); index++) {
+        if (((component_t *)entity->components.at(&entity->components, index))->type == type)
+            return entity->components.at(&entity->components, index);
+    }
+    return 0;
 }
 
 int entity_constructor(entity_t *entity)

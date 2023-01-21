@@ -1,14 +1,16 @@
 /*
-** EPITECH PROJECT, 2022
-** my_my_hunter
-** File description:
-** world
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/source/world.c
+ * Path: /workspaces/our_rpg/lib/ECS/source
+ * Created Date: Wednesday, December 21st 2022, 8:20:21 am
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include "world.h"
 #include <stddef.h>
 
-int run_systems(world_t *world)
+int world_run_systems(world_t *world)
 {
     vector_t *ptr = &world->system_list;
     system_t *system = NULL;

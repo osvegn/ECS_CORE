@@ -1,12 +1,16 @@
 /*
-** EPITECH PROJECT, 2022
-** my_my_hunter
-** File description:
-** system
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/include/system.h
+ * Path: /workspaces/our_rpg/lib/ECS/include
+ * Created Date: Monday, December 19th 2022, 12:26:14 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #ifndef SYSTEM_H_
 #define SYSTEM_H_
+
+#include <stdbool.h>
 
 /// @brief It's the structure of a system. A system is used to update a type
 /// of component or resource. It contains a type, a boolean and a

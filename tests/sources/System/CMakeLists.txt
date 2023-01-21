@@ -11,7 +11,7 @@ target_link_libraries(${TARGET}
 )
 
 target_include_directories(${TARGET}
-    ${PROJECT_SOURCE_DIR}/includes
+    PRIVATE ${PROJECT_SOURCE_DIR}/includes
 )
 
 add_test(${TARGET} ${TARGET})

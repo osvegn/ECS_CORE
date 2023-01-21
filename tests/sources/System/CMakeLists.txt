@@ -10,6 +10,10 @@ target_link_libraries(${TARGET}
     ecs
 )
 
+target_include_directories(${TARGET}
+    ${PROJECT_SOURCE_DIR}/includes
+)
+
 add_test(${TARGET} ${TARGET})
 
 set_target_properties(${TARGET}

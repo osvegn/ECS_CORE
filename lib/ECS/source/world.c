@@ -8,7 +8,7 @@
 #include "world.h"
 #include <stddef.h>
 
-int run_systems(world_t *world)
+int world_run_systems(world_t *world)
 {
     vector_t *ptr = &world->system_list;
     system_t *system = NULL;

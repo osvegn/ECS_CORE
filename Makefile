@@ -13,19 +13,23 @@ BUILD	=	build
 
 CC		=	cmake
 
+TESTS	=	vector_tests ecs_tests system_tests
+
 all:
-	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release
+	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF
 	${CC} --build ${BUILD}
 
 clean:
 	${RM} ${BUILD}
+	${RM} ${TESTS}
 
 re: clean all
 
 debug:
-	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Debug
+	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Debug -DTESTING=OFF
 	${CC} --build ${BUILD}
 
-run_tests: clean
+run_tests:
 	${CC} -B ${BUILD} -DTESTING=ON
 	${CC} --build ${BUILD}
+	${foreach test, ${TESTS}, ./${test};}

@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** my_my_hunter
-** File description:
-** vector
-*/
+ * Filename: /workspaces/our_rpg/sources/Component/position.c
+ * Path: /workspaces/our_rpg/sources/Component
+ * Created Date: Sunday, January 15th 2023, 3:59:05 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include "component.h"
 #include "components.h"

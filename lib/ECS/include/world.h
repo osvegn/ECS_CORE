@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** my_my_hunter
-** File description:
-** world
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/include/world.h
+ * Path: /workspaces/our_rpg/lib/ECS/include
+ * Created Date: Sunday, January 15th 2023, 3:59:16 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #ifndef WORLD_H_
 #define WORLD_H_

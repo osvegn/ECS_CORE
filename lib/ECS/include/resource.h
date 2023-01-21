@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** my_my_hunter
-** File description:
-** resource
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/include/resource.h
+ * Path: /workspaces/our_rpg/lib/ECS/include
+ * Created Date: Monday, December 19th 2022, 12:26:14 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #ifndef RESOURCE_H_
 #define RESOURCE_H_

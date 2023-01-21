@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** our_rpg
-** File description:
-** vector_tests
-*/
+ * Filename: /workspaces/our_rpg/tests/library/vector/vector_tests.c
+ * Path: /workspaces/our_rpg/tests/library/vector
+ * Created Date: Thursday, December 29th 2022, 10:41:19 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include <criterion/criterion.h>
 #include "vector.h"

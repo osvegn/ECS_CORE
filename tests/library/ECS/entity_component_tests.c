@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2023
-** our_rpg [Codespaces]
-** File description:
-** entity_component_tests
-*/
+ * Filename: /workspaces/our_rpg/tests/library/ECS/entity_component_tests.c
+ * Path: /workspaces/our_rpg/tests/library/ECS
+ * Created Date: Sunday, January 15th 2023, 3:59:16 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include <criterion/criterion.h>
 #include "entity.h"

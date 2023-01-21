@@ -1,9 +1,11 @@
 /*
-** EPITECH PROJECT, 2022
-** our_rpg [Codespaces]
-** File description:
-** world_constructor
-*/
+ * Filename: /workspaces/our_rpg/lib/ECS/source/world_constructor.c
+ * Path: /workspaces/our_rpg/lib/ECS/source
+ * Created Date: Monday, January 2nd 2023, 2:38:37 pm
+ * Author: osvegn
+ * 
+ * Copyright (c) 2023 our_rpg
+ */
 
 #include "world.h"
 

@@ -17,6 +17,16 @@ set(GLOBAL_SOURCES
 set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
 
 # EXECUTABLE
+add_executable(${TARGET} ${MAIN} ${GLOBAL_SOURCES})
+target_include_directories(${TARGET}
+    PUBLIC ${INCLUDE_ROOT}
+)
+
+target_link_libraries(${TARGET}
+    ecs
+    raylib
+)
+
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(DetectCompiler)
 

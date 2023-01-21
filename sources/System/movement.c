@@ -24,13 +24,13 @@ int movement(void *world)
     vector_t entities = {0};
     entity_t *entity;
     vector2i_t *components[2];
-    int rvalue = join_entities(world, &entities, 2, VELOCITY, POSITION);
+    int rvalue = world_join_entities(world, &entities, 2, VELOCITY, POSITION);
 
 
     if (rvalue <= 0)
         return rvalue;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
-        entity = entities.at(&entities, i);
+        entity = *(entity_t **)entities.at(&entities, i);
         components[0] = get_component(entity, POSITION)->data;
         components[1] = get_component(entity, VELOCITY)->data;
         components[0]->x += components[1]->x;

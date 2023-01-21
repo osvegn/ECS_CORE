@@ -11,10 +11,10 @@
 #include "vector2i.h"
 
 typedef enum component_type_e {
-    UNDEFINED,
+    C_UNDEFINED,
     POSITION,
     VELOCITY,
-    MAX_VALUE
+    C_MAX_VALUE
 } component_type_t;
 
 int create_position(component_t *component, vector2i_t pos);

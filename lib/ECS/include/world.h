@@ -95,43 +95,43 @@ system_t *world_get_system_by_type(world_t *world, unsigned int type);
 /// @param world The world object
 /// @param resource The resource to add to the world.
 /// @return 0, or -1 if the resource already exists.
-int add_resource(world_t *world, resource_t resource);
+int world_add_resource(world_t *world, resource_t resource);
 
 /// @brief It removes a resource from the world's resource list
 /// @param world The world that the resource is in.
 /// @param resource The resource to be removed.
 /// @return 0, or -1 if the resource isn't found.
-int remove_resource(world_t *world, resource_t resource);
+int world_remove_resource(world_t *world, resource_t resource);
 
 /// @brief It removes a resource from the world's resource list.
 /// @param world The world that the resource is in.
 /// @param type The resource type to be removed.
 /// @return 0, or -1 if the resource isn't found.
-int remove_resource_by_type(world_t *world, unsigned int type);
+int world_remove_resource_by_type(world_t *world, unsigned int type);
 
 /// @brief It returns true if the resource is in the world's resource list
 /// @param world The world that contains the resource.
 /// @param resource The resource to check for.
 /// @return A boolean value.
-bool contains_resource(world_t *world, resource_t resource);
+bool world_contains_resource(world_t *world, resource_t resource);
 
 /// @brief It returns if the resource is in the world's resource list or not.
 /// @param world The world that contains the resource.
 /// @param type The resource type to check for.
 /// @return True if the resource is found, false otherwise.
-bool contains_resource_by_type(world_t *world, unsigned int type);
+bool world_contains_resource_by_type(world_t *world, unsigned int type);
 
 /// @brief It returns the resource contained in the world corresponding on the resource passed as parameter.
 /// @param world The world on which get the resource.
 /// @param resource The resource to be found.
 /// @return It returns a pointer to the resource asked, or 0 if it's not found.
-resource_t *get_resource(world_t *world, resource_t resource);
+resource_t *world_get_resource(world_t *world, resource_t resource);
 
 /// @brief It returns the resource contained in the world corresponding on the resource type passed as parameter.
 /// @param world The world on which get the resource.
 /// @param type The resource to be found.
 /// @return It returns a pointer to the resource asked, or 0 if it's not found.
-resource_t *get_resource_by_type(world_t *world, unsigned int type);
+resource_t *world_get_resource_by_type(world_t *world, unsigned int type);
 
     /// ENTITY
 
@@ -139,25 +139,25 @@ resource_t *get_resource_by_type(world_t *world, unsigned int type);
 /// @param world The world to add the entity to.
 /// @param entity The entity to add to the world.
 /// @return 0, or -1 if the entity already exists.
-int add_entity(world_t *world, entity_t entity);
+int world_add_entity(world_t *world, entity_t entity);
 
 /// @brief It removes an entity from the world
 /// @param world The world that the entity is in.
 /// @param entity The entity to remove from the world.
 /// @return 0, or -1 if the entity isn't found.
-int remove_entity(world_t *world, entity_t entity);
+int world_remove_entity(world_t *world, entity_t entity);
 
 /// @brief It returns true if the entity is in the world, false otherwise
 /// @param world The world that the entity is in.
 /// @param entity The entity to check for.
 /// @return A boolean value.
-bool contains_entity(world_t *world, entity_t entity);
+bool world_contains_entity(world_t *world, entity_t entity);
 
 /// @brief Get an entity from the world entity list by his id.
 /// @param world The world on which find the entity.
 /// @param id The id of the entity to be found.
 /// @return A pointer to the entity, 0 otherwise.
-entity_t *get_entity_by_id(world_t *world, unsigned int id);
+entity_t *world_get_entity_by_id(world_t *world, unsigned int id);
 
 /// @brief Initialize entities vector with entities which contain all components types asked.
 /// @param world The world on which find entities.
@@ -165,6 +165,6 @@ entity_t *get_entity_by_id(world_t *world, unsigned int id);
 /// @param type The number of components to find.
 /// @param ... Components type to find.
 /// @return The number of entity find, or -1 otherwise.
-int join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
+int world_join_entities(world_t *world, vector_t *entities, unsigned int type, ...);
 
 #endif /* !WORLD_H_ */

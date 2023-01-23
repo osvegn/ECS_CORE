@@ -11,6 +11,7 @@ set(MAIN
 )
 set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/movement.c
+    ${SOURCE_ROOT}/System/world_manager.c
     ${SOURCE_ROOT}/Component/position.c
     ${SOURCE_ROOT}/Component/velocity.c
 )

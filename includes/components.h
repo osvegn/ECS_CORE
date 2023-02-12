@@ -17,6 +17,7 @@ typedef enum component_type_e {
     C_UNDEFINED,
     POSITION,
     VELOCITY,
+    DISPLAYABLE,
     C_MAX_VALUE
 } component_type_t;
 
@@ -29,5 +30,7 @@ int velocity_constructor(component_t *component, vector2i_t vel);
 void velocity_destructor(component_t *component);
 void velocity_set(component_t *component, const vector2i_t vel);
 vector2i_t *velocity_get(const component_t *component);
+
+int displayable_constructor(component_t *component);
 
 #endif /* !COMPONENTS_H_ */

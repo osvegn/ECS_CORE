@@ -55,3 +55,7 @@ dkms.conf
 .vscode
 build
 *tests
+
+# Docker
+Dockerfile
+docker-compose.yml

@@ -28,7 +28,6 @@ static void system_initializer(world_t *world)
     system_t system;
     vector_t *systems = &world->system_list;
     int (*constructors[])(system_t *) = {
-        &movement_constructor,
         0
     };
 

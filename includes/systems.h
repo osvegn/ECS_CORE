@@ -14,11 +14,15 @@
 
 typedef enum system_type_e {
     S_UNDEFINED,
+    WORLD_INITIALIZER,
     MOVEMENT,
     S_MAX_VALUE
 } system_type_t;
 
 int movement(void *world);
 int movement_constructor(system_t *system);
+
+int world_initializer(void *ptr);
+int world_initializer_constructor(system_t *system);
 
 #endif /* !SYSTEMS_H_ */

@@ -15,7 +15,7 @@ int world_constructor(world_t *world)
 
     rvalue = vector_constructor(&world->resource_list, sizeof(resource_t), 0);
     if (rvalue < 0)
-        return -1;    
+        return -1;
     rvalue = vector_constructor(&world->entity_list, sizeof(entity_t), 0);
     if (rvalue < 0)
         return -1;

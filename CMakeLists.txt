@@ -11,13 +11,14 @@ set(MAIN
 )
 set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/movement.c
+    ${SOURCE_ROOT}/System/world_initializer.c
     ${SOURCE_ROOT}/Component/position.c
     ${SOURCE_ROOT}/Component/velocity.c
 )
 set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
 
 # EXECUTABLE
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 include(DetectCompiler)
 
 #LIBRARY

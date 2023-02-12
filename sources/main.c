@@ -7,22 +7,40 @@
  * Copyright (c) 2023 our_rpg
  */
 
-#include "raylib.h"
+#include "world.h"
+#include "systems.h"
+
+// #include "raylib.h"
+// int main(void)
+// {
+//     const int screenWidth = 800;
+//     const int screenHeight = 450;
+
+//     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+//     SetTargetFPS(60);
+//     while (!WindowShouldClose())
+//     {
+//         BeginDrawing();
+//             ClearBackground(RAYWHITE);
+//             DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+//         EndDrawing();
+//     }
+//     CloseWindow();
+//     return 0;
+// }
 
 int main(void)
 {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    world_t world;
+    system_t system;
+    int rvalue = 0;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-    SetTargetFPS(60);
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
-            ClearBackground(RAYWHITE);
-            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-        EndDrawing();
+    world_constructor(&world);
+    world_initializer_constructor(&system);
+    world_add_system(&world, system);
+    while (!rvalue && world.system_list.size(&world.system_list)) {
+        rvalue = world_run_systems(&world);
     }
-    CloseWindow();
+    world_destructor(&world);
     return 0;
 }

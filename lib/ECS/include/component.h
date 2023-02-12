@@ -28,4 +28,8 @@ typedef struct component_s {
     void *data;
 } component_t;
 
+/// @brief Free the data of a component.
+/// @param c The component to free.
+void component_destructor(component_t *c);
+
 #endif /* !COMPONENT_H_ */

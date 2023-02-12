@@ -8,6 +8,7 @@ set(SOURCE
     ${ECS_SOURCE_ROOT}/world_system.c
     ${ECS_SOURCE_ROOT}/world_constructor.c
     ${ECS_SOURCE_ROOT}/entity_component.c
+    ${ECS_SOURCE_ROOT}/component_destructor.c
 )
 set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 

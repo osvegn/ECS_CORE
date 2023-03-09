@@ -23,13 +23,13 @@ int world_run_systems(world_t *world);
 /// @param world The world to add the system to.
 /// @param system The system to add to the world.
 /// @return 0, or -1 if the system already exists.
-int world_add_system(world_t *world, system_t system);
+int world_add_system(world_t *world, system_t *system);
 
 /// @brief It removes a system from the world
 /// @param world The world to remove the system from.
 /// @param system The system to remove.
 /// @return 0, or -1 if the system isn't found.
-int world_remove_system(world_t *world, system_t system);
+int world_remove_system(world_t *world, system_t *system);
 
 /// @brief It removes a system from the world.
 /// @param world The world to remove the system from.
@@ -41,7 +41,7 @@ int world_remove_system_by_type(world_t *world, unsigned int type);
 /// @param world The world to check for.
 /// @param system The system to check for.
 /// @return True if the system is found, false otherwise.
-bool world_contains_system(world_t *world, system_t system);
+bool world_contains_system(world_t *world, system_t *system);
 
 /// @brief It checks if a system type exists in the system list of the world.
 /// @param world The world to check for.
@@ -53,7 +53,7 @@ bool world_contains_system_by_type(world_t *world, unsigned int type);
 /// @param world The world on which get a system.
 /// @param system The system to be get in the world system list.
 /// @return A pointer to the corresponding system, 0 otherwise.
-system_t *world_get_system(world_t *world, system_t system);
+system_t *world_get_system(world_t *world, system_t *system);
 
 /// @brief It gets a system from the system list of the world.
 /// @param world The world on which get a system.

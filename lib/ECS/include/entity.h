@@ -35,14 +35,14 @@ typedef struct entity_s {
 /// @return 0 on success, -1 on failure
 /// @details **Example**
 /// @code
-    int main(void)
-    {
-        entity_t entity;
-
-        entity_constructor(&entity);
-        entity_destructor(&entity);
-        return 0;
-    }
+///    int main(void)
+///    {
+///        entity_t entity;
+///
+///        entity_constructor(&entity);
+///        entity_destructor(&entity);
+///        return 0;
+///    }
 /// @endcode
 int entity_constructor(entity_t *entity);
 
@@ -50,14 +50,14 @@ int entity_constructor(entity_t *entity);
 /// @param entity The entity to destroy
 /// @details **Example**
 /// @code
-    int main(void)
-    {
-        entity_t entity;
-
-        entity_constructor(&entity);
-        entity_destructor(&entity);
-        return 0;
-    }
+///    int main(void)
+///    {
+///        entity_t entity;
+///
+///        entity_constructor(&entity);
+///        entity_destructor(&entity);
+///        return 0;
+///    }
 /// @endcode
 void entity_destructor(entity_t *entity);
 
@@ -67,18 +67,18 @@ void entity_destructor(entity_t *entity);
 /// @return true if the entity contains the component, false if not
 /// @details **Example**
 /// @code
-    int main(void) {
-        entity_t entity;
-        component_t component;
-
-        component.type = 0;
-        entity_constructor(&entity);
-        entity_add_component(&entity, component);
-        if (entity_contains_component(&entity, component) == false)
-            return 1;
-        entity_destructor(&entity);
-        return 0;
-    }
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        entity_add_component(&entity, component);
+///        if (entity_contains_component(&entity, component) == false)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
 /// @endcode
 bool entity_contains_component(entity_t *entity, component_t component);
 
@@ -88,18 +88,18 @@ bool entity_contains_component(entity_t *entity, component_t component);
 /// @return 0 on success, -1 on failure
 /// @details **Example**
 /// @code
-    int main(void) {
-        entity_t entity;
-        component_t component;
-
-        component.type = 0;
-        entity_constructor(&entity);
-        entity_add_component(&entity, component);
-        if (entity_remove_component(&entity, component) == -1)
-            return 1;
-        entity_destructor(&entity);
-        return 0;
-    }
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        entity_add_component(&entity, component);
+///        if (entity_remove_component(&entity, component) == -1)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
 /// @endcode
 int entity_remove_component(entity_t *entity, component_t component);
 
@@ -109,17 +109,17 @@ int entity_remove_component(entity_t *entity, component_t component);
 /// @return 0 on success, -1 on failure
 /// @details **Example**
 /// @code
-    int main(void) {
-        entity_t entity;
-        component_t component;
-
-        component.type = 0;
-        entity_constructor(&entity);
-        if (entity_add_component(&entity, component) == -1)
-            return 1;
-        entity_destructor(&entity);
-        return 0;
-    }
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        if (entity_add_component(&entity, component) == -1)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
 /// @endcode
 int entity_add_component(entity_t *entity, component_t component);
 
@@ -129,20 +129,20 @@ int entity_add_component(entity_t *entity, component_t component);
 /// @return The component if found, NULL if not found
 /// @details **Example**
 /// @code
-    int main(void) {
-        entity_t entity;
-        component_t component;
-        component_t *component2;
-
-        component.type = 0;
-        entity_constructor(&entity);
-        entity_add_component(&entity, component);
-        component2 = entity_get_component(&entity, 0);
-        if (component2 == 0)
-            return 1;
-        entity_destructor(&entity);
-        return 0;
-    }
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///        component_t *component2;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        entity_add_component(&entity, component);
+///        component2 = entity_get_component(&entity, 0);
+///        if (component2 == 0)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
 /// @endcode
 component_t *entity_get_component(entity_t *entity, unsigned int type);
 

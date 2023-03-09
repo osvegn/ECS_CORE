@@ -37,15 +37,15 @@ typedef struct world_s {
 /// @return 0, or -1 on failure
 /// @details **Example**
 /// @code
-    int main(void) {
-        world_t world;
-        int rvalue = 0;
-
-        rvalue = world_constructor(&world);
-        if (rvalue < 0)
-            return -1;
-        return 0;
-    }
+///    int main(void) {
+///        world_t world;
+///        int rvalue = 0;
+///
+///        rvalue = world_constructor(&world);
+///        if (rvalue < 0)
+///            return -1;
+///        return 0;
+///    }
 /// @endcode
 int world_constructor(world_t *world);
 
@@ -53,16 +53,16 @@ int world_constructor(world_t *world);
 /// @param world The world to be destructed.
 /// @details **Example**
 /// @code
-    int main(void) {
-        world_t world;
-        int rvalue = 0;
-
-        rvalue = world_constructor(&world);
-        if (rvalue < 0)
-            return -1;
-        world_destructor(&world);
-        return 0;
-    }
+///    int main(void) {
+///        world_t world;
+///        int rvalue = 0;
+///
+///        rvalue = world_constructor(&world);
+///        if (rvalue < 0)
+///            return -1;
+///        world_destructor(&world);
+///        return 0;
+///    }
 /// @endcode
 void world_destructor(world_t *world);
 

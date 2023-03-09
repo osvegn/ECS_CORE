@@ -17,6 +17,8 @@
 /// a name and a list of components.
 /// Only systems can update an entity.
 /// Entities are only store in the world.
+/// @note To create a new entity, you have to fill the components list with
+/// components.
 typedef struct entity_s {
 
     /// @brief The id is used to differentiate two entities with the same name

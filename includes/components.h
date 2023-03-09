@@ -18,6 +18,7 @@ typedef enum component_type_e {
     POSITION,
     VELOCITY,
     DISPLAYABLE,
+    SIZE,
     C_MAX_VALUE
 } component_type_t;
 

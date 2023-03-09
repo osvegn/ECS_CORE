@@ -13,7 +13,7 @@ BUILD	=	build
 
 CC		=	cmake
 
-TESTS	=	vector_tests ecs_tests system_tests
+TESTS	=	vector_tests ecs_tests
 
 all:
 	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF

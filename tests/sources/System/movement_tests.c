@@ -23,9 +23,9 @@ void create_world(world_t *world)
     world_constructor(world);
     entity_constructor(&entity);
     position_constructor(&component, (vector2i_t){10, 10});
-    entity_add_component(&entity, component);
+    entity_add_component(&entity, &component);
     velocity_constructor(&component, (vector2i_t){5, 2});
-    entity_add_component(&entity, component);
+    entity_add_component(&entity, &component);
     world_add_entity(world, &entity);
     movement_constructor(&system);
     world_add_system(world, &system);

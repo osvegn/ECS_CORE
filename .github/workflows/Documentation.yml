@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Install submodules
+        run: git submodule update --init --recursive
       - name: Create ECS documentation
         uses: mattnotmitt/doxygen-action@v1.9.5
         with:

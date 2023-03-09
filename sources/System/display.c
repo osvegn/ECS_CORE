@@ -23,8 +23,10 @@ int display_constructor(system_t *system)
 int display(void *ptr)
 {
     vector_t entities = {0};
-    entity_t *entity;
-    int rvalue = world_join_entities(ptr, &entities, 1, DISPLAYABLE);
+    entity_t *entity = 0;
+    int rvalue = world_join_entities(ptr, &entities, 1, DISPLAYABLE, POSITION, SIZE);
+    vector2i_t position = {0};
+    vector2i_t size = {0};
 
     if (rvalue <= 0)
         return rvalue;
@@ -32,7 +34,9 @@ int display(void *ptr)
     ClearBackground(RAYWHITE);
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        DrawRectangle(0 + i * 11, 0, 10, 10, RED);
+        position = *(vector2i_t *){entity_get_component(entity, POSITION)->data};
+        size = *(vector2i_t *){entity_get_component(entity, SIZE)->data};
+        DrawRectangle(position.x, position.y, size.x, size.y, RED);
     }
     EndDrawing();
     return 0;

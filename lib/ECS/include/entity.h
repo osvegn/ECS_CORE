@@ -80,7 +80,7 @@ void entity_destructor(entity_t *entity);
 ///        return 0;
 ///    }
 /// @endcode
-bool entity_contains_component(entity_t *entity, component_t component);
+bool entity_contains_component(entity_t *entity, component_t *component);
 
 /// @brief Remove a component from an entity
 /// @param entity The entity to remove the component from
@@ -101,7 +101,7 @@ bool entity_contains_component(entity_t *entity, component_t component);
 ///        return 0;
 ///    }
 /// @endcode
-int entity_remove_component(entity_t *entity, component_t component);
+int entity_remove_component(entity_t *entity, component_t *component);
 
 /// @brief Add a component to an entity
 /// @param entity The entity to add the component to
@@ -121,7 +121,7 @@ int entity_remove_component(entity_t *entity, component_t component);
 ///        return 0;
 ///    }
 /// @endcode
-int entity_add_component(entity_t *entity, component_t component);
+int entity_add_component(entity_t *entity, component_t *component);
 
 /// @brief Get a component from an entity
 /// @param entity The entity to get the component from

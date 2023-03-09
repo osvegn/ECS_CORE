@@ -9,7 +9,7 @@
 
 #include "components.h"
 
-int displayable_constructor(component_t *component, const char *path)
+int displayable_constructor(component_t *component)
 {
     component->type = DISPLAYABLE;
     component->data = 0;

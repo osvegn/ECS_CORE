@@ -8,6 +8,7 @@
  */
 
 #include "components.h"
+#include <stdlib.h>
 
 int size_constructor(component_t *component, vector2i_t s)
 {

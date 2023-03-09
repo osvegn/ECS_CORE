@@ -55,6 +55,7 @@ dkms.conf
 .vscode
 build
 *tests
+docs
 
 # Docker
 Dockerfile

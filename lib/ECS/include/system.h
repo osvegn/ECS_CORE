@@ -16,6 +16,10 @@
 /// of component or resource. It contains a type, a boolean and a
 /// function pointer.
 /// Systems are called by the world to be run.
+/// @note To create a new system, you have to create a new type and a new
+/// function to run the system.
+/// @note Good practice is to create a constructor and use it to bind the
+/// function pointer to the run function.
 typedef struct system_s {
 
     /// @brief The type of the system. It is used to know if a system already

@@ -9,6 +9,12 @@
 
 #include "entity.h"
 
+/// @brief It returns the index of the component in the component list if it
+/// exists, or the size of the component list
+/// @param entity The entity to search through.
+/// @param component The component to find.
+/// @return The index of the component in the component list, or the size of the
+/// component list if it doesn't exist.
 static unsigned int find_component(entity_t *entity, component_t *component)
 {
     for (unsigned int i = 0; i < entity->components.size(&entity->components); i++) {
@@ -69,4 +75,9 @@ int entity_constructor(entity_t *entity)
     entity->id = id;
     id++;
     return vector_constructor(&entity->components, sizeof(component_t), 0);
+}
+
+void entity_destructor(entity_t *entity)
+{
+    entity->components.destructor(&entity->components);
 }

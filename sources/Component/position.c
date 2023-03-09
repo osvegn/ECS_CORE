@@ -23,11 +23,6 @@ int position_constructor(component_t *component, vector2i_t pos)
     return 0;
 }
 
-void position_destructor(component_t *component)
-{
-    free(component->data);
-}
-
 void position_set(component_t *component, const vector2i_t pos)
 {
     vector2i_t *position = component->data;

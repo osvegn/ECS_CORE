@@ -15,6 +15,10 @@
 /// Only systems can update resource data.
 /// Resources are only stores in the world.
 /// A resource contains a type and some data.
+/// @note To create a new resource, you have to create a new type and a new
+/// structure to store data.
+/// @note Good practice is to create a constructor, a getter and a setter
+/// functions for your resource.
 typedef struct resource_s {
 
     /// @brief The type of the resource. It is used to know if this component

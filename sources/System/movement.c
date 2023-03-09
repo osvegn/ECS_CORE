@@ -8,6 +8,7 @@
  */
 
 #include "world.h"
+#include "world_entity.h"
 #include "components.h"
 #include "systems.h"
 

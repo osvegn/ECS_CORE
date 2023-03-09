@@ -16,7 +16,7 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1.9.5
         with:
           working-directory: ./lib/ECS
-          doxyfile-path: ./lib/ECS/Doxyfile
+          doxyfile-path: ./doxyfile
       - name: Create ECS documentation artifact
         uses: actions/upload-artifact@v2
         with:

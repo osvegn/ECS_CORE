@@ -37,20 +37,20 @@ static unsigned int find_resource_by_type(vector_t *resource_list, unsigned int 
     return resource_list->size(resource_list);
 }
 
-int world_add_resource(world_t *world, resource_t resource)
+int world_add_resource(world_t *world, resource_t *resource)
 {
-    unsigned int index = find_resource(&world->resource_list, &resource);
+    unsigned int index = find_resource(&world->resource_list, resource);
 
     if (index < world->resource_list.size(&world->resource_list)) {
         return -1;
     }
-    world->resource_list.emplace_back(&world->resource_list, &resource);
+    world->resource_list.emplace_back(&world->resource_list, resource);
     return 0;
 }
 
-int world_remove_resource(world_t *world, resource_t resource)
+int world_remove_resource(world_t *world, resource_t *resource)
 {
-    unsigned int index = find_resource(&world->resource_list, &resource);
+    unsigned int index = find_resource(&world->resource_list, resource);
 
     if (index < world->resource_list.size(&world->resource_list)) {
         world->resource_list.erase(&world->resource_list, index);
@@ -70,9 +70,9 @@ int world_remove_resource_by_type(world_t *world, unsigned int type)
     return -1;
 }
 
-bool world_contains_resource(world_t *world, resource_t resource)
+bool world_contains_resource(world_t *world, resource_t *resource)
 {
-    unsigned int index = find_resource(&world->resource_list, &resource);
+    unsigned int index = find_resource(&world->resource_list, resource);
 
     if (index < world->resource_list.size(&world->resource_list)) {
         return true;
@@ -90,9 +90,9 @@ bool world_contains_resource_by_type(world_t *world, unsigned int type)
     return false;
 }
 
-resource_t *world_get_resource(world_t *world, resource_t resource)
+resource_t *world_get_resource(world_t *world, resource_t *resource)
 {
-    unsigned int index = find_resource(&world->resource_list, &resource);
+    unsigned int index = find_resource(&world->resource_list, resource);
 
     if (index < world->resource_list.size(&world->resource_list)) {
         return world->resource_list.at(&world->resource_list, index);

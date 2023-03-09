@@ -70,3 +70,8 @@ int entity_constructor(entity_t *entity)
     id++;
     return vector_constructor(&entity->components, sizeof(component_t), 0);
 }
+
+void entity_destructor(entity_t *entity)
+{
+    entity->components.destructor(&entity->components);
+}

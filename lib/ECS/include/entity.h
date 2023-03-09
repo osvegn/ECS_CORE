@@ -28,8 +28,9 @@ typedef struct entity_s {
     vector_t components;
 } entity_t;
 
-bool entity_contains_component(entity_t *entity, component_t component);
 int entity_constructor(entity_t *entity);
+void entity_destructor(entity_t *entity);
+bool entity_contains_component(entity_t *entity, component_t component);
 int entity_remove_component(entity_t *entity, component_t component);
 int entity_add_component(entity_t *entity, component_t component);
 component_t *entity_get_component(entity_t *entity, unsigned int type);

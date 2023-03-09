@@ -21,12 +21,10 @@ typedef enum component_type_e {
 } component_type_t;
 
 int position_constructor(component_t *component, vector2i_t pos);
-void position_destructor(component_t *component);
 void position_set(component_t *component, const vector2i_t pos);
 vector2i_t *position_get(const component_t *component);
 
 int velocity_constructor(component_t *component, vector2i_t vel);
-void velocity_destructor(component_t *component);
 void velocity_set(component_t *component, const vector2i_t vel);
 vector2i_t *velocity_get(const component_t *component);
 

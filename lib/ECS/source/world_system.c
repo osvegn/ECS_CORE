@@ -32,20 +32,20 @@ static unsigned int find_system_by_type(vector_t *system_list, unsigned int type
     return system_list->size(system_list);
 }
 
-int world_add_system(world_t *world, system_t system)
+int world_add_system(world_t *world, system_t *system)
 {
-    unsigned int index = find_system(&world->system_list, &system);
+    unsigned int index = find_system(&world->system_list, system);
 
     if (index < world->system_list.size(&world->system_list)) {
         return -1;
     }
-    world->system_list.emplace_back(&world->system_list, &system);
+    world->system_list.emplace_back(&world->system_list, system);
     return 0;
 }
 
-int world_remove_system(world_t *world, system_t system)
+int world_remove_system(world_t *world, system_t *system)
 {
-    unsigned int index = find_system(&world->system_list, &system);
+    unsigned int index = find_system(&world->system_list, system);
 
     if (index < world->system_list.size(&world->system_list)) {
         world->system_list.erase(&world->system_list, index);
@@ -65,9 +65,9 @@ int world_remove_system_by_type(world_t *world, unsigned int type)
     return -1;
 }
 
-bool world_contains_system(world_t *world, system_t system)
+bool world_contains_system(world_t *world, system_t *system)
 {
-    unsigned int index = find_system(&world->system_list, &system);
+    unsigned int index = find_system(&world->system_list, system);
 
     if (index < world->system_list.size(&world->system_list)) {
         return true;
@@ -85,9 +85,9 @@ bool world_contains_system_by_type(world_t *world, unsigned int type)
     return false;
 }
 
-system_t *world_get_system(world_t *world, system_t system)
+system_t *world_get_system(world_t *world, system_t *system)
 {
-    unsigned int index = find_system(&world->system_list, &system);
+    unsigned int index = find_system(&world->system_list, system);
 
     if (index < world->system_list.size(&world->system_list)) {
         return world->system_list.at(&world->system_list, index);

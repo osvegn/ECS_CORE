@@ -23,11 +23,6 @@ int velocity_constructor(component_t *component, vector2i_t vel)
     return 0;
 }
 
-void velocity_destructor(component_t *component)
-{
-    free(component->data);
-}
-
 void velocity_set(component_t *component, const vector2i_t vel)
 {
     vector2i_t *velocity = component->data;

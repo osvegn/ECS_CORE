@@ -15,6 +15,10 @@
 /// Only systems can update component data.
 /// Components are only stores in entities.
 /// A component contains a type and some data.
+/// @note To create a new component, you have to create a new type and a new
+/// structure to store data.
+/// @note Good practice is to create a constructor, a getter and a
+/// setter functions for your component.
 typedef struct component_s {
 
     /// @brief The type of the component. It is used to know if this component

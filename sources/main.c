@@ -8,6 +8,7 @@
  */
 
 #include "world.h"
+#include "world_system.h"
 #include "systems.h"
 
 // #include "raylib.h"
@@ -37,7 +38,7 @@ int main(void)
 
     world_constructor(&world);
     world_initializer_constructor(&system);
-    world_add_system(&world, system);
+    world_add_system(&world, &system);
     while (!rvalue && world.system_list.size(&world.system_list)) {
         rvalue = world_run_systems(&world);
     }

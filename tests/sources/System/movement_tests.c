@@ -10,6 +10,8 @@
 #include <criterion/criterion.h>
 #include "systems.h"
 #include "world.h"
+#include "world_entity.h"
+#include "world_system.h"
 #include "components.h"
 
 void create_world(world_t *world)
@@ -24,9 +26,9 @@ void create_world(world_t *world)
     entity_add_component(&entity, component);
     velocity_constructor(&component, (vector2i_t){5, 2});
     entity_add_component(&entity, component);
-    world_add_entity(world, entity);
+    world_add_entity(world, &entity);
     movement_constructor(&system);
-    world_add_system(world, system);
+    world_add_system(world, &system);
 }
 
 Test(run_movement_system, test01)

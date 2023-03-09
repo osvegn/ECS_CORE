@@ -19,16 +19,16 @@
 /// @return 0, or -1 if the resource already exists.
 /// @details **Example**
 /// @code
-    int add_resource(world_t *world)
-    {
-        int rvalue = 0;
-        resource_t resource = {1, 0};
-
-        rvalue = world_add_resource(world, &resource);
-        if (rvalue < 0)
-            return -1;
-        return 0;
-    }
+///    int add_resource(world_t *world)
+///    {
+///        int rvalue = 0;
+///        resource_t resource = {1, 0};
+///
+///        rvalue = world_add_resource(world, &resource);
+///        if (rvalue < 0)
+///            return -1;
+///        return 0;
+///    }
 /// @endcode
 int world_add_resource(world_t *world, resource_t *resource);
 
@@ -38,16 +38,16 @@ int world_add_resource(world_t *world, resource_t *resource);
 /// @return 0, or -1 if the resource isn't found.
 /// @details **Example**
 /// @code
-    int remove_resource(world_t *world)
-    {
-        int rvalue = 0;
-        resource_t resource = {1, 0};
-
-        rvalue = world_remove_resource(world, &resource);
-        if (rvalue < 0)
-            return -1;
-        return 0;
-    }
+///    int remove_resource(world_t *world)
+///    {
+///        int rvalue = 0;
+///        resource_t resource = {1, 0};
+///
+///        rvalue = world_remove_resource(world, &resource);
+///        if (rvalue < 0)
+///            return -1;
+///        return 0;
+///    }
 /// @endcode
 int world_remove_resource(world_t *world, resource_t *resource);
 

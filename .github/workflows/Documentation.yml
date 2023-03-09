@@ -25,5 +25,5 @@ jobs:
       - name: Upload ECS documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ECS-docs
+          folder: ./lib/ECS/docs/html
           target-folder: docs/ECS

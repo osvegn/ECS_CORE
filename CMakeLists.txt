@@ -19,6 +19,7 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/Component/displayable.c
     ${SOURCE_ROOT}/Resource/window_resource.c
     ${SOURCE_ROOT}/Entity/rectangle.c
+    ${SOURCE_ROOT}/System/windows_manager.c
 )
 set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
 

@@ -20,6 +20,8 @@ typedef enum resource_type_e {
 } resource_type_t;
 
 int window_constructor(resource_t *resource);
+int window_copy_constructor(resource_t *resource, window_t *w);
+void window_destructor(resource_t *resource);
 
 
 #endif /* !RESOURCES_H_*/

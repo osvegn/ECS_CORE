@@ -19,6 +19,10 @@ typedef enum component_type_e {
     VELOCITY,
     DISPLAYABLE,
     SIZE,
+    CLICKABLE,
+    CLICKED,
+    ACTION,
+    CONTROLLABLE,
     C_MAX_VALUE
 } component_type_t;
 
@@ -31,5 +35,15 @@ void velocity_set(component_t *component, const vector2i_t vel);
 vector2i_t *velocity_get(const component_t *component);
 
 int displayable_constructor(component_t *component);
+
+int clickable_constructor(component_t *component);
+
+int clicked_constructor(component_t *component);
+
+int action_constructor(component_t *component, void *data);
+void *action_get(const component_t *component);
+void action_set(component_t *component, void *data);
+
+int controllable_constructor(component_t *component);
 
 #endif /* !COMPONENTS_H_ */

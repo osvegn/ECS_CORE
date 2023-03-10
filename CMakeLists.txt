@@ -13,14 +13,23 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/movement.c
     ${SOURCE_ROOT}/System/display.c
     ${SOURCE_ROOT}/System/world_initializer.c
+    ${SOURCE_ROOT}/System/windows_manager.c
+    ${SOURCE_ROOT}/System/move_controllable.c
+
     ${SOURCE_ROOT}/Component/position.c
     ${SOURCE_ROOT}/Component/velocity.c
     ${SOURCE_ROOT}/Component/size.c
     ${SOURCE_ROOT}/Component/displayable.c
+    ${SOURCE_ROOT}/Component/clickable.c
+    ${SOURCE_ROOT}/Component/clicked.c
+    ${SOURCE_ROOT}/Component/action.c
+    ${SOURCE_ROOT}/Component/controllable.c
+
     ${SOURCE_ROOT}/Resource/window_resource.c
+
     ${SOURCE_ROOT}/Entity/rectangle.c
-    ${SOURCE_ROOT}/System/windows_manager.c
 )
+
 set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
 
 # EXECUTABLE

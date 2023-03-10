@@ -35,6 +35,8 @@ static void system_initializer(world_t *world)
     int (*constructors[])(system_t *) = {
         &display_constructor,
         &windows_manager_constructor,
+        &movement_constructor,
+        &move_controllable_constructor,
         0
     };
 

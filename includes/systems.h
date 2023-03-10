@@ -18,6 +18,8 @@ typedef enum system_type_e {
     MOVEMENT,
     DISPLAY,
     WINDOW_MANAGER,
+    MOVE_INPUT,
+    MOVE_CONTROLLABLE,
     S_MAX_VALUE
 } system_type_t;
 
@@ -32,5 +34,8 @@ int display_constructor(system_t *system);
 
 int windows_manager(void *ptr);
 int windows_manager_constructor(system_t *system);
+
+int move_controllable_run(void *world);
+int move_controllable_constructor(system_t *system);
 
 #endif /* !SYSTEMS_H_ */

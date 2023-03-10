@@ -21,5 +21,9 @@ int rectangle_constructor(entity_t *entity)
     entity_add_component(entity, &component);
     displayable_constructor(&component);
     entity_add_component(entity, &component);
+    controllable_constructor(&component);
+    entity_add_component(entity, &component);
+    velocity_constructor(&component, (vector2i_t){0, 0});
+    entity_add_component(entity, &component);
     return 0;
 }

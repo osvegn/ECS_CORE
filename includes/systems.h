@@ -16,6 +16,7 @@ typedef enum system_type_e {
     S_UNDEFINED,
     WORLD_INITIALIZER,
     MOVEMENT,
+    DISPLAY,
     S_MAX_VALUE
 } system_type_t;
 
@@ -25,4 +26,6 @@ int movement_constructor(system_t *system);
 int world_initializer(void *ptr);
 int world_initializer_constructor(system_t *system);
 
+int display(void *world);
+int display_constructor(system_t *system);
 #endif /* !SYSTEMS_H_ */

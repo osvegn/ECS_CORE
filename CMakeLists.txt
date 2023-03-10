@@ -11,9 +11,14 @@ set(MAIN
 )
 set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/movement.c
+    ${SOURCE_ROOT}/System/display.c
     ${SOURCE_ROOT}/System/world_initializer.c
     ${SOURCE_ROOT}/Component/position.c
     ${SOURCE_ROOT}/Component/velocity.c
+    ${SOURCE_ROOT}/Component/size.c
+    ${SOURCE_ROOT}/Component/displayable.c
+    ${SOURCE_ROOT}/Resource/window_resource.c
+    ${SOURCE_ROOT}/Entity/rectangle.c
 )
 set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
 

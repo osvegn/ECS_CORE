@@ -38,3 +38,4 @@ include(DetectCompiler)
 
 #LIBRARY
 add_subdirectory(lib)
+add_subdirectory(ECS)

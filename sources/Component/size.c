@@ -23,6 +23,21 @@ int size_constructor(component_t *component, vector2i_t s)
     return 0;
 }
 
+/// @brief This function set the size of the component
+/// @param component The component to set the size
+/// @param s The new size of the component
+/// @details **Example:**
+/// @code
+/// int main(void) {
+///     component_t component;
+///     vector2i_t size = {10, 10};
+///
+///     size_constructor(&component, size);
+///     size_set(&component, (vector2i_t){20, 20});
+///     component_destroy(&component);
+///     return 0;
+/// }
+/// @endcode
 void size_set(component_t *component, const vector2i_t s)
 {
     vector2i_t *size = component->data;

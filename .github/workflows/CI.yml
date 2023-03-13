@@ -19,6 +19,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Install submodules
+      run: git submodule update --init --recursive
+
     - name: Build
       run: |
         cmake -B build

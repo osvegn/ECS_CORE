@@ -15,6 +15,7 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/world_initializer.c
     ${SOURCE_ROOT}/System/windows_manager.c
     ${SOURCE_ROOT}/System/move_controllable.c
+    ${SOURCE_ROOT}/System/gravity.c
 
     ${SOURCE_ROOT}/Component/position.c
     ${SOURCE_ROOT}/Component/velocity.c
@@ -24,8 +25,11 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/Component/clicked.c
     ${SOURCE_ROOT}/Component/action.c
     ${SOURCE_ROOT}/Component/controllable.c
+    ${SOURCE_ROOT}/Component/gravitable.c
+    ${SOURCE_ROOT}/Component/weight.c
 
     ${SOURCE_ROOT}/Resource/window_resource.c
+    ${SOURCE_ROOT}/Resource/gravity.c
 
     ${SOURCE_ROOT}/Entity/rectangle.c
 )

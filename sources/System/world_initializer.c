@@ -36,7 +36,8 @@ static void system_initializer(world_t *world)
         &display_constructor,
         &windows_manager_constructor,
         &movement_constructor,
-        &move_controllable_constructor,
+        // &move_controllable_constructor,
+        &gravity_constructor,
         0
     };
 
@@ -58,11 +59,15 @@ static void resource_initializer(world_t *world)
     vector_t *resources = &world->resource_list;
     int (*constructors[])(resource_t *) = {
         &window_constructor,
+        &resource_gravity_constructor,
         0
     };
 
     for (unsigned int i = 0; constructors[i]; i++) {
         constructors[i](&resource);
+        if (resource.type == GRAVITY) {
+            resource.data = 1;
+        }
         resources->emplace_back(resources, &resource);
     }
 }

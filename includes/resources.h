@@ -16,6 +16,7 @@
 typedef enum resource_type_e {
     R_UNDEFINED,
     WINDOW,
+    GRAVITY,
     R_MAX_VALUE
 } resource_type_t;
 
@@ -110,5 +111,8 @@ int window_copy_constructor(resource_t *resource, window_t *w);
 /// @endcode
 void window_destructor(resource_t *resource);
 
+int resource_gravity_constructor(resource_t *resource, void *data);
+void *resource_gravity_get(const resource_t *resource);
+void resource_gravity_set(resource_t *resource, void *data);
 
 #endif /* !RESOURCES_H_*/

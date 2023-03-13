@@ -24,6 +24,8 @@ typedef enum component_type_e {
     CLICKED,
     ACTION,
     CONTROLLABLE,
+    WEIGHT,
+    GRAVITABLE,
     C_MAX_VALUE
 } component_type_t;
 
@@ -215,5 +217,12 @@ int size_constructor(component_t *component, vector2i_t s);
 void size_set(component_t *component, const vector2i_t s);
 
 void size_get(const component_t *component, vector2i_t *s);
+
+
+int gravitable_constructor(component_t *component);
+
+int weight_constructor(component_t *component, void *data);
+void *weight_get(const component_t *component);
+void weight_set(component_t *component, void *data);
 
 #endif /* !COMPONENTS_H_ */

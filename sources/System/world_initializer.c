@@ -24,7 +24,9 @@ static void entity_initializer(world_t *world)
     entity_t entity;
     vector_t *entities = &world->entity_list;
 
-    rectangle_constructor(&entity);
+    player_constructor(&entity);
+    entities->emplace_back(entities, &entity);
+    plateform_constructor(&entity);
     entities->emplace_back(entities, &entity);
 }
 
@@ -36,8 +38,9 @@ static void system_initializer(world_t *world)
         &display_constructor,
         &windows_manager_constructor,
         &movement_constructor,
-        // &move_controllable_constructor,
+        &move_controllable_constructor,
         &gravity_constructor,
+        &jump_constructor,
         0
     };
 
@@ -76,8 +79,8 @@ int world_initializer(void *ptr)
 {
     world_t *world = ptr;
 
-    entity_initializer(world);
-    system_initializer(world);
     resource_initializer(world);
+    system_initializer(world);
+    entity_initializer(world);
     return 0;
 }

@@ -21,6 +21,8 @@ typedef enum system_type_e {
     MOVE_INPUT,
     MOVE_CONTROLLABLE,
     GRAVITY_SYSTEM,
+    JUMP_SYSTEM,
+    COLLISION_SYSTEM,
     S_MAX_VALUE
 } system_type_t;
 
@@ -41,5 +43,8 @@ int move_controllable_constructor(system_t *system);
 
 int gravity_constructor(system_t *system);
 int gravity(void *ptr);
+
+int jump_constructor(system_t *system);
+int jump(void *ptr);
 
 #endif /* !SYSTEMS_H_ */

@@ -37,7 +37,6 @@ int gravity(void *ptr)
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
         velocity = (vector2i_t *)entity_get_component(entity, VELOCITY)->data;
-        printf("velocity: %i\n", velocity->y);
         velocity->y += (int)resource->data;
     }
     return 0;

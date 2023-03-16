@@ -10,7 +10,7 @@
 #include "world_entity.h"
 #include "components.h"
 
-int rectangle_constructor(entity_t *entity)
+int player_constructor(entity_t *entity)
 {
     component_t component;
 
@@ -26,6 +26,10 @@ int rectangle_constructor(entity_t *entity)
     velocity_constructor(&component, (vector2i_t){0, 0});
     entity_add_component(entity, &component);
     gravitable_constructor(&component);
+    entity_add_component(entity, &component);
+    jumpable_constructor(&component);
+    entity_add_component(entity, &component);
+    collidable_constructor(&component);
     entity_add_component(entity, &component);
     return 0;
 }

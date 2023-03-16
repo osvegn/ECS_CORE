@@ -35,18 +35,11 @@ int move_controllable_run(void *world)
         entity = *(entity_t **)entities.at(&entities, i);
         component = entity_get_component(entity, VELOCITY);
         ((vector2i_t *)component->data)->x = 0;
-        ((vector2i_t *)component->data)->y = 0;
-        if (IsKeyDown(KEY_Z)) {
-            ((vector2i_t *)component->data)->y = -1;
-        }
-        if (IsKeyDown(KEY_S)) {
-            ((vector2i_t *)component->data)->y = 1;
-        }
         if (IsKeyDown(KEY_Q)) {
-            ((vector2i_t *)component->data)->x = -1;
+            ((vector2i_t *)component->data)->x = -5;
         }
         if (IsKeyDown(KEY_D)) {
-            ((vector2i_t *)component->data)->x = 1;
+            ((vector2i_t *)component->data)->x = 5;
         }
     }
     return 0;

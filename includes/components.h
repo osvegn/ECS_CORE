@@ -26,6 +26,8 @@ typedef enum component_type_e {
     CONTROLLABLE,
     WEIGHT,
     GRAVITABLE,
+    JUMPABLE,
+    COLLIDABLE,
     C_MAX_VALUE
 } component_type_t;
 

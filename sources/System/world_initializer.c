@@ -41,6 +41,7 @@ static void system_initializer(world_t *world)
         &move_controllable_constructor,
         &gravity_constructor,
         &jump_constructor,
+        &createObstacle_constructor,
         0
     };
 
@@ -60,17 +61,20 @@ static void resource_initializer(world_t *world)
 {
     resource_t resource;
     vector_t *resources = &world->resource_list;
-    int (*constructors[])(resource_t *) = {
+    window_t window = {840, 600, "rpg", 60};
+
+    void *data[] = {
+        &window,
+        1,
+        0
+    };
+    int (*constructors[])(resource_t *, void *) = {
         &window_constructor,
         &resource_gravity_constructor,
         0
     };
-
     for (unsigned int i = 0; constructors[i]; i++) {
-        constructors[i](&resource);
-        if (resource.type == GRAVITY) {
-            resource.data = 1;
-        }
+        constructors[i](&resource, data[i]);
         resources->emplace_back(resources, &resource);
     }
 }

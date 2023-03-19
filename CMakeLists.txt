@@ -17,6 +17,7 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/move_controllable.c
     ${SOURCE_ROOT}/System/gravity.c
     ${SOURCE_ROOT}/System/jump.c
+    ${SOURCE_ROOT}/System/createObstacle.c
 
     ${SOURCE_ROOT}/Component/position.c
     ${SOURCE_ROOT}/Component/velocity.c
@@ -30,12 +31,15 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/Component/weight.c
     ${SOURCE_ROOT}/Component/jumpable.c
     ${SOURCE_ROOT}/Component/collidable.c
+    ${SOURCE_ROOT}/Component/color.c
+    ${SOURCE_ROOT}/Component/obstacle.c
 
     ${SOURCE_ROOT}/Resource/window_resource.c
     ${SOURCE_ROOT}/Resource/gravity.c
 
     ${SOURCE_ROOT}/Entity/player.c
     ${SOURCE_ROOT}/Entity/plateform.c
+    ${SOURCE_ROOT}/Entity/obstacle.c
 )
 
 set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})

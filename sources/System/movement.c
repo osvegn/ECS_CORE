@@ -36,14 +36,15 @@ static int check_collision(vector2i_t **components, entity_t *entity, vector_t c
         }
         if (components[0]->y + components[1]->y + entity_size->y > collider_pos->y &&
             components[0]->y + components[1]->y < collider_pos->y + collider_size->y &&
-            components[0]->x + components[1]->x + entity_size->x > collider_pos->x &&
-            components[0]->x + components[1]->x < collider_pos->x + collider_size->x) {
+            components[0]->x + entity_size->x > collider_pos->x &&
+            components[0]->x < collider_pos->x + collider_size->x
+        ) {
             components[1]->y = 0;
         }
         if (components[0]->x + components[1]->x + entity_size->x > collider_pos->x &&
             components[0]->x + components[1]->x < collider_pos->x + collider_size->x &&
-            components[0]->y + components[1]->y + entity_size->y > collider_pos->y &&
-            components[0]->y + components[1]->y < collider_pos->y + collider_size->y) {
+            components[0]->y + entity_size->y > collider_pos->y &&
+            components[0]->y < collider_pos->y + collider_size->y) {
             components[1]->x = 0;
         }
     }

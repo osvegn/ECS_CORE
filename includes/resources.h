@@ -22,14 +22,16 @@ typedef enum resource_type_e {
 
 /// @brief This function is used to create a window resource
 /// @param resource The resource to create
+/// @param data The data to use to create the resource
 /// @return 0 if the resource was created, -1 otherwise
 /// @details **Example**
 /// @code
 ///    int main(void)
 ///    {
 ///        resource_t window;
+///        window_t w = {1920, 1080, "Our RPG", 60};
 ///
-///        if (window_constructor(&window) == -1)
+///        if (window_constructor(&window, &w) == -1)
 ///            return 84;
 ///        while (!WindowShouldClose()) {
 ///            BeginDrawing();
@@ -41,7 +43,7 @@ typedef enum resource_type_e {
 ///        return 0;
 ///    }
 /// @endcode
-int window_constructor(resource_t *resource);
+int window_constructor(resource_t *resource, void *data);
 
 /// @brief This function is used to create a window resource
 /// @param resource The resource to create

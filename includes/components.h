@@ -12,6 +12,7 @@
 
 #include "component.h"
 #include "vector2i.h"
+#include "raylib.h"
 
 /// @brief Component types
 typedef enum component_type_e {
@@ -28,6 +29,8 @@ typedef enum component_type_e {
     GRAVITABLE,
     JUMPABLE,
     COLLIDABLE,
+    COLOR,
+    OBSTACLE,
     C_MAX_VALUE
 } component_type_t;
 
@@ -226,5 +229,9 @@ int gravitable_constructor(component_t *component);
 int weight_constructor(component_t *component, void *data);
 void *weight_get(const component_t *component);
 void weight_set(component_t *component, void *data);
+
+int color_constructor(component_t *component, Color color);
+Color *get_color(component_t *component, Color *color);
+int set_color(component_t *component, Color color);
 
 #endif /* !COMPONENTS_H_ */

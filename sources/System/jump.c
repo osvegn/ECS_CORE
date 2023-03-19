@@ -36,7 +36,7 @@ int jump(void *ptr)
         if (IsKeyPressed(KEY_SPACE)) {
             entity = *(entity_t **)entities.at(&entities, i);
             velocity = (vector2i_t *)entity_get_component(entity, VELOCITY)->data;
-            velocity->y = -10;
+            velocity->y = -20;
         }
     }
     return 0;

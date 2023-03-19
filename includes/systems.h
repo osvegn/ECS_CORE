@@ -23,6 +23,7 @@ typedef enum system_type_e {
     GRAVITY_SYSTEM,
     JUMP_SYSTEM,
     COLLISION_SYSTEM,
+    CREATE_OBSTACLE,
     S_MAX_VALUE
 } system_type_t;
 
@@ -46,5 +47,8 @@ int gravity(void *ptr);
 
 int jump_constructor(system_t *system);
 int jump(void *ptr);
+
+int createObstacle_constructor(system_t *system);
+int createObstacle_update(void *ptr);
 
 #endif /* !SYSTEMS_H_ */

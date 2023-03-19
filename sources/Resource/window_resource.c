@@ -10,11 +10,11 @@
 #include "resources.h"
 #include "raylib.h"
 
-int window_constructor(resource_t *resource)
+int window_constructor(resource_t *resource, void *data)
 {
-    window_t window = {800, 450, "Our RPG", 60};
+    window_t *window = data;
 
-    return window_copy_constructor(resource, &window);
+    return window_copy_constructor(resource, window);
 }
 
 int window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps)

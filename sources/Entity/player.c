@@ -15,9 +15,9 @@ int player_constructor(entity_t *entity)
     component_t component;
 
     entity_constructor(entity);
-    size_constructor(&component, (vector2i_t){100, 100});
+    size_constructor(&component, (vector2i_t){50, 50});
     entity_add_component(entity, &component);
-    position_constructor(&component, (vector2i_t){0, 0});
+    position_constructor(&component, (vector2i_t){500, 200});
     entity_add_component(entity, &component);
     displayable_constructor(&component);
     entity_add_component(entity, &component);

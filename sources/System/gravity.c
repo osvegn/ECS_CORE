@@ -27,7 +27,7 @@ int gravity(void *ptr)
     vector_t entities = {0};
     entity_t *entity = 0;
     int rvalue = world_join_entities(ptr, &entities, 2, C_GRAVITABLE, C_VELOCITY);
-    resource_t *resource = world_get_resource_by_type(ptr, GRAVITY);
+    resource_t *resource = world_get_resource_by_type(ptr, R_GRAVITY);
     vector2i_t *velocity = 0;
 
     if (rvalue <= 0)

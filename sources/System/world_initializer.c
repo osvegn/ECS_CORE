@@ -69,7 +69,7 @@ static void resource_initializer(world_t *world)
         0
     };
     int (*constructors[])(resource_t *, void *) = {
-        &window_constructor,
+        &resource_window_constructor,
         &resource_gravity_constructor,
         0
     };

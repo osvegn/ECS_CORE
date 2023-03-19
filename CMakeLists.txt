@@ -13,6 +13,8 @@ ${SOURCE_ROOT}/main.c
 add_subdirectory(sources)
 
 set(GLOBAL_SOURCES
+    ${SOURCES}
+
     ${SOURCE_ROOT}/System/movement.c
     ${SOURCE_ROOT}/System/display.c
     ${SOURCE_ROOT}/System/world_initializer.c
@@ -21,11 +23,6 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/System/gravity.c
     ${SOURCE_ROOT}/System/jump.c
     ${SOURCE_ROOT}/System/createObstacle.c
-
-    ${SOURCES}
-
-    ${SOURCE_ROOT}/Resource/window_resource.c
-    ${SOURCE_ROOT}/Resource/gravity.c
 
     ${SOURCE_ROOT}/Entity/player.c
     ${SOURCE_ROOT}/Entity/plateform.c

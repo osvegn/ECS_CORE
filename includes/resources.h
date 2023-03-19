@@ -15,8 +15,8 @@
 
 typedef enum resource_type_e {
     R_UNDEFINED,
-    WINDOW,
-    GRAVITY,
+    R_WINDOW,
+    R_GRAVITY,
     R_MAX_VALUE
 } resource_type_t;
 
@@ -31,7 +31,7 @@ typedef enum resource_type_e {
 ///        resource_t window;
 ///        window_t w = {1920, 1080, "Our RPG", 60};
 ///
-///        if (window_constructor(&window, &w) == -1)
+///        if (resource_window_constructor(&window, &w) == -1)
 ///            return 84;
 ///        while (!WindowShouldClose()) {
 ///            BeginDrawing();
@@ -39,11 +39,11 @@ typedef enum resource_type_e {
 ///            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 ///            EndDrawing();
 ///        }
-///        window_destructor(&window);
+///        resource_window_destructor(&window);
 ///        return 0;
 ///    }
 /// @endcode
-int window_constructor(resource_t *resource, void *data);
+int resource_window_constructor(resource_t *resource, void *data);
 
 /// @brief This function is used to create a window resource
 /// @param resource The resource to create
@@ -58,7 +58,7 @@ int window_constructor(resource_t *resource, void *data);
 ///    {
 ///        resource_t window;
 ///
-///        if (window_constructor_with_params(&window, 800, 450, "Our RPG", 60) == -1)
+///        if (resource_window_constructor_with_params(&window, 800, 450, "Our RPG", 60) == -1)
 ///            return 84;
 ///        while (!WindowShouldClose()) {
 ///            BeginDrawing();
@@ -66,11 +66,11 @@ int window_constructor(resource_t *resource, void *data);
 ///            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 ///            EndDrawing();
 ///        }
-///        window_destructor(&window);
+///        resource_window_destructor(&window);
 ///        return 0;
 ///    }
 /// @endcode
-int window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps);
+int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps);
 
 /// @brief This function is used to create a window resource
 /// @param resource The resource to create
@@ -83,7 +83,7 @@ int window_constructor_with_params(resource_t *resource, unsigned int width, uns
 ///        resource_t window;
 ///        window_t w = {800, 450, "Our RPG", 60};
 ///
-///        if (window_copy_constructor(&window, &w) == -1)
+///        if (resource_window_copy_constructor(&window, &w) == -1)
 ///            return 84;
 ///        while (!WindowShouldClose()) {
 ///            BeginDrawing();
@@ -91,11 +91,11 @@ int window_constructor_with_params(resource_t *resource, unsigned int width, uns
 ///            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 ///            EndDrawing();
 ///        }
-///        window_destructor(&window);
+///        resource_window_destructor(&window);
 ///        return 0;
 ///    }
 /// @endcode
-int window_copy_constructor(resource_t *resource, window_t *w);
+int resource_window_copy_constructor(resource_t *resource, window_t *w);
 
 /// @brief This function is used to close the window and free the memory allocated for the resource
 /// @param resource The resource to free
@@ -105,13 +105,13 @@ int window_copy_constructor(resource_t *resource, window_t *w);
 ///    {
 ///        resource_t window;
 ///
-///        if (window_constructor(&window) == -1)
+///        if (resource_window_constructor(&window) == -1)
 ///            return 84;
-///        window_destructor(&window);
+///        resource_window_destructor(&window);
 ///        return 0;
 ///    }
 /// @endcode
-void window_destructor(resource_t *resource);
+void resource_window_destructor(resource_t *resource);
 
 int resource_gravity_constructor(resource_t *resource, void *data);
 void *resource_gravity_get(const resource_t *resource);

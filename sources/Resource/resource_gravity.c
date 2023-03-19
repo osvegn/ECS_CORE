@@ -11,17 +11,21 @@
 
 int resource_gravity_constructor(resource_t *resource, void *data)
 {
-    resource->type = GRAVITY;
+    resource->type = R_GRAVITY;
     resource->data = data;
     return 0;
 }
 
 void *resource_gravity_get(const resource_t *resource)
 {
+    if (resource->type != R_GRAVITY)
+        return 0;
     return resource->data;
 }
 
 void resource_gravity_set(resource_t *resource, void *data)
 {
+    if (resource->type != R_GRAVITY)
+        return;
     resource->data = data;
 }

@@ -12,27 +12,27 @@
 #include <stdlib.h>
 #include <string.h>
 
-int window_constructor(resource_t *resource, void *data)
+int resource_window_constructor(resource_t *resource, void *data)
 {
     window_t *window = data;
 
-    return window_copy_constructor(resource, window);
+    return resource_window_copy_constructor(resource, window);
 }
 
-int window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps)
+int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps)
 {
     window_t window = {width, height, title, fps};
 
-    return window_copy_constructor(resource, &window);
+    return resource_window_copy_constructor(resource, &window);
 }
 
-int window_copy_constructor(resource_t *resource, window_t *w)
+int resource_window_copy_constructor(resource_t *resource, window_t *w)
 {
     window_t *window = malloc(sizeof(window_t));
 
     if (!window)
         return -1;
-    resource->type = WINDOW;
+    resource->type = R_WINDOW;
     window->width = w->width;
     window->height = w->height;
     strcpy(window->title, w->title);
@@ -43,7 +43,7 @@ int window_copy_constructor(resource_t *resource, window_t *w)
     return 0;
 }
 
-void window_destructor(resource_t *resource)
+void resource_window_destructor(resource_t *resource)
 {
     CloseWindow();
     free(resource->data);

@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int clicked_constructor(component_t *component)
+int component_clicked_constructor(component_t *component)
 {
-    component->type = CLICKED;
+    component->type = C_CLICKED;
     component->data = 0;
     return 0;
 }

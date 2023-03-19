@@ -10,9 +10,9 @@
 #include "components.h"
 #include "raylib.h"
 
-int color_constructor(component_t *component, Color color)
+int component_color_constructor(component_t *component, Color color)
 {
-    component->type = COLOR;
+    component->type = C_COLOR;
     component->data = malloc(sizeof(Color));
     if (!component->data)
         return 84;
@@ -20,16 +20,16 @@ int color_constructor(component_t *component, Color color)
     return 0;
 }
 
-Color *get_color(component_t *component, Color *color)
+Color *component_get_color(component_t *component, Color *color)
 {
-    if (component->type != COLOR)
+    if (component->type != C_COLOR)
         return 0;
     return (Color *)component->data;
 }
 
-int set_color(component_t *component, Color color)
+int component_set_color(component_t *component, Color color)
 {
-    if (component->type != COLOR)
+    if (component->type != C_COLOR)
         return 84;
     *(Color *)component->data = color;
     return 0;

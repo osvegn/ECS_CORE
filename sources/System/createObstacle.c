@@ -29,11 +29,11 @@ static int remove_obstacle(world_t *world)
     vector2i_t *pos = 0;
     vector2i_t *size = 0;
 
-    world_join_entities(world, &entities, 1, OBSTACLE);
+    world_join_entities(world, &entities, 1, C_OBSTACLE);
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        pos = entity_get_component(entity, POSITION)->data;
-        size = entity_get_component(entity, SIZE)->data;
+        pos = entity_get_component(entity, C_POSITION)->data;
+        size = entity_get_component(entity, C_SIZE)->data;
         if (pos->x <= GetMouseX() && pos->x + size->x >= GetMouseX() &&
             pos->y <= GetMouseY() && pos->y + size->y >= GetMouseY()) {
             world_remove_entity_by_id(world, entity->id);

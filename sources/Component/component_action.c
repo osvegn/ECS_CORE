@@ -9,19 +9,23 @@
 
 #include "components.h"
 
-int action_constructor(component_t *component, void *data)
+int component_action_constructor(component_t *component, void *data)
 {
-    component->type = ACTION;
+    component->type = C_ACTION;
     component->data = data;
     return 0;
 }
 
-void *action_get(const component_t *component)
+void *component_action_get(const component_t *component)
 {
+    if (component->type != C_ACTION)
+        return 0;
     return component->data;
 }
 
-void action_set(component_t *component, void *data)
+void component_action_set(component_t *component, void *data)
 {
+    if (component->type != C_ACTION)
+        return;
     component->data = data;
 }

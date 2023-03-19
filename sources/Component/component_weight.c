@@ -9,19 +9,23 @@
 
 #include "components.h"
 
-int weight_constructor(component_t *component, void *data)
+int component_weight_constructor(component_t *component, void *data)
 {
-    component->type = WEIGHT;
+    component->type = C_WEIGHT;
     component->data = data;
     return 0;
 }
 
-void *weight_get(const component_t *component)
+void *component_weight_get(const component_t *component)
 {
+    if (component->type != C_WEIGHT)
+        return 0;
     return component->data;
 }
 
-void weight_set(component_t *component, void *data)
+void component_weight_set(component_t *component, void *data)
 {
+    if (component->type != C_WEIGHT)
+        return;
     component->data = data;
 }

@@ -11,7 +11,7 @@
 
 int component_obstacle_constructor(component_t *component)
 {
-    component->type = OBSTACLE;
+    component->type = C_OBSTACLE;
     component->data = 0;
     return 0;
 }

@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int clickable_constructor(component_t *component)
+int component_clickable_constructor(component_t *component)
 {
-    component->type = CLICKABLE;
+    component->type = C_CLICKABLE;
     component->data = 0;
     return 0;
 }

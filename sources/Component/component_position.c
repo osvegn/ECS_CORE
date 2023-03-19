@@ -10,28 +10,32 @@
 #include "components.h"
 #include <stdlib.h>
 
-int position_constructor(component_t *component, vector2i_t pos)
+int component_position_constructor(component_t *component, vector2i_t pos)
 {
     vector2i_t *position = malloc(sizeof(vector2i_t));
 
     if (!position)
         return -1;
-    component->type = POSITION;
+    component->type = C_POSITION;
     position->x = pos.x;
     position->y = pos.y;
     component->data = (void *)position;
     return 0;
 }
 
-void position_set(component_t *component, const vector2i_t pos)
+void component_position_set(component_t *component, const vector2i_t pos)
 {
     vector2i_t *position = component->data;
 
+    if (!component->type == C_POSITION)
+        return;
     position->x = pos.x;
     position->y = pos.y;
 }
 
-vector2i_t *position_get(const component_t *component)
+vector2i_t *component_position_get(const component_t *component)
 {
+    if (component->type != C_POSITION)
+        return 0;
     return (vector2i_t *)component->data;
 }

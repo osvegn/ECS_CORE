@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int collidable_constructor(component_t *component)
+int component_collidable_constructor(component_t *component)
 {
-    component->type = COLLIDABLE;
+    component->type = C_COLLIDABLE;
     component->data = 0;
     return 0;
 }

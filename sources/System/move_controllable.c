@@ -15,7 +15,6 @@
 
 int move_controllable_constructor(system_t *system)
 {
-    printf("move_controllable_constructor\n");
     system->type = MOVE_CONTROLLABLE;
     system->run = &move_controllable_run;
     system->active = true;
@@ -27,13 +26,13 @@ int move_controllable_run(void *world)
     vector_t entities = {0};
     entity_t *entity = 0;
     component_t *component = 0;
-    int rvalue = world_join_entities(world, &entities, 2, CONTROLLABLE, VELOCITY);
+    int rvalue = world_join_entities(world, &entities, 2, C_CONTROLLABLE, C_VELOCITY);
 
     if (rvalue <= 0)
         return rvalue;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        component = entity_get_component(entity, VELOCITY);
+        component = entity_get_component(entity, C_VELOCITY);
         ((vector2i_t *)component->data)->x = 0;
         if (IsKeyDown(KEY_Q)) {
             ((vector2i_t *)component->data)->x = -5;

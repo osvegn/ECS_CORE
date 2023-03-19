@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int jumpable_constructor(component_t *component)
+int component_jumpable_constructor(component_t *component)
 {
-    component->type = JUMPABLE;
+    component->type = C_JUMPABLE;
     component->data = 0;
     return 0;
 }

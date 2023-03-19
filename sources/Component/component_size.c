@@ -10,13 +10,13 @@
 #include "components.h"
 #include <stdlib.h>
 
-int size_constructor(component_t *component, vector2i_t s)
+int component_size_constructor(component_t *component, vector2i_t s)
 {
     vector2i_t *size = malloc(sizeof(vector2i_t));
 
     if (!size)
         return -1;
-    component->type = SIZE;
+    component->type = C_SIZE;
     size->x = s.x;
     size->y = s.y;
     component->data = (void *)size;
@@ -38,15 +38,19 @@ int size_constructor(component_t *component, vector2i_t s)
 ///     return 0;
 /// }
 /// @endcode
-void size_set(component_t *component, const vector2i_t s)
+void component_size_set(component_t *component, const vector2i_t s)
 {
     vector2i_t *size = component->data;
 
+    if (component->type != C_SIZE)
+        return;
     size->x = s.x;
     size->y = s.y;
 }
 
-void size_get(const component_t *component, vector2i_t *s)
+void *component_size_get(const component_t *component, vector2i_t *s)
 {
+    if (component->type != C_SIZE)
+        return;
     return (vector2i_t *)component->data;
 }

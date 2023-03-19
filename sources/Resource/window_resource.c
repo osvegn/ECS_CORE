@@ -9,6 +9,8 @@
 
 #include "resources.h"
 #include "raylib.h"
+#include <stdlib.h>
+#include <string.h>
 
 int window_constructor(resource_t *resource, void *data)
 {

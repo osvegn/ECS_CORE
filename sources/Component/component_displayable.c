@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int displayable_constructor(component_t *component)
+int component_displayable_constructor(component_t *component)
 {
-    component->type = DISPLAYABLE;
+    component->type = C_DISPLAYABLE;
     component->data = 0;
     return 0;
 }

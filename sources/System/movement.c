@@ -26,13 +26,13 @@ static int check_collision(vector2i_t **components, entity_t *entity, vector_t c
         if (entity->id == (*(entity_t **)collidable.at(&collidable, j))->id)
             continue;
         entity_t *collider = *(entity_t **)collidable.at(&collidable, j);
-        vector2i_t *collider_pos = entity_get_component(collider, POSITION)->data;
-        vector2i_t *collider_size = entity_get_component(collider, SIZE)->data;
+        vector2i_t *collider_pos = entity_get_component(collider, C_POSITION)->data;
+        vector2i_t *collider_size = entity_get_component(collider, C_SIZE)->data;
         vector2i_t *entity_size;
-        if (entity_contains_component_by_type(entity, SIZE)) {
-            entity_size = entity_get_component(entity, SIZE)->data;
+        if (entity_contains_component_by_type(entity, C_SIZE)) {
+            entity_size = entity_get_component(entity, C_SIZE)->data;
         } else {
-            entity_size = (vector2i_t *){1, 1};
+            entity_size = 0;
         }
         if (components[0]->y + components[1]->y + entity_size->y > collider_pos->y &&
             components[0]->y + components[1]->y < collider_pos->y + collider_size->y &&
@@ -56,18 +56,18 @@ int movement(void *world)
     vector_t collidable = {0};
     entity_t *entity;
     vector2i_t *components[2];
-    int rvalue = world_join_entities(world, &entities, 2, VELOCITY, POSITION);
+    int rvalue = world_join_entities(world, &entities, 2, C_VELOCITY, C_POSITION);
 
     if (rvalue <= 0)
         return rvalue;
-    rvalue = world_join_entities(world, &collidable, 3, COLLIDABLE, POSITION, SIZE);
+    rvalue = world_join_entities(world, &collidable, 3, C_COLLIDABLE, C_POSITION, C_SIZE);
     if (rvalue <= 0)
         return rvalue;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        components[0] = entity_get_component(entity, POSITION)->data;
-        components[1] = entity_get_component(entity, VELOCITY)->data;
-        if (entity_contains_component_by_type(entity, COLLIDABLE)) {
+        components[0] = entity_get_component(entity, C_POSITION)->data;
+        components[1] = entity_get_component(entity, C_VELOCITY)->data;
+        if (entity_contains_component_by_type(entity, C_COLLIDABLE)) {
             check_collision(components, entity, collidable);
         }
         components[0]->x += components[1]->x;

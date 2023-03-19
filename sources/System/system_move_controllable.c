@@ -13,15 +13,15 @@
 #include "components.h"
 #include "raylib.h"
 
-int move_controllable_constructor(system_t *system)
+int system_move_controllable_constructor(system_t *system)
 {
-    system->type = MOVE_CONTROLLABLE;
-    system->run = &move_controllable_run;
+    system->type = S_MOVE_CONTROLLABLE;
+    system->run = &system_move_controllable_run;
     system->active = true;
     return 0;
 }
 
-int move_controllable_run(void *world)
+int system_move_controllable_run(void *world)
 {
     vector_t entities = {0};
     entity_t *entity = 0;

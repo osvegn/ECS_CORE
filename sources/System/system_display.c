@@ -13,15 +13,15 @@
 #include "components.h"
 #include "raylib.h"
 
-int display_constructor(system_t *system)
+int system_display_constructor(system_t *system)
 {
-    system->type = DISPLAY;
-    system->run = &display;
+    system->type = S_DISPLAY;
+    system->run = &system_display;
     system->active = true;
     return 0;
 }
 
-int display(void *ptr)
+int system_display(void *ptr)
 {
     vector_t entities = {0};
     entity_t *entity = 0;

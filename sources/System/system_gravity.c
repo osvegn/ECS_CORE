@@ -14,15 +14,15 @@
 #include "components.h"
 #include "resources.h"
 
-int gravity_constructor(system_t *system)
+int system_gravity_constructor(system_t *system)
 {
-    system->type = GRAVITY_SYSTEM;
-    system->run = &gravity;
+    system->type = S_GRAVITY_SYSTEM;
+    system->run = &system_gravity;
     system->active = true;
     return 0;
 }
 
-int gravity(void *ptr)
+int system_gravity(void *ptr)
 {
     vector_t entities = {0};
     entity_t *entity = 0;

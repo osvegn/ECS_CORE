@@ -12,10 +12,10 @@
 #include "components.h"
 #include "systems.h"
 
-int movement_constructor(system_t *system)
+int system_movement_constructor(system_t *system)
 {
-    system->type = MOVEMENT;
-    system->run = &movement;
+    system->type = S_MOVEMENT;
+    system->run = &system_movement;
     system->active = true;
     return 0;
 }
@@ -37,8 +37,7 @@ static int check_collision(vector2i_t **components, entity_t *entity, vector_t c
         if (components[0]->y + components[1]->y + entity_size->y > collider_pos->y &&
             components[0]->y + components[1]->y < collider_pos->y + collider_size->y &&
             components[0]->x + entity_size->x > collider_pos->x &&
-            components[0]->x < collider_pos->x + collider_size->x
-        ) {
+            components[0]->x < collider_pos->x + collider_size->x) {
             components[1]->y = 0;
         }
         if (components[0]->x + components[1]->x + entity_size->x > collider_pos->x &&
@@ -50,7 +49,7 @@ static int check_collision(vector2i_t **components, entity_t *entity, vector_t c
     }
 }
 
-int movement(void *world)
+int system_movement(void *world)
 {
     vector_t entities = {0};
     vector_t collidable = {0};

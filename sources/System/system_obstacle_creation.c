@@ -14,15 +14,15 @@
 #include "vector2i.h"
 #include "components.h"
 
-int createObstacle_constructor(system_t *system)
+int system_obstacle_creation_constructor(system_t *system)
 {
-    system->run = createObstacle_update;
-    system->type = CREATE_OBSTACLE;
+    system->run = system_obstacle_creation_run;
+    system->type = S_OBSTACLE_CREATION;
     system->active = true;
     return 0;
 }
 
-static int remove_obstacle(world_t *world)
+static int system_remove_obstacle(world_t *world)
 {
     entity_t *entity = 0;
     vector_t entities = {0};
@@ -43,7 +43,7 @@ static int remove_obstacle(world_t *world)
     return 0;
 }
 
-int createObstacle_update(void *ptr)
+int system_obstacle_creation_run(void *ptr)
 {
     entity_t entity = {0};
     component_t *component = 0;
@@ -58,7 +58,7 @@ int createObstacle_update(void *ptr)
         world_add_entity(ptr, &entity);
     }
     if (IsMouseButtonPressed(MOUSE_RIGHT_BUTTON)) {
-        remove_obstacle(ptr);
+        system_remove_obstacle(ptr);
     }
     return 0;
 }

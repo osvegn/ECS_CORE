@@ -14,41 +14,41 @@
 
 typedef enum system_type_e {
     S_UNDEFINED,
-    WORLD_INITIALIZER,
-    MOVEMENT,
-    DISPLAY,
-    WINDOW_MANAGER,
-    MOVE_INPUT,
-    MOVE_CONTROLLABLE,
-    GRAVITY_SYSTEM,
-    JUMP_SYSTEM,
-    COLLISION_SYSTEM,
-    CREATE_OBSTACLE,
+    S_WORLD_INITIALIZER,
+    S_MOVEMENT,
+    S_DISPLAY,
+    S_WINDOW_MANAGER,
+    S_MOVE_INPUT,
+    S_MOVE_CONTROLLABLE,
+    S_GRAVITY_SYSTEM,
+    S_JUMP_SYSTEM,
+    S_COLLISION_SYSTEM,
+    S_OBSTACLE_CREATION,
     S_MAX_VALUE
 } system_type_t;
 
-int movement(void *world);
-int movement_constructor(system_t *system);
+int system_movement(void *world);
+int system_movement_constructor(system_t *system);
 
-int world_initializer(void *ptr);
-int world_initializer_constructor(system_t *system);
+int system_world_initializer(void *ptr);
+int system_world_initializer_constructor(system_t *system);
 
-int display(void *world);
-int display_constructor(system_t *system);
+int system_display(void *world);
+int system_display_constructor(system_t *system);
 
-int windows_manager(void *ptr);
-int windows_manager_constructor(system_t *system);
+int system_windows_manager(void *ptr);
+int system_windows_manager_constructor(system_t *system);
 
-int move_controllable_run(void *world);
-int move_controllable_constructor(system_t *system);
+int system_move_controllable_run(void *world);
+int system_move_controllable_constructor(system_t *system);
 
-int gravity_constructor(system_t *system);
-int gravity(void *ptr);
+int system_gravity_constructor(system_t *system);
+int system_gravity(void *ptr);
 
-int jump_constructor(system_t *system);
-int jump(void *ptr);
+int system_jump_constructor(system_t *system);
+int system_jump(void *ptr);
 
-int createObstacle_constructor(system_t *system);
-int createObstacle_update(void *ptr);
+int system_obstacle_creation_constructor(system_t *system);
+int system_obstacle_creation_run(void *ptr);
 
 #endif /* !SYSTEMS_H_ */

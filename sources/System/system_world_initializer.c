@@ -11,10 +11,10 @@
 #include "systems.h"
 #include "resources.h"
 
-int world_initializer_constructor(system_t *system)
+int system_world_initializer_constructor(system_t *system)
 {
-    system->type = WORLD_INITIALIZER;
-    system->run = &world_initializer;
+    system->type = S_WORLD_INITIALIZER;
+    system->run = &system_world_initializer;
     system->active = true;
     return 0;
 }
@@ -35,13 +35,13 @@ static void system_initializer(world_t *world)
     system_t system;
     vector_t *systems = &world->system_list;
     int (*constructors[])(system_t *) = {
-        &display_constructor,
-        &windows_manager_constructor,
-        &movement_constructor,
-        &move_controllable_constructor,
-        &gravity_constructor,
-        &jump_constructor,
-        &createObstacle_constructor,
+        &system_display_constructor,
+        &system_windows_manager_constructor,
+        &system_movement_constructor,
+        &system_move_controllable_constructor,
+        &system_gravity_constructor,
+        &system_jump_constructor,
+        &system_obstacle_creation_constructor,
         0
     };
 
@@ -50,7 +50,7 @@ static void system_initializer(world_t *world)
         systems->emplace_back(systems, &system);
     }
     for (unsigned int i = 0; i < systems->size(systems); i++) {
-        if (((system_t *)systems->at(systems, i))->type == WORLD_INITIALIZER) {
+        if (((system_t *)systems->at(systems, i))->type == S_WORLD_INITIALIZER) {
             systems->erase(systems, i);
             break;
         }
@@ -79,7 +79,7 @@ static void resource_initializer(world_t *world)
     }
 }
 
-int world_initializer(void *ptr)
+int system_world_initializer(void *ptr)
 {
     world_t *world = ptr;
 

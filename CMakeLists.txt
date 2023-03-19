@@ -15,15 +15,6 @@ add_subdirectory(sources)
 set(GLOBAL_SOURCES
     ${SOURCES}
 
-    ${SOURCE_ROOT}/System/movement.c
-    ${SOURCE_ROOT}/System/display.c
-    ${SOURCE_ROOT}/System/world_initializer.c
-    ${SOURCE_ROOT}/System/windows_manager.c
-    ${SOURCE_ROOT}/System/move_controllable.c
-    ${SOURCE_ROOT}/System/gravity.c
-    ${SOURCE_ROOT}/System/jump.c
-    ${SOURCE_ROOT}/System/createObstacle.c
-
     ${SOURCE_ROOT}/Entity/player.c
     ${SOURCE_ROOT}/Entity/plateform.c
     ${SOURCE_ROOT}/Entity/obstacle.c

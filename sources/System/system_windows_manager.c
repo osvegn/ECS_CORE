@@ -12,15 +12,15 @@
 #include "components.h"
 #include "raylib.h"
 
-int windows_manager_constructor(system_t *system)
+int system_windows_manager_constructor(system_t *system)
 {
-    system->type = WINDOW_MANAGER;
-    system->run = &windows_manager;
+    system->type = S_WINDOW_MANAGER;
+    system->run = &system_windows_manager;
     system->active = true;
     return 0;
 }
 
-int windows_manager(void *ptr)
+int system_windows_manager(void *ptr)
 {
     if (WindowShouldClose())
         return -1;

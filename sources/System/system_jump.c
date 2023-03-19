@@ -15,15 +15,15 @@
 #include "resources.h"
 #include "raylib.h"
 
-int jump_constructor(system_t *system)
+int system_jump_constructor(system_t *system)
 {
-    system->type = JUMP_SYSTEM;
-    system->run = &jump;
+    system->type = S_JUMP_SYSTEM;
+    system->run = &system_jump;
     system->active = true;
     return 0;
 }
 
-int jump(void *ptr)
+int system_jump(void *ptr)
 {
     vector_t entities = {0};
     entity_t *entity = 0;

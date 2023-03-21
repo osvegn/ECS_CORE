@@ -55,6 +55,9 @@ jobs:
         cd Criterion
         sudo ldconfig
 
+    - name: Install submodules
+      run: git submodule update --init --recursive
+
     - name: Build
       run: make run_tests
 

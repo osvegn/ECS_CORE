@@ -42,6 +42,7 @@ static void system_initializer(world_t *world)
         &system_gravity_constructor,
         &system_jump_constructor,
         &system_obstacle_creation_constructor,
+        &system_camera_constructor,
         0
     };
 
@@ -71,6 +72,7 @@ static void resource_initializer(world_t *world)
     int (*constructors[])(resource_t *, void *) = {
         &resource_window_constructor,
         &resource_gravity_constructor,
+        &resource_camera_constructor,
         0
     };
     for (unsigned int i = 0; constructors[i]; i++) {

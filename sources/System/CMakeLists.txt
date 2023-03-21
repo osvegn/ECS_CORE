@@ -9,5 +9,6 @@ set(SYSTEMS_SOURCES
     ${SRC_SYSTEMS_ROOT}/system_obstacle_creation.c
     ${SRC_SYSTEMS_ROOT}/system_windows_manager.c
     ${SRC_SYSTEMS_ROOT}/system_world_initializer.c
+    ${SRC_SYSTEMS_ROOT}/system_camera.c
     PARENT_SCOPE
 )

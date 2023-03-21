@@ -9,8 +9,10 @@
 
 #include "world.h"
 #include "world_entity.h"
+#include "world_resource.h"
 #include "systems.h"
 #include "components.h"
+#include "resources.h"
 #include "raylib.h"
 
 int system_display_constructor(system_t *system)
@@ -28,10 +30,12 @@ int system_display(void *ptr)
     int rvalue = world_join_entities(ptr, &entities, 3, C_DISPLAYABLE, C_POSITION, C_SIZE);
     vector2i_t position = {0};
     vector2i_t size = {0};
+    Camera2D *camera = world_get_resource_by_type(ptr, R_CAMERA)->data;
 
     if (rvalue <= 0)
         return rvalue;
     BeginDrawing();
+    BeginMode2D(*camera);
     ClearBackground(RAYWHITE);
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
@@ -39,6 +43,7 @@ int system_display(void *ptr)
         size = *(vector2i_t *){entity_get_component(entity, C_SIZE)->data};
         DrawRectangle(position.x, position.y, size.x, size.y, RED);
     }
+    EndMode2D();
     EndDrawing();
     return 0;
 }

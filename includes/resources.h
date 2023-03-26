@@ -18,6 +18,7 @@ typedef enum resource_type_e {
     R_WINDOW,
     R_GRAVITY,
     R_CAMERA,
+    R_SCENE_FILENAME,
     R_MAX_VALUE
 } resource_type_t;
 
@@ -117,9 +118,15 @@ void resource_window_destructor(resource_t *resource);
 int resource_gravity_constructor(resource_t *resource, void *data);
 void *resource_gravity_get(const resource_t *resource);
 void resource_gravity_set(resource_t *resource, void *data);
+int resource_gravity_destructor(resource_t *resource);
 
-int resource_camera_constructor(resource_t *resource);
+int resource_camera_constructor(resource_t *resource, void *data);
 int resource_camera_destructor(resource_t *resource);
 int resource_camera_update_position(resource_t *resource, void *data);
+
+int resource_scene_filename_constructor(resource_t *resource, void *data);
+int resource_scene_filename_destructor(resource_t *resource);
+int resource_scene_filename_set(resource_t *resource, char *filename);
+int resource_scene_filename_get(resource_t *resource);
 
 #endif /* !RESOURCES_H_*/

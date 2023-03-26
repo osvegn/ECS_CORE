@@ -11,12 +11,24 @@
 #include "raylib.h"
 #include <stdlib.h>
 #include <string.h>
+#include <json-c/json.h>
 
 int resource_window_constructor(resource_t *resource, void *data)
 {
-    window_t *window = data;
+    json_object *json = json_tokener_parse((char *)data);
 
-    return resource_window_copy_constructor(resource, window);
+    if (!json) {
+        printf("Error: json_tokener_parse failed in resource_window_constructor\n");
+        return -1;
+    }
+    window_t window = {json_object_get_int(json_object_object_get(json, "width")),
+                       json_object_get_int(json_object_object_get(json, "height")),
+                       "rpg",
+                       json_object_get_int(json_object_object_get(json, "fps"))};
+
+    printf("windows: %d %d %s %d\n", window.width, window.height, window.title, window.fps);
+    json_object_put(json);
+    return resource_window_copy_constructor(resource, &window);
 }
 
 int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps)
@@ -38,6 +50,7 @@ int resource_window_copy_constructor(resource_t *resource, window_t *w)
     strcpy(window->title, w->title);
     window->fps = w->fps;
     resource->data = (void *)window;
+    resource->destructor = &resource_window_destructor;
     InitWindow(window->width, window->height, window->title);
     SetTargetFPS(window->fps);
     return 0;

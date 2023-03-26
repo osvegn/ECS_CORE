@@ -18,13 +18,14 @@ int plateform_constructor(entity_t *entity)
     int height = GetScreenHeight();
 
     entity_constructor(entity);
-    component_size_constructor(&component, (vector2i_t){width / 2, 10});
+    component_size_constructor(&component, (vector2i_t){1000 / 2, 30});
     entity_add_component(entity, &component);
-    component_position_constructor(&component, (vector2i_t){width / 4, height - 100});
+    component_position_constructor(&component, (vector2i_t){0, 0});
     entity_add_component(entity, &component);
     component_displayable_constructor(&component);
     entity_add_component(entity, &component);
     component_collidable_constructor(&component);
     entity_add_component(entity, &component);
+    printf("Plateform created\n");
     return 0;
 }

@@ -39,5 +39,6 @@ int system_jump(void *ptr)
             velocity->y = -20;
         }
     }
+    entities.destructor(&entities);
     return 0;
 }

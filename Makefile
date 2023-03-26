@@ -33,3 +33,6 @@ run_tests:
 	${CC} -B ${BUILD} -DTESTING=ON
 	${CC} --build ${BUILD}
 	${foreach test, ${TESTS}, ./${test};}
+
+valgrind: debug
+	valgrind --leak-check=full ./build/our_rpg 2> log_valgrind.txt

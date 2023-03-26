@@ -41,5 +41,6 @@ int system_move_controllable_run(void *world)
             ((vector2i_t *)component->data)->x = 5;
         }
     }
+    entities.destructor(&entities);
     return 0;
 }

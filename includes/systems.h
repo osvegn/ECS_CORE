@@ -25,6 +25,8 @@ typedef enum system_type_e {
     S_COLLISION_SYSTEM,
     S_OBSTACLE_CREATION,
     S_CAMERA,
+    S_LOAD_SCENE,
+    S_RELOAD_CONFIG,
     S_MAX_VALUE
 } system_type_t;
 
@@ -54,5 +56,11 @@ int system_obstacle_creation_run(void *ptr);
 
 int system_camera_constructor(system_t *system);
 int system_camera(void *ptr);
+
+int system_load_scene_constructor(system_t *system);
+int system_load_scene_run(void *ptr);
+
+int system_reload_config_constructor(system_t *system);
+int system_reload_config_run(void *ptr);
 
 #endif /* !SYSTEMS_H_ */

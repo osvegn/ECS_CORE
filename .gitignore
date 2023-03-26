@@ -57,6 +57,8 @@ build
 *tests
 docs
 plateform.md
+vgcore.*
+log_valgrind.txt
 
 # Docker
 Dockerfile

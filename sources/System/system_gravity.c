@@ -39,5 +39,6 @@ int system_gravity(void *ptr)
         velocity = (vector2i_t *)entity_get_component(entity, C_VELOCITY)->data;
         velocity->y += (int)resource->data;
     }
+    entities.destructor(&entities);
     return 0;
 }

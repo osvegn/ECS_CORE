@@ -1,0 +1,42 @@
+{
+    "name": "test",
+    "description": "test scene",
+    "world":
+    {
+        "systems":
+        [
+            "S_DISPLAY",
+            "S_WINDOWS_MANAGER",
+            "S_MOVEMENT",
+            "S_MOVE_CONTROLLABLE",
+            "S_GRAVITY",
+            "S_JUMP",
+            "S_OBSTACLE_CREATION",
+            "S_CAMERA",
+            "S_RELOAD_CONFIG"
+        ],
+        "resources":
+        [
+            {
+                "type":"R_WINDOW",
+                "data":{"width":840, "height":600, "title": "rpg", "fps":60}
+            },
+            {
+                "type":"R_GRAVITY",
+                "data":1
+            },
+            {
+                "type":"R_CAMERA",
+                "data":null
+            },
+            {
+                "type":"R_SCENE_FILENAME",
+                "data":"config/basic_scene.json"
+            }
+        ],
+        "entities":
+        [
+
+        ]
+    }
+}

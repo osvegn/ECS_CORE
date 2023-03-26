@@ -10,7 +10,7 @@
 #include "resources.h"
 #include "raylib.h"
 
-int resource_camera_constructor(resource_t *resource)
+int resource_camera_constructor(resource_t *resource, void *data)
 {
     Camera2D *camera = malloc(sizeof(Camera2D));
 
@@ -23,12 +23,14 @@ int resource_camera_constructor(resource_t *resource)
     camera->zoom = 1;
     resource->type = R_CAMERA;
     resource->data = camera;
+    resource->destructor = &resource_camera_destructor;
     return 0;
 }
 
 int resource_camera_destructor(resource_t *resource)
 {
-    free(resource->data);
+    if (resource->data)
+        free(resource->data);
     return 0;
 }
 

@@ -45,5 +45,6 @@ int system_display(void *ptr)
     }
     EndMode2D();
     EndDrawing();
+    entities.destructor(&entities);
     return 0;
 }

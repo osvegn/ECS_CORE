@@ -12,7 +12,8 @@
 int resource_gravity_constructor(resource_t *resource, void *data)
 {
     resource->type = R_GRAVITY;
-    resource->data = data;
+    resource->data = atoi((char *)data);
+    resource->destructor = &resource_gravity_destructor;
     return 0;
 }
 
@@ -28,4 +29,9 @@ void resource_gravity_set(resource_t *resource, void *data)
     if (resource->type != R_GRAVITY)
         return;
     resource->data = data;
+}
+
+int resource_gravity_destructor(resource_t *resource)
+{
+    return 0;
 }

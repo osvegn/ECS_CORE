@@ -61,5 +61,6 @@ int system_camera(void *ptr)
         position = (vector2i_t *)entity_get_component(entity, C_POSITION)->data;
         update_camera(resource, position);
     }
+    entities.destructor(&entities);
     return 0;
 }

@@ -21,6 +21,7 @@ else ()
   target_link_libraries(${TARGET}
       ecs
       raylib
+      json-c
   )
 
   #RAYLIB

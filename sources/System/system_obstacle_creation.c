@@ -41,6 +41,7 @@ static int system_remove_obstacle(world_t *world, resource_t *resource)
             return 0;
         }
     }
+    entities.destructor(&entities);
     return 0;
 }
 

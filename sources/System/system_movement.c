@@ -72,5 +72,7 @@ int system_movement(void *world)
         components[0]->x += components[1]->x;
         components[0]->y += components[1]->y;
     }
+    entities.destructor(&entities);
+    collidable.destructor(&collidable);
     return 0;
 }

@@ -12,6 +12,7 @@
 #include "world_resource.h"
 #include "systems.h"
 #include "resources.h"
+#include "components.h"
 #include <json-c/json.h>
 
 int system_load_scene_constructor(system_t *system)
@@ -121,6 +122,28 @@ static int update_resources(world_t *world, json_object *resources)
 
 static int update_entities(world_t *world, json_object *entities)
 {
+    const char *components_types[] = {
+        "C_POSITION",
+        "C_VELOCITY",
+        "C_CONTROLLABLE",
+        "C_SIZE",
+        "C_DISPLAYABLE",
+        "C_GRAVITABLE",
+        "C_JUMPABLE",
+        "C_COLLIDABLE",
+        0
+    };
+    int (*constructors[])(component_t *, void *) = {
+        &component_position_constructor,
+        &component_velocity_constructor,
+        &component_controllable_constructor,
+        &component_size_constructor,
+        &component_displayable_constructor,
+        &component_gravitable_constructor,
+        &component_jumpable_constructor,
+        &component_collidable_constructor,
+        0
+    };
     return 0;
 }
 
@@ -140,7 +163,7 @@ int system_load_scene_run(void *ptr)
     printf("Scene loaded: %s\n", json_object_to_json_string(json));
     update_resources(world, json_object_object_get(json_object_object_get(json, "world"), "resources"));
     update_systems(world, json_object_object_get(json_object_object_get(json, "world"), "systems"));
-    update_entities(world, json);
+    update_entities(world, json_object_object_get(json_object_object_get(json, "world"), "entities"));
     json_object_put(json);
     return 0;
 }

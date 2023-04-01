@@ -1,0 +1,28 @@
+{
+    "name": "main menu",
+    "description": "main menu",
+    "world":
+    {
+        "systems":
+        [
+            "S_DISPLAY",
+            "S_WINDOWS_MANAGER",
+            "S_RELOAD_CONFIG"
+        ],
+        "resources":
+        [
+            {
+                "type": "R_WINDOW",
+                "data":{"width":1920, "height":1080, "title":"main menu", "fps":60}
+            },
+            {
+                "type": "R_SCENE_FILENAME",
+                "data":"config/main_menu.json"
+            }
+        ],
+        "entities":
+        [
+            
+        ]
+    }
+}

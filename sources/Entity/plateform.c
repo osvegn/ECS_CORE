@@ -9,7 +9,6 @@
 
 #include "world_entity.h"
 #include "components.h"
-#include "raylib.h"
 
 int plateform_constructor(entity_t *entity)
 {
@@ -18,14 +17,13 @@ int plateform_constructor(entity_t *entity)
     int height = GetScreenHeight();
 
     entity_constructor(entity);
-    component_size_constructor(&component, (vector2i_t){1000 / 2, 30});
+    component_size_constructor(&component, (ecs_vector2i_t){1000 / 2, 30});
     entity_add_component(entity, &component);
-    component_position_constructor(&component, (vector2i_t){0, 0});
+    component_position_constructor(&component, (ecs_vector2i_t){0, 0});
     entity_add_component(entity, &component);
     component_displayable_constructor(&component);
     entity_add_component(entity, &component);
     component_collidable_constructor(&component);
     entity_add_component(entity, &component);
-    printf("Plateform created\n");
     return 0;
 }

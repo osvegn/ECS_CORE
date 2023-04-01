@@ -28,7 +28,7 @@ int system_gravity(void *ptr)
     entity_t *entity = 0;
     int rvalue = world_join_entities(ptr, &entities, 2, C_GRAVITABLE, C_VELOCITY);
     resource_t *resource = world_get_resource_by_type(ptr, R_GRAVITY);
-    vector2i_t *velocity = 0;
+    ecs_vector2i_t *velocity = 0;
 
     if (rvalue <= 0)
         return rvalue;
@@ -36,7 +36,7 @@ int system_gravity(void *ptr)
         return -1;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        velocity = (vector2i_t *)entity_get_component(entity, C_VELOCITY)->data;
+        velocity = (ecs_vector2i_t *)entity_get_component(entity, C_VELOCITY)->data;
         velocity->y += (int)resource->data;
     }
     entities.destructor(&entities);

@@ -33,12 +33,12 @@ int system_move_controllable_run(void *world)
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
         component = entity_get_component(entity, C_VELOCITY);
-        ((vector2i_t *)component->data)->x = 0;
+        ((ecs_vector2i_t *)component->data)->x = 0;
         if (IsKeyDown(KEY_Q)) {
-            ((vector2i_t *)component->data)->x = -5;
+            ((ecs_vector2i_t *)component->data)->x = -5;
         }
         if (IsKeyDown(KEY_D)) {
-            ((vector2i_t *)component->data)->x = 5;
+            ((ecs_vector2i_t *)component->data)->x = 5;
         }
     }
     entities.destructor(&entities);

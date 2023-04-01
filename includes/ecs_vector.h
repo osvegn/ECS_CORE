@@ -1,5 +1,5 @@
 /*
- * Filename: /workspaces/our_rpg/includes/vector2i.h
+ * Filename: /workspaces/our_rpg/includes/ecs_vector.h
  * Path: /workspaces/our_rpg/includes
  * Created Date: Sunday, January 15th 2023, 3:59:05 pm
  * Author: osvegn
@@ -10,9 +10,9 @@
 #ifndef VECTOR2I_H_
 #define VECTOR2I_H_
 
-typedef struct vector2i_s {
+typedef struct ecs_vector2i_s {
     int x;
     int y;
-} vector2i_t;
+} ecs_vector2i_t;
 
 #endif /* !VECTOR2I_H_ */

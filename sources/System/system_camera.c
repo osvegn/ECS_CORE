@@ -14,6 +14,7 @@
 #include "components.h"
 #include "resources.h"
 #include "raymath.h"
+#include "raylib.h"
 
 int system_camera_constructor(system_t *system)
 {
@@ -23,7 +24,7 @@ int system_camera_constructor(system_t *system)
     return 0;
 }
 
-void update_camera(resource_t *resource, vector2i_t *position)
+void update_camera(resource_t *resource, ecs_vector2i_t *position)
 {
     Vector2 p = {0};
     static float min_speed = 30;
@@ -50,7 +51,7 @@ int system_camera(void *ptr)
     entity_t *entity = 0;
     int rvalue = world_join_entities(ptr, &entities, 2, C_CONTROLLABLE, C_POSITION);
     resource_t *resource = world_get_resource_by_type(ptr, R_CAMERA);
-    vector2i_t *position = 0;
+    ecs_vector2i_t *position = 0;
 
     if (rvalue <= 0)
         return rvalue;
@@ -58,7 +59,7 @@ int system_camera(void *ptr)
         return -1;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        position = (vector2i_t *)entity_get_component(entity, C_POSITION)->data;
+        position = (ecs_vector2i_t *)entity_get_component(entity, C_POSITION)->data;
         update_camera(resource, position);
     }
     entities.destructor(&entities);

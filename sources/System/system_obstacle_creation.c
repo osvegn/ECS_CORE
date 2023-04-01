@@ -11,7 +11,6 @@
 #include "world_entity.h"
 #include "systems.h"
 #include "raylib.h"
-#include "vector2i.h"
 #include "components.h"
 #include "resources.h"
 
@@ -27,8 +26,8 @@ static int system_remove_obstacle(world_t *world, resource_t *resource)
 {
     entity_t *entity = 0;
     vector_t entities = {0};
-    vector2i_t *pos = 0;
-    vector2i_t *size = 0;
+    ecs_vector2i_t *pos = 0;
+    ecs_vector2i_t *size = 0;
 
     world_join_entities(world, &entities, 1, C_OBSTACLE);
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
@@ -49,7 +48,7 @@ int system_obstacle_creation_run(void *ptr)
 {
     entity_t entity = {0};
     component_t *component = 0;
-    vector2i_t pos = {0};
+    ecs_vector2i_t pos = {0};
     resource_t *resource = world_get_resource_by_type(ptr, R_CAMERA);
 
     if (resource == 0)

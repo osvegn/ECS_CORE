@@ -20,15 +20,15 @@ int system_movement_constructor(system_t *system)
     return 0;
 }
 
-static int check_collision(vector2i_t **components, entity_t *entity, vector_t collidable)
+static int check_collision(ecs_vector2i_t **components, entity_t *entity, vector_t collidable)
 {
     for (unsigned int j = 0; j < collidable.size(&collidable); j++) {
         if (entity->id == (*(entity_t **)collidable.at(&collidable, j))->id)
             continue;
         entity_t *collider = *(entity_t **)collidable.at(&collidable, j);
-        vector2i_t *collider_pos = entity_get_component(collider, C_POSITION)->data;
-        vector2i_t *collider_size = entity_get_component(collider, C_SIZE)->data;
-        vector2i_t *entity_size;
+        ecs_vector2i_t *collider_pos = entity_get_component(collider, C_POSITION)->data;
+        ecs_vector2i_t *collider_size = entity_get_component(collider, C_SIZE)->data;
+        ecs_vector2i_t *entity_size;
         if (entity_contains_component_by_type(entity, C_SIZE)) {
             entity_size = entity_get_component(entity, C_SIZE)->data;
         } else {
@@ -54,7 +54,7 @@ int system_movement(void *world)
     vector_t entities = {0};
     vector_t collidable = {0};
     entity_t *entity;
-    vector2i_t *components[2];
+    ecs_vector2i_t *components[2];
     int rvalue = world_join_entities(world, &entities, 2, C_VELOCITY, C_POSITION);
 
     if (rvalue <= 0)

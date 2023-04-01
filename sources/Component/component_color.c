@@ -8,29 +8,29 @@
  */
 
 #include "components.h"
-#include "raylib.h"
+#include "ecs_color.h"
 
-int component_color_constructor(component_t *component, Color color)
+int component_color_constructor(component_t *component, ecs_color_t color)
 {
     component->type = C_COLOR;
-    component->data = malloc(sizeof(Color));
+    component->data = malloc(sizeof(ecs_color_t));
     if (!component->data)
         return 84;
-    *(Color *)component->data = color;
+    *(ecs_color_t *)component->data = color;
     return 0;
 }
 
-Color *component_get_color(component_t *component, Color *color)
+ecs_color_t *component_get_color(component_t *component, ecs_color_t *color)
 {
     if (component->type != C_COLOR)
         return 0;
-    return (Color *)component->data;
+    return (ecs_color_t *)component->data;
 }
 
-int component_set_color(component_t *component, Color color)
+int component_set_color(component_t *component, ecs_color_t color)
 {
     if (component->type != C_COLOR)
         return 84;
-    *(Color *)component->data = color;
+    *(ecs_color_t *)component->data = color;
     return 0;
 }

@@ -10,9 +10,9 @@
 #include "components.h"
 #include <stdlib.h>
 
-int component_size_constructor(component_t *component, vector2i_t s)
+int component_size_constructor(component_t *component, ecs_vector2i_t s)
 {
-    vector2i_t *size = malloc(sizeof(vector2i_t));
+    ecs_vector2i_t *size = malloc(sizeof(ecs_vector2i_t));
 
     if (!size)
         return -1;
@@ -30,17 +30,17 @@ int component_size_constructor(component_t *component, vector2i_t s)
 /// @code
 /// int main(void) {
 ///     component_t component;
-///     vector2i_t size = {10, 10};
+///     ecs_vector2i_t size = {10, 10};
 ///
 ///     size_constructor(&component, size);
-///     size_set(&component, (vector2i_t){20, 20});
+///     size_set(&component, (ecs_vector2i_t){20, 20});
 ///     component_destroy(&component);
 ///     return 0;
 /// }
 /// @endcode
-void component_size_set(component_t *component, const vector2i_t s)
+void component_size_set(component_t *component, const ecs_vector2i_t s)
 {
-    vector2i_t *size = component->data;
+    ecs_vector2i_t *size = component->data;
 
     if (component->type != C_SIZE)
         return;
@@ -48,9 +48,9 @@ void component_size_set(component_t *component, const vector2i_t s)
     size->y = s.y;
 }
 
-void *component_size_get(const component_t *component, vector2i_t *s)
+void *component_size_get(const component_t *component, ecs_vector2i_t *s)
 {
     if (component->type != C_SIZE)
         return;
-    return (vector2i_t *)component->data;
+    return (ecs_vector2i_t *)component->data;
 }

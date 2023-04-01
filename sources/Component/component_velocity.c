@@ -10,9 +10,9 @@
 #include "components.h"
 #include <stdlib.h>
 
-int component_velocity_constructor(component_t *component, vector2i_t vel)
+int component_velocity_constructor(component_t *component, ecs_vector2i_t vel)
 {
-    vector2i_t *velocity = malloc(sizeof(vector2i_t));
+    ecs_vector2i_t *velocity = malloc(sizeof(ecs_vector2i_t));
 
     if (!velocity)
         return -1;
@@ -23,9 +23,9 @@ int component_velocity_constructor(component_t *component, vector2i_t vel)
     return 0;
 }
 
-void component_velocity_set(component_t *component, const vector2i_t vel)
+void component_velocity_set(component_t *component, const ecs_vector2i_t vel)
 {
-    vector2i_t *velocity = component->data;
+    ecs_vector2i_t *velocity = component->data;
 
     if (!component->type != C_VELOCITY)
         return;
@@ -33,9 +33,9 @@ void component_velocity_set(component_t *component, const vector2i_t vel)
     velocity->y = vel.y;
 }
 
-vector2i_t *component_velocity_get(const component_t *component)
+ecs_vector2i_t *component_velocity_get(const component_t *component)
 {
     if (component->type != C_VELOCITY)
         return 0;
-    return (vector2i_t *)component->data;
+    return (ecs_vector2i_t *)component->data;
 }

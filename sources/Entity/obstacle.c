@@ -9,14 +9,13 @@
 
 #include "world_entity.h"
 #include "components.h"
-#include "raylib.h"
 
-int obstacle_constructor(entity_t *entity, vector2i_t pos)
+int obstacle_constructor(entity_t *entity, ecs_vector2i_t pos)
 {
     component_t component;
 
     entity_constructor(entity);
-    component_size_constructor(&component, (vector2i_t){50, 50});
+    component_size_constructor(&component, (ecs_vector2i_t){50, 50});
     entity_add_component(entity, &component);
     component_position_constructor(&component, pos);
     entity_add_component(entity, &component);

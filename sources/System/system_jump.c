@@ -28,14 +28,14 @@ int system_jump(void *ptr)
     vector_t entities = {0};
     entity_t *entity = 0;
     int rvalue = world_join_entities(ptr, &entities, 2, C_JUMPABLE, C_VELOCITY);
-    vector2i_t *velocity = 0;
+    ecs_vector2i_t *velocity = 0;
 
     if (rvalue <= 0)
         return rvalue;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         if (IsKeyPressed(KEY_SPACE)) {
             entity = *(entity_t **)entities.at(&entities, i);
-            velocity = (vector2i_t *)entity_get_component(entity, C_VELOCITY)->data;
+            velocity = (ecs_vector2i_t *)entity_get_component(entity, C_VELOCITY)->data;
             velocity->y = -20;
         }
     }

@@ -11,8 +11,8 @@
 #define COMPONENTS_H_
 
 #include "component.h"
-#include "vector2i.h"
-#include "raylib.h"
+#include "ecs_vector.h"
+#include "ecs_color.h"
 
 /// @brief Component types
 typedef enum component_type_e {
@@ -42,14 +42,14 @@ typedef enum component_type_e {
 /// @code
 /// int main(void) {
 ///     component_t component;
-///     vector2i_t pos = {0, 0};
+///     ecs_vector2i_t pos = {0, 0};
 ///
 ///     component_position_constructor(&component, pos);
 ///     component_destructor(&component);
 ///     return 0;
 /// }
 /// @endcode
-int component_position_constructor(component_t *component, vector2i_t pos);
+int component_position_constructor(component_t *component, ecs_vector2i_t pos);
 
 /// @brief This function is used to set the position of a position component
 /// @param component The component to set
@@ -58,7 +58,7 @@ int component_position_constructor(component_t *component, vector2i_t pos);
 /// @code
 /// int main(void) {
 ///     component_t component;
-///     vector2i_t pos = {0, 0};
+///     ecs_vector2i_t pos = {0, 0};
 ///
 ///     component_position_constructor(&component, pos);
 ///     pos.x = 1;
@@ -68,7 +68,7 @@ int component_position_constructor(component_t *component, vector2i_t pos);
 ///     return 0;
 /// }
 /// @endcode
-void component_position_set(component_t *component, const vector2i_t pos);
+void component_position_set(component_t *component, const ecs_vector2i_t pos);
 
 /// @brief This function is used to get the position of a position component
 /// @param component The component to get
@@ -77,7 +77,7 @@ void component_position_set(component_t *component, const vector2i_t pos);
 /// @code
 /// int main(void) {
 ///     component_t component;
-///     vector2i_t pos = {0, 0};
+///     ecs_vector2i_t pos = {0, 0};
 ///
 ///     component_position_constructor(&component, pos);
 ///     pos = component_position_get(&component);
@@ -85,11 +85,11 @@ void component_position_set(component_t *component, const vector2i_t pos);
 ///     return 0;
 /// }
 /// @endcode
-vector2i_t *component_position_get(const component_t *component);
+ecs_vector2i_t *component_position_get(const component_t *component);
 
-int component_velocity_constructor(component_t *component, vector2i_t vel);
-void component_velocity_set(component_t *component, const vector2i_t vel);
-vector2i_t *component_velocity_get(const component_t *component);
+int component_velocity_constructor(component_t *component, ecs_vector2i_t vel);
+void component_velocity_set(component_t *component, const ecs_vector2i_t vel);
+ecs_vector2i_t *component_velocity_get(const component_t *component);
 
 /// @brief This function is used to construct a displayable component
 /// @param component The component to construct
@@ -210,18 +210,18 @@ int component_controllable_constructor(component_t *component);
 /// @code
 /// int main(void) {
 ///     component_t component;
-///     vector2i_t size = {10, 10};
+///     ecs_vector2i_t size = {10, 10};
 ///
 ///     component_size_constructor(&component, size);
 ///     component_destroy(&component);
 ///     return 0;
 /// }
 /// @endcode
-int component_size_constructor(component_t *component, vector2i_t s);
+int component_size_constructor(component_t *component, ecs_vector2i_t s);
 
-void component_size_set(component_t *component, const vector2i_t s);
+void component_size_set(component_t *component, const ecs_vector2i_t s);
 
-void *component_size_get(const component_t *component, vector2i_t *s);
+void *component_size_get(const component_t *component, ecs_vector2i_t *s);
 
 
 int component_gravitable_constructor(component_t *component);
@@ -230,9 +230,9 @@ int weight_constructor(component_t *component, void *data);
 void *weight_get(const component_t *component);
 void weight_set(component_t *component, void *data);
 
-int component_color_constructor(component_t *component, Color color);
-Color *component_get_color(component_t *component, Color *color);
-int component_set_color(component_t *component, Color color);
+int component_color_constructor(component_t *component, ecs_color_t color);
+ecs_color_t *component_get_color(component_t *component);
+int component_set_color(component_t *component, ecs_color_t color);
 
 int component_clickable_constructor(component_t *component);
 int component_collidable_constructor(component_t *component);

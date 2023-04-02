@@ -9,6 +9,7 @@
 
 #include "components.h"
 #include "ecs_color.h"
+#include <stdlib.h>
 
 int component_color_constructor(component_t *component, ecs_color_t color)
 {
@@ -20,7 +21,7 @@ int component_color_constructor(component_t *component, ecs_color_t color)
     return 0;
 }
 
-ecs_color_t *component_get_color(component_t *component, ecs_color_t *color)
+ecs_color_t *component_get_color(component_t *component)
 {
     if (component->type != C_COLOR)
         return 0;

@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <json-c/json.h>
+#include <stdio.h>
 
 int resource_window_constructor(resource_t *resource, void *data)
 {

@@ -8,6 +8,7 @@
  */
 
 #include "resources.h"
+#include <stdlib.h>
 
 int resource_gravity_constructor(resource_t *resource, void *data)
 {

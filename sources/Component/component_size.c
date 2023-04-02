@@ -51,6 +51,6 @@ void component_size_set(component_t *component, const ecs_vector2i_t s)
 void *component_size_get(const component_t *component, ecs_vector2i_t *s)
 {
     if (component->type != C_SIZE)
-        return;
+        return 0;
     return (ecs_vector2i_t *)component->data;
 }

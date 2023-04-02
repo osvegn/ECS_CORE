@@ -41,22 +41,6 @@ else ()
       add_subdirectory(${raylib_SOURCE_DIR} ${raylib_BINARY_DIR})
     endif()
   endif()
-  set(JSON-C_VERSION json-c-0.15-20200726)
-  find_package(raylib ${JSON-C_VERSION} QUIET) # QUIET or REQUIRED
-  if (NOT json-c_FOUND) # If there's none, fetch and build raylib
-    include(FetchContent)
-    FetchContent_Declare(
-      json-c
-      URL https://github.com/json-c/json-c/archive/refs/tags/${JSON-C_VERSION}.tar.gz
-    )
-    FetchContent_GetProperties(json-c)
-    if (NOT json-c_POPULATED) # Have we downloaded raylib yet?
-      set(FETCHCONTENT_QUIET NO)
-      FetchContent_Populate(json-c)
-      set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
-      add_subdirectory(${json-c_SOURCE_DIR} ${json-c_BINARY_DIR})
-    endif()
-  endif()
 endif()
 if (CMAKE_COMPILER_IS_GNUCC)
   set(COMPILER_TYPE "gcc")

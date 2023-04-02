@@ -9,6 +9,7 @@
 
 #include "resources.h"
 #include "raylib.h"
+#include <stdlib.h>
 
 int resource_camera_constructor(resource_t *resource, void *data)
 {

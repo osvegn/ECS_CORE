@@ -13,8 +13,8 @@
 #include "systems.h"
 #include "components.h"
 #include "resources.h"
-#include "raymath.h"
 #include "raylib.h"
+#include "raymath.h"
 
 int system_camera_constructor(system_t *system)
 {

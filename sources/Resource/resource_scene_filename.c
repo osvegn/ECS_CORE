@@ -8,6 +8,8 @@
  */
 
 #include "resources.h"
+#include <stdlib.h>
+#include <string.h>
 
 int resource_scene_filename_constructor(resource_t *resource, void *data)
 {
@@ -39,7 +41,7 @@ int resource_scene_filename_set(resource_t *resource, char *filename)
     return 0;
 }
 
-int resource_scene_filename_get(resource_t *resource)
+void *resource_scene_filename_get(resource_t *resource)
 {
     return resource->data;
 }

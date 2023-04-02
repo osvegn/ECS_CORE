@@ -15,15 +15,15 @@ int obstacle_constructor(entity_t *entity, ecs_vector2i_t pos)
     component_t component;
 
     entity_constructor(entity);
-    component_size_constructor(&component, (ecs_vector2i_t){50, 50});
+    component_size_constructor(&component, (void *){&(ecs_vector2i_t){50, 50}});
     entity_add_component(entity, &component);
-    component_position_constructor(&component, pos);
+    component_position_constructor(&component, (void *){&pos});
     entity_add_component(entity, &component);
-    component_displayable_constructor(&component);
+    component_displayable_constructor(&component, 0);
     entity_add_component(entity, &component);
-    component_collidable_constructor(&component);
+    component_collidable_constructor(&component, 0);
     entity_add_component(entity, &component);
-    component_obstacle_constructor(&component);
+    component_obstacle_constructor(&component, 0);
     entity_add_component(entity, &component);
     return 0;
 }

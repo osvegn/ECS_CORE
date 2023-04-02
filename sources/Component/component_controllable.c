@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int component_controllable_constructor(component_t *component)
+int component_controllable_constructor(component_t *component, void *data)
 {
     component->type = C_CONTROLLABLE;
-    component->data = 0;
+    component->data = data;
     return 0;
 }

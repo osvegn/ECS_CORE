@@ -10,32 +10,28 @@
 #include "components.h"
 #include <stdlib.h>
 
-int component_position_constructor(component_t *component, ecs_vector2i_t pos)
+int component_position_constructor(component_t *component, void *data)
 {
-    ecs_vector2i_t *position = malloc(sizeof(ecs_vector2i_t));
-
-    if (!position)
+    component->data = malloc(sizeof(ecs_vector2i_t));
+    if (!component->data)
         return -1;
     component->type = C_POSITION;
-    position->x = pos.x;
-    position->y = pos.y;
-    component->data = (void *)position;
+    memcpy(component->data, data, sizeof(ecs_vector2i_t));
     return 0;
 }
 
-void component_position_set(component_t *component, const ecs_vector2i_t pos)
+void component_position_set(component_t *component, void *data)
 {
     ecs_vector2i_t *position = component->data;
 
     if (!component->type == C_POSITION)
         return;
-    position->x = pos.x;
-    position->y = pos.y;
+    memcpy(component->data, data, sizeof(ecs_vector2i_t));
 }
 
-ecs_vector2i_t *component_position_get(const component_t *component)
+void *component_position_get(const component_t *component)
 {
     if (component->type != C_POSITION)
         return 0;
-    return (ecs_vector2i_t *)component->data;
+    return component->data;
 }

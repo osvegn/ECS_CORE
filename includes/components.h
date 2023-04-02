@@ -36,7 +36,7 @@ typedef enum component_type_e {
 
 /// @brief This function is used to construct a position component
 /// @param component The component to construct
-/// @param pos The position to set
+/// @param data The position to set
 /// @return 0
 /// @details **Example:**
 /// @code
@@ -49,11 +49,11 @@ typedef enum component_type_e {
 ///     return 0;
 /// }
 /// @endcode
-int component_position_constructor(component_t *component, ecs_vector2i_t pos);
+int component_position_constructor(component_t *component, void *data);
 
 /// @brief This function is used to set the position of a position component
 /// @param component The component to set
-/// @param pos The position to set
+/// @param data The position to set
 /// @details **Example:**
 /// @code
 /// int main(void) {
@@ -68,7 +68,7 @@ int component_position_constructor(component_t *component, ecs_vector2i_t pos);
 ///     return 0;
 /// }
 /// @endcode
-void component_position_set(component_t *component, const ecs_vector2i_t pos);
+void component_position_set(component_t *component, void *data);
 
 /// @brief This function is used to get the position of a position component
 /// @param component The component to get
@@ -85,56 +85,59 @@ void component_position_set(component_t *component, const ecs_vector2i_t pos);
 ///     return 0;
 /// }
 /// @endcode
-ecs_vector2i_t *component_position_get(const component_t *component);
+void *component_position_get(const component_t *component);
 
-int component_velocity_constructor(component_t *component, ecs_vector2i_t vel);
-void component_velocity_set(component_t *component, const ecs_vector2i_t vel);
-ecs_vector2i_t *component_velocity_get(const component_t *component);
+int component_velocity_constructor(component_t *component, void *data);
+void component_velocity_set(component_t *component, void *data);
+void *component_velocity_get(const component_t *component);
 
 /// @brief This function is used to construct a displayable component
 /// @param component The component to construct
+/// @param data unused parameter
 /// @return 0
 /// @details **Example:**
 /// @code
 /// int main(void) {
 ///     component_t component;
 ///
-///     component_displayable_constructor(&component);
+///     component_displayable_constructor(&component, 0);
 ///     component_destructor(&component);
 ///     return 0;
 /// }
 /// @endcode
-int component_displayable_constructor(component_t *component);
+int component_displayable_constructor(component_t *component, void *data);
 
 /// @brief This function is used to initialize a clickable component
 /// @param component The component to initialize
+/// @param data unused parameter
 /// @return 0
 /// @details **Example:**
 /// @code
 /// int main(void) {
 ///     component_t component;
 ///
-///     clickable_constructor(&component);
+///     clickable_constructor(&component, 0);
 ///     component_destructor(&component);
 ///     return 0;
 /// }
 /// @endcode
-int component_clickable_constructor(component_t *component);
+int component_clickable_constructor(component_t *component, void *data);
 
 /// @brief This function is used to initialize the clicked component.
 /// @param component The component to initialize
+/// @param data unused parameter
 /// @return 0
 /// @details **Example:**
 /// @code
 /// int main(void) {
 ///     component_t component;
 ///
-///     component_clicked_constructor(&component);
+///     component_clicked_constructor(&component, 0);
 ///     component_destructor(&component);
 ///     return 0;
 /// }
 /// @endcode
-int component_clicked_constructor(component_t *component);
+int component_clicked_constructor(component_t *component, void *data);
 
 /// @brief The action component constructor
 /// @param component The component to construct
@@ -189,22 +192,23 @@ void component_action_set(component_t *component, void *data);
 
 /// @brief This function is used to construct a controllable component
 /// @param component The component to construct
+/// @param data unused parameter
 /// @return 0
 /// @details **Example:**
 /// @code
 /// int main(void) {
 ///     component_t component;
 ///
-///     component_controllable_constructor(&component);
+///     component_controllable_constructor(&component, 0);
 ///     component_destructor(&component);
 ///     return 0;
 /// }
 /// @endcode
-int component_controllable_constructor(component_t *component);
+int component_controllable_constructor(component_t *component, void *data);
 
 /// @brief This function is used to create a size component
 /// @param component The component to create
-/// @param s The size of the component
+/// @param data The size of the component
 /// @return 0 if the component was created, -1 otherwise
 /// @details **Example:**
 /// @code
@@ -217,26 +221,25 @@ int component_controllable_constructor(component_t *component);
 ///     return 0;
 /// }
 /// @endcode
-int component_size_constructor(component_t *component, ecs_vector2i_t s);
+int component_size_constructor(component_t *component, void *data);
 
-void component_size_set(component_t *component, const ecs_vector2i_t s);
+void component_size_set(component_t *component, void *data);
 
-void *component_size_get(const component_t *component, ecs_vector2i_t *s);
+void *component_size_get(const component_t *component);
 
 
-int component_gravitable_constructor(component_t *component);
+int component_gravitable_constructor(component_t *component, void *data);
 
 int weight_constructor(component_t *component, void *data);
 void *weight_get(const component_t *component);
 void weight_set(component_t *component, void *data);
 
-int component_color_constructor(component_t *component, ecs_color_t color);
+int component_color_constructor(component_t *component, void *data);
 ecs_color_t *component_get_color(component_t *component);
-int component_set_color(component_t *component, ecs_color_t color);
+int component_set_color(component_t *component, void *data);
 
-int component_clickable_constructor(component_t *component);
-int component_collidable_constructor(component_t *component);
-int component_jumpable_constructor(component_t *component);
-int component_obstacle_constructor(component_t *component);
+int component_collidable_constructor(component_t *component, void *data);
+int component_jumpable_constructor(component_t *component, void *data);
+int component_obstacle_constructor(component_t *component, void *data);
 
 #endif /* !COMPONENTS_H_ */

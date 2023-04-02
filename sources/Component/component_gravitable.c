@@ -9,9 +9,9 @@
 
 #include "components.h"
 
-int component_gravitable_constructor(component_t *component)
+int component_gravitable_constructor(component_t *component, void *data)
 {
     component->type = C_GRAVITABLE;
-    component->data = 0;
+    component->data = data;
     return 0;
 }

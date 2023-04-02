@@ -11,13 +11,14 @@
 #include "ecs_color.h"
 #include <stdlib.h>
 
-int component_color_constructor(component_t *component, ecs_color_t color)
+int component_color_constructor(component_t *component, void *data)
 {
     component->type = C_COLOR;
     component->data = malloc(sizeof(ecs_color_t));
     if (!component->data)
         return 84;
-    *(ecs_color_t *)component->data = color;
+    memcpy(component->data, data, sizeof(ecs_color_t));
+    component->data = data;
     return 0;
 }
 
@@ -28,10 +29,10 @@ ecs_color_t *component_get_color(component_t *component)
     return (ecs_color_t *)component->data;
 }
 
-int component_set_color(component_t *component, ecs_color_t color)
+int component_set_color(component_t *component, void *data)
 {
     if (component->type != C_COLOR)
         return 84;
-    *(ecs_color_t *)component->data = color;
+    memcpy(component->data, data, sizeof(ecs_color_t));
     return 0;
 }

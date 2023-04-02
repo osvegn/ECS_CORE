@@ -15,21 +15,21 @@ int player_constructor(entity_t *entity)
     component_t component;
 
     entity_constructor(entity);
-    component_size_constructor(&component, (ecs_vector2i_t){50, 50});
+    component_size_constructor(&component, (void *){&(ecs_vector2i_t){50, 50}});
     entity_add_component(entity, &component);
-    component_position_constructor(&component, (ecs_vector2i_t){200, -60});
+    component_position_constructor(&component, (void *){&(ecs_vector2i_t){200, -60}});
     entity_add_component(entity, &component);
-    component_displayable_constructor(&component);
+    component_displayable_constructor(&component, 0);
     entity_add_component(entity, &component);
-    component_controllable_constructor(&component);
+    component_controllable_constructor(&component, 0);
     entity_add_component(entity, &component);
-    component_velocity_constructor(&component, (ecs_vector2i_t){0, 0});
+    component_velocity_constructor(&component, (void *){&(ecs_vector2i_t){0, 0}});
     entity_add_component(entity, &component);
-    component_gravitable_constructor(&component);
+    component_gravitable_constructor(&component, 0);
     entity_add_component(entity, &component);
-    component_jumpable_constructor(&component);
+    component_jumpable_constructor(&component, 0);
     entity_add_component(entity, &component);
-    component_collidable_constructor(&component);
+    component_collidable_constructor(&component, 0);
     entity_add_component(entity, &component);
     return 0;
 }

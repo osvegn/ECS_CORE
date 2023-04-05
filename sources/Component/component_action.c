@@ -12,7 +12,7 @@
 int component_action_constructor(component_t *component, void *data)
 {
     component->type = C_ACTION;
-    component->data = data;
+    component->data = 0;
     return 0;
 }
 

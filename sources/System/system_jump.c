@@ -27,7 +27,7 @@ int system_jump(void *ptr)
 {
     vector_t entities = {0};
     entity_t *entity = 0;
-    int rvalue = world_join_entities(ptr, &entities, 2, C_JUMPABLE, C_VELOCITY);
+    int rvalue = world_join_entities(ptr, &entities, 3, C_JUMPABLE, C_VELOCITY, C_CONTROLLABLE);
     ecs_vector2i_t *velocity = 0;
 
     if (rvalue <= 0)

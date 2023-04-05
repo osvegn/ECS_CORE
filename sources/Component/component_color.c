@@ -10,15 +10,28 @@
 #include "components.h"
 #include "ecs_color.h"
 #include <stdlib.h>
+#include <string.h>
+#include <json-c/json.h>
 
 int component_color_constructor(component_t *component, void *data)
 {
+    json_object *json = json_tokener_parse((char *)data);
+
+    if (!json) {
+        return -1;
+    }
+    ecs_color_t color = {
+        json_object_get_int(json_object_object_get(json, "r")),
+        json_object_get_int(json_object_object_get(json, "g")),
+        json_object_get_int(json_object_object_get(json, "b")),
+        json_object_get_int(json_object_object_get(json, "a"))
+    };
+    json_object_put(json);
     component->type = C_COLOR;
     component->data = malloc(sizeof(ecs_color_t));
     if (!component->data)
         return 84;
-    memcpy(component->data, data, sizeof(ecs_color_t));
-    component->data = data;
+    memcpy(component->data, &color, sizeof(ecs_color_t));
     return 0;
 }
 

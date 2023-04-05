@@ -9,14 +9,25 @@
 
 #include "components.h"
 #include <stdlib.h>
+#include <json-c/json.h>
 
 int component_velocity_constructor(component_t *component, void *data)
 {
+    json_object *json = json_tokener_parse((char *)data);
+
+    if (!json) {
+        return -1;
+    }
+    ecs_vector2i_t velocity = {
+        json_object_get_int(json_object_object_get(json, "x")),
+        json_object_get_int(json_object_object_get(json, "y"))
+    };
+
     component->data = malloc(sizeof(ecs_vector2i_t));
     if (!component->data)
         return -1;
     component->type = C_VELOCITY;
-    memcpy(component->data, data, sizeof(ecs_vector2i_t));
+    memcpy(component->data, &velocity, sizeof(ecs_vector2i_t));
     return 0;
 }
 

@@ -12,6 +12,6 @@
 int component_collidable_constructor(component_t *component, void *data)
 {
     component->type = C_COLLIDABLE;
-    component->data = data;
+    component->data = 0;
     return 0;
 }

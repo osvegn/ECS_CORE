@@ -24,10 +24,10 @@ static void entity_initializer(world_t *world)
     entity_t entity;
     vector_t *entities = &world->entity_list;
 
-    player_constructor(&entity);
-    entities->emplace_back(entities, &entity);
-    plateform_constructor(&entity);
-    entities->emplace_back(entities, &entity);
+    // player_constructor(&entity);
+    // entities->emplace_back(entities, &entity);
+    // plateform_constructor(&entity);
+    // entities->emplace_back(entities, &entity);
 }
 
 static void system_initializer(world_t *world)

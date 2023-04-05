@@ -12,6 +12,6 @@
 int component_controllable_constructor(component_t *component, void *data)
 {
     component->type = C_CONTROLLABLE;
-    component->data = data;
+    component->data = 0;
     return 0;
 }

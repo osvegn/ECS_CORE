@@ -10,6 +10,7 @@
 #include "world.h"
 #include "world_system.h"
 #include "world_resource.h"
+#include "world_entity.h"
 #include "systems.h"
 #include "resources.h"
 #include "components.h"
@@ -144,6 +145,38 @@ static int update_entities(world_t *world, json_object *entities)
         &component_collidable_constructor,
         0
     };
+    entity_t entity = {0};
+    component_t component = {0};
+    json_object *tmp = 0;
+    void *data = 0;
+
+    while (world->entity_list.size(&world->entity_list) > 0) {
+        printf("remove entity id: %i\n", (entity_t *){world->entity_list.back(&world->entity_list)}->id);
+        entity_t *ptr = world->entity_list.back(&world->entity_list);
+        while (ptr->components.size(&ptr->components) > 0) {
+            component_destructor(ptr->components.back(&ptr->components));
+            ptr->components.pop_back(&ptr->components);
+        }
+        world->entity_list.pop_back(&world->entity_list);
+    }
+    for (unsigned int i = 0; i < json_object_array_length(entities); i++) {
+        printf("add entity\n");
+        tmp = json_object_object_get(json_object_array_get_idx(entities, i), "components");
+        entity_constructor(&entity);
+        for (unsigned int j = 0; j < json_object_array_length(tmp); j++) {
+            printf("add component\n");
+            for (unsigned int k = 0; components_types[k]; k++) {
+                if (strcmp(json_object_get_string(json_object_object_get(json_object_array_get_idx(tmp, j), "type")), components_types[k]) == 0) {
+                    constructors[k](&component, json_object_to_json_string(json_object_object_get(json_object_array_get_idx(tmp, j), "data")));
+                    entity_add_component(&entity, &component);
+                    break;
+                }
+                if (!components_types[k + 1])
+                    printf("Component not found\n");
+            }
+        }
+        world_add_entity(world, &entity);
+    }
     return 0;
 }
 

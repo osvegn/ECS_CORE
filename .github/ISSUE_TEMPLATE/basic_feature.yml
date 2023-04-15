@@ -1,0 +1,33 @@
+name: Feature
+description: Create an issue for a new feature to implement.
+title: "[FEATURE]: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature you want to implement.
+      placeholder: "Describe the feature you want to implement."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: To do
+      description: Describe the steps to implement the feature.
+      placeholder: "Describe the steps to implement the feature."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+      placeholder: "Add any other context or screenshots about the feature request here."
+    validations:
+      required: false

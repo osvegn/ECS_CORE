@@ -1,0 +1,3 @@
+add_subdirectory(System)
+add_subdirectory(Component)
+add_subdirectory(Resource)

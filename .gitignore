@@ -55,7 +55,7 @@ dkms.conf
 .vscode
 build
 build_debug
-*tests
+*_tests
 docs
 plateform.md
 vgcore.*

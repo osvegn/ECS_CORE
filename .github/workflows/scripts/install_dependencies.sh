@@ -24,7 +24,6 @@ if [ "$1" = "criterion" ]; then
     meson build
     ninja -C build
     sudo ninja -C build install
-    cd Criterion
     sudo ldconfig
 fi
 

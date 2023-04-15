@@ -1,0 +1,26 @@
+name: Documentation
+description: Create an issue to document something.
+title: "[DOC]: "
+labels: ["Documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+
+  - type: textarea
+    id: type
+    attributes:
+      label: type
+      description: What kind of documentation
+      placeholder: "What kind of documentation"
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: location
+      description: Where do you want to add this documentation
+      placeholder: "Where do you want to add this documentation"
+    validations:
+      required: true

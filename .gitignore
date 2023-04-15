@@ -54,6 +54,7 @@ dkms.conf
 
 .vscode
 build
+build_debug
 *tests
 docs
 plateform.md

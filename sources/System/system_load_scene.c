@@ -11,9 +11,7 @@
 #include "world_system.h"
 #include "world_resource.h"
 #include "world_entity.h"
-#include "systems.h"
-#include "resources.h"
-#include "components.h"
+#include "world_loader_constructors.h"
 #include <json-c/json.h>
 
 int system_load_scene_constructor(system_t *system)
@@ -26,32 +24,6 @@ int system_load_scene_constructor(system_t *system)
 
 static int update_systems(world_t *world, json_object *systems)
 {
-    char *systems_types[] = {
-        "S_LOAD_SCENE",
-        "S_DISPLAY",
-        "S_WINDOWS_MANAGER",
-        "S_MOVEMENT",
-        "S_MOVE_CONTROLLABLE",
-        "S_GRAVITY",
-        "S_JUMP",
-        "S_OBSTACLE_CREATION",
-        "S_CAMERA",
-        "S_RELOAD_CONFIG",
-        0
-    };
-    int (*constructors[])(system_t *) = {
-        &system_load_scene_constructor,
-        &system_display_constructor,
-        &system_windows_manager_constructor,
-        &system_movement_constructor,
-        &system_move_controllable_constructor,
-        &system_gravity_constructor,
-        &system_jump_constructor,
-        &system_obstacle_creation_constructor,
-        &system_camera_constructor,
-        &system_reload_config_constructor,
-        0
-    };
     system_t system = {0};
     json_object *tmp = 0;
 
@@ -64,7 +36,7 @@ static int update_systems(world_t *world, json_object *systems)
         tmp = json_object_array_get_idx(systems, i);
         for (int j = 0; systems_types[j]; j++) {
             if (strcmp(json_object_get_string(tmp), systems_types[j]) == 0) {
-                constructors[j](&system);
+                systems_constructors[j](&system);
                 world_add_system(world, &system);
                 printf("Add system: %s\n", systems_types[j]);
                 break;
@@ -79,20 +51,6 @@ static int update_systems(world_t *world, json_object *systems)
 
 static int update_resources(world_t *world, json_object *resources)
 {
-    char *resources_types[] = {
-        "R_WINDOW",
-        "R_GRAVITY",
-        "R_CAMERA",
-        "R_SCENE_FILENAME",
-        0
-    };
-    int (*constructors[])(resource_t *, void *) = {
-        &resource_window_constructor,
-        &resource_gravity_constructor,
-        &resource_camera_constructor,
-        &resource_scene_filename_constructor,
-        0
-    };
     resource_t resource = {0};
     json_object *tmp = 0;
     void *data = 0;
@@ -108,7 +66,7 @@ static int update_resources(world_t *world, json_object *resources)
             if (strcmp(json_object_get_string(json_object_object_get(tmp, "type")), resources_types[j]) == 0) {
                 char *wooow = json_object_to_json_string(json_object_object_get(tmp, "data"));
                 printf("wooow: %s\n", wooow);
-                constructors[j](&resource, json_object_to_json_string(json_object_object_get(tmp, "data")));
+                resources_constructors[j](&resource, json_object_to_json_string(json_object_object_get(tmp, "data")));
                 world_add_resource(world, &resource);
                 printf("Add resource: %s\n", resources_types[j]);
                 break;
@@ -123,28 +81,6 @@ static int update_resources(world_t *world, json_object *resources)
 
 static int update_entities(world_t *world, json_object *entities)
 {
-    const char *components_types[] = {
-        "C_POSITION",
-        "C_VELOCITY",
-        "C_CONTROLLABLE",
-        "C_SIZE",
-        "C_DISPLAYABLE",
-        "C_GRAVITABLE",
-        "C_JUMPABLE",
-        "C_COLLIDABLE",
-        0
-    };
-    int (*constructors[])(component_t *, void *) = {
-        &component_position_constructor,
-        &component_velocity_constructor,
-        &component_controllable_constructor,
-        &component_size_constructor,
-        &component_displayable_constructor,
-        &component_gravitable_constructor,
-        &component_jumpable_constructor,
-        &component_collidable_constructor,
-        0
-    };
     entity_t entity = {0};
     component_t component = {0};
     json_object *tmp = 0;
@@ -167,7 +103,7 @@ static int update_entities(world_t *world, json_object *entities)
             printf("add component\n");
             for (unsigned int k = 0; components_types[k]; k++) {
                 if (strcmp(json_object_get_string(json_object_object_get(json_object_array_get_idx(tmp, j), "type")), components_types[k]) == 0) {
-                    constructors[k](&component, json_object_to_json_string(json_object_object_get(json_object_array_get_idx(tmp, j), "data")));
+                    components_constructors[k](&component, json_object_to_json_string(json_object_object_get(json_object_array_get_idx(tmp, j), "data")));
                     entity_add_component(&entity, &component);
                     break;
                 }

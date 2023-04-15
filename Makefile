@@ -11,6 +11,8 @@ RM		=	rm -rf
 
 BUILD	=	build
 
+BUILD_DEBUG		=	build_debug
+
 CC		=	cmake
 
 TESTS	=	vector_tests ecs_tests
@@ -26,8 +28,8 @@ clean:
 re: clean all
 
 debug:
-	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Debug -DTESTING=OFF
-	${CC} --build ${BUILD}
+	${CC} -B ${BUILD_DEBUG} -DCMAKE_BUILD_TYPE=Debug -DTESTING=OFF
+	${CC} --build ${BUILD_DEBUG}
 
 run_tests:
 	${CC} -B ${BUILD} -DTESTING=ON

@@ -13,16 +13,36 @@
         [
             {
                 "type": "R_WINDOW",
-                "data":{"width":1920, "height":1080, "title":"main menu", "fps":60}
+                "data":{"width":840, "height":600, "title":"main menu", "fps":60}
             },
             {
                 "type": "R_SCENE_FILENAME",
-                "data":"config/main_menu.json"
+                "data":"config/basic_scene.json"
             }
         ],
         "entities":
         [
-            
+            {
+                "components":
+                [
+                    {
+                        "type": "C_SIZE",
+                        "data": {"width": 200, "height": 100}
+                    },
+                    {
+                        "type": "C_POSITION",
+                        "data": {"x":200, "y": 200}
+                    },
+                    {
+                        "type": "C_DISPLAYABLE",
+                        "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r":0, "g":0, "b":255, "a":255}
+                    }
+                ]
+            }
         ]
     }
 }

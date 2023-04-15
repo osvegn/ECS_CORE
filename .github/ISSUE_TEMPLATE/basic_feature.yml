@@ -1,7 +1,7 @@
 name: Feature
 description: Create an issue for a new feature to implement.
 title: "[FEATURE]: "
-labels: ["feature"]
+labels: ["Feature"]
 body:
   - type: markdown
     attributes:

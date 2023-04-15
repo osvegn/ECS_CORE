@@ -13,4 +13,16 @@ make
 make test
 sudo make install
 
+if [ "$1" = "criterion" ]; then
+    sudo apt-get install gcovr
+    sudo apt-get install meson
+    git clone --recursive https://github.com/Snaipe/Criterion Criterion
+    cd Criterion
+    meson build
+    ninja -C build
+    sudo ninja -C build install
+    cd Criterion
+    sudo ldconfig
+fi
+
 git submodule update --init --recursive

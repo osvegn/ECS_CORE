@@ -25,6 +25,7 @@ if [ "$1" = "criterion" ]; then
     ninja -C build
     sudo ninja -C build install
     sudo ldconfig
+    cd ..
 fi
 
 echo "Install submodules"

@@ -1,15 +1,15 @@
 /*
- * Filename: /workspaces/our_rpg/sources/Component/position.c
- * Path: /workspaces/our_rpg/sources/Component
+ * Filename: sources/Component/position.c
+ * Path: sources/Component
  * Created Date: Sunday, January 15th 2023, 3:59:05 pm
  * Author: osvegn
- * 
+ *
  * Copyright (c) 2023 our_rpg
  */
 
 #include "components.h"
-#include <stdlib.h>
 #include <json-c/json.h>
+#include <stdlib.h>
 
 int component_position_constructor(component_t *component, void *data)
 {
@@ -20,8 +20,7 @@ int component_position_constructor(component_t *component, void *data)
     }
     ecs_vector2i_t position = {
         json_object_get_int(json_object_object_get(json, "x")),
-        json_object_get_int(json_object_object_get(json, "y"))
-    };
+        json_object_get_int(json_object_object_get(json, "y"))};
     json_object_put(json);
     component->data = malloc(sizeof(ecs_vector2i_t));
     if (!component->data)

@@ -1,15 +1,15 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/Component/size.c
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/Component
+ * Filename: sources/Component/size.c
+ * Path: sources/Component
  * Created Date: Thursday, March 9th 2023, 3:10:24 pm
  * Author: Thomas
- * 
+ *
  * Copyright (c) 2023 Your Company
  */
 
 #include "components.h"
-#include <stdlib.h>
 #include <json-c/json.h>
+#include <stdlib.h>
 
 int component_size_constructor(component_t *component, void *data)
 {
@@ -18,9 +18,9 @@ int component_size_constructor(component_t *component, void *data)
     if (!json) {
         return -1;
     }
-    ecs_vector2i_t size = {json_object_get_int(json_object_object_get(json, "width")),
-                            json_object_get_int(json_object_object_get(json, "height"))
-                            };
+    ecs_vector2i_t size = {
+        json_object_get_int(json_object_object_get(json, "width")),
+        json_object_get_int(json_object_object_get(json, "height"))};
     json_object_put(json);
     component->data = malloc(sizeof(ecs_vector2i_t));
     if (!component->data)

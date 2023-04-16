@@ -1,9 +1,9 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/Component/obstacle.c
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/Component
+ * Filename: sources/Component/obstacle.c
+ * Path: sources/Component
  * Created Date: Friday, March 17th 2023, 9:43:47 am
  * Author: Thomas
- * 
+ *
  * Copyright (c) 2023 Your Company
  */
 

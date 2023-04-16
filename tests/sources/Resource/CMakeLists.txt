@@ -1,5 +1,5 @@
-set(SYSTEM_TESTS_ROOT ${PROJECT_SOURCE_DIR}/tests/sources/System)
-set(TARGET system_tests)
+set(RESOURCE_TESTS_ROOT ${PROJECT_SOURCE_DIR}/tests/sources/Resource)
+set(TARGET resource_tests)
 set(SOURCE
     ${GLOBAL_SOURCES}
 )

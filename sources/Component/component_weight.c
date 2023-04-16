@@ -1,6 +1,6 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/Component/weight.c
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/Component
+ * Filename: sources/Component/weight.c
+ * Path: sources/Component
  * Created Date: Monday, March 13th 2023, 4:51:45 pm
  * Author: Thomas
  *

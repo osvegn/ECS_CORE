@@ -13,9 +13,12 @@ BUILD	=	build
 
 BUILD_DEBUG		=	build_debug
 
+BUILD_TESTS		=	build_tests
+
 CC		=	cmake
 
-TESTS	=	vector_tests ecs_tests
+TESTS	=	component_tests resource_tests system_tests
+# vector_tests ecs_tests
 
 all:
 	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF
@@ -32,8 +35,8 @@ debug:
 	${CC} --build ${BUILD_DEBUG}
 
 run_tests:
-	${CC} -B ${BUILD} -DTESTING=ON
-	${CC} --build ${BUILD}
+	${CC} -B ${BUILD_TESTS} -DTESTING=ON
+	${CC} --build ${BUILD_TESTS}
 	${foreach test, ${TESTS}, ./${test};}
 
 valgrind: debug

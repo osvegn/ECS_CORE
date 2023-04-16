@@ -1,9 +1,9 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/Component/gravitable.c
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/Component
+ * Filename: sources/Component/gravitable.c
+ * Path: sources/Component
  * Created Date: Monday, March 13th 2023, 4:56:52 pm
  * Author: Thomas
- * 
+ *
  * Copyright (c) 2023 Your Company
  */
 

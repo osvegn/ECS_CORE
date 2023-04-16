@@ -9,6 +9,7 @@
 
 #include "world_entity.h"
 #include "components.h"
+#include <raylib.h>
 
 int plateform_constructor(entity_t *entity)
 {

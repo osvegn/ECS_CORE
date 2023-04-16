@@ -72,7 +72,7 @@ int resource_window_constructor(resource_t *resource, void *data);
 ///        return 0;
 ///    }
 /// @endcode
-int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps);
+int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char title[256], unsigned int fps);
 
 /// @brief This function is used to create a window resource
 /// @param resource The resource to create
@@ -113,7 +113,7 @@ int resource_window_copy_constructor(resource_t *resource, window_t *w);
 ///        return 0;
 ///    }
 /// @endcode
-void resource_window_destructor(resource_t *resource);
+int resource_window_destructor(resource_t *resource);
 
 int resource_gravity_constructor(resource_t *resource, void *data);
 void *resource_gravity_get(const resource_t *resource);

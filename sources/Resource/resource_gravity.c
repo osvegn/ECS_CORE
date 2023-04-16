@@ -13,7 +13,7 @@
 int resource_gravity_constructor(resource_t *resource, void *data)
 {
     resource->type = R_GRAVITY;
-    resource->data = atoi((char *)data);
+    resource->data = (void *)atoi((char *)data);
     resource->destructor = &resource_gravity_destructor;
     return 0;
 }

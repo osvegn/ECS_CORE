@@ -53,3 +53,6 @@ jobs:
         FOLDER: ./coverage
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TARGET_DIR: docs/coverage
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3

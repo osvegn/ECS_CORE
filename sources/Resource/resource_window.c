@@ -32,7 +32,7 @@ int resource_window_constructor(resource_t *resource, void *data)
     return resource_window_copy_constructor(resource, &window);
 }
 
-int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char *title, unsigned int fps)
+int resource_window_constructor_with_params(resource_t *resource, unsigned int width, unsigned int height, char title[256], unsigned int fps)
 {
     window_t window = {width, height, title, fps};
 
@@ -57,8 +57,9 @@ int resource_window_copy_constructor(resource_t *resource, window_t *w)
     return 0;
 }
 
-void resource_window_destructor(resource_t *resource)
+int resource_window_destructor(resource_t *resource)
 {
     CloseWindow();
     free(resource->data);
+    return 0;
 }

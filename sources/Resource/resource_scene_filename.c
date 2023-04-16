@@ -10,7 +10,6 @@
 #include "resources.h"
 #include <stdlib.h>
 #include <string.h>
-
 int resource_scene_filename_constructor(resource_t *resource, void *data)
 {
     char *tmp = strdup(data);
@@ -22,7 +21,6 @@ int resource_scene_filename_constructor(resource_t *resource, void *data)
     // resource->data = strdup(data);
     resource->data = strdup(tmp);
     resource->destructor = &resource_scene_filename_destructor;
-    printf("data: %s\n", resource->data);
     free(tmp);
     return 0;
 }

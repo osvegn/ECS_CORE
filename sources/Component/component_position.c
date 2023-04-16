@@ -10,6 +10,7 @@
 #include "components.h"
 #include <json-c/json.h>
 #include <stdlib.h>
+#include <string.h>
 
 int component_position_constructor(component_t *component, void *data)
 {

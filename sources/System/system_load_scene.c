@@ -28,23 +28,17 @@ static int update_systems(world_t *world, json_object *systems)
     json_object *tmp = 0;
 
     while (world->system_list.size(&world->system_list) > 0) {
-        printf("remove system type: %i\n", (system_t *){world->system_list.back(&world->system_list)}->type);
         world->system_list.pop_back(&world->system_list);
     }
-    printf("systems: %s\n", json_object_to_json_string(systems));
     for (int i = 0; i < json_object_array_length(systems); i++) {
         tmp = json_object_array_get_idx(systems, i);
         for (int j = 0; systems_types[j]; j++) {
             if (strcmp(json_object_get_string(tmp), systems_types[j]) == 0) {
                 systems_constructors[j](&system);
                 world_add_system(world, &system);
-                printf("Add system: %s\n", systems_types[j]);
                 break;
             }
-            if (!systems_types[j + 1])
-                printf("System not found: %s\n", json_object_get_string(tmp));
         }
-        printf("\tsystems %i: %s\n", i, json_object_to_json_string(tmp));
     }
     return 0;
 }
@@ -56,7 +50,6 @@ static int update_resources(world_t *world, json_object *resources)
     void *data = 0;
 
     while (world->resource_list.size(&world->resource_list) > 0) {
-        printf("remove resource type: %i\n", (resource_t *){world->resource_list.back(&world->resource_list)}->type);
         (resource_t *){world->resource_list.back(&world->resource_list)}->destructor(world->resource_list.back(&world->resource_list));
         world->resource_list.pop_back(&world->resource_list);
     }
@@ -65,16 +58,11 @@ static int update_resources(world_t *world, json_object *resources)
         for (int j = 0; resources_types[j]; j++) {
             if (strcmp(json_object_get_string(json_object_object_get(tmp, "type")), resources_types[j]) == 0) {
                 char *wooow = json_object_to_json_string(json_object_object_get(tmp, "data"));
-                printf("wooow: %s\n", wooow);
                 resources_constructors[j](&resource, json_object_to_json_string(json_object_object_get(tmp, "data")));
                 world_add_resource(world, &resource);
-                printf("Add resource: %s\n", resources_types[j]);
                 break;
             }
-            if (!resources_types[j + 1])
-                printf("Resource not found: %s\n", json_object_get_string(tmp));
         }
-        printf("\tresources %i: %s\n", i, json_object_to_json_string(tmp));
     }
     return 0;
 }
@@ -87,7 +75,6 @@ static int update_entities(world_t *world, json_object *entities)
     void *data = 0;
 
     while (world->entity_list.size(&world->entity_list) > 0) {
-        printf("remove entity id: %i\n", (entity_t *){world->entity_list.back(&world->entity_list)}->id);
         entity_t *ptr = world->entity_list.back(&world->entity_list);
         while (ptr->components.size(&ptr->components) > 0) {
             component_destructor(ptr->components.back(&ptr->components));
@@ -96,19 +83,15 @@ static int update_entities(world_t *world, json_object *entities)
         world->entity_list.pop_back(&world->entity_list);
     }
     for (unsigned int i = 0; i < json_object_array_length(entities); i++) {
-        printf("add entity\n");
         tmp = json_object_object_get(json_object_array_get_idx(entities, i), "components");
         entity_constructor(&entity);
         for (unsigned int j = 0; j < json_object_array_length(tmp); j++) {
-            printf("add component\n");
             for (unsigned int k = 0; components_types[k]; k++) {
                 if (strcmp(json_object_get_string(json_object_object_get(json_object_array_get_idx(tmp, j), "type")), components_types[k]) == 0) {
                     components_constructors[k](&component, json_object_to_json_string(json_object_object_get(json_object_array_get_idx(tmp, j), "data")));
                     entity_add_component(&entity, &component);
                     break;
                 }
-                if (!components_types[k + 1])
-                    printf("Component not found\n");
             }
         }
         world_add_entity(world, &entity);
@@ -124,12 +107,9 @@ int system_load_scene_run(void *ptr)
 
     if (scene_filename == 0)
         return -1;
-    printf("scene_filename: %s\n", scene_filename->data);
     json = json_object_from_file(scene_filename->data);
     if (json == 0)
         return -2;
-    printf("Loading scene: %s\n", scene_filename->data);
-    printf("Scene loaded: %s\n", json_object_to_json_string(json));
     update_resources(world, json_object_object_get(json_object_object_get(json, "world"), "resources"));
     update_systems(world, json_object_object_get(json_object_object_get(json, "world"), "systems"));
     update_entities(world, json_object_object_get(json_object_object_get(json, "world"), "entities"));

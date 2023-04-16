@@ -14,6 +14,7 @@ cmake ../json-c
 make
 make test
 sudo make install
+sudo ldconfig
 
 if [ "$1" = "criterion" ]; then
     echo "Install Criterion"

@@ -18,7 +18,6 @@ BUILD_TESTS		=	build_tests
 CC		=	cmake
 
 TESTS	=	component_tests resource_tests system_tests
-# vector_tests ecs_tests
 
 all:
 	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF
@@ -26,6 +25,8 @@ all:
 
 clean:
 	${RM} ${BUILD}
+	${RM} ${BUILD_DEBUG}
+	${RM} ${BUILD_TESTS}
 	${RM} ${TESTS}
 
 re: clean all

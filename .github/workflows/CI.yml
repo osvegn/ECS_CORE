@@ -21,6 +21,20 @@ jobs:
         cmake -B build
         cmake --build build
 
+  build-windows:
+    runs-on: windows-2019
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Dependencies
+      run: ${GITHUB_WORKSPACE}\.github\workflows\scripts\install_dependencies.bat
+
+    - name: Build
+      run: |
+        cmake -B build
+        cmake --build build
+
   tests_linux:
     needs: build-linux
     runs-on: ubuntu-22.04

@@ -60,6 +60,7 @@ docs
 plateform.md
 vgcore.*
 log_valgrind.txt
+log
 
 # Docker
 Dockerfile

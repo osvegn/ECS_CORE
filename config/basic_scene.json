@@ -70,6 +70,10 @@
                     {
                         "type": "C_COLLIDABLE",
                         "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r": 255, "g": 0, "b": 0, "a": 255}
                     }
                 ]
             },
@@ -91,6 +95,10 @@
                     {
                         "type": "C_COLLIDABLE",
                         "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r": 255, "g": 0, "b": 0, "a": 255}
                     }
                 ]
             },
@@ -124,6 +132,10 @@
                     {
                         "type": "C_COLLIDABLE",
                         "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r": 0, "g": 255, "b": 0, "a": 255}
                     }
                 ]
             }

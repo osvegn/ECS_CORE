@@ -9,7 +9,7 @@
 
 #include "components.h"
 #include "ecs_color.h"
-#include <json-c/json.h>
+#include "json.h"
 #include <stdlib.h>
 #include <string.h>
 

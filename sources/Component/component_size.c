@@ -8,7 +8,7 @@
  */
 
 #include "components.h"
-#include <json-c/json.h>
+#include "json.h"
 #include <stdlib.h>
 #include <string.h>
 

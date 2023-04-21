@@ -17,7 +17,7 @@ int main(void)
     system_t system;
     int rvalue = 0;
 
-    world_constructor(&world);
+    world_constructor(&world, 0);
     system_world_initializer_constructor(&system);
     world_add_system(&world, &system);
     while (!rvalue && world.system_list.size(&world.system_list)) {

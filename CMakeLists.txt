@@ -28,3 +28,4 @@ include(DetectCompiler)
 
 #LIBRARY
 add_subdirectory(ECS)
+add_subdirectory(json-c)

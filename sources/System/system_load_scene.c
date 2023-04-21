@@ -12,7 +12,7 @@
 #include "world_resource.h"
 #include "world_entity.h"
 #include "world_loader_constructors.h"
-#include <json-c/json.h>
+#include "json.h"
 
 int system_load_scene_constructor(system_t *system)
 {

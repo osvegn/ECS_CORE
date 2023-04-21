@@ -4,3 +4,6 @@
 [submodule "ECS"]
 	path = ECS
 	url = https://github.com/osvegn/ECS
+[submodule "json-c"]
+	path = json-c
+	url = https://github.com/json-c/json-c.git

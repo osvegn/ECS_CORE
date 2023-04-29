@@ -14,10 +14,6 @@ add_subdirectory(sources)
 
 set(GLOBAL_SOURCES
     ${SOURCES}
-
-    ${SOURCE_ROOT}/Entity/player.c
-    ${SOURCE_ROOT}/Entity/plateform.c
-    ${SOURCE_ROOT}/Entity/obstacle.c
 )
 
 # set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
@@ -29,3 +25,4 @@ include(DetectCompiler)
 #LIBRARY
 add_subdirectory(ECS)
 add_subdirectory(json-c)
+add_subdirectory(lib)

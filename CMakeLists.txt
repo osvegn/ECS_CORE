@@ -20,10 +20,13 @@ set(GLOBAL_SOURCES
     ${SOURCE_ROOT}/Entity/obstacle.c
 )
 
-# set_property(GLOBAL PROPERTY GLOBAL_SOURCES ${GLOBAL_SOURCES})
+# output directory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # EXECUTABLE
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+include(Dependencies)
+include(Testings)
 include(DetectCompiler)
 
 #LIBRARY

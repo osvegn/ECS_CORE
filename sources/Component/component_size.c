@@ -11,51 +11,44 @@
 #include "json.h"
 #include <stdlib.h>
 #include <string.h>
+#include "world_logger.h"
+
+static int component_is_size(const component_t *component)
+{
+    if (component->type == C_SIZE)
+        return 1;
+    log_error("Component is not size.");
+    return 0;
+}
 
 int component_size_constructor(component_t *component, void *data)
 {
-    json_object *json = json_tokener_parse((char *)data);
-
-    if (!json) {
+    component->type = C_SIZE;
+    component->data = malloc(sizeof(ecs_vector2i_t));
+    if (!component->data) {
+        log_fatal("Could not allocate memory for size component.");
         return -1;
     }
-    ecs_vector2i_t size = {
-        json_object_get_int(json_object_object_get(json, "width")),
-        json_object_get_int(json_object_object_get(json, "height"))};
-    json_object_put(json);
-    component->data = malloc(sizeof(ecs_vector2i_t));
-    if (!component->data)
+    return component_size_set(component, data);
+}
+
+int component_size_set(component_t *component, void *data)
+{
+    ecs_vector2i_t size = {0};
+    json_object *json = json_tokener_parse((char *)data);
+
+    if (!component_is_size(component) || !json)
         return -1;
-    component->type = C_SIZE;
+    size.x = json_object_get_int(json_object_object_get(json, "x"));
+    size.y = json_object_get_int(json_object_object_get(json, "y"));
+    json_object_put(json);
     memcpy(component->data, &size, sizeof(ecs_vector2i_t));
     return 0;
 }
 
-/// @brief This function set the size of the component
-/// @param component The component to set the size
-/// @param s The new size of the component
-/// @details **Example:**
-/// @code
-/// int main(void) {
-///     component_t component;
-///     ecs_vector2i_t size = {10, 10};
-///
-///     size_constructor(&component, size);
-///     size_set(&component, (ecs_vector2i_t){20, 20});
-///     component_destroy(&component);
-///     return 0;
-/// }
-/// @endcode
-void component_size_set(component_t *component, void *data)
-{
-    if (component->type != C_SIZE)
-        return;
-    memcpy(component->data, data, sizeof(ecs_vector2i_t));
-}
-
 void *component_size_get(const component_t *component)
 {
-    if (component->type != C_SIZE)
+    if (!component_is_size(component))
         return 0;
     return component->data;
 }

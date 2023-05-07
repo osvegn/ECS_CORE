@@ -32,7 +32,7 @@ int component_color_constructor(component_t *component, void *data)
     return 0;
 }
 
-int component_set_color(component_t *component, void *data)
+int component_set_color(const component_t *component, void *data)
 {
     ecs_color_t color = {0};
     json_object *json = json_tokener_parse((char *)data);

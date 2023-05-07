@@ -28,7 +28,7 @@ int component_color_constructor(component_t *component, void *data)
         log_fatal("Could not allocate memory for color component.");
         return -1;
     }
-    return component_color_set(component, data);
+    return component_set_color(component, data);
     return 0;
 }
 

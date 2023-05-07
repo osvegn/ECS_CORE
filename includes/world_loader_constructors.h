@@ -12,30 +12,30 @@
 #include "components.h"
 
 const char *systems_types[] = {
-        "S_LOAD_SCENE",
-        "S_DISPLAY",
-        "S_WINDOWS_MANAGER",
-        "S_MOVEMENT",
-        "S_MOVE_CONTROLLABLE",
-        "S_GRAVITY",
-        "S_JUMP",
-        "S_OBSTACLE_CREATION",
-        "S_CAMERA",
-        "S_RELOAD_CONFIG",
+        // "S_LOAD_SCENE",
+        // "S_DISPLAY",
+        // "S_WINDOWS_MANAGER",
+        // "S_MOVEMENT",
+        // "S_MOVE_CONTROLLABLE",
+        // "S_GRAVITY",
+        // "S_JUMP",
+        // "S_OBSTACLE_CREATION",
+        // "S_CAMERA",
+        // "S_RELOAD_CONFIG",
         0
 };
 
 const int (*systems_constructors[])(system_t *) = {
-        &system_load_scene_constructor,
-        &system_display_constructor,
-        &system_windows_manager_constructor,
-        &system_movement_constructor,
-        &system_move_controllable_constructor,
-        &system_gravity_constructor,
-        &system_jump_constructor,
-        &system_obstacle_creation_constructor,
-        &system_camera_constructor,
-        &system_reload_config_constructor,
+        // &system_load_scene_constructor,
+        // &system_display_constructor,
+        // &system_windows_manager_constructor,
+        // &system_movement_constructor,
+        // &system_move_controllable_constructor,
+        // &system_gravity_constructor,
+        // &system_jump_constructor,
+        // &system_obstacle_creation_constructor,
+        // &system_camera_constructor,
+        // &system_reload_config_constructor,
         0
 };
 
@@ -49,7 +49,6 @@ const char *resources_types[] = {
 
 const int (*resources_constructors[])(resource_t *, void *) = {
         &resource_window_constructor,
-        &resource_gravity_constructor,
         &resource_camera_constructor,
         &resource_scene_filename_constructor,
         0
@@ -74,8 +73,6 @@ const int (*components_constructors[])(component_t *, void *) = {
         &component_controllable_constructor,
         &component_size_constructor,
         &component_displayable_constructor,
-        &component_gravitable_constructor,
-        &component_jumpable_constructor,
         &component_collidable_constructor,
         &component_color_constructor,
         0

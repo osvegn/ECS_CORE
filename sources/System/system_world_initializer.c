@@ -19,31 +19,12 @@ int system_world_initializer_constructor(system_t *system)
     return 0;
 }
 
-static void entity_initializer(world_t *world)
-{
-    entity_t entity;
-    vector_t *entities = &world->entity_list;
-
-    // player_constructor(&entity);
-    // entities->emplace_back(entities, &entity);
-    // plateform_constructor(&entity);
-    // entities->emplace_back(entities, &entity);
-}
-
 static void system_initializer(world_t *world)
 {
     system_t system;
     vector_t *systems = &world->system_list;
     int (*constructors[])(system_t *) = {
         &system_load_scene_constructor,
-        // &system_display_constructor,
-        // &system_windows_manager_constructor,
-        // &system_movement_constructor,
-        // &system_move_controllable_constructor,
-        // &system_gravity_constructor,
-        // &system_jump_constructor,
-        // &system_obstacle_creation_constructor,
-        // &system_camera_constructor,
         0
     };
 
@@ -66,16 +47,10 @@ static void resource_initializer(world_t *world)
     window_t window = {840, 840, "rpg", 60};
 
     void *data[] = {
-        // &window,
-        // 1,
-        // 0,
         "config/basic_scene.json",
         0
     };
     int (*constructors[])(resource_t *, void *) = {
-        // &resource_window_constructor,
-        // &resource_gravity_constructor,
-        // &resource_camera_constructor,
         &resource_scene_filename_constructor,
         0
     };
@@ -91,6 +66,5 @@ int system_world_initializer(void *ptr)
 
     resource_initializer(world);
     system_initializer(world);
-    entity_initializer(world);
     return 0;
 }

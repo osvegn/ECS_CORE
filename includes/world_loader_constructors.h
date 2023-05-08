@@ -12,36 +12,35 @@
 #include "components.h"
 
 const char *systems_types[] = {
-        // "S_LOAD_SCENE",
-        // "S_DISPLAY",
-        // "S_WINDOWS_MANAGER",
+        "S_LOAD_SCENE",
+        "S_DISPLAY",
+        "S_WINDOW_MANAGER",
+        "S_RELOAD_CONFIG",
         // "S_MOVEMENT",
         // "S_MOVE_CONTROLLABLE",
         // "S_GRAVITY",
         // "S_JUMP",
         // "S_OBSTACLE_CREATION",
         // "S_CAMERA",
-        // "S_RELOAD_CONFIG",
         0
 };
 
 const int (*systems_constructors[])(system_t *) = {
-        // &system_load_scene_constructor,
-        // &system_display_constructor,
-        // &system_windows_manager_constructor,
+        &system_load_scene_constructor,
+        &system_display_constructor,
+        &system_windows_manager_constructor,
+        &system_reload_config_constructor,
         // &system_movement_constructor,
         // &system_move_controllable_constructor,
         // &system_gravity_constructor,
         // &system_jump_constructor,
         // &system_obstacle_creation_constructor,
         // &system_camera_constructor,
-        // &system_reload_config_constructor,
         0
 };
 
 const char *resources_types[] = {
         "R_WINDOW",
-        "R_GRAVITY",
         "R_CAMERA",
         "R_SCENE_FILENAME",
         0
@@ -60,8 +59,6 @@ const char *components_types[] = {
         "C_CONTROLLABLE",
         "C_SIZE",
         "C_DISPLAYABLE",
-        "C_GRAVITABLE",
-        "C_JUMPABLE",
         "C_COLLIDABLE",
         "C_COLOR",
         0

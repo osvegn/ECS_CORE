@@ -9,13 +9,10 @@
 
 #include "components.h"
 #include "json.h"
+#include "world_logger.h"
 #include <stdlib.h>
 #include <string.h>
-#include "world_logger.h"
 
-/// @brief Check if the component is a velocity component.
-/// @param component The component to check.
-/// @return 1 if the component is a velocity component, 0 otherwise.
 static int component_is_velocity(const component_t *component)
 {
     if (component->type == C_VELOCITY)
@@ -24,25 +21,21 @@ static int component_is_velocity(const component_t *component)
     return 0;
 }
 
-/// @brief This function is used to construct a velocity component.
-/// @param component The component to construct.
-/// @param data The velocity to set. Use the format {"x": 0, "y": 0}.
-/// @return 0 if the component was successfully constructed, -1 otherwise.
 int component_velocity_constructor(component_t *component, void *data)
 {
+    int rvalue = 0;
+
     component->type = C_VELOCITY;
     component->data = malloc(sizeof(ecs_vector2i_t));
     if (!component->data) {
         log_fatal("Could not allocate memory for velocity component.");
         return -1;
     }
-    return component_velocity_set(component, data);
+    rvalue = component_velocity_set(component, data);
+    log_info("Velocity component created.");
+    return rvalue;
 }
 
-/// @brief This function is used to set the velocity of a velocity component.
-/// @param component The component to set.
-/// @param data The velocity to set. Use the format {"x": 0, "y": 0}.
-/// @return 0 if the component was successfully set, -1 otherwise.
 int component_velocity_set(component_t *component, void *data)
 {
     ecs_vector2i_t velocity = {0};
@@ -57,9 +50,6 @@ int component_velocity_set(component_t *component, void *data)
     return 0;
 }
 
-/// @brief This function is used to get the velocity of a velocity component.
-/// @param component The component to get.
-/// @return A pointer to the velocity of the component.
 void *component_velocity_get(const component_t *component)
 {
     if (component->type != C_VELOCITY)

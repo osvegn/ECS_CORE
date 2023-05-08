@@ -8,10 +8,12 @@
  */
 
 #include "components.h"
+#include "world_logger.h"
 
 int component_controllable_constructor(component_t *component, void *data)
 {
     component->type = C_CONTROLLABLE;
-    component->data = data;
+    component->data = 0;
+    log_info("Controllable component created.");
     return 0;
 }

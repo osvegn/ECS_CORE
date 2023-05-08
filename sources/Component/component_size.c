@@ -9,9 +9,9 @@
 
 #include "components.h"
 #include "json.h"
+#include "world_logger.h"
 #include <stdlib.h>
 #include <string.h>
-#include "world_logger.h"
 
 static int component_is_size(const component_t *component)
 {
@@ -23,13 +23,17 @@ static int component_is_size(const component_t *component)
 
 int component_size_constructor(component_t *component, void *data)
 {
+    int rvalue = 0;
+
     component->type = C_SIZE;
     component->data = malloc(sizeof(ecs_vector2i_t));
     if (!component->data) {
         log_fatal("Could not allocate memory for size component.");
         return -1;
     }
-    return component_size_set(component, data);
+    rvalue = component_size_set(component, data);
+    log_info("Size component created.");
+    return rvalue;
 }
 
 int component_size_set(component_t *component, void *data)

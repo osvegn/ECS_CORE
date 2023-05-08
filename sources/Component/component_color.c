@@ -9,9 +9,9 @@
 
 #include "components.h"
 #include "json.h"
+#include "world_logger.h"
 #include <stdlib.h>
 #include <string.h>
-#include "world_logger.h"
 
 static int component_is_color(const component_t *component)
 {
@@ -22,14 +22,17 @@ static int component_is_color(const component_t *component)
 }
 int component_color_constructor(component_t *component, void *data)
 {
+    int rvalue = 0;
+
     component->type = C_COLOR;
     component->data = malloc(sizeof(ecs_color_t));
     if (!component->data) {
         log_fatal("Could not allocate memory for color component.");
         return -1;
     }
-    return component_set_color(component, data);
-    return 0;
+    rvalue = component_set_color(component, data);
+    log_info("Color component created.");
+    return rvalue;
 }
 
 int component_set_color(const component_t *component, void *data)

@@ -22,13 +22,17 @@ static int component_is_position(const component_t *component)
 }
 int component_position_constructor(component_t *component, void *data)
 {
+    int rvalue = 0;
+
     component->type = C_POSITION;
     component->data = malloc(sizeof(ecs_vector2i_t));
     if (!component->data) {
         log_fatal("Could not allocate memory for position component.");
         return -1;
     }
-    return component_position_set(component, data);
+    rvalue = component_position_set(component, data);
+    log_info("Position component created.");
+    return rvalue;
 }
 
 int component_position_set(component_t *component, void *data)

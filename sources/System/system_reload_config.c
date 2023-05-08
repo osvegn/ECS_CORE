@@ -1,17 +1,18 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/System/system_reload_config.c
+ * Filename:
+ * /home/thomas/Documents/Perso/our_rpg/sources/System/system_reload_config.c
  * Path: /home/thomas/Documents/Perso/our_rpg/sources/System
  * Created Date: Tuesday, March 21st 2023, 5:09:16 pm
  * Author: Thomas
- * 
+ *
  * Copyright (c) 2023 Your Company
  */
 
-#include "world.h"
-#include "world_system.h"
+#include "raylib.h"
 #include "system.h"
 #include "systems.h"
-#include "raylib.h"
+#include "world.h"
+#include "world_system.h"
 
 int system_reload_config_constructor(system_t *system)
 {

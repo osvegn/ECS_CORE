@@ -13,6 +13,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief Check if component is color type.
+/// @param component Component to check. Must be a valid component_t.
+/// @return Return 1 if component is C_COLOR, 0 otherwise.
+/// @note This function is static.
 static int component_is_color(const component_t *component)
 {
     if (component->type == C_COLOR)
@@ -20,6 +24,7 @@ static int component_is_color(const component_t *component)
     log_error("Component is not color.");
     return 0;
 }
+
 int component_color_constructor(component_t *component, void *data)
 {
     int rvalue = 0;
@@ -35,7 +40,7 @@ int component_color_constructor(component_t *component, void *data)
     return rvalue;
 }
 
-int component_set_color(const component_t *component, void *data)
+int component_set_color(component_t *component, void *data)
 {
     ecs_color_t color = {0};
     json_object *json = json_tokener_parse((char *)data);
@@ -51,7 +56,7 @@ int component_set_color(const component_t *component, void *data)
     return 0;
 }
 
-void *component_get_color(component_t *component)
+void *component_get_color(const component_t *component)
 {
     if (component->type != C_COLOR)
         return 0;

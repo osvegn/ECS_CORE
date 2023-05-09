@@ -39,14 +39,47 @@ int component_size_constructor(component_t *component, void *data);
 int component_size_set(component_t *component, void *data);
 void *component_size_get(const component_t *component);
 
+/// @brief Create a color component from a json string.
+/// @note The json string must be formatted as follow:
+/// {
+///     "r": 0-255,
+///     "g": 0-255,
+///     "b": 0-255,
+///     "a": 0-255
+/// }
+/// @param component Component to initialize. Must be a valid component_t.
+/// @param data Data to initialize the component. Must be a valid json string.
+/// @return Return 0 if success, -1 otherwise.
 int component_color_constructor(component_t *component, void *data);
-int component_set_color(const component_t *component, void *data);
-void *component_get_color(component_t *component);
+
+/// @brief Set color component from json string.
+/// @note The json string must be formatted as follow:
+/// {
+///     "r": 0-255,
+///     "g": 0-255,
+///     "b": 0-255,
+///     "a": 0-255
+/// }
+/// @param component Component to set. Must be a valid component_t.
+/// @param data Data to set. Must be a valid json string.
+/// @return Return 0 on success, -1 otherwise.
+int component_set_color(component_t *component, void *data);
+
+/// @brief Get a pointer to the color component data.
+/// @param component Component to get data from. Must be a valid component_t.
+/// @return Return a pointer to the color component data. 0 if component is not
+/// a color component.
+void *component_get_color(const component_t *component);
 
 int component_displayable_constructor(component_t *component, void *data);
 
 int component_controllable_constructor(component_t *component, void *data);
 
+/// @brief Construct a new component collidable object.
+/// @param component The component to construct. Must be
+/// a valid pointer to a component_t structure.
+/// @param data The data to initialize the component with.
+/// @return int 0.
 int component_collidable_constructor(component_t *component, void *data);
 
 #endif /* !COMPONENTS_H_ */

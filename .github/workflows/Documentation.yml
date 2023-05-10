@@ -20,16 +20,16 @@ jobs:
       - name: Create ECS documentation
         uses: mattnotmitt/doxygen-action@v1.9.5
         with:
-          working-directory: ./sources
-          doxyfile-path: ../doxyfile
+          working-directory: .
+          doxyfile-path: ./doxyfile
       - name: Create ECS documentation artifact
         uses: actions/upload-artifact@v2
         with:
           name: ECS_Documentation
-          path: ./lib/ECS/docs/html
+          path: ./docs/html
       - name: Upload ECS documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./lib/ECS/docs/html
+          folder: ./docs/html
           target-folder: docs/ECS_CORE
           branch: gh-pages

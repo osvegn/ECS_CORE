@@ -13,6 +13,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief Check if a component is a velocity component.
+/// @param component Component to check. It must be a valid component.
+/// @return Return 1 if the component is a velocity component, 0 otherwise.
 static int component_is_velocity(const component_t *component)
 {
     if (component->type == C_VELOCITY)

@@ -13,6 +13,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief Check if component is size type.
+/// @param component Component to check.
+/// @return Return 1 if component is C_SIZE, 0 otherwise.
 static int component_is_size(const component_t *component)
 {
     if (component->type == C_SIZE)

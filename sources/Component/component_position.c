@@ -13,6 +13,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief Check if a component is a position component.
+/// @param component Component to check.
+/// @return Return 1 if the component is a position component, 0 otherwise.
+/// @note This function is static.
 static int component_is_position(const component_t *component)
 {
     if (component->type == C_POSITION)
@@ -20,6 +24,7 @@ static int component_is_position(const component_t *component)
     log_error("Component is not position.");
     return 0;
 }
+
 int component_position_constructor(component_t *component, void *data)
 {
     int rvalue = 0;

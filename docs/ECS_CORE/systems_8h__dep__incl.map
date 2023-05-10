@@ -1,0 +1,10 @@
+<map id="includes/systems.h" name="includes/systems.h">
+<area shape="rect" id="node1" title=" " alt="" coords="479,5,612,31"/>
+<area shape="rect" id="node2" href="$world__loader__constructors_8h.html" title=" " alt="" coords="13,79,160,119"/>
+<area shape="rect" id="node4" href="$system__display_8c.html" title=" " alt="" coords="184,79,347,119"/>
+<area shape="rect" id="node5" href="$system__reload__config_8c.html" title=" " alt="" coords="371,79,533,119"/>
+<area shape="rect" id="node6" href="$system__windows__manager_8c.html" title=" " alt="" coords="557,79,720,119"/>
+<area shape="rect" id="node7" href="$system__world__initializer_8c.html" title=" " alt="" coords="744,79,907,119"/>
+<area shape="rect" id="node8" href="$main_8c.html" title=" " alt="" coords="931,86,1042,111"/>
+<area shape="rect" id="node3" href="$system__load__scene_8c.html" title=" " alt="" coords="5,167,168,207"/>
+</map>

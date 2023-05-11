@@ -7,7 +7,24 @@ on:
     branches: [ main ]
 
 jobs:
+  linter:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Linter
+      uses: cpp-linter/cpp-linter-action@v2
+      id: linter
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        style: file
+        extensions: 'c,h'
+        thread-comments: true
+
   build-linux:
+    needs: linter
     runs-on: ubuntu-22.04
     steps:
     - name: Checkout repository
@@ -22,6 +39,7 @@ jobs:
         cmake --build build
 
   build-windows:
+    needs: linter
     runs-on: windows-2019
     steps:
     - name: Checkout repository

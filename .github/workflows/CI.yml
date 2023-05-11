@@ -17,6 +17,7 @@ jobs:
       uses: DoozyX/clang-format-lint-action@v0.13
       with:
         source: 'sources'
+        clangFormatVersion: 12
         inplace: False
 
   build-linux:

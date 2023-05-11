@@ -20,7 +20,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         style: file
-        repo-root: 'sources'
+        extensions: 'c,h'
 
   build-linux:
     needs: linter

@@ -21,6 +21,7 @@ jobs:
       with:
         style: file
         extensions: 'c,h'
+        thread-comments: true
 
   build-linux:
     needs: linter

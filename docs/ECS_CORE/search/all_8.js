@@ -24,6 +24,6 @@ var searchData=
   ['resource_5fwindow_5fget_21',['resource_window_get',['../resource__window_8c.html#af634eb3546b6e451c497fbd9687f2da4',1,'resource_window_get(const resource_t *resource):&#160;resource_window.c'],['../resources_8h.html#af634eb3546b6e451c497fbd9687f2da4',1,'resource_window_get(const resource_t *resource):&#160;resource_window.c']]],
   ['resource_5fwindow_5fset_22',['resource_window_set',['../resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52',1,'resource_window_set(resource_t *resource, void *data):&#160;resource_window.c'],['../resources_8h.html#a7d332f82fa9ae590561c1f0c5226cd52',1,'resource_window_set(resource_t *resource, void *data):&#160;resource_window.c']]],
   ['resources_2eh_23',['resources.h',['../resources_8h.html',1,'']]],
-  ['resources_5fconstructors_24',['resources_constructors',['../world__loader__constructors_8h.html#a6fe30adb408de54f3613c87aec19ac5d',1,'world_loader_constructors.h']]],
-  ['resources_5ftypes_25',['resources_types',['../world__loader__constructors_8h.html#a447a4a3495e5931134f3943c62d11693',1,'world_loader_constructors.h']]]
+  ['resources_5fconstructors_24',['resources_constructors',['../world__loader__constructors_8h.html#acaebb74094b1465eb12355ad6a14fe7a',1,'world_loader_constructors.h']]],
+  ['resources_5ftypes_25',['resources_types',['../world__loader__constructors_8h.html#ac454045c022f46bb72b5452856c852a8',1,'world_loader_constructors.h']]]
 ];

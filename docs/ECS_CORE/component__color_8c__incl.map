@@ -1,11 +1,11 @@
 <map id="sources/Component/component_color.c" name="sources/Component/component_color.c">
-<area shape="rect" id="node1" title=" " alt="" coords="279,5,486,45"/>
-<area shape="rect" id="node2" href="$components_8h.html" title=" " alt="" coords="122,93,225,119"/>
-<area shape="rect" id="node6" title=" " alt="" coords="249,93,305,119"/>
-<area shape="rect" id="node7" title=" " alt="" coords="330,93,435,119"/>
-<area shape="rect" id="node8" title=" " alt="" coords="459,93,522,119"/>
-<area shape="rect" id="node9" title=" " alt="" coords="547,93,611,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,167,101,192"/>
-<area shape="rect" id="node4" href="$ecs__vector_8h.html" title=" " alt="" coords="125,167,221,192"/>
-<area shape="rect" id="node5" href="$ecs__color_8h.html" title=" " alt="" coords="245,167,333,192"/>
+<area shape="rect" id="node1" title=" " alt="" coords="129,5,336,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,68,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="93,93,157,119"/>
+<area shape="rect" id="node4" href="$components_8h.html" title=" " alt="" coords="181,93,284,119"/>
+<area shape="rect" id="node8" title=" " alt="" coords="309,93,365,119"/>
+<area shape="rect" id="node9" title=" " alt="" coords="389,93,495,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="65,167,161,192"/>
+<area shape="rect" id="node6" href="$ecs__vector_8h.html" title=" " alt="" coords="185,167,281,192"/>
+<area shape="rect" id="node7" href="$ecs__color_8h.html" title=" " alt="" coords="305,167,393,192"/>
 </map>

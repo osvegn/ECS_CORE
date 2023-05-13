@@ -24,6 +24,7 @@ jobs:
       with:
         style: file
         extensions: 'c,h'
+        extra-args: '-I includes -I ECS/include'
 
   build-linux:
     needs: linter

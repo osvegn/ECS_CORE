@@ -11,18 +11,12 @@
 #include "resources.h"
 #include "components.h"
 
-const char *systems_types[] const = {
-        "S_LOAD_SCENE",
-        "S_DISPLAY",
-        "S_WINDOW_MANAGER",
-        "S_RELOAD_CONFIG",
-        // "S_MOVEMENT",
-        // "S_MOVE_CONTROLLABLE",
-        // "S_GRAVITY",
-        // "S_JUMP",
-        // "S_OBSTACLE_CREATION",
-        // "S_CAMERA",
-        0
+const char * const systems_types[] = {
+    "S_LOAD_SCENE",
+    "S_DISPLAY",
+    "S_WINDOW_MANAGER",
+    "S_RELOAD_CONFIG",
+    0
 };
 
 const int (*systems_constructors[])(system_t *) = {

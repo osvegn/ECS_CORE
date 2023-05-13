@@ -7,11 +7,11 @@
  * Copyright (c) 2023 Your Company
  */
 
+#include <stdlib.h>
+#include <string.h>
 #include "components.h"
 #include "json.h"
 #include "world_logger.h"
-#include <stdlib.h>
-#include <string.h>
 
 /// @brief Check if component is color type.
 /// @param component Component to check. Must be a valid component_t.

@@ -28,12 +28,22 @@ typedef enum component_type_e {
 } component_type_t;
 
 /// @brief Create a position component from a json string.
+/// @note The json string must be formatted as follow:
+/// {
+///     "x": 0,
+///     "y": 0
+/// }
 /// @param component Component to initialize. It must be a valid component.
 /// @param data Data to initialize the component. It must be a valid json string.
 /// @return Return 0 if success, -1 otherwise.
 int component_position_constructor(component_t *component, void *data);
 
 /// @brief Set position component from json string.
+/// @note The json string must be formatted as follow:
+/// {
+///     "x": 0,
+///     "y": 0
+/// }
 /// @param component Component to set. It must be a valid component.
 /// @param data Data to set the component with. It must be a valid json string.
 /// @return Return 0 if success, -1 otherwise.
@@ -46,12 +56,22 @@ int component_position_set(component_t *component, void *data);
 void *component_position_get(const component_t *component);
 
 /// @brief Constructor for velocity component from json data.
+/// @note The json string must be formatted as follow:
+/// {
+///     "x": 0,
+///     "y": 0
+/// }
 /// @param component Component to construct. It must be a valid component.
 /// @param data Json data to construct component from.
 /// @return Return 0 if component was successfully constructed, -1 otherwise.
 int component_velocity_constructor(component_t *component, void *data);
 
 /// @brief Set velocity component from json data.
+/// @note The json string must be formatted as follow:
+/// {
+///     "x": 0,
+///     "y": 0
+/// }
 /// @param component Component to set. It must be a valid component.
 /// @param data Json data to set component from.
 /// @return Return 0 if component was successfully set, -1 otherwise.
@@ -63,12 +83,22 @@ int component_velocity_set(component_t *component, void *data);
 void *component_velocity_get(const component_t *component);
 
 /// @brief Constructor for size component from json data.
+/// @note The json string must be formatted as follow:
+/// {
+///     "width": 0,
+///     "height": 0
+/// }
 /// @param component Component to construct. It must be a valid component.
 /// @param data Json data to construct component from.
 /// @return Return 0 if component was successfully constructed, -1 otherwise.
 int component_size_constructor(component_t *component, void *data);
 
 /// @brief Set size component from json data.
+/// @note The json string must be formatted as follow:
+/// {
+///     "width": 0,
+///     "height": 0
+/// }
 /// @param component Component to set. It must be a valid component.
 /// @param data Json data to set component from.
 /// @return Return 0 if component was successfully set, -1 otherwise.

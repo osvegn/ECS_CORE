@@ -15,6 +15,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief Check if the resource is a R_WINDOW or not.
+/// @param resource The resource to be checked.
+/// @return 1 if the resource is a R_WINDOW, 0 otherwise.
+/// @note This function is static.
 static int resource_is_window(const resource_t *resource)
 {
     if (resource->type == R_WINDOW)

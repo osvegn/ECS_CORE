@@ -13,6 +13,10 @@
 #include "json.h"
 #include "world_logger.h"
 
+/// @brief Check if the resource is a R_SCENE_FILENAME or not.
+/// @param resource The resource to be checked.
+/// @return 1 if the resource is a R_SCENE_FILENAME, or 0 otherwise.
+/// @note This is a static function. 
 static int resource_is_scene_filename(const resource_t *resource)
 {
     if (resource->type == R_SCENE_FILENAME)

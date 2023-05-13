@@ -11,7 +11,7 @@
 #include "resources.h"
 #include "components.h"
 
-const char *systems_types[] = {
+const char *systems_types[] const = {
         "S_LOAD_SCENE",
         "S_DISPLAY",
         "S_WINDOW_MANAGER",

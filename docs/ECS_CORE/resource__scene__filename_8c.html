@@ -120,12 +120,16 @@ Include dependency graph for resource_scene_filename.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a800a9e2e0f8d637f0626ca52ea03242a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a">resource_scene_filename_constructor</a> (resource_t *resource, void *data)</td></tr>
+<tr class="memdesc:a800a9e2e0f8d637f0626ca52ea03242a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scene filename resource constructor.  <a href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a">More...</a><br /></td></tr>
 <tr class="separator:a800a9e2e0f8d637f0626ca52ea03242a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafca598db57bbae8817c4f99b1efc0f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__scene__filename_8c.html#aafca598db57bbae8817c4f99b1efc0f6">resource_scene_filename_destructor</a> (resource_t *resource)</td></tr>
+<tr class="memdesc:aafca598db57bbae8817c4f99b1efc0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scene filename resource destructor.  <a href="resource__scene__filename_8c.html#aafca598db57bbae8817c4f99b1efc0f6">More...</a><br /></td></tr>
 <tr class="separator:aafca598db57bbae8817c4f99b1efc0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a547a6b4a1351679272eed369ac68fcac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__scene__filename_8c.html#a547a6b4a1351679272eed369ac68fcac">resource_scene_filename_set</a> (resource_t *resource, void *data)</td></tr>
+<tr class="memdesc:a547a6b4a1351679272eed369ac68fcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene filename resource data.  <a href="resource__scene__filename_8c.html#a547a6b4a1351679272eed369ac68fcac">More...</a><br /></td></tr>
 <tr class="separator:a547a6b4a1351679272eed369ac68fcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1015fbc399686db541b66b2c319eafc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__scene__filename_8c.html#af1015fbc399686db541b66b2c319eafc">resource_scene_filename_get</a> (const resource_t *resource)</td></tr>
+<tr class="memitem:af1015fbc399686db541b66b2c319eafc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__scene__filename_8c.html#af1015fbc399686db541b66b2c319eafc">resource_scene_filename_get</a> (<a class="el" href="world__loader__constructors_8h.html#a95d73db3d78960b57e04ca795d592a8c">const</a> resource_t *resource)</td></tr>
+<tr class="memdesc:af1015fbc399686db541b66b2c319eafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the data of the resource.  <a href="resource__scene__filename_8c.html#af1015fbc399686db541b66b2c319eafc">More...</a><br /></td></tr>
 <tr class="separator:af1015fbc399686db541b66b2c319eafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -154,14 +158,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Scene filename resource constructor. </p>
+<dl class="section note"><dt>Note</dt><dd>The json format must be formatted like: { "filename": string } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be construct. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to be set to the resource. It must be a json formatted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if something fail. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resource__scene__filename_8c_a800a9e2e0f8d637f0626ca52ea03242a_cgraph.png" border="0" usemap="#aresource__scene__filename_8c_a800a9e2e0f8d637f0626ca52ea03242a_cgraph" alt=""/></div>
 <map name="aresource__scene__filename_8c_a800a9e2e0f8d637f0626ca52ea03242a_cgraph" id="aresource__scene__filename_8c_a800a9e2e0f8d637f0626ca52ea03242a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,175,75"/>
-<area shape="rect" href="resource__scene__filename_8c.html#aafca598db57bbae8817c4f99b1efc0f6" title=" " alt="" coords="235,5,405,45"/>
-<area shape="rect" href="resource__scene__filename_8c.html#a547a6b4a1351679272eed369ac68fcac" title=" " alt="" coords="223,70,417,95"/>
+<area shape="rect" title="Scene filename resource constructor." alt="" coords="5,35,175,75"/>
+<area shape="rect" href="resource__scene__filename_8c.html#aafca598db57bbae8817c4f99b1efc0f6" title="Scene filename resource destructor." alt="" coords="235,5,405,45"/>
+<area shape="rect" href="resource__scene__filename_8c.html#a547a6b4a1351679272eed369ac68fcac" title="Set scene filename resource data." alt="" coords="223,70,417,95"/>
 </map>
 </div>
 
@@ -182,13 +197,22 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Scene filename resource destructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be destroy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resource__scene__filename_8c_aafca598db57bbae8817c4f99b1efc0f6_icgraph.png" border="0" usemap="#aresource__scene__filename_8c_aafca598db57bbae8817c4f99b1efc0f6_icgraph" alt=""/></div>
 <map name="aresource__scene__filename_8c_aafca598db57bbae8817c4f99b1efc0f6_icgraph" id="aresource__scene__filename_8c_aafca598db57bbae8817c4f99b1efc0f6_icgraph">
-<area shape="rect" title=" " alt="" coords="223,5,392,45"/>
-<area shape="rect" href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a" title=" " alt="" coords="5,5,175,45"/>
+<area shape="rect" title="Scene filename resource destructor." alt="" coords="223,5,392,45"/>
+<area shape="rect" href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a" title="Scene filename resource constructor." alt="" coords="5,5,175,45"/>
 </map>
 </div>
 
@@ -203,12 +227,21 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void * resource_scene_filename_get </td>
           <td>(</td>
-          <td class="paramtype">const resource_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="world__loader__constructors_8h.html#a95d73db3d78960b57e04ca795d592a8c">const</a> resource_t *&#160;</td>
           <td class="paramname"><em>resource</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get a pointer to the data of the resource. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to get the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the data, or 0 if it's not a valid resource. </dd></dl>
 
 </div>
 </div>
@@ -237,13 +270,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set scene filename resource data. </p>
+<dl class="section note"><dt>Note</dt><dd>The json format must be formatted like: { "filename": string } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be updated. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if something failed. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resource__scene__filename_8c_a547a6b4a1351679272eed369ac68fcac_icgraph.png" border="0" usemap="#aresource__scene__filename_8c_a547a6b4a1351679272eed369ac68fcac_icgraph" alt=""/></div>
 <map name="aresource__scene__filename_8c_a547a6b4a1351679272eed369ac68fcac_icgraph" id="aresource__scene__filename_8c_a547a6b4a1351679272eed369ac68fcac_icgraph">
-<area shape="rect" title=" " alt="" coords="223,13,417,38"/>
-<area shape="rect" href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a" title=" " alt="" coords="5,5,175,45"/>
+<area shape="rect" title="Set scene filename resource data." alt="" coords="223,13,417,38"/>
+<area shape="rect" href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a" title="Scene filename resource constructor." alt="" coords="5,5,175,45"/>
 </map>
 </div>
 

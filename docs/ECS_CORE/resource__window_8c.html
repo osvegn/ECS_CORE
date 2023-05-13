@@ -124,12 +124,16 @@ Include dependency graph for resource_window.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9914c604aba5188d17fd624423ed245f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f">resource_window_constructor</a> (resource_t *resource, void *data)</td></tr>
+<tr class="memdesc:a9914c604aba5188d17fd624423ed245f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window constructor. It opens a new window.  <a href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f">More...</a><br /></td></tr>
 <tr class="separator:a9914c604aba5188d17fd624423ed245f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d332f82fa9ae590561c1f0c5226cd52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52">resource_window_set</a> (resource_t *resource, void *data)</td></tr>
+<tr class="memdesc:a7d332f82fa9ae590561c1f0c5226cd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new data for a window resource. It opens a new window.  <a href="resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52">More...</a><br /></td></tr>
 <tr class="separator:a7d332f82fa9ae590561c1f0c5226cd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af634eb3546b6e451c497fbd9687f2da4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__window_8c.html#af634eb3546b6e451c497fbd9687f2da4">resource_window_get</a> (const resource_t *resource)</td></tr>
+<tr class="memitem:af634eb3546b6e451c497fbd9687f2da4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__window_8c.html#af634eb3546b6e451c497fbd9687f2da4">resource_window_get</a> (<a class="el" href="world__loader__constructors_8h.html#a95d73db3d78960b57e04ca795d592a8c">const</a> resource_t *resource)</td></tr>
+<tr class="memdesc:af634eb3546b6e451c497fbd9687f2da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the window resource data.  <a href="resource__window_8c.html#af634eb3546b6e451c497fbd9687f2da4">More...</a><br /></td></tr>
 <tr class="separator:af634eb3546b6e451c497fbd9687f2da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad876b49946297bc77d8d396ed32d719e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resource__window_8c.html#ad876b49946297bc77d8d396ed32d719e">resource_window_destructor</a> (resource_t *resource)</td></tr>
+<tr class="memdesc:ad876b49946297bc77d8d396ed32d719e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window destructor.  <a href="resource__window_8c.html#ad876b49946297bc77d8d396ed32d719e">More...</a><br /></td></tr>
 <tr class="separator:ad876b49946297bc77d8d396ed32d719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -158,14 +162,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Window constructor. It opens a new window. </p>
+<dl class="section note"><dt>Note</dt><dd>The json format must be formatted like: { "width": int, "height": int, "title": string, "fps": int } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be construct. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to set to the window. It must be a json formatted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if something fail. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resource__window_8c_a9914c604aba5188d17fd624423ed245f_cgraph.png" border="0" usemap="#aresource__window_8c_a9914c604aba5188d17fd624423ed245f_cgraph" alt=""/></div>
 <map name="aresource__window_8c_a9914c604aba5188d17fd624423ed245f_cgraph" id="aresource__window_8c_a9914c604aba5188d17fd624423ed245f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,200,56"/>
-<area shape="rect" href="resource__window_8c.html#ad876b49946297bc77d8d396ed32d719e" title=" " alt="" coords="248,5,436,31"/>
-<area shape="rect" href="resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52" title=" " alt="" coords="268,55,416,80"/>
+<area shape="rect" title="Window constructor. It opens a new window." alt="" coords="5,31,200,56"/>
+<area shape="rect" href="resource__window_8c.html#ad876b49946297bc77d8d396ed32d719e" title="Window destructor." alt="" coords="248,5,436,31"/>
+<area shape="rect" href="resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52" title="Set new data for a window resource. It opens a new window." alt="" coords="268,55,416,80"/>
 </map>
 </div>
 
@@ -186,13 +201,22 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Window destructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be destroy. It closes the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resource__window_8c_ad876b49946297bc77d8d396ed32d719e_icgraph.png" border="0" usemap="#aresource__window_8c_ad876b49946297bc77d8d396ed32d719e_icgraph" alt=""/></div>
 <map name="aresource__window_8c_ad876b49946297bc77d8d396ed32d719e_icgraph" id="aresource__window_8c_ad876b49946297bc77d8d396ed32d719e_icgraph">
-<area shape="rect" title=" " alt="" coords="248,5,436,31"/>
-<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title=" " alt="" coords="5,5,200,31"/>
+<area shape="rect" title="Window destructor." alt="" coords="248,5,436,31"/>
+<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="5,5,200,31"/>
 </map>
 </div>
 
@@ -207,12 +231,21 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void * resource_window_get </td>
           <td>(</td>
-          <td class="paramtype">const resource_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="world__loader__constructors_8h.html#a95d73db3d78960b57e04ca795d592a8c">const</a> resource_t *&#160;</td>
           <td class="paramname"><em>resource</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get a pointer to the window resource data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to get the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the data, or 0 if it's not a valid resource. </dd></dl>
 
 </div>
 </div>
@@ -241,13 +274,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set new data for a window resource. It opens a new window. </p>
+<dl class="section note"><dt>Note</dt><dd>The json format must be formatted like: { "width": int, "height": int, "title": string, "fps": int } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be updated. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to set to the window. It must be a json formatted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if something fail. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resource__window_8c_a7d332f82fa9ae590561c1f0c5226cd52_icgraph.png" border="0" usemap="#aresource__window_8c_a7d332f82fa9ae590561c1f0c5226cd52_icgraph" alt=""/></div>
 <map name="aresource__window_8c_a7d332f82fa9ae590561c1f0c5226cd52_icgraph" id="aresource__window_8c_a7d332f82fa9ae590561c1f0c5226cd52_icgraph">
-<area shape="rect" title=" " alt="" coords="248,5,396,31"/>
-<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title=" " alt="" coords="5,5,200,31"/>
+<area shape="rect" title="Set new data for a window resource. It opens a new window." alt="" coords="248,5,396,31"/>
+<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="5,5,200,31"/>
 </map>
 </div>
 

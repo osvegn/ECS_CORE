@@ -8,10 +8,12 @@
  */
 
 #include "components.h"
+#include "world_logger.h"
 
 int component_collidable_constructor(component_t *component, void *data)
 {
     component->type = C_COLLIDABLE;
     component->data = 0;
+    log_info("Collidable component created.");
     return 0;
 }

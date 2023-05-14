@@ -14,10 +14,6 @@ add_subdirectory(sources)
 
 set(GLOBAL_SOURCES
     ${SOURCES}
-
-    ${SOURCE_ROOT}/Entity/player.c
-    ${SOURCE_ROOT}/Entity/plateform.c
-    ${SOURCE_ROOT}/Entity/obstacle.c
 )
 
 # output directory

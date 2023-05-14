@@ -6,13 +6,7 @@
         "systems":
         [
             "S_DISPLAY",
-            "S_WINDOWS_MANAGER",
-            "S_MOVEMENT",
-            "S_MOVE_CONTROLLABLE",
-            "S_GRAVITY",
-            "S_JUMP",
-            "S_OBSTACLE_CREATION",
-            "S_CAMERA",
+            "S_WINDOW_MANAGER",
             "S_RELOAD_CONFIG"
         ],
         "resources":
@@ -22,16 +16,12 @@
                 "data":{"width":840, "height":600, "title": "rpg", "fps":60}
             },
             {
-                "type":"R_GRAVITY",
-                "data":1
-            },
-            {
                 "type":"R_CAMERA",
                 "data":null
             },
             {
                 "type":"R_SCENE_FILENAME",
-                "data":"config/basic_scene.json"
+                "data":{"filename":"config/basic_scene.json"}
             }
         ],
         "entities":
@@ -45,7 +35,7 @@
                     },
                     {
                         "type": "C_POSITION",
-                        "data": {"x": 0, "y": -150}
+                        "data": {"x": 0, "y": 150}
                     },
                     {
                         "type": "C_DISPLAYABLE",
@@ -58,14 +48,6 @@
                     {
                         "type": "C_VELOCITY",
                         "data": {"x": 0, "y": 0}
-                    },
-                    {
-                        "type": "C_GRAVITABLE",
-                        "data": null
-                    },
-                    {
-                        "type": "C_JUMPABLE",
-                        "data": null
                     },
                     {
                         "type": "C_COLLIDABLE",
@@ -120,14 +102,6 @@
                     {
                         "type": "C_VELOCITY",
                         "data": {"x": 0, "y": 0}
-                    },
-                    {
-                        "type": "C_GRAVITABLE",
-                        "data": null
-                    },
-                    {
-                        "type": "C_JUMPABLE",
-                        "data": null
                     },
                     {
                         "type": "C_COLLIDABLE",

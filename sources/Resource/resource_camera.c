@@ -9,46 +9,51 @@
 
 #include "resources.h"
 #include "raylib.h"
+#include "json.h"
+#include "world_logger.h"
 #include <stdlib.h>
+
+static int resource_is_camera(const resource_t *resource)
+{
+    if (resource->type != R_CAMERA)
+        return 1;
+    return 0;
+}
 
 int resource_camera_constructor(resource_t *resource, void *data)
 {
-    Camera2D *camera = malloc(sizeof(Camera2D));
+    int rvalue = 0;
 
-    if (!camera)
-        return -1;
-    camera->offset = (Vector2){0, 0};
-    // camera->offset = (Vector2){GetScreenWidth()/2, GetScreenHeight()/2};
-    camera->target = (Vector2){0, 0};
-    camera->rotation = 0;
-    camera->zoom = 1;
     resource->type = R_CAMERA;
-    resource->data = camera;
+    resource->data = malloc(sizeof(Camera2D));
     resource->destructor = &resource_camera_destructor;
-    return 0;
+    rvalue = resource_camera_set(resource, data);
+    log_info("Camera resource created.");
+    return rvalue;
 }
 
 int resource_camera_destructor(resource_t *resource)
 {
     if (resource->data)
         free(resource->data);
+    log_info("Camera resource destroyed.");
     return 0;
 }
 
-int resource_camera_update_offset(resource_t *resource, void *data)
+int resource_camera_set(resource_t *resource, void *data)
 {
-    Camera2D *camera = (Camera2D *)resource->data;
-    Vector2 *offset = (Vector2 *)data;
+    Camera2D *camera = 0;
+    json_object *json = json_tokener_parse((char *)data);
 
-    camera->offset = *offset;
+    if (!resource_is_camera(resource) || !json)
+        return -1;
+    // configure camera def
     return 0;
 }
 
-int resource_camera_update_position(resource_t *resource, void *data)
+void *resource_camera_get(const resource_t *resource)
 {
-    Camera2D *camera = (Camera2D *)resource->data;
-    Vector2 *target = (Vector2 *)data;
-
-    camera->target = *target;
-    return 0;
+    if (!resource_is_camera(resource))
+        return 0;
+    return resource->data;
 }

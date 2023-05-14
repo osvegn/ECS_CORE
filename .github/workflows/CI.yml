@@ -13,6 +13,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Dependencies
+      run: ${GITHUB_WORKSPACE}/.github/workflows/scripts/install_dependencies.sh
+
     - name: Linter
       uses: cpp-linter/cpp-linter-action@v2
       id: linter
@@ -21,7 +24,7 @@ jobs:
       with:
         style: file
         extensions: 'c,h'
-        thread-comments: true
+        extra-args: '-I includes -I ECS/include'
 
   build-linux:
     needs: linter

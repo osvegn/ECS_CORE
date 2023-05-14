@@ -22,6 +22,7 @@ TESTS	=	component_tests resource_tests system_tests
 all:
 	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF
 	${CC} --build ${BUILD}
+	cp -r config ${BUILD}
 
 clean:
 	${RM} ${BUILD}
@@ -34,10 +35,12 @@ re: clean all
 debug:
 	${CC} -B ${BUILD_DEBUG} -DCMAKE_BUILD_TYPE=Debug -DTESTING=OFF
 	${CC} --build ${BUILD_DEBUG}
+	cp -r config ${BUILD_DEBUG}
 
 run_tests:
 	${CC} -B ${BUILD_TESTS} -DTESTING=ON
 	${CC} --build ${BUILD_TESTS}
+	cp -r config ${BUILD_TESTS}
 	${foreach test, ${TESTS}, ./${test};}
 
 valgrind: debug

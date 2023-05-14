@@ -8,10 +8,12 @@
  */
 
 #include "components.h"
+#include "world_logger.h"
 
 int component_displayable_constructor(component_t *component, void *data)
 {
     component->type = C_DISPLAYABLE;
     component->data = 0;
+    log_info("Displayable component created.");
     return 0;
 }

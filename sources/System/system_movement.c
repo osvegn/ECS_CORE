@@ -1,57 +1,53 @@
 /*
- * Filename: system_movement.c
- * Path: sources/System
- * Created Date: Sunday, September 17th 2023, 7:25:32 am
+ * Filename: /home/osvegn/Documents/Repositories/ecs_core/sources/System/system_movement.c
+ * Path: /home/osvegn/Documents/Repositories/ecs_core/sources/System
+ * Created Date: Sunday, May 14th 2023, 4:30:11 pm
  * Author: osvegn
  * 
- * Copyright (c) 2023 our_rpg
+ * Copyright (c) 2023 Your Company
  */
 
+#include "world.h"
 #include "systems.h"
-#include "vector.h"
-#include "world_entity.h"
-#include "world_resource.h"
 #include "components.h"
-#include "resources.h"
-#ifdef __linux__
-    #include <sys/time.h>
-#endif
+#include <stdlib.h>
+#include <stdio.h>
+
+#include "world_logger.h"
 
 int system_movement_constructor(system_t *system)
 {
     system->type = S_MOVEMENT;
     system->run = &system_movement;
     system->active = true;
+    log_info("Movement system created.");
     return 0;
 }
 
-int system_movement(void *world)
+int system_movement(void *ptr)
 {
     vector_t entities = {0};
-    int rvalue = world_join_entities(world, &entities, 2, C_POSITION, C_VELOCITY);
-    ecs_vector2f_t position = {0};
-    entity_t *e = 0;
+    entity_t *entity = 0;
+    int rvalue = world_join_entities(ptr, &entities, 2, C_POSITION, C_VELOCITY);
     component_t *c_position = 0;
     component_t *c_velocity = 0;
-    resource_t *r = world_get_resource_by_type(world, R_GAME_CLOCK);
-    #ifdef __linux__
-        struct timeval now, start;
-        start = *(struct timeval *)resource_game_clock_get(r);
-        gettimeofday(&now, NULL);
-        double time = ((now.tv_sec - start.tv_sec) * 1000.0f + (now.tv_usec - start.tv_usec) / 1000.0f);
-    #else
-        double time = 1.0f;
-    #endif
+    ecs_vector2i_t velocity = {0};
+    ecs_vector2i_t position = {0};
+    char *buffer = 0;
 
-    if (rvalue <= 0)
-        return 0;
+    if (rvalue < 0)
+        return rvalue;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
-        e = *(entity_t **)entities.at(&entities, i);
-        c_position = entity_get_component_by_type(e, C_POSITION);
-        c_velocity = entity_get_component_by_type(e, C_VELOCITY);
-        position.x = (ecs_vector2f_t *){c_position->data}->x + (ecs_vector2i_t *){c_velocity->data}->x * time;
-        position.y = (ecs_vector2f_t *){c_position->data}->y + (ecs_vector2i_t *){c_velocity->data}->y * time;
-        component_position_set(c_position, &position);
+        entity = *(entity_t **)entities.at(&entities, i);
+        c_position = entity_get_component(entity, C_POSITION);
+        c_velocity = entity_get_component(entity, C_VELOCITY);
+        velocity = *(ecs_vector2i_t *)c_velocity->data;
+        position = *(ecs_vector2i_t *)c_position->data;
+        position.x += velocity.x;
+        position.y += velocity.y;
+        sprintf(&buffer, "{\"x\":%i, \"y\":%i}", position.x, position.y);
+        component_position_set(c_position, &buffer);
     }
+    entities.destructor(&entities);
     return 0;
 }

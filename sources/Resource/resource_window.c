@@ -38,6 +38,9 @@ int resource_window_constructor(resource_t *resource, void *data)
         return -1;
     }
     resource->destructor = &resource_window_destructor;
+    if (!data) {
+        data = &(window_t){.fps=60, .height=640, .width=840, .title="Default title"};
+    }
     rvalue = resource_window_set(resource, data);
     log_info("Window resource created.");
     return rvalue;
@@ -45,18 +48,14 @@ int resource_window_constructor(resource_t *resource, void *data)
 
 int resource_window_set(resource_t *resource, void *data)
 {
-    json_object *json = json_tokener_parse((char *)data);
-    window_t window = {0};
+    window_t *win = 0;
 
-    if (!resource_is_window(resource) || !json)
+    if (!resource_is_window(resource) || !resource->data || !data)
         return -1;
-    window.width = json_object_get_int(json_object_object_get(json, "width"));
-    window.height = json_object_get_int(json_object_object_get(json, "height"));
-    strncpy(window.title, json_object_get_string(json_object_object_get(json, "title")), 255);
-    window.fps = json_object_get_int(json_object_object_get(json, "fps"));
-    json_object_put(json);
-    InitWindow(window.width, window.height, window.title);
-    SetTargetFPS(window.fps);
+    memcpy(resource->data, data, sizeof(resource_t));
+    win = resource->data;
+    InitWindow(win->width, win->height, win->title);
+    SetTargetFPS(win->fps);
     return 0;
 }
 

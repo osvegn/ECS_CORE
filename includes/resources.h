@@ -59,12 +59,6 @@ int resource_window_set(resource_t *resource, void *data);
 void *resource_window_get(const resource_t *resource);
 
 
-int resource_camera_constructor(resource_t *resource, void *data);
-int resource_camera_destructor(resource_t *resource);
-int resource_camera_set( resource_t *resource, void *data);
-void *resource_camera_get(const resource_t *resource);
-
-
 /// @brief Scene filename resource constructor.
 /// @note The json format must be formatted like:
 /// {

@@ -29,14 +29,12 @@ int (* const systems_constructors[])(system_t *) = {
 
 const char * const resources_types[] = {
     "R_WINDOW",
-    "R_CAMERA",
     "R_SCENE_FILENAME",
     0
 };
 
 int (* const resources_constructors[])(resource_t *, void *) = {
     &resource_window_constructor,
-    &resource_camera_constructor,
     &resource_scene_filename_constructor,
     0
 };

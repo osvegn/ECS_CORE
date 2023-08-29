@@ -21,10 +21,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # EXECUTABLE
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
-include(Dependencies)
+# include(Dependencies)
 include(Testings)
 include(DetectCompiler)
 
 #LIBRARY
-add_subdirectory(ECS)
-add_subdirectory(json-c)
+add_subdirectory(submodules/ECS)
+add_subdirectory(submodules/json-c)
+add_subdirectory(submodules/raylib)

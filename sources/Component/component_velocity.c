@@ -34,6 +34,9 @@ int component_velocity_constructor(component_t *component, void *data)
         log_fatal("Could not allocate memory for velocity component.");
         return -1;
     }
+    if (!data) {
+        data = &(ecs_vector2i_t){0, 0};
+    }
     rvalue = component_velocity_set(component, data);
     log_info("Velocity component created.");
     return rvalue;
@@ -41,15 +44,9 @@ int component_velocity_constructor(component_t *component, void *data)
 
 int component_velocity_set(component_t *component, void *data)
 {
-    ecs_vector2i_t velocity = {0};
-    json_object *json = json_tokener_parse((char *)data);
-
-    if (!component_is_velocity(component) || !json)
+    if (!component_is_velocity(component) || !component->data || !data)
         return -1;
-    velocity.x = json_object_get_int(json_object_object_get(json, "x"));
-    velocity.y = json_object_get_int(json_object_object_get(json, "y"));
-    json_object_put(json);
-    memcpy(component->data, &velocity, sizeof(ecs_vector2i_t));
+    memcpy(component->data, data, sizeof(ecs_vector2i_t));
     return 0;
 }
 

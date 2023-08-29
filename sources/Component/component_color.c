@@ -35,6 +35,9 @@ int component_color_constructor(component_t *component, void *data)
         log_fatal("Could not allocate memory for color component.");
         return -1;
     }
+    if (!data) {
+        data = &(ecs_color_t){0, 0, 0, 0};
+    }
     rvalue = component_set_color(component, data);
     log_info("Color component created.");
     return rvalue;
@@ -42,16 +45,8 @@ int component_color_constructor(component_t *component, void *data)
 
 int component_set_color(component_t *component, void *data)
 {
-    ecs_color_t color = {0};
-    json_object *json = json_tokener_parse((char *)data);
-
-    if (!component_is_color(component) || !json)
+    if (!component_is_color(component) || !component->data || !data)
         return -1;
-    color.r = json_object_get_int(json_object_object_get(json, "r"));
-    color.g = json_object_get_int(json_object_object_get(json, "g"));
-    color.b = json_object_get_int(json_object_object_get(json, "b"));
-    color.a = json_object_get_int(json_object_object_get(json, "a"));
-    json_object_put(json);
     memcpy(component->data, data, sizeof(ecs_color_t));
     return 0;
 }
@@ -60,5 +55,5 @@ void *component_get_color(const component_t *component)
 {
     if (component->type != C_COLOR)
         return 0;
-    return (ecs_color_t *)component->data;
+    return component->data;
 }

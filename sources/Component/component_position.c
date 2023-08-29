@@ -35,6 +35,9 @@ int component_position_constructor(component_t *component, void *data)
         log_fatal("Could not allocate memory for position component.");
         return -1;
     }
+    if (!data) {
+        data = &(ecs_vector2i_t){0, 0};
+    }
     rvalue = component_position_set(component, data);
     log_info("Position component created.");
     return rvalue;
@@ -42,15 +45,9 @@ int component_position_constructor(component_t *component, void *data)
 
 int component_position_set(component_t *component, void *data)
 {
-    ecs_vector2i_t position = {0};
-    json_object *json = json_tokener_parse((char *)data);
-
-    if (!component_is_position(component) || !json)
+    if (!component_is_position(component) || !component->data || !data)
         return -1;
-    position.x = json_object_get_int(json_object_object_get(json, "x"));
-    position.y = json_object_get_int(json_object_object_get(json, "y"));
-    json_object_put(json);
-    memcpy(component->data, &position, sizeof(ecs_vector2i_t));
+    memcpy(component->data, data, sizeof(ecs_vector2i_t));
     return 0;
 }
 

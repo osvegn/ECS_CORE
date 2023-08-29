@@ -25,12 +25,15 @@ all:
 	cp -r config ${BUILD}
 
 clean:
+	${RM} ${TESTS}
+	${RM} bin
+
+fclean: clean
 	${RM} ${BUILD}
 	${RM} ${BUILD_DEBUG}
 	${RM} ${BUILD_TESTS}
-	${RM} ${TESTS}
 
-re: clean all
+re: fclean all
 
 debug:
 	${CC} -B ${BUILD_DEBUG} -DCMAKE_BUILD_TYPE=Debug -DTESTING=OFF
@@ -38,7 +41,7 @@ debug:
 	cp -r config ${BUILD_DEBUG}
 
 run_tests:
-	${CC} -B ${BUILD_TESTS} -DTESTING=ON
+	${CC} -B ${BUILD_TESTS} -DCMAKE_BUILD_TYPE=Release -DTESTING=ON
 	${CC} --build ${BUILD_TESTS}
 	cp -r config ${BUILD_TESTS}
 	${foreach test, ${TESTS}, ./${test};}

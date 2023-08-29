@@ -55,12 +55,14 @@ dkms.conf
 .vscode
 build
 build_debug
+build_tests
 *_tests
 docs
 plateform.md
 vgcore.*
 log_valgrind.txt
 log
+bin
 
 # Docker
 Dockerfile

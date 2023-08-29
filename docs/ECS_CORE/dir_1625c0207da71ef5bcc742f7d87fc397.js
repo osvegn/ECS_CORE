@@ -1,6 +1,5 @@
 var dir_1625c0207da71ef5bcc742f7d87fc397 =
 [
-    [ "template", "dir_3da0bd7090f4120f7c09fa72e98aa58b.html", "dir_3da0bd7090f4120f7c09fa72e98aa58b" ],
     [ "component_collidable.c", "component__collidable_8c.html", "component__collidable_8c" ],
     [ "component_color.c", "component__color_8c.html", "component__color_8c" ],
     [ "component_controllable.c", "component__controllable_8c.html", "component__controllable_8c" ],

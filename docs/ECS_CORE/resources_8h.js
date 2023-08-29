@@ -8,10 +8,6 @@ var resources_8h =
       [ "R_SCENE_FILENAME", "resources_8h.html#aab0136f9cc4aba80cfe1ec12e00129d5af6a236ea60e37e40b31ab2e48b3c5deb", null ],
       [ "R_MAX_VALUE", "resources_8h.html#aab0136f9cc4aba80cfe1ec12e00129d5a44c2a9041e9be6683a71204fb1e797be", null ]
     ] ],
-    [ "resource_camera_constructor", "resources_8h.html#ad8bf80725ae76a0c649db231ec6f9ac0", null ],
-    [ "resource_camera_destructor", "resources_8h.html#a13ff2e437923d3f4ecd17f8924c2f036", null ],
-    [ "resource_camera_get", "resources_8h.html#a71198c8852344e494754431dc81fc8a5", null ],
-    [ "resource_camera_set", "resources_8h.html#ac48e4fb4ea8506579665c4c21bf96cd4", null ],
     [ "resource_scene_filename_constructor", "resources_8h.html#a800a9e2e0f8d637f0626ca52ea03242a", null ],
     [ "resource_scene_filename_destructor", "resources_8h.html#aafca598db57bbae8817c4f99b1efc0f6", null ],
     [ "resource_scene_filename_get", "resources_8h.html#af1015fbc399686db541b66b2c319eafc", null ],

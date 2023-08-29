@@ -1,9 +1,9 @@
-[submodule "doxygen-awesome-css"]
-	path = doxygen-awesome-css
+[submodule "submodules/doxygen-awesome-css"]
+	path = submodules/doxygen-awesome-css
 	url = https://github.com/jothepro/doxygen-awesome-css.git
-[submodule "ECS"]
-	path = ECS
+[submodule "submodules/ECS"]
+	path = submodules/ECS
 	url = https://github.com/osvegn/ECS
-[submodule "json-c"]
-	path = json-c
+[submodule "submodules/json-c"]
+	path = submodules/json-c
 	url = https://github.com/json-c/json-c.git

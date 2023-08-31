@@ -16,6 +16,9 @@ jobs:
     - name: Dependencies
       run: ${GITHUB_WORKSPACE}/.github/workflows/scripts/install_dependencies.sh
 
+    - name: Headers
+      run: ${GITHUB_WORKSPACE}/check_header_validity.sh
+
     - name: Linter
       uses: cpp-linter/cpp-linter-action@v2
       id: linter
@@ -25,6 +28,7 @@ jobs:
         style: file
         extensions: 'c,h'
         extra-args: '-I includes -I ECS/include'
+
 
   build-linux:
     needs: linter

@@ -37,6 +37,13 @@ int resource_scene_filename_constructor(resource_t *resource, void *data)
     return rvalue;
 }
 
+int resource_scene_filename_constructor_from_json(resource_t *resource, void *data)
+{
+    void *new_data = 0;
+
+    return resource_scene_filename_constructor(resource, new_data);
+}
+
 int resource_scene_filename_destructor(resource_t *resource)
 {
     if (resource->data)
@@ -47,7 +54,7 @@ int resource_scene_filename_destructor(resource_t *resource)
 
 int resource_scene_filename_set(resource_t *resource, void *data)
 {
-    if (!resource_is_scene_filename(resource) || !resource->data || !data)
+    if (!resource_is_scene_filename(resource) || !data)
         return -1;
     if (resource->data) {
         if (!strcmp((char *)resource->data, (char *)data)) {

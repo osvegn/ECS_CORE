@@ -19,6 +19,8 @@ typedef enum system_type_e {
     S_WINDOW_MANAGER,
     S_LOAD_SCENE,
     S_RELOAD_CONFIG,
+    S_MOVE_CONTROLLABLE,
+    S_MOVEMENT,
     S_MAX_VALUE
 } system_type_t;
 
@@ -36,5 +38,11 @@ int system_load_scene_run(void *ptr);
 
 int system_reload_config_constructor(system_t *system);
 int system_reload_config_run(void *ptr);
+
+int system_move_controllable_constructor(system_t *system);
+static int system_move_controllable(void *world);
+
+static int system_movement(void *world);
+int system_movement_constructor(system_t *system);
 
 #endif /* !SYSTEMS_H_ */

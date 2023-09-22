@@ -34,6 +34,7 @@ typedef enum resource_type_e {
 /// @param data The data to set to the window. It must be a json formatted string.
 /// @return 0, or -1 if something fail.
 int resource_window_constructor(resource_t *resource, void *data);
+int resource_window_constructor_from_json(resource_t *resource, void *data);
 
 /// @brief Window destructor.
 /// @param resource The resource to be destroy. It closes the window.
@@ -68,6 +69,7 @@ void *resource_window_get(const resource_t *resource);
 /// @param data The data to be set to the resource. It must be a json formatted string.
 /// @return 0, or -1 if something fail.
 int resource_scene_filename_constructor(resource_t *resource, void *data);
+int resource_scene_filename_constructor_from_json(resource_t *resource, void *data);
 
 /// @brief Scene filename resource destructor.
 /// @param resource The resource to be destroy.

@@ -43,6 +43,18 @@ int component_color_constructor(component_t *component, void *data)
     return rvalue;
 }
 
+int component_color_constructor_from_json(component_t *component, void *data)
+{
+    ecs_color_t color = {0};
+    json_object *obj = json_tokener_parse(data);
+
+    color.r = json_object_get_int(json_object_object_get(obj, "r"));
+    color.g = json_object_get_int(json_object_object_get(obj, "g"));
+    color.b = json_object_get_int(json_object_object_get(obj, "b"));
+    color.a = json_object_get_int(json_object_object_get(obj, "a"));
+    return component_color_constructor(component, &color);
+}
+
 int component_set_color(component_t *component, void *data)
 {
     if (!component_is_color(component) || !component->data || !data)

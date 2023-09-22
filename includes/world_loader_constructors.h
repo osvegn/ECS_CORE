@@ -34,8 +34,8 @@ const char * const resources_types[] = {
 };
 
 int (* const resources_constructors[])(resource_t *, void *) = {
-    &resource_window_constructor,
-    &resource_scene_filename_constructor,
+    &resource_window_constructor_from_json,
+    &resource_scene_filename_constructor_from_json,
     0
 };
 
@@ -47,16 +47,18 @@ const char * const components_types[] = {
     "C_DISPLAYABLE",
     "C_COLLIDABLE",
     "C_COLOR",
+    "C_SPEED",
     0
 };
 
 int (* const components_constructors[])(component_t *, void *) = {
-    &component_position_constructor,
-    &component_velocity_constructor,
+    &component_position_constructor_from_json,
+    &component_velocity_constructor_from_json,
     &component_controllable_constructor,
-    &component_size_constructor,
+    &component_size_constructor_from_json,
     &component_displayable_constructor,
     &component_collidable_constructor,
-    &component_color_constructor,
+    &component_color_constructor_from_json,
+    &component_speed_constructor_from_json,
     0
 };

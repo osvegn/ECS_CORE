@@ -24,6 +24,7 @@ typedef enum component_type_e {
     C_DISPLAYABLE,
     C_CONTROLLABLE,
     C_COLLIDABLE,
+    C_SPEED,
     C_MAX
 } component_type_t;
 
@@ -37,6 +38,7 @@ typedef enum component_type_e {
 /// @param data Data to initialize the component. It must be a valid json string.
 /// @return Return 0 if success, -1 otherwise.
 int component_position_constructor(component_t *component, void *data);
+int component_position_constructor_from_json(component_t *component, void *data);
 
 /// @brief Set position component from json string.
 /// @note The json string must be formatted as follow:
@@ -65,6 +67,7 @@ void *component_position_get(const component_t *component);
 /// @param data Json data to construct component from.
 /// @return Return 0 if component was successfully constructed, -1 otherwise.
 int component_velocity_constructor(component_t *component, void *data);
+int component_velocity_constructor_from_json(component_t *component, void *data);
 
 /// @brief Set velocity component from json data.
 /// @note The json string must be formatted as follow:
@@ -92,6 +95,7 @@ void *component_velocity_get(const component_t *component);
 /// @param data Json data to construct component from.
 /// @return Return 0 if component was successfully constructed, -1 otherwise.
 int component_size_constructor(component_t *component, void *data);
+int component_size_constructor_from_json(component_t *component, void *data);
 
 /// @brief Set size component from json data.
 /// @note The json string must be formatted as follow:
@@ -122,6 +126,7 @@ void *component_size_get(const component_t *component);
 /// @param data Data to initialize the component. Must be a valid json string.
 /// @return Return 0 if success, -1 otherwise.
 int component_color_constructor(component_t *component, void *data);
+int component_color_constructor_from_json(component_t *component, void *data);
 
 /// @brief Set color component from json string.
 /// @note The json string must be formatted as follow:
@@ -163,5 +168,11 @@ int component_controllable_constructor(component_t *component, void *data);
 /// @param data The data to initialize the component with.
 /// @return int 0.
 int component_collidable_constructor(component_t *component, void *data);
+
+
+int component_speed_constructor(component_t *component, void *data);
+int component_speed_constructor_from_json(component_t *component, void *data);
+int component_speed_set(component_t *component, void *data);
+void *component_speed_get(const component_t *component);
 
 #endif /* !COMPONENTS_H_ */

@@ -46,6 +46,18 @@ int resource_window_constructor(resource_t *resource, void *data)
     return rvalue;
 }
 
+int resource_window_constructor_from_json(resource_t *resource, void *data)
+{
+    window_t win = {0};
+    json_object *obj = json_tokener_parse(data);
+
+    win.width = json_object_get_int(json_object_object_get(obj, "width"));
+    win.height = json_object_get_int(json_object_object_get(obj, "height"));
+    win.fps = json_object_get_int(json_object_object_get(obj, "fps"));
+    strncpy(win.title, json_object_get_string(json_object_object_get(obj, "title")), 255);
+    return resource_window_constructor(resource, &win);
+}
+
 int resource_window_set(resource_t *resource, void *data)
 {
     window_t *win = 0;

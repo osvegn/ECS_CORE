@@ -43,6 +43,16 @@ int component_position_constructor(component_t *component, void *data)
     return rvalue;
 }
 
+int component_position_constructor_from_json(component_t *component, void *data)
+{
+    json_object *obj = json_tokener_parse(data);
+    ecs_vector2i_t v = {0};
+
+    v.x = json_object_get_int(json_object_object_get(obj, "x"));
+    v.y = json_object_get_int(json_object_object_get(obj, "y"));
+    return component_position_constructor(component, &v);
+}
+
 int component_position_set(component_t *component, void *data)
 {
     if (!component_is_position(component) || !component->data || !data)

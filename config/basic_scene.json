@@ -6,18 +6,13 @@
         "systems":
         [
             "S_DISPLAY",
-            "S_WINDOW_MANAGER",
-            "S_RELOAD_CONFIG"
+            "S_WINDOW_MANAGER"
         ],
         "resources":
         [
             {
                 "type":"R_WINDOW",
                 "data":{"width":840, "height":600, "title": "rpg", "fps":60}
-            },
-            {
-                "type":"R_CAMERA",
-                "data":null
             },
             {
                 "type":"R_SCENE_FILENAME",
@@ -56,6 +51,10 @@
                     {
                         "type": "C_COLOR",
                         "data": {"r": 255, "g": 0, "b": 0, "a": 255}
+                    },
+                    {
+                        "type": "C_SPEED",
+                        "data": 10
                     }
                 ]
             },
@@ -68,7 +67,7 @@
                     },
                     {
                         "type": "C_POSITION",
-                        "data": {"x":0, "y":0}
+                        "data": {"x":0, "y":300}
                     },
                     {
                         "type": "C_DISPLAYABLE",

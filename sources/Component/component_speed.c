@@ -41,11 +41,10 @@ int component_speed_constructor(component_t *component, void *data)
 int component_speed_constructor_from_json(component_t *component, void *data)
 {
     json_object *obj = json_tokener_parse(data);
-    ecs_vector2i_t v = {0};
+    int speed = 0;
 
-    v.x = json_object_get_int(json_object_object_get(obj, "x"));
-    v.y = json_object_get_int(json_object_object_get(obj, "y"));
-    return component_speed_constructor(component, &v);
+    speed = json_object_get_int(obj);
+    return component_speed_constructor(component, &speed);
 }
 
 int component_speed_set(component_t *component, void *data)

@@ -6,7 +6,10 @@
         "systems":
         [
             "S_DISPLAY",
-            "S_WINDOW_MANAGER"
+            "S_WINDOW_MANAGER",
+            "S_MOVEMENT",
+            "S_MOVE_CONTROLLABLE",
+            "S_RESET_GAME_CLOCK"
         ],
         "resources":
         [
@@ -17,6 +20,10 @@
             {
                 "type":"R_SCENE_FILENAME",
                 "data":{"filename":"config/basic_scene.json"}
+            },
+            {
+                "type": "R_GAME_CLOCK",
+                "data": 0
             }
         ],
         "entities":
@@ -54,7 +61,7 @@
                     },
                     {
                         "type": "C_SPEED",
-                        "data": 10
+                        "data": 3
                     }
                 ]
             },

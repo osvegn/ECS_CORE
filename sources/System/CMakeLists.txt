@@ -6,6 +6,7 @@ set(SYSTEMS_SOURCES
     ${SRC_SYSTEMS_ROOT}/system_display.c
     ${SRC_SYSTEMS_ROOT}/system_reload_config.c
     ${SRC_SYSTEMS_ROOT}/system_windows_manager.c
+    ${SRC_SYSTEMS_ROOT}/system_reset_game_clock.c
     # ${SRC_SYSTEMS_ROOT}/system_gravity.c
     # ${SRC_SYSTEMS_ROOT}/system_jump.c
     ${SRC_SYSTEMS_ROOT}/system_move_controllable.c

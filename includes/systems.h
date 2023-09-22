@@ -21,6 +21,7 @@ typedef enum system_type_e {
     S_RELOAD_CONFIG,
     S_MOVE_CONTROLLABLE,
     S_MOVEMENT,
+    S_RESET_GAME_CLOCK,
     S_MAX_VALUE
 } system_type_t;
 
@@ -44,5 +45,8 @@ static int system_move_controllable(void *world);
 
 static int system_movement(void *world);
 int system_movement_constructor(system_t *system);
+
+int system_reset_game_clock_constructor(system_t *system);
+int system_reset_game_clock(void *world);
 
 #endif /* !SYSTEMS_H_ */

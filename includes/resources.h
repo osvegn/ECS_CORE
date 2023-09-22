@@ -19,6 +19,7 @@ typedef enum resource_type_e {
     R_WINDOW,
     R_CAMERA,
     R_SCENE_FILENAME,
+    R_GAME_CLOCK,
     R_MAX_VALUE
 } resource_type_t;
 
@@ -90,5 +91,11 @@ int resource_scene_filename_set(resource_t *resource, void *data);
 /// @param resource The resource to get the data from.
 /// @return A pointer to the data, or 0 if it's not a valid resource.
 void *resource_scene_filename_get(const resource_t *resource);
+
+int resource_game_clock_constructor(resource_t *resource, void *data);
+int resource_game_clock_constructor_from_json(resource_t *resource, void *data);
+int resource_game_clock_destructor(resource_t *resource);
+int resource_game_clock_set(resource_t *resource, void *data);
+void *resource_game_clock_get(const resource_t *resource);
 
 #endif /* !RESOURCES_H_*/

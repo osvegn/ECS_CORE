@@ -16,6 +16,9 @@ const char * const systems_types[] = {
     "S_DISPLAY",
     "S_WINDOW_MANAGER",
     "S_RELOAD_CONFIG",
+    "S_MOVEMENT",
+    "S_MOVE_CONTROLLABLE",
+    "S_RESET_GAME_CLOCK",
     0
 };
 
@@ -24,18 +27,23 @@ int (* const systems_constructors[])(system_t *) = {
     &system_display_constructor,
     &system_windows_manager_constructor,
     &system_reload_config_constructor,
+    &system_movement_constructor,
+    &system_move_controllable_constructor,
+    &system_reset_game_clock_constructor,
     0
 };
 
 const char * const resources_types[] = {
     "R_WINDOW",
     "R_SCENE_FILENAME",
+    "R_GAME_CLOCK",
     0
 };
 
 int (* const resources_constructors[])(resource_t *, void *) = {
     &resource_window_constructor_from_json,
     &resource_scene_filename_constructor_from_json,
+    &resource_game_clock_constructor,
     0
 };
 

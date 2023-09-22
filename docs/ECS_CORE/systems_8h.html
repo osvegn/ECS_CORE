@@ -111,13 +111,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="systems_8h__dep__incl.png" border="0" usemap="#aincludes_2systems_8hdep" alt=""/></div>
 <map name="aincludes_2systems_8hdep" id="aincludes_2systems_8hdep">
-<area shape="rect" title=" " alt="" coords="479,5,612,31"/>
+<area shape="rect" title=" " alt="" coords="665,5,799,31"/>
 <area shape="rect" href="world__loader__constructors_8h.html" title=" " alt="" coords="13,79,160,119"/>
 <area shape="rect" href="system__display_8c.html" title=" " alt="" coords="184,79,347,119"/>
-<area shape="rect" href="system__reload__config_8c.html" title=" " alt="" coords="371,79,533,119"/>
-<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="557,79,720,119"/>
-<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="744,79,907,119"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="931,86,1042,111"/>
+<area shape="rect" href="system__move__controllable_8c.html" title=" " alt="" coords="371,79,533,119"/>
+<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="557,79,720,119"/>
+<area shape="rect" href="system__reload__config_8c.html" title=" " alt="" coords="744,79,907,119"/>
+<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="931,79,1093,119"/>
+<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="1117,79,1280,119"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="1305,86,1415,111"/>
 <area shape="rect" href="system__load__scene_8c.html" title=" " alt="" coords="5,167,168,207"/>
 </map>
 </div>
@@ -139,7 +141,10 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a1b58d631ccb51b7c8414ea1baf13784d">S_LOAD_SCENE</a>
 , <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43aed6b9017529e0ff5ebf4c60528e8f762">S_RELOAD_CONFIG</a>
-, <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01">S_MAX_VALUE</a>
+, <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a5b0c95e93521c8f87a1ee725de527cf9">S_MOVE_CONTROLLABLE</a>
+, <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a771dd99b1b0577ea032b1db51cede5e1">S_MOVEMENT</a>
+, <br />
+&#160;&#160;<a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01">S_MAX_VALUE</a>
 <br />
  }</td></tr>
 <tr class="separator:abc000cf00682a9ee9a767b1270dc0c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +171,10 @@ Functions</h2></td></tr>
 <tr class="separator:aba1b9d1e3cc1e1d382112a53c18c56e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b93b113abb8544abd19283848fea56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#ad2b93b113abb8544abd19283848fea56">system_reload_config_run</a> (void *ptr)</td></tr>
 <tr class="separator:ad2b93b113abb8544abd19283848fea56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf60144105424b0f8ee3396320a5375"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#a2cf60144105424b0f8ee3396320a5375">system_move_controllable_constructor</a> (system_t *system)</td></tr>
+<tr class="separator:a2cf60144105424b0f8ee3396320a5375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9fb180e5f2323745b478e3a36b3bc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#a9c9fb180e5f2323745b478e3a36b3bc5">system_movement_constructor</a> (system_t *system)</td></tr>
+<tr class="separator:a9c9fb180e5f2323745b478e3a36b3bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a00f6db02bbcb79d10d0e5805f5e574c3" name="a00f6db02bbcb79d10d0e5805f5e574c3"></a>
@@ -201,6 +210,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43aa6db1df918ef1fbb762b2e5188ba972d" name="abc000cf00682a9ee9a767b1270dc0c43aa6db1df918ef1fbb762b2e5188ba972d"></a>S_WINDOW_MANAGER&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a1b58d631ccb51b7c8414ea1baf13784d" name="abc000cf00682a9ee9a767b1270dc0c43a1b58d631ccb51b7c8414ea1baf13784d"></a>S_LOAD_SCENE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43aed6b9017529e0ff5ebf4c60528e8f762" name="abc000cf00682a9ee9a767b1270dc0c43aed6b9017529e0ff5ebf4c60528e8f762"></a>S_RELOAD_CONFIG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a5b0c95e93521c8f87a1ee725de527cf9" name="abc000cf00682a9ee9a767b1270dc0c43a5b0c95e93521c8f87a1ee725de527cf9"></a>S_MOVE_CONTROLLABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a771dd99b1b0577ea032b1db51cede5e1" name="abc000cf00682a9ee9a767b1270dc0c43a771dd99b1b0577ea032b1db51cede5e1"></a>S_MOVEMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01" name="abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01"></a>S_MAX_VALUE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -324,6 +335,42 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="system__reload__config_8c.html#aba1b9d1e3cc1e1d382112a53c18c56e2" title=" " alt="" coords="5,5,152,45"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a2cf60144105424b0f8ee3396320a5375" name="a2cf60144105424b0f8ee3396320a5375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf60144105424b0f8ee3396320a5375">&#9670;&#160;</a></span>system_move_controllable_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int system_move_controllable_constructor </td>
+          <td>(</td>
+          <td class="paramtype">system_t *&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c9fb180e5f2323745b478e3a36b3bc5" name="a9c9fb180e5f2323745b478e3a36b3bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9fb180e5f2323745b478e3a36b3bc5">&#9670;&#160;</a></span>system_movement_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int system_movement_constructor </td>
+          <td>(</td>
+          <td class="paramtype">system_t *&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

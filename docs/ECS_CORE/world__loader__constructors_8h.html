@@ -168,22 +168,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    &amp;<a class="code hl_function" href="component__position_8c.html#a0445f911508985ab3eae91edb00cc532">component_position_constructor</a>,</div>
-<div class="line">    &amp;<a class="code hl_function" href="component__velocity_8c.html#af3561c862a30e567c6b848b616f0fe33">component_velocity_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5">component_position_constructor_from_json</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="component__velocity_8c.html#ae1ee158fc34838c8754db2f3e923c5ec">component_velocity_constructor_from_json</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="component__controllable_8c.html#a0102f6a07a37c4582dc5594d6fbf497e">component_controllable_constructor</a>,</div>
-<div class="line">    &amp;<a class="code hl_function" href="component__size_8c.html#a98b248dfbf9c4fc81b652cf5ec0f7e05">component_size_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="component__size_8c.html#a467e2127bd701f4032bc27dd545c7b13">component_size_constructor_from_json</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="component__displayable_8c.html#a473225f63e24553363d7603b2f7a6802">component_displayable_constructor</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="component__collidable_8c.html#a1919fcfdcdbe7d185a0fed8d59663233">component_collidable_constructor</a>,</div>
-<div class="line">    &amp;<a class="code hl_function" href="component__color_8c.html#a16cea6c0559e54620c7ebaa555169e9d">component_color_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="component__speed_8c.html#a495784d1a3a29ea823423679223b7ca9">component_speed_constructor_from_json</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 <div class="ttc" id="acomponent__collidable_8c_html_a1919fcfdcdbe7d185a0fed8d59663233"><div class="ttname"><a href="component__collidable_8c.html#a1919fcfdcdbe7d185a0fed8d59663233">component_collidable_constructor</a></div><div class="ttdeci">int component_collidable_constructor(component_t *component, void *data)</div><div class="ttdoc">Construct a new component collidable object.</div><div class="ttdef"><b>Definition:</b> component_collidable.c:13</div></div>
-<div class="ttc" id="acomponent__color_8c_html_a16cea6c0559e54620c7ebaa555169e9d"><div class="ttname"><a href="component__color_8c.html#a16cea6c0559e54620c7ebaa555169e9d">component_color_constructor</a></div><div class="ttdeci">int component_color_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a color component from a json string.</div><div class="ttdef"><b>Definition:</b> component_color.c:28</div></div>
+<div class="ttc" id="acomponent__color_8c_html_a8d06a6bfdb78a95365518f5cd776df5e"><div class="ttname"><a href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a></div><div class="ttdeci">int component_color_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_color.c:46</div></div>
 <div class="ttc" id="acomponent__controllable_8c_html_a0102f6a07a37c4582dc5594d6fbf497e"><div class="ttname"><a href="component__controllable_8c.html#a0102f6a07a37c4582dc5594d6fbf497e">component_controllable_constructor</a></div><div class="ttdeci">int component_controllable_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a controllable component. It allows the entity to be controllable by the player.</div><div class="ttdef"><b>Definition:</b> component_controllable.c:13</div></div>
 <div class="ttc" id="acomponent__displayable_8c_html_a473225f63e24553363d7603b2f7a6802"><div class="ttname"><a href="component__displayable_8c.html#a473225f63e24553363d7603b2f7a6802">component_displayable_constructor</a></div><div class="ttdeci">int component_displayable_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a displayable component. It is used to display an entity.</div><div class="ttdef"><b>Definition:</b> component_displayable.c:13</div></div>
-<div class="ttc" id="acomponent__position_8c_html_a0445f911508985ab3eae91edb00cc532"><div class="ttname"><a href="component__position_8c.html#a0445f911508985ab3eae91edb00cc532">component_position_constructor</a></div><div class="ttdeci">int component_position_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a position component from a json string.</div><div class="ttdef"><b>Definition:</b> component_position.c:28</div></div>
-<div class="ttc" id="acomponent__size_8c_html_a98b248dfbf9c4fc81b652cf5ec0f7e05"><div class="ttname"><a href="component__size_8c.html#a98b248dfbf9c4fc81b652cf5ec0f7e05">component_size_constructor</a></div><div class="ttdeci">int component_size_constructor(component_t *component, void *data)</div><div class="ttdoc">Constructor for size component from json data.</div><div class="ttdef"><b>Definition:</b> component_size.c:27</div></div>
-<div class="ttc" id="acomponent__velocity_8c_html_af3561c862a30e567c6b848b616f0fe33"><div class="ttname"><a href="component__velocity_8c.html#af3561c862a30e567c6b848b616f0fe33">component_velocity_constructor</a></div><div class="ttdeci">int component_velocity_constructor(component_t *component, void *data)</div><div class="ttdoc">Constructor for velocity component from json data.</div><div class="ttdef"><b>Definition:</b> component_velocity.c:27</div></div>
+<div class="ttc" id="acomponent__position_8c_html_a43ad0b29f8bb33519c84587041af76d5"><div class="ttname"><a href="component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5">component_position_constructor_from_json</a></div><div class="ttdeci">int component_position_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_position.c:46</div></div>
+<div class="ttc" id="acomponent__size_8c_html_a467e2127bd701f4032bc27dd545c7b13"><div class="ttname"><a href="component__size_8c.html#a467e2127bd701f4032bc27dd545c7b13">component_size_constructor_from_json</a></div><div class="ttdeci">int component_size_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_size.c:45</div></div>
+<div class="ttc" id="acomponent__speed_8c_html_a495784d1a3a29ea823423679223b7ca9"><div class="ttname"><a href="component__speed_8c.html#a495784d1a3a29ea823423679223b7ca9">component_speed_constructor_from_json</a></div><div class="ttdeci">int component_speed_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_speed.c:41</div></div>
+<div class="ttc" id="acomponent__velocity_8c_html_ae1ee158fc34838c8754db2f3e923c5ec"><div class="ttname"><a href="component__velocity_8c.html#ae1ee158fc34838c8754db2f3e923c5ec">component_velocity_constructor_from_json</a></div><div class="ttdeci">int component_velocity_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_velocity.c:45</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -206,6 +208,7 @@ Variables</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;C_DISPLAYABLE&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;C_COLLIDABLE&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;C_COLOR&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;C_SPEED&quot;</span>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -237,12 +240,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    &amp;<a class="code hl_function" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f">resource_window_constructor</a>,</div>
-<div class="line">    &amp;<a class="code hl_function" href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a">resource_scene_filename_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29">resource_scene_filename_constructor_from_json</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
-<div class="ttc" id="aresource__scene__filename_8c_html_a800a9e2e0f8d637f0626ca52ea03242a"><div class="ttname"><a href="resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a">resource_scene_filename_constructor</a></div><div class="ttdeci">int resource_scene_filename_constructor(resource_t *resource, void *data)</div><div class="ttdoc">Scene filename resource constructor.</div><div class="ttdef"><b>Definition:</b> resource_scene_filename.c:28</div></div>
-<div class="ttc" id="aresource__window_8c_html_a9914c604aba5188d17fd624423ed245f"><div class="ttname"><a href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f">resource_window_constructor</a></div><div class="ttdeci">int resource_window_constructor(resource_t *resource, void *data)</div><div class="ttdoc">Window constructor. It opens a new window.</div><div class="ttdef"><b>Definition:</b> resource_window.c:30</div></div>
+<div class="ttc" id="aresource__scene__filename_8c_html_a316e053c396983037faa817ca1b95b29"><div class="ttname"><a href="resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29">resource_scene_filename_constructor_from_json</a></div><div class="ttdeci">int resource_scene_filename_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_scene_filename.c:40</div></div>
+<div class="ttc" id="aresource__window_8c_html_a4d4485e5ca0d124bc9f6ebda593b6654"><div class="ttname"><a href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a></div><div class="ttdeci">int resource_window_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_window.c:49</div></div>
 </div><!-- fragment -->
 </div>
 </div>

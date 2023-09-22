@@ -9,10 +9,12 @@ var resources_8h =
       [ "R_MAX_VALUE", "resources_8h.html#aab0136f9cc4aba80cfe1ec12e00129d5a44c2a9041e9be6683a71204fb1e797be", null ]
     ] ],
     [ "resource_scene_filename_constructor", "resources_8h.html#a800a9e2e0f8d637f0626ca52ea03242a", null ],
+    [ "resource_scene_filename_constructor_from_json", "resources_8h.html#a316e053c396983037faa817ca1b95b29", null ],
     [ "resource_scene_filename_destructor", "resources_8h.html#aafca598db57bbae8817c4f99b1efc0f6", null ],
     [ "resource_scene_filename_get", "resources_8h.html#af1015fbc399686db541b66b2c319eafc", null ],
     [ "resource_scene_filename_set", "resources_8h.html#a547a6b4a1351679272eed369ac68fcac", null ],
     [ "resource_window_constructor", "resources_8h.html#a9914c604aba5188d17fd624423ed245f", null ],
+    [ "resource_window_constructor_from_json", "resources_8h.html#a4d4485e5ca0d124bc9f6ebda593b6654", null ],
     [ "resource_window_destructor", "resources_8h.html#ad876b49946297bc77d8d396ed32d719e", null ],
     [ "resource_window_get", "resources_8h.html#af634eb3546b6e451c497fbd9687f2da4", null ],
     [ "resource_window_set", "resources_8h.html#a7d332f82fa9ae590561c1f0c5226cd52", null ]

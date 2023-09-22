@@ -1,4 +1,5 @@
 <map id="resource_window_destructor" name="resource_window_destructor">
-<area shape="rect" id="node1" title="Window destructor." alt="" coords="248,5,436,31"/>
-<area shape="rect" id="node2" href="$resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="5,5,200,31"/>
+<area shape="rect" id="node1" title="Window destructor." alt="" coords="491,13,679,38"/>
+<area shape="rect" id="node2" href="$resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="248,13,443,38"/>
+<area shape="rect" id="node3" href="$resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654" title=" " alt="" coords="5,5,200,45"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="component_position_set" name="component_position_set">
-<area shape="rect" id="node1" title="Set position component from json string." alt="" coords="192,13,355,38"/>
-<area shape="rect" id="node2" href="$component__position_8c.html#a0445f911508985ab3eae91edb00cc532" title="Create a position component from a json string." alt="" coords="5,5,144,45"/>
+<area shape="rect" id="node1" title="Set position component from json string." alt="" coords="399,13,561,38"/>
+<area shape="rect" id="node2" href="$component__position_8c.html#a0445f911508985ab3eae91edb00cc532" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" id="node3" href="$component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5" title=" " alt="" coords="5,5,164,45"/>
 </map>

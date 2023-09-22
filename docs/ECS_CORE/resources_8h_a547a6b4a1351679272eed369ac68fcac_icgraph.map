@@ -1,4 +1,5 @@
 <map id="resource_scene_filename_set" name="resource_scene_filename_set">
-<area shape="rect" id="node1" title="Set scene filename resource data." alt="" coords="223,13,417,38"/>
-<area shape="rect" id="node2" href="$resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a" title="Scene filename resource constructor." alt="" coords="5,5,175,45"/>
+<area shape="rect" id="node1" title="Set scene filename resource data." alt="" coords="440,13,635,38"/>
+<area shape="rect" id="node2" href="$resource__scene__filename_8c.html#a800a9e2e0f8d637f0626ca52ea03242a" title="Scene filename resource constructor." alt="" coords="223,5,392,45"/>
+<area shape="rect" id="node3" href="$resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29" title=" " alt="" coords="5,5,175,45"/>
 </map>

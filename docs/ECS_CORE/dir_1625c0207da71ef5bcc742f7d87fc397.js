@@ -6,5 +6,6 @@ var dir_1625c0207da71ef5bcc742f7d87fc397 =
     [ "component_displayable.c", "component__displayable_8c.html", "component__displayable_8c" ],
     [ "component_position.c", "component__position_8c.html", "component__position_8c" ],
     [ "component_size.c", "component__size_8c.html", "component__size_8c" ],
+    [ "component_speed.c", "component__speed_8c.html", "component__speed_8c" ],
     [ "component_velocity.c", "component__velocity_8c.html", "component__velocity_8c" ]
 ];

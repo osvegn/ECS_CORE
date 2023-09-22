@@ -1,6 +1,6 @@
 <map id="includes/ecs_color.h" name="includes/ecs_color.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1486,5,1626,31"/>
-<area shape="rect" id="node2" href="$components_8h.html" title=" " alt="" coords="1479,79,1633,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1602,5,1742,31"/>
+<area shape="rect" id="node2" href="$components_8h.html" title=" " alt="" coords="1595,79,1749,104"/>
 <area shape="rect" id="node3" href="$world__loader__constructors_8h.html" title=" " alt="" coords="13,152,160,192"/>
 <area shape="rect" id="node5" href="$component__collidable_8c.html" title=" " alt="" coords="185,152,391,192"/>
 <area shape="rect" id="node6" href="$component__color_8c.html" title=" " alt="" coords="415,152,622,192"/>
@@ -13,7 +13,8 @@
 <area shape="rect" id="node13" href="$system__display_8c.html" title=" " alt="" coords="2031,152,2193,192"/>
 <area shape="rect" id="node14" href="$system__move__controllable_8c.html" title=" " alt="" coords="2217,152,2380,192"/>
 <area shape="rect" id="node15" href="$system__movement_8c.html" title=" " alt="" coords="2404,152,2567,192"/>
-<area shape="rect" id="node16" href="$system__windows__manager_8c.html" title=" " alt="" coords="2591,152,2753,192"/>
-<area shape="rect" id="node17" href="$system__world__initializer_8c.html" title=" " alt="" coords="2777,152,2940,192"/>
+<area shape="rect" id="node16" href="$system__reset__game__clock_8c.html" title=" " alt="" coords="2591,152,2753,192"/>
+<area shape="rect" id="node17" href="$system__windows__manager_8c.html" title=" " alt="" coords="2777,152,2940,192"/>
+<area shape="rect" id="node18" href="$system__world__initializer_8c.html" title=" " alt="" coords="2964,152,3127,192"/>
 <area shape="rect" id="node4" href="$system__load__scene_8c.html" title=" " alt="" coords="5,240,168,280"/>
 </map>

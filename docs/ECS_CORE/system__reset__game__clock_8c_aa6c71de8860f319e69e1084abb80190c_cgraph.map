@@ -1,0 +1,4 @@
+<map id="system_reset_game_clock" name="system_reset_game_clock">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,183,31"/>
+<area shape="rect" id="node2" href="$resource__game__clock_8c.html#acb01d969b2db432bc9b38c55fd0f6c44" title=" " alt="" coords="231,5,405,31"/>
+</map>

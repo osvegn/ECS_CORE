@@ -242,8 +242,10 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    &amp;<a class="code hl_function" href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29">resource_scene_filename_constructor_from_json</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="resource__game__clock_8c.html#ad669a2d5bacc1c841b9e10262a97ec62">resource_game_clock_constructor</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
+<div class="ttc" id="aresource__game__clock_8c_html_ad669a2d5bacc1c841b9e10262a97ec62"><div class="ttname"><a href="resource__game__clock_8c.html#ad669a2d5bacc1c841b9e10262a97ec62">resource_game_clock_constructor</a></div><div class="ttdeci">int resource_game_clock_constructor(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_game_clock.c:25</div></div>
 <div class="ttc" id="aresource__scene__filename_8c_html_a316e053c396983037faa817ca1b95b29"><div class="ttname"><a href="resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29">resource_scene_filename_constructor_from_json</a></div><div class="ttdeci">int resource_scene_filename_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_scene_filename.c:40</div></div>
 <div class="ttc" id="aresource__window_8c_html_a4d4485e5ca0d124bc9f6ebda593b6654"><div class="ttname"><a href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a></div><div class="ttdeci">int resource_window_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_window.c:49</div></div>
 </div><!-- fragment -->
@@ -263,6 +265,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <span class="stringliteral">&quot;R_WINDOW&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;R_SCENE_FILENAME&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;R_GAME_CLOCK&quot;</span>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -288,11 +291,17 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_function" href="system__display_8c.html#a963b9b92a29200234e2acd24f973988c">system_display_constructor</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="system__windows__manager_8c.html#ab85d834156a4c7d11cc82e03df0cbd26">system_windows_manager_constructor</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="system__reload__config_8c.html#aba1b9d1e3cc1e1d382112a53c18c56e2">system_reload_config_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="system__movement_8c.html#a9c9fb180e5f2323745b478e3a36b3bc5">system_movement_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="system__move__controllable_8c.html#a2cf60144105424b0f8ee3396320a5375">system_move_controllable_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="system__reset__game__clock_8c.html#a960241def8ff05dd353bf3ebc56dcb1a">system_reset_game_clock_constructor</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 <div class="ttc" id="asystem__display_8c_html_a963b9b92a29200234e2acd24f973988c"><div class="ttname"><a href="system__display_8c.html#a963b9b92a29200234e2acd24f973988c">system_display_constructor</a></div><div class="ttdeci">int system_display_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_display.c:19</div></div>
 <div class="ttc" id="asystem__load__scene_8c_html_a41c07f8c251b3c755ab69342783ebfa6"><div class="ttname"><a href="system__load__scene_8c.html#a41c07f8c251b3c755ab69342783ebfa6">system_load_scene_constructor</a></div><div class="ttdeci">int system_load_scene_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_load_scene.c:17</div></div>
+<div class="ttc" id="asystem__move__controllable_8c_html_a2cf60144105424b0f8ee3396320a5375"><div class="ttname"><a href="system__move__controllable_8c.html#a2cf60144105424b0f8ee3396320a5375">system_move_controllable_constructor</a></div><div class="ttdeci">int system_move_controllable_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_move_controllable.c:17</div></div>
+<div class="ttc" id="asystem__movement_8c_html_a9c9fb180e5f2323745b478e3a36b3bc5"><div class="ttname"><a href="system__movement_8c.html#a9c9fb180e5f2323745b478e3a36b3bc5">system_movement_constructor</a></div><div class="ttdeci">int system_movement_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_movement.c:18</div></div>
 <div class="ttc" id="asystem__reload__config_8c_html_aba1b9d1e3cc1e1d382112a53c18c56e2"><div class="ttname"><a href="system__reload__config_8c.html#aba1b9d1e3cc1e1d382112a53c18c56e2">system_reload_config_constructor</a></div><div class="ttdeci">int system_reload_config_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_reload_config.c:17</div></div>
+<div class="ttc" id="asystem__reset__game__clock_8c_html_a960241def8ff05dd353bf3ebc56dcb1a"><div class="ttname"><a href="system__reset__game__clock_8c.html#a960241def8ff05dd353bf3ebc56dcb1a">system_reset_game_clock_constructor</a></div><div class="ttdeci">int system_reset_game_clock_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_reset_game_clock.c:20</div></div>
 <div class="ttc" id="asystem__windows__manager_8c_html_ab85d834156a4c7d11cc82e03df0cbd26"><div class="ttname"><a href="system__windows__manager_8c.html#ab85d834156a4c7d11cc82e03df0cbd26">system_windows_manager_constructor</a></div><div class="ttdeci">int system_windows_manager_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_windows_manager.c:15</div></div>
 </div><!-- fragment -->
 </div>
@@ -313,6 +322,9 @@ Variables</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;S_DISPLAY&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;S_WINDOW_MANAGER&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;S_RELOAD_CONFIG&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;S_MOVEMENT&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;S_MOVE_CONTROLLABLE&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;S_RESET_GAME_CLOCK&quot;</span>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 </div><!-- fragment -->

@@ -29,7 +29,7 @@ static int system_movement(void *world)
 {
     vector_t entities = {0};
     int rvalue = world_join_entities(world, &entities, 2, C_POSITION, C_VELOCITY);
-    ecs_vector2i_t position = {0};
+    ecs_vector2f_t position = {0};
     entity_t *e = 0;
     component_t *c_position = 0;
     component_t *c_velocity = 0;
@@ -49,8 +49,8 @@ static int system_movement(void *world)
         e = *(entity_t **)entities.at(&entities, i);
         c_position = entity_get_component(e, C_POSITION);
         c_velocity = entity_get_component(e, C_VELOCITY);
-        position.x = (ecs_vector2i_t *){c_position->data}->x + (ecs_vector2i_t *){c_velocity->data}->x * time;
-        position.y = (ecs_vector2i_t *){c_position->data}->y + (ecs_vector2i_t *){c_velocity->data}->y * time;
+        position.x = (ecs_vector2f_t *){c_position->data}->x + (ecs_vector2i_t *){c_velocity->data}->x * time;
+        position.y = (ecs_vector2f_t *){c_position->data}->y + (ecs_vector2i_t *){c_velocity->data}->y * time;
         component_position_set(c_position, &position);
     }
     return 0;

@@ -15,7 +15,7 @@
         [
             {
                 "type":"R_WINDOW",
-                "data":{"width":840, "height":600, "title": "rpg", "fps":60}
+                "data":{"width":1280, "height":720, "title": "rpg", "fps":60}
             },
             {
                 "type":"R_SCENE_FILENAME",
@@ -61,7 +61,7 @@
                     },
                     {
                         "type": "C_SPEED",
-                        "data": 3
+                        "data": 1
                     }
                 ]
             },

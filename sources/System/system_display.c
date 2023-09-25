@@ -30,7 +30,7 @@ int system_display(void *ptr)
     vector_t entities = {0};
     entity_t *entity = 0;
     int rvalue = world_join_entities(ptr, &entities, 3, C_DISPLAYABLE, C_POSITION, C_SIZE);
-    ecs_vector2i_t position = {0};
+    ecs_vector2f_t position = {0};
     ecs_vector2i_t size = {0};
     Color color = RED;
     ecs_color_t *color_tmp = 0;
@@ -41,7 +41,7 @@ int system_display(void *ptr)
     ClearBackground(RAYWHITE);
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        position = *(ecs_vector2i_t *){entity_get_component(entity, C_POSITION)->data};
+        position = *(ecs_vector2f_t *){entity_get_component(entity, C_POSITION)->data};
         size = *(ecs_vector2i_t *){entity_get_component(entity, C_SIZE)->data};
         if (entity_get_component(entity, C_COLOR)) {
             color_tmp = entity_get_component(entity, C_COLOR)->data;

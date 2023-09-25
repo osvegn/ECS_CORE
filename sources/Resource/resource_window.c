@@ -1,10 +1,10 @@
 /*
- * Filename:
- * /home/thomas/Documents/Perso/our_rpg/sources/Resource/window_resource.c Path:
- * /home/thomas/Documents/Perso/our_rpg/sources/Resource Created Date: Sunday,
- * February 12th 2023, 5:27:54 pm Author: Thomas
+ * Filename: window_resource.c
+ * Path: sources/Resource 
+ * Created Date: Sunday, February 12th 2023, 5:27:54 pm
+ * Author: Thomas
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #include "json.h"

@@ -4,7 +4,7 @@
  * Created Date: Friday, March 17th 2023, 9:27:54 am
  * Author: Thomas
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #include <stdlib.h>

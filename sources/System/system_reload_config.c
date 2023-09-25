@@ -1,11 +1,10 @@
 /*
- * Filename:
- * /home/thomas/Documents/Perso/our_rpg/sources/System/system_reload_config.c
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/System
+ * Filename: system_reload_config.c
+ * Path: sources/System
  * Created Date: Tuesday, March 21st 2023, 5:09:16 pm
  * Author: Thomas
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #include "raylib.h"

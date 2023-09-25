@@ -4,7 +4,7 @@
  * Created Date: Sunday, February 12th 2023, 5:32:35 pm
  * Author: Thomas
  * 
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #ifndef RESOURCES_H_

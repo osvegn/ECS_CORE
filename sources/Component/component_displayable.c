@@ -4,7 +4,7 @@
  * Created Date: Sunday, February 12th 2023, 6:21:46 pm
  * Author: Thomas
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #include "components.h"

@@ -4,7 +4,7 @@
  * Created Date: Sunday, January 22nd 2023, 1:13:50 am
  * Author: osvegn
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #include "resources.h"

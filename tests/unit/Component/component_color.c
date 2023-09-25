@@ -4,7 +4,7 @@
  * Created Date: Tuesday, August 29th 2023, 4:53:57 pm
  * Author: osvegn
  * 
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 our_rpg
  */
 
 #include <criterion/criterion.h>

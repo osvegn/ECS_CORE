@@ -1,7 +1,0 @@
-<map id="resource_game_clock_set" name="resource_game_clock_set">
-<area shape="rect" id="node1" title=" " alt="" coords="456,46,631,71"/>
-<area shape="rect" id="node2" href="$resource__game__clock_8c.html#ad669a2d5bacc1c841b9e10262a97ec62" title=" " alt="" coords="245,8,394,48"/>
-<area shape="rect" id="node4" href="$system__reset__game__clock_8c.html#aa6c71de8860f319e69e1084abb80190c" title=" " alt="" coords="231,74,408,99"/>
-<area shape="rect" id="node3" href="$resource__game__clock_8c.html#a43cf496a15af7fb849dc4ae36a8779d2" title=" " alt="" coords="15,5,173,45"/>
-<area shape="rect" id="node5" href="$system__reset__game__clock_8c.html#a960241def8ff05dd353bf3ebc56dcb1a" title=" " alt="" coords="5,69,183,109"/>
-</map>

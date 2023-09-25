@@ -12,6 +12,7 @@
 #include <string.h>
 #include "json.h"
 #include "world_logger.h"
+#ifdef __linux__
 #include <sys/time.h>
 
 static int resource_is_game_clock(const resource_t *resource)
@@ -25,17 +26,19 @@ static int resource_is_game_clock(const resource_t *resource)
 int resource_game_clock_constructor(resource_t *resource, void *data)
 {
     int rvalue = 0;
-    struct timeval start;
-
-    gettimeofday(&start, NULL);
     resource->type = R_GAME_CLOCK;
-    resource->data = malloc(sizeof(struct timeval));
-    if (!resource->data) {
-        return -1;
-    }
-    if (!data) {
-        data = &start;
-    }
+    #ifdef __linux__
+        struct timeval start;
+
+        gettimeofday(&start, NULL);
+        resource->data = malloc(sizeof(struct timeval));
+        if (!resource->data) {
+            return -1;
+        }
+        if (!data) {
+            data = &start;
+        }
+    #endif
     resource->destructor = &resource_game_clock_destructor;
     rvalue = resource_game_clock_set(resource, data);
     log_info("game_clock resource created.");
@@ -61,7 +64,9 @@ int resource_game_clock_set(resource_t *resource, void *data)
 {
     if (!resource_is_game_clock(resource))
         return -1;
-    memcpy(resource->data, data, sizeof(struct timeval));
+    #ifdef __linux__
+        memcpy(resource->data, data, sizeof(struct timeval));
+    #endif
     return 0;
 }
 

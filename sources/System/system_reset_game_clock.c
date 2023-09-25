@@ -14,7 +14,9 @@
 #include "world_entity.h"
 #include "world_resource.h"
 #include "components.h"
-#include <sys/time.h>
+#ifdef __linux__
+    #include <sys/time.h>
+#endif
 #include "resources.h"
 
 int system_reset_game_clock_constructor(system_t *system)
@@ -27,10 +29,12 @@ int system_reset_game_clock_constructor(system_t *system)
 
 int system_reset_game_clock(void *world)
 {
-    struct timeval new;
-    resource_t *game_clock = world_get_resource_by_type(world, R_GAME_CLOCK);
+    #ifdef __linux__
+        struct timeval new;
+        resource_t *game_clock = world_get_resource_by_type(world, R_GAME_CLOCK);
 
-    gettimeofday(&new, NULL);
-    resource_game_clock_set(game_clock, &new);
+        gettimeofday(&new, NULL);
+        resource_game_clock_set(game_clock, &new);
+    #endif
     return 0;
 }

@@ -64,6 +64,7 @@ int resource_scene_filename_set(resource_t *resource, void *data)
     } else {
         resource->data = strdup((char *)data);
     }
+    return 0;
 }
 
 void *resource_scene_filename_get(const resource_t *resource)

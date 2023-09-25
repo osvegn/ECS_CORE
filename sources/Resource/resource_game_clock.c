@@ -13,7 +13,8 @@
 #include "json.h"
 #include "world_logger.h"
 #ifdef __linux__
-#include <sys/time.h>
+    #include <sys/time.h>
+#endif
 
 static int resource_is_game_clock(const resource_t *resource)
 {

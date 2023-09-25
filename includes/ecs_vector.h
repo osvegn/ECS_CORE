@@ -15,4 +15,9 @@ typedef struct ecs_vector2i_s {
     int y;
 } ecs_vector2i_t;
 
+typedef struct ecs_vector2f_s {
+    float x;
+    float y;
+} ecs_vector2f_t;
+
 #endif /* !VECTOR2I_H_ */

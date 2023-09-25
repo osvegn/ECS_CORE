@@ -13,7 +13,9 @@
 #include "world_resource.h"
 #include "components.h"
 #include "resources.h"
-#include <sys/time.h>
+#ifdef __linux__
+    #include <sys/time.h>
+#endif
 
 int system_movement_constructor(system_t *system)
 {
@@ -32,10 +34,14 @@ static int system_movement(void *world)
     component_t *c_position = 0;
     component_t *c_velocity = 0;
     resource_t *r = world_get_resource_by_type(world, R_GAME_CLOCK);
-    struct timeval now, start;
-    start = *(struct timeval *)resource_game_clock_get(r);
-    gettimeofday(&now, NULL);
-    double time = ((now.tv_sec - start.tv_sec) * 1000.0f + (now.tv_usec - start.tv_usec) / 1000.0f);
+    #ifdef __linux__
+        struct timeval now, start;
+        start = *(struct timeval *)resource_game_clock_get(r);
+        gettimeofday(&now, NULL);
+        double time = ((now.tv_sec - start.tv_sec) * 1000.0f + (now.tv_usec - start.tv_usec) / 1000.0f);
+    #else
+        double time = 1.0f;
+    #endif
 
     if (rvalue <= 0)
         return 0;

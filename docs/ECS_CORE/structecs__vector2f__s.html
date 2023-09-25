@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ECS: sources/System/system_movement.c File Reference</title>
+<title>ECS: ecs_vector2f_s Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('system__movement_8c.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structecs__vector2f__s.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,67 +90,58 @@ $(document).ready(function(){initNavTree('system__movement_8c.html',''); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">system_movement.c File Reference</div></div>
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">ecs_vector2f_s Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="systems_8h_source.html">systems.h</a>&quot;</code><br />
-<code>#include &quot;vector.h&quot;</code><br />
-<code>#include &quot;world_entity.h&quot;</code><br />
-<code>#include &quot;world_resource.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="components_8h_source.html">components.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="resources_8h_source.html">resources.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for system_movement.c:</div>
-<div class="dyncontent">
-<div class="center"><img src="system__movement_8c__incl.png" border="0" usemap="#asources_2System_2system__movement_8c" alt=""/></div>
-<map name="asources_2System_2system__movement_8c" id="asources_2System_2system__movement_8c">
-<area shape="rect" title=" " alt="" coords="239,5,402,45"/>
-<area shape="rect" href="systems_8h.html" title=" " alt="" coords="5,93,87,119"/>
-<area shape="rect" title=" " alt="" coords="111,93,179,119"/>
-<area shape="rect" title=" " alt="" coords="203,93,305,119"/>
-<area shape="rect" title=" " alt="" coords="329,93,449,119"/>
-<area shape="rect" href="components_8h.html" title=" " alt="" coords="473,93,576,119"/>
-<area shape="rect" href="resources_8h.html" title=" " alt="" coords="652,93,741,119"/>
-<area shape="rect" title=" " alt="" coords="9,167,83,192"/>
-<area shape="rect" title=" " alt="" coords="303,167,399,192"/>
-<area shape="rect" href="ecs__vector_8h.html" title=" " alt="" coords="423,167,519,192"/>
-<area shape="rect" href="ecs__color_8h.html" title=" " alt="" coords="543,167,631,192"/>
-<area shape="rect" title=" " alt="" coords="655,167,738,192"/>
-<area shape="rect" href="window_8h.html" title=" " alt="" coords="763,167,839,192"/>
-</map>
-</div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a9c9fb180e5f2323745b478e3a36b3bc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system__movement_8c.html#a9c9fb180e5f2323745b478e3a36b3bc5">system_movement_constructor</a> (system_t *system)</td></tr>
-<tr class="separator:a9c9fb180e5f2323745b478e3a36b3bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+
+<p><code>#include &lt;<a class="el" href="ecs__vector_8h_source.html">ecs_vector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ad0da36b2558901e21e7a30f6c227a45e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structecs__vector2f__s.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></td></tr>
+<tr class="separator:ad0da36b2558901e21e7a30f6c227a45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structecs__vector2f__s.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></td></tr>
+<tr class="separator:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a9c9fb180e5f2323745b478e3a36b3bc5" name="a9c9fb180e5f2323745b478e3a36b3bc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c9fb180e5f2323745b478e3a36b3bc5">&#9670;&#160;</a></span>system_movement_constructor()</h2>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ad0da36b2558901e21e7a30f6c227a45e" name="ad0da36b2558901e21e7a30f6c227a45e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0da36b2558901e21e7a30f6c227a45e">&#9670;&#160;</a></span>x</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int system_movement_constructor </td>
-          <td>(</td>
-          <td class="paramtype">system_t *&#160;</td>
-          <td class="paramname"><em>system</em></td><td>)</td>
-          <td></td>
+          <td class="memname">float x</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
+<a id="aa4f0d3eebc3c443f9be81bf48561a217" name="aa4f0d3eebc3c443f9be81bf48561a217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f0d3eebc3c443f9be81bf48561a217">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>includes/<a class="el" href="ecs__vector_8h_source.html">ecs_vector.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li><li class="navelem"><a class="el" href="dir_dbff9d19e82c23288cf26fa638b485e8.html">System</a></li><li class="navelem"><a class="el" href="system__movement_8c.html">system_movement.c</a></li>
+    <li class="navelem"><a class="el" href="structecs__vector2f__s.html">ecs_vector2f_s</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

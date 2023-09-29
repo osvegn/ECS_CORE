@@ -31,17 +31,19 @@ int system_handle_click(void *world)
     entity_t *e = 0;
     component_t *c = 0;
     Vector2 mouse_position = GetMousePosition();
-    Vector2 camera_position = (Camera2D *){r->data}->target;
     Vector2 old_mouse_position = {0};
+    if (r) {
+        Vector2 camera_position = (Camera2D *){r->data}->target;
 
-    mouse_position.x += camera_position.x;
-    mouse_position.y += camera_position.y;
-    camera_position = (Camera2D *){r->data}->offset;
-    mouse_position.x -= camera_position.x;
-    mouse_position.y -= camera_position.y;
+        mouse_position.x += camera_position.x;
+        mouse_position.y += camera_position.y;
+        camera_position = (Camera2D *){r->data}->offset;
+        mouse_position.x -= camera_position.x;
+        mouse_position.y -= camera_position.y;
+    }
     old_mouse_position = mouse_position;
     
-    if (!IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+    if (!IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         return (0);
     }
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
@@ -51,9 +53,6 @@ int system_handle_click(void *world)
             c = entity_get_component(e, C_POSITION);
             mouse_position.x -= (ecs_vector2f_t *){c->data}->x;
             mouse_position.y -= (ecs_vector2f_t *){c->data}->y;
-            BeginDrawing();
-            DrawRectangleLines(mouse_position.x, mouse_position.y, 50, 50, BLUE);
-            EndDrawing();
             if (mouse_position.x < 0 || mouse_position.y < 0)
                 continue;
             c = entity_get_component(e, C_SIZE);

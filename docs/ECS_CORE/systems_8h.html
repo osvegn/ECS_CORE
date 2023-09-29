@@ -111,16 +111,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="systems_8h__dep__incl.png" border="0" usemap="#aincludes_2systems_8hdep" alt=""/></div>
 <map name="aincludes_2systems_8hdep" id="aincludes_2systems_8hdep">
-<area shape="rect" title=" " alt="" coords="759,5,892,31"/>
+<area shape="rect" title=" " alt="" coords="945,5,1079,31"/>
 <area shape="rect" href="world__loader__constructors_8h.html" title=" " alt="" coords="13,79,160,119"/>
 <area shape="rect" href="system__display_8c.html" title=" " alt="" coords="184,79,347,119"/>
-<area shape="rect" href="system__move__controllable_8c.html" title=" " alt="" coords="371,79,533,119"/>
-<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="557,79,720,119"/>
-<area shape="rect" href="system__reload__config_8c.html" title=" " alt="" coords="744,79,907,119"/>
-<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="931,79,1093,119"/>
-<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="1117,79,1280,119"/>
-<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="1304,79,1467,119"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="1491,86,1602,111"/>
+<area shape="rect" href="system__follow__player_8c.html" title=" " alt="" coords="371,79,533,119"/>
+<area shape="rect" href="system__handle__click_8c.html" title=" " alt="" coords="557,79,720,119"/>
+<area shape="rect" href="system__move__controllable_8c.html" title=" " alt="" coords="744,79,907,119"/>
+<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="931,79,1093,119"/>
+<area shape="rect" href="system__reload__config_8c.html" title=" " alt="" coords="1117,79,1280,119"/>
+<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="1304,79,1467,119"/>
+<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="1491,79,1653,119"/>
+<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="1677,79,1840,119"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="1865,86,1975,111"/>
 <area shape="rect" href="system__load__scene_8c.html" title=" " alt="" coords="5,167,168,207"/>
 </map>
 </div>
@@ -146,6 +148,8 @@ Enumerations</h2></td></tr>
 , <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a771dd99b1b0577ea032b1db51cede5e1">S_MOVEMENT</a>
 , <br />
 &#160;&#160;<a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a349fd53caa33bcf6f0fd01ae4efdc840">S_RESET_GAME_CLOCK</a>
+, <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a0c4bd561089cb6a3abb02ece4183d0fa">S_FOLLOW_PLAYER</a>
+, <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a5c9bbaaf5d49b181b8d79c781df54c23">S_HANDLE_CLICK</a>
 , <a class="el" href="systems_8h.html#abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01">S_MAX_VALUE</a>
 <br />
  }</td></tr>
@@ -181,6 +185,14 @@ Functions</h2></td></tr>
 <tr class="separator:a960241def8ff05dd353bf3ebc56dcb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c71de8860f319e69e1084abb80190c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#aa6c71de8860f319e69e1084abb80190c">system_reset_game_clock</a> (void *world)</td></tr>
 <tr class="separator:aa6c71de8860f319e69e1084abb80190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611571284ec7aff3d34edf77a19f6675"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#a611571284ec7aff3d34edf77a19f6675">system_follow_player_constructor</a> (system_t *system)</td></tr>
+<tr class="separator:a611571284ec7aff3d34edf77a19f6675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac724bcded70f944f38596282fa7997e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#ac724bcded70f944f38596282fa7997e3">system_follow_player</a> (void *world)</td></tr>
+<tr class="separator:ac724bcded70f944f38596282fa7997e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63ae651d6754463646abf309a40a2d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#ac63ae651d6754463646abf309a40a2d4">system_handle_click_constructor</a> (system_t *system)</td></tr>
+<tr class="separator:ac63ae651d6754463646abf309a40a2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f97f43f4cf2f4bbd83a67cfc63d595"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="systems_8h.html#ab9f97f43f4cf2f4bbd83a67cfc63d595">system_handle_click</a> (void *world)</td></tr>
+<tr class="separator:ab9f97f43f4cf2f4bbd83a67cfc63d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a00f6db02bbcb79d10d0e5805f5e574c3" name="a00f6db02bbcb79d10d0e5805f5e574c3"></a>
@@ -219,6 +231,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a5b0c95e93521c8f87a1ee725de527cf9" name="abc000cf00682a9ee9a767b1270dc0c43a5b0c95e93521c8f87a1ee725de527cf9"></a>S_MOVE_CONTROLLABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a771dd99b1b0577ea032b1db51cede5e1" name="abc000cf00682a9ee9a767b1270dc0c43a771dd99b1b0577ea032b1db51cede5e1"></a>S_MOVEMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a349fd53caa33bcf6f0fd01ae4efdc840" name="abc000cf00682a9ee9a767b1270dc0c43a349fd53caa33bcf6f0fd01ae4efdc840"></a>S_RESET_GAME_CLOCK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a0c4bd561089cb6a3abb02ece4183d0fa" name="abc000cf00682a9ee9a767b1270dc0c43a0c4bd561089cb6a3abb02ece4183d0fa"></a>S_FOLLOW_PLAYER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a5c9bbaaf5d49b181b8d79c781df54c23" name="abc000cf00682a9ee9a767b1270dc0c43a5c9bbaaf5d49b181b8d79c781df54c23"></a>S_HANDLE_CLICK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01" name="abc000cf00682a9ee9a767b1270dc0c43a35d0dacace4d9c018e28a361983e8c01"></a>S_MAX_VALUE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -274,6 +288,124 @@ Here is the call graph for this function:</div>
 <map name="asystems_8h_a963b9b92a29200234e2acd24f973988c_cgraph" id="asystems_8h_a963b9b92a29200234e2acd24f973988c_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,188,31"/>
 <area shape="rect" href="system__display_8c.html#a8d335799ecc117cc682a32a20881e364" title=" " alt="" coords="236,5,347,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac724bcded70f944f38596282fa7997e3" name="ac724bcded70f944f38596282fa7997e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac724bcded70f944f38596282fa7997e3">&#9670;&#160;</a></span>system_follow_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int system_follow_player </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>world</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="systems_8h_ac724bcded70f944f38596282fa7997e3_cgraph.png" border="0" usemap="#asystems_8h_ac724bcded70f944f38596282fa7997e3_cgraph" alt=""/></div>
+<map name="asystems_8h_ac724bcded70f944f38596282fa7997e3_cgraph" id="asystems_8h_ac724bcded70f944f38596282fa7997e3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,31"/>
+<area shape="rect" href="resource__camera_8c.html#ac48e4fb4ea8506579665c4c21bf96cd4" title=" " alt="" coords="200,5,347,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="systems_8h_ac724bcded70f944f38596282fa7997e3_icgraph.png" border="0" usemap="#asystems_8h_ac724bcded70f944f38596282fa7997e3_icgraph" alt=""/></div>
+<map name="asystems_8h_ac724bcded70f944f38596282fa7997e3_icgraph" id="asystems_8h_ac724bcded70f944f38596282fa7997e3_icgraph">
+<area shape="rect" title=" " alt="" coords="200,13,347,38"/>
+<area shape="rect" href="system__follow__player_8c.html#a611571284ec7aff3d34edf77a19f6675" title=" " alt="" coords="5,5,152,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a611571284ec7aff3d34edf77a19f6675" name="a611571284ec7aff3d34edf77a19f6675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611571284ec7aff3d34edf77a19f6675">&#9670;&#160;</a></span>system_follow_player_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int system_follow_player_constructor </td>
+          <td>(</td>
+          <td class="paramtype">system_t *&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="systems_8h_a611571284ec7aff3d34edf77a19f6675_cgraph.png" border="0" usemap="#asystems_8h_a611571284ec7aff3d34edf77a19f6675_cgraph" alt=""/></div>
+<map name="asystems_8h_a611571284ec7aff3d34edf77a19f6675_cgraph" id="asystems_8h_a611571284ec7aff3d34edf77a19f6675_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,45"/>
+<area shape="rect" href="system__follow__player_8c.html#ac724bcded70f944f38596282fa7997e3" title=" " alt="" coords="200,13,347,38"/>
+<area shape="rect" href="resource__camera_8c.html#ac48e4fb4ea8506579665c4c21bf96cd4" title=" " alt="" coords="395,13,541,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab9f97f43f4cf2f4bbd83a67cfc63d595" name="ab9f97f43f4cf2f4bbd83a67cfc63d595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f97f43f4cf2f4bbd83a67cfc63d595">&#9670;&#160;</a></span>system_handle_click()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int system_handle_click </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>world</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="systems_8h_ab9f97f43f4cf2f4bbd83a67cfc63d595_icgraph.png" border="0" usemap="#asystems_8h_ab9f97f43f4cf2f4bbd83a67cfc63d595_icgraph" alt=""/></div>
+<map name="asystems_8h_ab9f97f43f4cf2f4bbd83a67cfc63d595_icgraph" id="asystems_8h_ab9f97f43f4cf2f4bbd83a67cfc63d595_icgraph">
+<area shape="rect" title=" " alt="" coords="196,13,339,38"/>
+<area shape="rect" href="system__handle__click_8c.html#ac63ae651d6754463646abf309a40a2d4" title=" " alt="" coords="5,5,148,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac63ae651d6754463646abf309a40a2d4" name="ac63ae651d6754463646abf309a40a2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac63ae651d6754463646abf309a40a2d4">&#9670;&#160;</a></span>system_handle_click_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int system_handle_click_constructor </td>
+          <td>(</td>
+          <td class="paramtype">system_t *&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="systems_8h_ac63ae651d6754463646abf309a40a2d4_cgraph.png" border="0" usemap="#asystems_8h_ac63ae651d6754463646abf309a40a2d4_cgraph" alt=""/></div>
+<map name="asystems_8h_ac63ae651d6754463646abf309a40a2d4_cgraph" id="asystems_8h_ac63ae651d6754463646abf309a40a2d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,148,45"/>
+<area shape="rect" href="system__handle__click_8c.html#ab9f97f43f4cf2f4bbd83a67cfc63d595" title=" " alt="" coords="196,13,339,38"/>
 </map>
 </div>
 

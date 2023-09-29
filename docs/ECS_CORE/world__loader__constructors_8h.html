@@ -176,8 +176,10 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_function" href="component__collidable_8c.html#a1919fcfdcdbe7d185a0fed8d59663233">component_collidable_constructor</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="component__speed_8c.html#a495784d1a3a29ea823423679223b7ca9">component_speed_constructor_from_json</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="component__clickable_8c.html#a53ff558e37f335d4a2884aebfb08b15d">component_clickable_constructor</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
+<div class="ttc" id="acomponent__clickable_8c_html_a53ff558e37f335d4a2884aebfb08b15d"><div class="ttname"><a href="component__clickable_8c.html#a53ff558e37f335d4a2884aebfb08b15d">component_clickable_constructor</a></div><div class="ttdeci">int component_clickable_constructor(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_clickable.c:12</div></div>
 <div class="ttc" id="acomponent__collidable_8c_html_a1919fcfdcdbe7d185a0fed8d59663233"><div class="ttname"><a href="component__collidable_8c.html#a1919fcfdcdbe7d185a0fed8d59663233">component_collidable_constructor</a></div><div class="ttdeci">int component_collidable_constructor(component_t *component, void *data)</div><div class="ttdoc">Construct a new component collidable object.</div><div class="ttdef"><b>Definition:</b> component_collidable.c:13</div></div>
 <div class="ttc" id="acomponent__color_8c_html_a8d06a6bfdb78a95365518f5cd776df5e"><div class="ttname"><a href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a></div><div class="ttdeci">int component_color_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_color.c:46</div></div>
 <div class="ttc" id="acomponent__controllable_8c_html_a0102f6a07a37c4582dc5594d6fbf497e"><div class="ttname"><a href="component__controllable_8c.html#a0102f6a07a37c4582dc5594d6fbf497e">component_controllable_constructor</a></div><div class="ttdeci">int component_controllable_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a controllable component. It allows the entity to be controllable by the player.</div><div class="ttdef"><b>Definition:</b> component_controllable.c:13</div></div>
@@ -209,6 +211,7 @@ Variables</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;C_COLLIDABLE&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;C_COLOR&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;C_SPEED&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;C_CLICKABLE&quot;</span>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -243,8 +246,10 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_function" href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29">resource_scene_filename_constructor_from_json</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="resource__game__clock_8c.html#ad669a2d5bacc1c841b9e10262a97ec62">resource_game_clock_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="resource__camera_8c.html#a34e5d1ba0dcec2f9e68085bca1965bd2">resource_camera_constructor_from_json</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
+<div class="ttc" id="aresource__camera_8c_html_a34e5d1ba0dcec2f9e68085bca1965bd2"><div class="ttname"><a href="resource__camera_8c.html#a34e5d1ba0dcec2f9e68085bca1965bd2">resource_camera_constructor_from_json</a></div><div class="ttdeci">int resource_camera_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_camera.c:37</div></div>
 <div class="ttc" id="aresource__game__clock_8c_html_ad669a2d5bacc1c841b9e10262a97ec62"><div class="ttname"><a href="resource__game__clock_8c.html#ad669a2d5bacc1c841b9e10262a97ec62">resource_game_clock_constructor</a></div><div class="ttdeci">int resource_game_clock_constructor(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_game_clock.c:27</div></div>
 <div class="ttc" id="aresource__scene__filename_8c_html_a316e053c396983037faa817ca1b95b29"><div class="ttname"><a href="resource__scene__filename_8c.html#a316e053c396983037faa817ca1b95b29">resource_scene_filename_constructor_from_json</a></div><div class="ttdeci">int resource_scene_filename_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_scene_filename.c:40</div></div>
 <div class="ttc" id="aresource__window_8c_html_a4d4485e5ca0d124bc9f6ebda593b6654"><div class="ttname"><a href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a></div><div class="ttdeci">int resource_window_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_window.c:49</div></div>
@@ -266,6 +271,7 @@ Variables</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;R_WINDOW&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;R_SCENE_FILENAME&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;R_GAME_CLOCK&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;R_CAMERA&quot;</span>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -294,9 +300,13 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_function" href="system__movement_8c.html#a9c9fb180e5f2323745b478e3a36b3bc5">system_movement_constructor</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="system__move__controllable_8c.html#a2cf60144105424b0f8ee3396320a5375">system_move_controllable_constructor</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="system__reset__game__clock_8c.html#a960241def8ff05dd353bf3ebc56dcb1a">system_reset_game_clock_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="system__follow__player_8c.html#a611571284ec7aff3d34edf77a19f6675">system_follow_player_constructor</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="system__handle__click_8c.html#ac63ae651d6754463646abf309a40a2d4">system_handle_click_constructor</a>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 <div class="ttc" id="asystem__display_8c_html_a963b9b92a29200234e2acd24f973988c"><div class="ttname"><a href="system__display_8c.html#a963b9b92a29200234e2acd24f973988c">system_display_constructor</a></div><div class="ttdeci">int system_display_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_display.c:19</div></div>
+<div class="ttc" id="asystem__follow__player_8c_html_a611571284ec7aff3d34edf77a19f6675"><div class="ttname"><a href="system__follow__player_8c.html#a611571284ec7aff3d34edf77a19f6675">system_follow_player_constructor</a></div><div class="ttdeci">int system_follow_player_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_follow_player.c:17</div></div>
+<div class="ttc" id="asystem__handle__click_8c_html_ac63ae651d6754463646abf309a40a2d4"><div class="ttname"><a href="system__handle__click_8c.html#ac63ae651d6754463646abf309a40a2d4">system_handle_click_constructor</a></div><div class="ttdeci">int system_handle_click_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_handle_click.c:18</div></div>
 <div class="ttc" id="asystem__load__scene_8c_html_a41c07f8c251b3c755ab69342783ebfa6"><div class="ttname"><a href="system__load__scene_8c.html#a41c07f8c251b3c755ab69342783ebfa6">system_load_scene_constructor</a></div><div class="ttdeci">int system_load_scene_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_load_scene.c:17</div></div>
 <div class="ttc" id="asystem__move__controllable_8c_html_a2cf60144105424b0f8ee3396320a5375"><div class="ttname"><a href="system__move__controllable_8c.html#a2cf60144105424b0f8ee3396320a5375">system_move_controllable_constructor</a></div><div class="ttdeci">int system_move_controllable_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_move_controllable.c:17</div></div>
 <div class="ttc" id="asystem__movement_8c_html_a9c9fb180e5f2323745b478e3a36b3bc5"><div class="ttname"><a href="system__movement_8c.html#a9c9fb180e5f2323745b478e3a36b3bc5">system_movement_constructor</a></div><div class="ttdeci">int system_movement_constructor(system_t *system)</div><div class="ttdef"><b>Definition:</b> system_movement.c:20</div></div>
@@ -325,6 +335,8 @@ Variables</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;S_MOVEMENT&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;S_MOVE_CONTROLLABLE&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;S_RESET_GAME_CLOCK&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;S_FOLLOW_PLAYER&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;S_HANDLE_CLICK&quot;</span>,</div>
 <div class="line">    0</div>
 <div class="line">}</div>
 </div><!-- fragment -->

@@ -9,6 +9,10 @@ var resources_8h =
       [ "R_GAME_CLOCK", "resources_8h.html#aab0136f9cc4aba80cfe1ec12e00129d5a704b654827e3ba8c7160af286be13764", null ],
       [ "R_MAX_VALUE", "resources_8h.html#aab0136f9cc4aba80cfe1ec12e00129d5a44c2a9041e9be6683a71204fb1e797be", null ]
     ] ],
+    [ "resource_camera_constructor", "resources_8h.html#ad8bf80725ae76a0c649db231ec6f9ac0", null ],
+    [ "resource_camera_constructor_from_json", "resources_8h.html#a34e5d1ba0dcec2f9e68085bca1965bd2", null ],
+    [ "resource_camera_destructor", "resources_8h.html#a13ff2e437923d3f4ecd17f8924c2f036", null ],
+    [ "resource_camera_set", "resources_8h.html#ac48e4fb4ea8506579665c4c21bf96cd4", null ],
     [ "resource_game_clock_constructor", "resources_8h.html#ad669a2d5bacc1c841b9e10262a97ec62", null ],
     [ "resource_game_clock_constructor_from_json", "resources_8h.html#a43cf496a15af7fb849dc4ae36a8779d2", null ],
     [ "resource_game_clock_destructor", "resources_8h.html#aace7087565714fa13f9d5e33a8df9318", null ],

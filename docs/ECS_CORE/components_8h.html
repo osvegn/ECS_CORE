@@ -115,22 +115,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="components_8h__dep__incl.png" border="0" usemap="#aincludes_2components_8hdep" alt=""/></div>
 <map name="aincludes_2components_8hdep" id="aincludes_2components_8hdep">
-<area shape="rect" title=" " alt="" coords="1595,5,1749,31"/>
+<area shape="rect" title=" " alt="" coords="1940,5,2095,31"/>
 <area shape="rect" href="world__loader__constructors_8h.html" title=" " alt="" coords="13,79,160,119"/>
-<area shape="rect" href="component__collidable_8c.html" title=" " alt="" coords="185,79,391,119"/>
-<area shape="rect" href="component__color_8c.html" title=" " alt="" coords="415,79,622,119"/>
-<area shape="rect" href="component__controllable_8c.html" title=" " alt="" coords="646,79,853,119"/>
-<area shape="rect" href="component__displayable_8c.html" title=" " alt="" coords="877,79,1083,119"/>
-<area shape="rect" href="component__position_8c.html" title=" " alt="" coords="1107,79,1314,119"/>
-<area shape="rect" href="component__size_8c.html" title=" " alt="" coords="1338,79,1545,119"/>
-<area shape="rect" href="component__speed_8c.html" title=" " alt="" coords="1569,79,1775,119"/>
-<area shape="rect" href="component__velocity_8c.html" title=" " alt="" coords="1799,79,2006,119"/>
-<area shape="rect" href="system__display_8c.html" title=" " alt="" coords="2031,79,2193,119"/>
-<area shape="rect" href="system__move__controllable_8c.html" title=" " alt="" coords="2217,79,2380,119"/>
-<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="2404,79,2567,119"/>
-<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="2591,79,2753,119"/>
-<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="2777,79,2940,119"/>
-<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="2964,79,3127,119"/>
+<area shape="rect" href="component__clickable_8c.html" title=" " alt="" coords="185,79,391,119"/>
+<area shape="rect" href="component__collidable_8c.html" title=" " alt="" coords="415,79,622,119"/>
+<area shape="rect" href="component__color_8c.html" title=" " alt="" coords="646,79,853,119"/>
+<area shape="rect" href="component__controllable_8c.html" title=" " alt="" coords="877,79,1083,119"/>
+<area shape="rect" href="component__displayable_8c.html" title=" " alt="" coords="1107,79,1314,119"/>
+<area shape="rect" href="component__position_8c.html" title=" " alt="" coords="1338,79,1545,119"/>
+<area shape="rect" href="component__size_8c.html" title=" " alt="" coords="1569,79,1775,119"/>
+<area shape="rect" href="component__speed_8c.html" title=" " alt="" coords="1799,79,2006,119"/>
+<area shape="rect" href="component__velocity_8c.html" title=" " alt="" coords="2030,79,2237,119"/>
+<area shape="rect" href="system__display_8c.html" title=" " alt="" coords="2261,79,2424,119"/>
+<area shape="rect" href="system__follow__player_8c.html" title=" " alt="" coords="2448,79,2611,119"/>
+<area shape="rect" href="system__handle__click_8c.html" title=" " alt="" coords="2635,79,2797,119"/>
+<area shape="rect" href="system__move__controllable_8c.html" title=" " alt="" coords="2821,79,2984,119"/>
+<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="3008,79,3171,119"/>
+<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="3195,79,3357,119"/>
+<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="3381,79,3544,119"/>
+<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="3568,79,3731,119"/>
 <area shape="rect" href="system__load__scene_8c.html" title=" " alt="" coords="5,167,168,207"/>
 </map>
 </div>
@@ -157,6 +160,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="components_8h.html#af3fba937a41c8eb285dbeddd2df7e521a0bd5a64409c1bfc5a96d7f5d40819662">C_COLLIDABLE</a>
 , <br />
 &#160;&#160;<a class="el" href="components_8h.html#af3fba937a41c8eb285dbeddd2df7e521a0dae262ee5574a9198df81648329c80b">C_SPEED</a>
+, <a class="el" href="components_8h.html#af3fba937a41c8eb285dbeddd2df7e521ae2a89fb983264ce771ae72983962b45a">C_CLICKABLE</a>
 , <a class="el" href="components_8h.html#af3fba937a41c8eb285dbeddd2df7e521aba9663bfac0246278ff6e2dae2ac74df">C_MAX</a>
 <br />
  }</td></tr>
@@ -226,6 +230,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2a5ac9a748925a615ae7a700e02f3674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc2bafcc546b84700dc6e12b995e8108"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#acc2bafcc546b84700dc6e12b995e8108">component_speed_get</a> (const component_t *component)</td></tr>
 <tr class="separator:acc2bafcc546b84700dc6e12b995e8108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ff558e37f335d4a2884aebfb08b15d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a53ff558e37f335d4a2884aebfb08b15d">component_clickable_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a53ff558e37f335d4a2884aebfb08b15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a196771c32fb4061ee86d185e5b801514" name="a196771c32fb4061ee86d185e5b801514"></a>
@@ -268,12 +274,41 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521a205a6d2e8fc2716b8649d3e681803c7e" name="af3fba937a41c8eb285dbeddd2df7e521a205a6d2e8fc2716b8649d3e681803c7e"></a>C_CONTROLLABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521a0bd5a64409c1bfc5a96d7f5d40819662" name="af3fba937a41c8eb285dbeddd2df7e521a0bd5a64409c1bfc5a96d7f5d40819662"></a>C_COLLIDABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521a0dae262ee5574a9198df81648329c80b" name="af3fba937a41c8eb285dbeddd2df7e521a0dae262ee5574a9198df81648329c80b"></a>C_SPEED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521ae2a89fb983264ce771ae72983962b45a" name="af3fba937a41c8eb285dbeddd2df7e521ae2a89fb983264ce771ae72983962b45a"></a>C_CLICKABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521aba9663bfac0246278ff6e2dae2ac74df" name="af3fba937a41c8eb285dbeddd2df7e521aba9663bfac0246278ff6e2dae2ac74df"></a>C_MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a53ff558e37f335d4a2884aebfb08b15d" name="a53ff558e37f335d4a2884aebfb08b15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ff558e37f335d4a2884aebfb08b15d">&#9670;&#160;</a></span>component_clickable_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_clickable_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1919fcfdcdbe7d185a0fed8d59663233" name="a1919fcfdcdbe7d185a0fed8d59663233"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1919fcfdcdbe7d185a0fed8d59663233">&#9670;&#160;</a></span>component_collidable_constructor()</h2>
 

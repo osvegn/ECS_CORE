@@ -11,8 +11,10 @@ var components_8h =
       [ "C_CONTROLLABLE", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521a205a6d2e8fc2716b8649d3e681803c7e", null ],
       [ "C_COLLIDABLE", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521a0bd5a64409c1bfc5a96d7f5d40819662", null ],
       [ "C_SPEED", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521a0dae262ee5574a9198df81648329c80b", null ],
+      [ "C_CLICKABLE", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521ae2a89fb983264ce771ae72983962b45a", null ],
       [ "C_MAX", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521aba9663bfac0246278ff6e2dae2ac74df", null ]
     ] ],
+    [ "component_clickable_constructor", "components_8h.html#a53ff558e37f335d4a2884aebfb08b15d", null ],
     [ "component_collidable_constructor", "components_8h.html#a1919fcfdcdbe7d185a0fed8d59663233", null ],
     [ "component_color_constructor", "components_8h.html#a16cea6c0559e54620c7ebaa555169e9d", null ],
     [ "component_color_constructor_from_json", "components_8h.html#a8d06a6bfdb78a95365518f5cd776df5e", null ],

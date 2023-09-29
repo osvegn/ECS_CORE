@@ -98,4 +98,10 @@ int resource_game_clock_destructor(resource_t *resource);
 int resource_game_clock_set(resource_t *resource, void *data);
 void *resource_game_clock_get(const resource_t *resource);
 
+int resource_camera_constructor(resource_t *resource, void *data);
+int resource_camera_constructor_from_json(resource_t *resource, void *data);
+int resource_camera_destructor(resource_t *resource);
+int resource_camera_set(resource_t *resource, void *data);
+void *resource_game_clock_get(const resource_t *resource);
+
 #endif /* !RESOURCES_H_*/

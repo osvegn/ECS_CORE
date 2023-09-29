@@ -9,7 +9,9 @@
             "S_WINDOW_MANAGER",
             "S_MOVEMENT",
             "S_MOVE_CONTROLLABLE",
-            "S_RESET_GAME_CLOCK"
+            "S_RESET_GAME_CLOCK",
+            "S_FOLLOW_PLAYER",
+            "S_HANDLE_CLICK"
         ],
         "resources":
         [
@@ -23,6 +25,10 @@
             },
             {
                 "type": "R_GAME_CLOCK",
+                "data": 0
+            },
+            {
+                "type":"R_CAMERA",
                 "data": 0
             }
         ],
@@ -87,6 +93,10 @@
                     {
                         "type": "C_COLOR",
                         "data": {"r": 255, "g": 0, "b": 0, "a": 255}
+                    },
+                    {
+                        "type": "C_CLICKABLE",
+                        "data": null
                     }
                 ]
             },
@@ -116,6 +126,10 @@
                     {
                         "type": "C_COLOR",
                         "data": {"r": 0, "g": 255, "b": 0, "a": 255}
+                    },
+                    {
+                        "type": "C_CLICKABLE",
+                        "data": null
                     }
                 ]
             }

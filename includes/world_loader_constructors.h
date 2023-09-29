@@ -19,6 +19,8 @@ const char * const systems_types[] = {
     "S_MOVEMENT",
     "S_MOVE_CONTROLLABLE",
     "S_RESET_GAME_CLOCK",
+    "S_FOLLOW_PLAYER",
+    "S_HANDLE_CLICK",
     0
 };
 
@@ -30,6 +32,8 @@ int (* const systems_constructors[])(system_t *) = {
     &system_movement_constructor,
     &system_move_controllable_constructor,
     &system_reset_game_clock_constructor,
+    &system_follow_player_constructor,
+    &system_handle_click_constructor,
     0
 };
 
@@ -37,6 +41,7 @@ const char * const resources_types[] = {
     "R_WINDOW",
     "R_SCENE_FILENAME",
     "R_GAME_CLOCK",
+    "R_CAMERA",
     0
 };
 
@@ -44,6 +49,7 @@ int (* const resources_constructors[])(resource_t *, void *) = {
     &resource_window_constructor_from_json,
     &resource_scene_filename_constructor_from_json,
     &resource_game_clock_constructor,
+    &resource_camera_constructor_from_json,
     0
 };
 
@@ -56,6 +62,7 @@ const char * const components_types[] = {
     "C_COLLIDABLE",
     "C_COLOR",
     "C_SPEED",
+    "C_CLICKABLE",
     0
 };
 
@@ -68,5 +75,6 @@ int (* const components_constructors[])(component_t *, void *) = {
     &component_collidable_constructor,
     &component_color_constructor_from_json,
     &component_speed_constructor_from_json,
+    &component_clickable_constructor,
     0
 };

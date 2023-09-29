@@ -22,6 +22,8 @@ typedef enum system_type_e {
     S_MOVE_CONTROLLABLE,
     S_MOVEMENT,
     S_RESET_GAME_CLOCK,
+    S_FOLLOW_PLAYER,
+    S_HANDLE_CLICK,
     S_MAX_VALUE
 } system_type_t;
 
@@ -48,5 +50,11 @@ int system_movement_constructor(system_t *system);
 
 int system_reset_game_clock_constructor(system_t *system);
 int system_reset_game_clock(void *world);
+
+int system_follow_player_constructor(system_t *system);
+int system_follow_player(void *world);
+
+int system_handle_click_constructor(system_t *system);
+int system_handle_click(void *world);
 
 #endif /* !SYSTEMS_H_ */

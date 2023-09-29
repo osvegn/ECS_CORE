@@ -25,6 +25,7 @@ typedef enum component_type_e {
     C_CONTROLLABLE,
     C_COLLIDABLE,
     C_SPEED,
+    C_CLICKABLE,
     C_MAX
 } component_type_t;
 
@@ -174,5 +175,7 @@ int component_speed_constructor(component_t *component, void *data);
 int component_speed_constructor_from_json(component_t *component, void *data);
 int component_speed_set(component_t *component, void *data);
 void *component_speed_get(const component_t *component);
+
+int component_clickable_constructor(component_t *component, void *data);
 
 #endif /* !COMPONENTS_H_ */

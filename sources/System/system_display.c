@@ -34,11 +34,15 @@ int system_display(void *ptr)
     ecs_vector2i_t size = {0};
     Color color = RED;
     ecs_color_t *color_tmp = 0;
+    resource_t *camera = world_get_resource_by_type(ptr, R_CAMERA);
 
     if (rvalue < 0)
         return rvalue;
     BeginDrawing();
     ClearBackground(RAYWHITE);
+    if (camera) {
+        BeginMode2D(*(Camera2D *){camera->data});
+    }
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
         position = *(ecs_vector2f_t *){entity_get_component(entity, C_POSITION)->data};
@@ -49,6 +53,8 @@ int system_display(void *ptr)
         }
         DrawRectangle(position.x, position.y, size.x, size.y, color);
     }
+    if (camera)
+        EndMode2D();
     EndDrawing();
     entities.destructor(&entities);
     return 0;

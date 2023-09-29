@@ -9,5 +9,6 @@ set(COMPONENTS_SOURCES
     ${SRC_COMPONENTS_ROOT}/component_controllable.c
     ${SRC_COMPONENTS_ROOT}/component_collidable.c
     ${SRC_COMPONENTS_ROOT}/component_speed.c
+    ${SRC_COMPONENTS_ROOT}/component_clickable.c
     PARENT_SCOPE
 )

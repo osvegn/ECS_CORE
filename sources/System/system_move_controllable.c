@@ -44,8 +44,8 @@ static int system_move_controllable(void *world)
         offset.y = 1;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         e = *(entity_t **)entities.at(&entities, i);
-        c_speed = entity_get_component(e, C_SPEED);
-        c_velocity = entity_get_component(e, C_VELOCITY);
+        c_speed = entity_get_component_by_type(e, C_SPEED);
+        c_velocity = entity_get_component_by_type(e, C_VELOCITY);
         movement.x = offset.x * *(int *){c_speed->data};
         movement.y = offset.y * *(int *){c_speed->data};
         component_velocity_set(c_velocity, &movement);

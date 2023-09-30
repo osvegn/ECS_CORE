@@ -11,8 +11,8 @@
 #define COMPONENTS_H_
 
 #include "component.h"
-#include "ecs_vector.h"
-#include "ecs_color.h"
+#include "utils/ecs_vector.h"
+#include "utils/ecs_color.h"
 
 /// @brief Component types
 typedef enum component_type_e {

@@ -47,8 +47,8 @@ static int system_movement(void *world)
         return 0;
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         e = *(entity_t **)entities.at(&entities, i);
-        c_position = entity_get_component(e, C_POSITION);
-        c_velocity = entity_get_component(e, C_VELOCITY);
+        c_position = entity_get_component_by_type(e, C_POSITION);
+        c_velocity = entity_get_component_by_type(e, C_VELOCITY);
         position.x = (ecs_vector2f_t *){c_position->data}->x + (ecs_vector2i_t *){c_velocity->data}->x * time;
         position.y = (ecs_vector2f_t *){c_position->data}->y + (ecs_vector2i_t *){c_velocity->data}->y * time;
         component_position_set(c_position, &position);

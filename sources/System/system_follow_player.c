@@ -29,8 +29,8 @@ int system_follow_player(void *world)
     resource_t *camera = world_get_resource_by_type(world, R_CAMERA);
     Camera2D *cam = camera->data;
     entity_t *e = *(entity_t **)entities.at(&entities, 0);
-    ecs_vector2f_t *pos = entity_get_component(e, C_POSITION)->data;
-    ecs_vector2i_t *size = entity_get_component(e, C_SIZE)->data;
+    ecs_vector2f_t *pos = entity_get_component_by_type(e, C_POSITION)->data;
+    ecs_vector2i_t *size = entity_get_component_by_type(e, C_SIZE)->data;
 
     cam->target.x = pos->x + size->x / 2;
     cam->target.y = pos->y + size->y / 2;

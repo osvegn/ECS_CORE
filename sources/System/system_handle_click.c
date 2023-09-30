@@ -50,12 +50,12 @@ int system_handle_click(void *world)
         mouse_position = old_mouse_position;
         e = *(entity_t **)entities.at(&entities, i);
         if (entity_contains_component_by_type(e, C_POSITION) && entity_contains_component_by_type(e, C_SIZE)) {
-            c = entity_get_component(e, C_POSITION);
+            c = entity_get_component_by_type(e, C_POSITION);
             mouse_position.x -= (ecs_vector2f_t *){c->data}->x;
             mouse_position.y -= (ecs_vector2f_t *){c->data}->y;
             if (mouse_position.x < 0 || mouse_position.y < 0)
                 continue;
-            c = entity_get_component(e, C_SIZE);
+            c = entity_get_component_by_type(e, C_SIZE);
             if (mouse_position.x > (ecs_vector2i_t *){c->data}->x || mouse_position.y > (ecs_vector2i_t *){c->data}->y)
                 continue;
             printf("Click!\n");

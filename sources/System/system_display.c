@@ -45,10 +45,10 @@ int system_display(void *ptr)
     }
     for (unsigned int i = 0; i < entities.size(&entities); i++) {
         entity = *(entity_t **)entities.at(&entities, i);
-        position = *(ecs_vector2f_t *){entity_get_component(entity, C_POSITION)->data};
-        size = *(ecs_vector2i_t *){entity_get_component(entity, C_SIZE)->data};
-        if (entity_get_component(entity, C_COLOR)) {
-            color_tmp = entity_get_component(entity, C_COLOR)->data;
+        position = *(ecs_vector2f_t *){entity_get_component_by_type(entity, C_POSITION)->data};
+        size = *(ecs_vector2i_t *){entity_get_component_by_type(entity, C_SIZE)->data};
+        if (entity_get_component_by_type(entity, C_COLOR)) {
+            color_tmp = entity_get_component_by_type(entity, C_COLOR)->data;
             color = (Color){color_tmp->r, color_tmp->g, color_tmp->b, color_tmp->a};
         }
         DrawRectangle(position.x, position.y, size.x, size.y, color);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_0',['b',['../structecs__color__s.html#a41cede1b4c0d05cff170ad5761f70964',1,'ecs_color_s']]]
+  ['fps_0',['fps',['../structwindow__s.html#a0256d25b86a9f6d108e63e630fd20cf2',1,'window_s']]]
 ];

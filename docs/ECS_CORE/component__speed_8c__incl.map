@@ -1,10 +1,10 @@
 <map id="sources/Component/component_speed.c" name="sources/Component/component_speed.c">
-<area shape="rect" id="node1" title=" " alt="" coords="134,5,341,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="41,93,97,119"/>
-<area shape="rect" id="node3" href="$components_8h.html" title=" " alt="" coords="122,93,225,119"/>
-<area shape="rect" id="node7" title=" " alt="" coords="249,93,354,119"/>
-<area shape="rect" id="node8" title=" " alt="" coords="378,93,441,119"/>
+<area shape="rect" id="node1" title=" " alt="" coords="149,5,355,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="56,93,112,119"/>
+<area shape="rect" id="node3" href="$components_8h.html" title=" " alt="" coords="137,93,239,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="263,93,369,119"/>
+<area shape="rect" id="node8" title=" " alt="" coords="393,93,455,119"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,167,101,192"/>
-<area shape="rect" id="node5" href="$ecs__vector_8h.html" title=" " alt="" coords="125,167,221,192"/>
-<area shape="rect" id="node6" href="$ecs__color_8h.html" title=" " alt="" coords="245,167,333,192"/>
+<area shape="rect" id="node5" title=" " alt="" coords="126,167,250,192"/>
+<area shape="rect" id="node6" title=" " alt="" coords="274,167,390,192"/>
 </map>

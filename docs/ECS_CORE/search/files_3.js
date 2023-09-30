@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['resource_5fcamera_2ec_0',['resource_camera.c',['../resource__camera_8c.html',1,'']]],
-  ['resource_5fgame_5fclock_2ec_1',['resource_game_clock.c',['../resource__game__clock_8c.html',1,'']]],
-  ['resource_5fscene_5ffilename_2ec_2',['resource_scene_filename.c',['../resource__scene__filename_8c.html',1,'']]],
-  ['resource_5fwindow_2ec_3',['resource_window.c',['../resource__window_8c.html',1,'']]],
-  ['resources_2eh_4',['resources.h',['../resources_8h.html',1,'']]]
+  ['system_5fdisplay_2ec_0',['system_display.c',['../system__display_8c.html',1,'']]],
+  ['system_5ffollow_5fplayer_2ec_1',['system_follow_player.c',['../system__follow__player_8c.html',1,'']]],
+  ['system_5fhandle_5fclick_2ec_2',['system_handle_click.c',['../system__handle__click_8c.html',1,'']]],
+  ['system_5fload_5fscene_2ec_3',['system_load_scene.c',['../system__load__scene_8c.html',1,'']]],
+  ['system_5fmove_5fcontrollable_2ec_4',['system_move_controllable.c',['../system__move__controllable_8c.html',1,'']]],
+  ['system_5fmovement_2ec_5',['system_movement.c',['../system__movement_8c.html',1,'']]],
+  ['system_5freload_5fconfig_2ec_6',['system_reload_config.c',['../system__reload__config_8c.html',1,'']]],
+  ['system_5freset_5fgame_5fclock_2ec_7',['system_reset_game_clock.c',['../system__reset__game__clock_8c.html',1,'']]],
+  ['system_5fwindows_5fmanager_2ec_8',['system_windows_manager.c',['../system__windows__manager_8c.html',1,'']]],
+  ['system_5fworld_5finitializer_2ec_9',['system_world_initializer.c',['../system__world__initializer_8c.html',1,'']]],
+  ['systems_2eh_10',['systems.h',['../systems_8h.html',1,'']]]
 ];

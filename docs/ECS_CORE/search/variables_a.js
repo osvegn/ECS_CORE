@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../structecs__vector2i__s.html#a6150e0515f7202e2fb518f7206ed97dc',1,'ecs_vector2i_s::x()'],['../structecs__vector2f__s.html#ad0da36b2558901e21e7a30f6c227a45e',1,'ecs_vector2f_s::x()']]]
+  ['thickness_0',['thickness',['../structshape__s.html#a9bddad7a0f5d61aefe107acf47f09549',1,'shape_s']]],
+  ['title_1',['title',['../structwindow__s.html#a854dc1502ff3e88c42f5536e39197873',1,'window_s']]]
 ];

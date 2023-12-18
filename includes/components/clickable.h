@@ -1,8 +1,17 @@
-//
-// Created by osvegn on 11/30/23.
-//
+/**
+* Filename: clickable.h
+* Path: include/components
+* Created Date: Thursday, November 30th 2023, 6:23 pm
+* Author: osvegn
+*
+* Copyright (c) 2023 our_rpg
+*/
 
-#ifndef LANGUAGES_CLICKABLE_H
-#define LANGUAGES_CLICKABLE_H
+#ifndef CLICKABLE_H
+#define CLICKABLE_H
 
-#endif // LANGUAGES_CLICKABLE_H
+#include "component.h"
+
+int component_clickable_constructor(component_t *component, void *data);
+
+#endif // CLICKABLE_H

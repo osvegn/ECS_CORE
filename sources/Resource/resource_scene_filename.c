@@ -10,7 +10,6 @@
 #include "resources.h"
 #include <stdlib.h>
 #include <string.h>
-#include "json.h"
 #include "world_logger.h"
 
 /// @brief Check if the resource is a R_SCENE_FILENAME or not.

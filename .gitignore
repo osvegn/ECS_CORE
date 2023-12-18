@@ -63,6 +63,8 @@ vgcore.*
 log_valgrind.txt
 log
 bin
+.idea
+cmake-build-debug
 
 # Docker
 Dockerfile

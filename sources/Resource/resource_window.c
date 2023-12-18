@@ -8,10 +8,8 @@
  */
 
 #include "json.h"
-#include "raylib.h"
 #include "resources.h"
 #include "world_logger.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -66,8 +64,6 @@ int resource_window_set(resource_t *resource, void *data)
         return -1;
     memcpy(resource->data, data, sizeof(resource_t));
     win = resource->data;
-    InitWindow(win->width, win->height, win->title);
-    SetTargetFPS(win->fps);
     return 0;
 }
 
@@ -80,7 +76,6 @@ void *resource_window_get(const resource_t *resource)
 
 int resource_window_destructor(resource_t *resource)
 {
-    CloseWindow();
     if (resource->data)
         free(resource->data);
     log_info("Window resource destroyed.");

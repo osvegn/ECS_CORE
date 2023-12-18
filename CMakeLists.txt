@@ -26,4 +26,3 @@ include(Testings)
 #LIBRARY
 add_subdirectory(submodules/ECS)
 add_subdirectory(submodules/json-c)
-add_subdirectory(submodules/raylib)

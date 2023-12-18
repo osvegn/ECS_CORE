@@ -91,40 +91,23 @@ $(document).ready(function(){initNavTree('components_8h.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">components.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;component.h&quot;</code><br />
 <code>#include &quot;utils/ecs_vector.h&quot;</code><br />
 <code>#include &quot;utils/ecs_color.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="position_8h_source.html">components/position.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="velocity_8h_source.html">components/velocity.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="size_8h_source.html">components/size.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="color_8h_source.html">components/color.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="displayable_8h_source.html">components/displayable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controllable_8h_source.html">components/controllable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="collidable_8h_source.html">components/collidable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="speed_8h_source.html">components/speed.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="clickable_8h_source.html">components/clickable.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for components.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="components_8h__incl.png" border="0" usemap="#aincludes_2components_8h" alt=""/></div>
 <map name="aincludes_2components_8h" id="aincludes_2components_8h">
-<area shape="rect" title=" " alt="" coords="731,5,886,31"/>
-<area shape="rect" title=" " alt="" coords="927,152,1023,177"/>
-<area shape="rect" title=" " alt="" coords="24,79,148,104"/>
-<area shape="rect" title=" " alt="" coords="172,79,288,104"/>
-<area shape="rect" href="position_8h.html" title=" " alt="" coords="312,79,464,104"/>
-<area shape="rect" href="velocity_8h.html" title=" " alt="" coords="489,79,640,104"/>
-<area shape="rect" href="size_8h.html" title=" " alt="" coords="664,79,795,104"/>
-<area shape="rect" href="color_8h.html" title=" " alt="" coords="820,79,954,104"/>
-<area shape="rect" href="displayable_8h.html" title=" " alt="" coords="979,79,1150,104"/>
-<area shape="rect" href="controllable_8h.html" title=" " alt="" coords="1174,79,1347,104"/>
-<area shape="rect" href="collidable_8h.html" title=" " alt="" coords="1372,79,1533,104"/>
-<area shape="rect" href="speed_8h.html" title=" " alt="" coords="1557,79,1700,104"/>
-<area shape="rect" href="clickable_8h.html" title=" " alt="" coords="1724,79,1882,104"/>
+<area shape="rect" title=" " alt="" coords="111,5,265,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,101,104"/>
+<area shape="rect" title=" " alt="" coords="126,79,250,104"/>
+<area shape="rect" title=" " alt="" coords="274,79,390,104"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -132,7 +115,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="components_8h__dep__incl.png" border="0" usemap="#aincludes_2components_8hdep" alt=""/></div>
 <map name="aincludes_2components_8hdep" id="aincludes_2components_8hdep">
-<area shape="rect" title=" " alt="" coords="1248,5,1403,31"/>
+<area shape="rect" title=" " alt="" coords="1940,5,2095,31"/>
 <area shape="rect" href="world__loader__constructors_8h.html" title=" " alt="" coords="13,79,160,119"/>
 <area shape="rect" href="component__clickable_8c.html" title=" " alt="" coords="185,79,391,119"/>
 <area shape="rect" href="component__collidable_8c.html" title=" " alt="" coords="415,79,622,119"/>
@@ -143,8 +126,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="component__size_8c.html" title=" " alt="" coords="1569,79,1775,119"/>
 <area shape="rect" href="component__speed_8c.html" title=" " alt="" coords="1799,79,2006,119"/>
 <area shape="rect" href="component__velocity_8c.html" title=" " alt="" coords="2030,79,2237,119"/>
-<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="2261,79,2424,119"/>
-<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="2448,79,2611,119"/>
+<area shape="rect" href="system__display_8c.html" title=" " alt="" coords="2261,79,2424,119"/>
+<area shape="rect" href="system__follow__player_8c.html" title=" " alt="" coords="2448,79,2611,119"/>
+<area shape="rect" href="system__handle__click_8c.html" title=" " alt="" coords="2635,79,2797,119"/>
+<area shape="rect" href="system__move__controllable_8c.html" title=" " alt="" coords="2821,79,2984,119"/>
+<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="3008,79,3171,119"/>
+<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="3195,79,3357,119"/>
+<area shape="rect" href="system__windows__manager_8c.html" title=" " alt="" coords="3381,79,3544,119"/>
+<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="3568,79,3731,119"/>
 <area shape="rect" href="system__load__scene_8c.html" title=" " alt="" coords="5,167,168,207"/>
 </map>
 </div>
@@ -177,6 +166,72 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af3fba937a41c8eb285dbeddd2df7e521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component types.  <a href="components_8h.html#af3fba937a41c8eb285dbeddd2df7e521">More...</a><br /></td></tr>
 <tr class="separator:af3fba937a41c8eb285dbeddd2df7e521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0445f911508985ab3eae91edb00cc532"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a0445f911508985ab3eae91edb00cc532">component_position_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a0445f911508985ab3eae91edb00cc532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a position component from a json string.  <a href="components_8h.html#a0445f911508985ab3eae91edb00cc532">More...</a><br /></td></tr>
+<tr class="separator:a0445f911508985ab3eae91edb00cc532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ad0b29f8bb33519c84587041af76d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a43ad0b29f8bb33519c84587041af76d5">component_position_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a43ad0b29f8bb33519c84587041af76d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310de3e5d2d2c061876c90258d4c4012"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a310de3e5d2d2c061876c90258d4c4012">component_position_set</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a310de3e5d2d2c061876c90258d4c4012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set position component from json string.  <a href="components_8h.html#a310de3e5d2d2c061876c90258d4c4012">More...</a><br /></td></tr>
+<tr class="separator:a310de3e5d2d2c061876c90258d4c4012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60292d45a25ed775b532666c39f8e6b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#ad60292d45a25ed775b532666c39f8e6b">component_position_get</a> (const component_t *component)</td></tr>
+<tr class="memdesc:ad60292d45a25ed775b532666c39f8e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data of a position component.  <a href="components_8h.html#ad60292d45a25ed775b532666c39f8e6b">More...</a><br /></td></tr>
+<tr class="separator:ad60292d45a25ed775b532666c39f8e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3561c862a30e567c6b848b616f0fe33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#af3561c862a30e567c6b848b616f0fe33">component_velocity_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:af3561c862a30e567c6b848b616f0fe33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for velocity component from json data.  <a href="components_8h.html#af3561c862a30e567c6b848b616f0fe33">More...</a><br /></td></tr>
+<tr class="separator:af3561c862a30e567c6b848b616f0fe33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ee158fc34838c8754db2f3e923c5ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#ae1ee158fc34838c8754db2f3e923c5ec">component_velocity_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:ae1ee158fc34838c8754db2f3e923c5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c3075548e045cf91cafbe1dc4df84c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#ac6c3075548e045cf91cafbe1dc4df84c">component_velocity_set</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:ac6c3075548e045cf91cafbe1dc4df84c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set velocity component from json data.  <a href="components_8h.html#ac6c3075548e045cf91cafbe1dc4df84c">More...</a><br /></td></tr>
+<tr class="separator:ac6c3075548e045cf91cafbe1dc4df84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ef00868074317d203a3a5c5c881100"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#ae6ef00868074317d203a3a5c5c881100">component_velocity_get</a> (const component_t *component)</td></tr>
+<tr class="memdesc:ae6ef00868074317d203a3a5c5c881100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data of a velocity component.  <a href="components_8h.html#ae6ef00868074317d203a3a5c5c881100">More...</a><br /></td></tr>
+<tr class="separator:ae6ef00868074317d203a3a5c5c881100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b248dfbf9c4fc81b652cf5ec0f7e05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a98b248dfbf9c4fc81b652cf5ec0f7e05">component_size_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a98b248dfbf9c4fc81b652cf5ec0f7e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for size component from json data.  <a href="components_8h.html#a98b248dfbf9c4fc81b652cf5ec0f7e05">More...</a><br /></td></tr>
+<tr class="separator:a98b248dfbf9c4fc81b652cf5ec0f7e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467e2127bd701f4032bc27dd545c7b13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a467e2127bd701f4032bc27dd545c7b13">component_size_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a467e2127bd701f4032bc27dd545c7b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad22e4d4c712ed426104907fffe74c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a8ad22e4d4c712ed426104907fffe74c1">component_size_set</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a8ad22e4d4c712ed426104907fffe74c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size component from json data.  <a href="components_8h.html#a8ad22e4d4c712ed426104907fffe74c1">More...</a><br /></td></tr>
+<tr class="separator:a8ad22e4d4c712ed426104907fffe74c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff2ae4d82c9f3bbc9d57eadd8d0ad55"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a7ff2ae4d82c9f3bbc9d57eadd8d0ad55">component_size_get</a> (const component_t *component)</td></tr>
+<tr class="memdesc:a7ff2ae4d82c9f3bbc9d57eadd8d0ad55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size component data.  <a href="components_8h.html#a7ff2ae4d82c9f3bbc9d57eadd8d0ad55">More...</a><br /></td></tr>
+<tr class="separator:a7ff2ae4d82c9f3bbc9d57eadd8d0ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cea6c0559e54620c7ebaa555169e9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a16cea6c0559e54620c7ebaa555169e9d">component_color_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a16cea6c0559e54620c7ebaa555169e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a color component from a json string.  <a href="components_8h.html#a16cea6c0559e54620c7ebaa555169e9d">More...</a><br /></td></tr>
+<tr class="separator:a16cea6c0559e54620c7ebaa555169e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d06a6bfdb78a95365518f5cd776df5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a8d06a6bfdb78a95365518f5cd776df5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95e60a1506b4748518778627f7f8d7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#ae95e60a1506b4748518778627f7f8d7b">component_set_color</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:ae95e60a1506b4748518778627f7f8d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color component from json string.  <a href="components_8h.html#ae95e60a1506b4748518778627f7f8d7b">More...</a><br /></td></tr>
+<tr class="separator:ae95e60a1506b4748518778627f7f8d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4a6c736350ac4e1d45cc27408f6f50"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#adb4a6c736350ac4e1d45cc27408f6f50">component_get_color</a> (const component_t *component)</td></tr>
+<tr class="memdesc:adb4a6c736350ac4e1d45cc27408f6f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the color component data.  <a href="components_8h.html#adb4a6c736350ac4e1d45cc27408f6f50">More...</a><br /></td></tr>
+<tr class="separator:adb4a6c736350ac4e1d45cc27408f6f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473225f63e24553363d7603b2f7a6802"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a473225f63e24553363d7603b2f7a6802">component_displayable_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a473225f63e24553363d7603b2f7a6802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a displayable component. It is used to display an entity.  <a href="components_8h.html#a473225f63e24553363d7603b2f7a6802">More...</a><br /></td></tr>
+<tr class="separator:a473225f63e24553363d7603b2f7a6802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0102f6a07a37c4582dc5594d6fbf497e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a0102f6a07a37c4582dc5594d6fbf497e">component_controllable_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a0102f6a07a37c4582dc5594d6fbf497e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a controllable component. It allows the entity to be controllable by the player.  <a href="components_8h.html#a0102f6a07a37c4582dc5594d6fbf497e">More...</a><br /></td></tr>
+<tr class="separator:a0102f6a07a37c4582dc5594d6fbf497e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1919fcfdcdbe7d185a0fed8d59663233"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a1919fcfdcdbe7d185a0fed8d59663233">component_collidable_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a1919fcfdcdbe7d185a0fed8d59663233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new component collidable object.  <a href="components_8h.html#a1919fcfdcdbe7d185a0fed8d59663233">More...</a><br /></td></tr>
+<tr class="separator:a1919fcfdcdbe7d185a0fed8d59663233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acefc1b7c764affb8b0f6ee21ce03d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a3acefc1b7c764affb8b0f6ee21ce03d7">component_speed_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a3acefc1b7c764affb8b0f6ee21ce03d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495784d1a3a29ea823423679223b7ca9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a495784d1a3a29ea823423679223b7ca9">component_speed_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a495784d1a3a29ea823423679223b7ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5ac9a748925a615ae7a700e02f3674"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a2a5ac9a748925a615ae7a700e02f3674">component_speed_set</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a2a5ac9a748925a615ae7a700e02f3674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2bafcc546b84700dc6e12b995e8108"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#acc2bafcc546b84700dc6e12b995e8108">component_speed_get</a> (const component_t *component)</td></tr>
+<tr class="separator:acc2bafcc546b84700dc6e12b995e8108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ff558e37f335d4a2884aebfb08b15d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="components_8h.html#a53ff558e37f335d4a2884aebfb08b15d">component_clickable_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a53ff558e37f335d4a2884aebfb08b15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a196771c32fb4061ee86d185e5b801514" name="a196771c32fb4061ee86d185e5b801514"></a>
@@ -222,6 +277,973 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521ae2a89fb983264ce771ae72983962b45a" name="af3fba937a41c8eb285dbeddd2df7e521ae2a89fb983264ce771ae72983962b45a"></a>C_CLICKABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af3fba937a41c8eb285dbeddd2df7e521aba9663bfac0246278ff6e2dae2ac74df" name="af3fba937a41c8eb285dbeddd2df7e521aba9663bfac0246278ff6e2dae2ac74df"></a>C_MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a53ff558e37f335d4a2884aebfb08b15d" name="a53ff558e37f335d4a2884aebfb08b15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ff558e37f335d4a2884aebfb08b15d">&#9670;&#160;</a></span>component_clickable_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_clickable_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1919fcfdcdbe7d185a0fed8d59663233" name="a1919fcfdcdbe7d185a0fed8d59663233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1919fcfdcdbe7d185a0fed8d59663233">&#9670;&#160;</a></span>component_collidable_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_collidable_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new component collidable object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>The component to construct. Must be a valid pointer to a component_t structure. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to initialize the component with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0. </dd></dl>
+
+</div>
+</div>
+<a id="a16cea6c0559e54620c7ebaa555169e9d" name="a16cea6c0559e54620c7ebaa555169e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16cea6c0559e54620c7ebaa555169e9d">&#9670;&#160;</a></span>component_color_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_color_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a color component from a json string. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "r": 0-255, "g": 0-255, "b": 0-255, "a": 0-255 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to initialize. Must be a valid component_t. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to initialize the component. Must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph.png" border="0" usemap="#acomponents_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph" alt=""/></div>
+<map name="acomponents_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph" id="acomponents_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph">
+<area shape="rect" title="Create a color component from a json string." alt="" coords="5,5,199,31"/>
+<area shape="rect" href="component__color_8c.html#ae95e60a1506b4748518778627f7f8d7b" title="Set color component from json string." alt="" coords="247,5,393,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph.png" border="0" usemap="#acomponents_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph" alt=""/></div>
+<map name="acomponents_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph" id="acomponents_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph">
+<area shape="rect" title="Create a color component from a json string." alt="" coords="247,13,440,38"/>
+<area shape="rect" href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e" title=" " alt="" coords="5,5,199,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d06a6bfdb78a95365518f5cd776df5e" name="a8d06a6bfdb78a95365518f5cd776df5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d06a6bfdb78a95365518f5cd776df5e">&#9670;&#160;</a></span>component_color_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_color_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph.png" border="0" usemap="#acomponents_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph" alt=""/></div>
+<map name="acomponents_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph" id="acomponents_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,199,45"/>
+<area shape="rect" href="component__color_8c.html#a16cea6c0559e54620c7ebaa555169e9d" title="Create a color component from a json string." alt="" coords="247,13,440,38"/>
+<area shape="rect" href="component__color_8c.html#ae95e60a1506b4748518778627f7f8d7b" title="Set color component from json string." alt="" coords="488,13,635,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0102f6a07a37c4582dc5594d6fbf497e" name="a0102f6a07a37c4582dc5594d6fbf497e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0102f6a07a37c4582dc5594d6fbf497e">&#9670;&#160;</a></span>component_controllable_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_controllable_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a controllable component. It allows the entity to be controllable by the player. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>The component to initialize. It must be a valid component_t. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to initialize the component. It must be empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 </dd></dl>
+
+</div>
+</div>
+<a id="a473225f63e24553363d7603b2f7a6802" name="a473225f63e24553363d7603b2f7a6802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a473225f63e24553363d7603b2f7a6802">&#9670;&#160;</a></span>component_displayable_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_displayable_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a displayable component. It is used to display an entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>The component to initialize. It must be a valid component_t. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to initialize the component. It must be empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0. </dd></dl>
+
+</div>
+</div>
+<a id="adb4a6c736350ac4e1d45cc27408f6f50" name="adb4a6c736350ac4e1d45cc27408f6f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4a6c736350ac4e1d45cc27408f6f50">&#9670;&#160;</a></span>component_get_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_get_color </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to the color component data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to get data from. Must be a valid component_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a pointer to the color component data. 0 if component is not a color component. </dd></dl>
+
+</div>
+</div>
+<a id="a0445f911508985ab3eae91edb00cc532" name="a0445f911508985ab3eae91edb00cc532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0445f911508985ab3eae91edb00cc532">&#9670;&#160;</a></span>component_position_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_position_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a position component from a json string. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "x": 0, "y": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to initialize. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to initialize the component. It must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a0445f911508985ab3eae91edb00cc532_cgraph.png" border="0" usemap="#acomponents_8h_a0445f911508985ab3eae91edb00cc532_cgraph" alt=""/></div>
+<map name="acomponents_8h_a0445f911508985ab3eae91edb00cc532_cgraph" id="acomponents_8h_a0445f911508985ab3eae91edb00cc532_cgraph">
+<area shape="rect" title="Create a position component from a json string." alt="" coords="5,5,144,45"/>
+<area shape="rect" href="component__position_8c.html#a310de3e5d2d2c061876c90258d4c4012" title="Set position component from json string." alt="" coords="192,13,355,38"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a0445f911508985ab3eae91edb00cc532_icgraph.png" border="0" usemap="#acomponents_8h_a0445f911508985ab3eae91edb00cc532_icgraph" alt=""/></div>
+<map name="acomponents_8h_a0445f911508985ab3eae91edb00cc532_icgraph" id="acomponents_8h_a0445f911508985ab3eae91edb00cc532_icgraph">
+<area shape="rect" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" href="component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5" title=" " alt="" coords="5,5,164,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a43ad0b29f8bb33519c84587041af76d5" name="a43ad0b29f8bb33519c84587041af76d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ad0b29f8bb33519c84587041af76d5">&#9670;&#160;</a></span>component_position_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_position_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph.png" border="0" usemap="#acomponents_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph" alt=""/></div>
+<map name="acomponents_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph" id="acomponents_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,45"/>
+<area shape="rect" href="component__position_8c.html#a0445f911508985ab3eae91edb00cc532" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" href="component__position_8c.html#a310de3e5d2d2c061876c90258d4c4012" title="Set position component from json string." alt="" coords="399,13,561,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad60292d45a25ed775b532666c39f8e6b" name="ad60292d45a25ed775b532666c39f8e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60292d45a25ed775b532666c39f8e6b">&#9670;&#160;</a></span>component_position_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_position_get </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the data of a position component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to get the data from. It must be a valid position component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the data of the component if success, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a310de3e5d2d2c061876c90258d4c4012" name="a310de3e5d2d2c061876c90258d4c4012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310de3e5d2d2c061876c90258d4c4012">&#9670;&#160;</a></span>component_position_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_position_set </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set position component from json string. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "x": 0, "y": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to set. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to set the component with. It must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph.png" border="0" usemap="#acomponents_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph" alt=""/></div>
+<map name="acomponents_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph" id="acomponents_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph">
+<area shape="rect" title="Set position component from json string." alt="" coords="399,13,561,38"/>
+<area shape="rect" href="component__position_8c.html#a0445f911508985ab3eae91edb00cc532" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" href="component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5" title=" " alt="" coords="5,5,164,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae95e60a1506b4748518778627f7f8d7b" name="ae95e60a1506b4748518778627f7f8d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95e60a1506b4748518778627f7f8d7b">&#9670;&#160;</a></span>component_set_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_set_color </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set color component from json string. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "r": 0-255, "g": 0-255, "b": 0-255, "a": 0-255 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to set. Must be a valid component_t. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to set. Must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 on success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph.png" border="0" usemap="#acomponents_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph" alt=""/></div>
+<map name="acomponents_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph" id="acomponents_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph">
+<area shape="rect" title="Set color component from json string." alt="" coords="488,13,635,38"/>
+<area shape="rect" href="component__color_8c.html#a16cea6c0559e54620c7ebaa555169e9d" title="Create a color component from a json string." alt="" coords="247,13,440,38"/>
+<area shape="rect" href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e" title=" " alt="" coords="5,5,199,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a98b248dfbf9c4fc81b652cf5ec0f7e05" name="a98b248dfbf9c4fc81b652cf5ec0f7e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b248dfbf9c4fc81b652cf5ec0f7e05">&#9670;&#160;</a></span>component_size_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_size_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for size component from json data. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "width": 0, "height": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to construct. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Json data to construct component from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if component was successfully constructed, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_cgraph.png" border="0" usemap="#acomponents_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_cgraph" alt=""/></div>
+<map name="acomponents_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_cgraph" id="acomponents_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_cgraph">
+<area shape="rect" title="Constructor for size component from json data." alt="" coords="5,5,193,31"/>
+<area shape="rect" href="component__size_8c.html#a8ad22e4d4c712ed426104907fffe74c1" title="Set size component from json data." alt="" coords="241,5,383,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_icgraph.png" border="0" usemap="#acomponents_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_icgraph" alt=""/></div>
+<map name="acomponents_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_icgraph" id="acomponents_8h_a98b248dfbf9c4fc81b652cf5ec0f7e05_icgraph">
+<area shape="rect" title="Constructor for size component from json data." alt="" coords="241,13,429,38"/>
+<area shape="rect" href="component__size_8c.html#a467e2127bd701f4032bc27dd545c7b13" title=" " alt="" coords="5,5,193,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a467e2127bd701f4032bc27dd545c7b13" name="a467e2127bd701f4032bc27dd545c7b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467e2127bd701f4032bc27dd545c7b13">&#9670;&#160;</a></span>component_size_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_size_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a467e2127bd701f4032bc27dd545c7b13_cgraph.png" border="0" usemap="#acomponents_8h_a467e2127bd701f4032bc27dd545c7b13_cgraph" alt=""/></div>
+<map name="acomponents_8h_a467e2127bd701f4032bc27dd545c7b13_cgraph" id="acomponents_8h_a467e2127bd701f4032bc27dd545c7b13_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,193,45"/>
+<area shape="rect" href="component__size_8c.html#a98b248dfbf9c4fc81b652cf5ec0f7e05" title="Constructor for size component from json data." alt="" coords="241,13,429,38"/>
+<area shape="rect" href="component__size_8c.html#a8ad22e4d4c712ed426104907fffe74c1" title="Set size component from json data." alt="" coords="477,13,619,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7ff2ae4d82c9f3bbc9d57eadd8d0ad55" name="a7ff2ae4d82c9f3bbc9d57eadd8d0ad55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff2ae4d82c9f3bbc9d57eadd8d0ad55">&#9670;&#160;</a></span>component_size_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_size_get </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get size component data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to get data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a pointer to the data if component is a size component, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a8ad22e4d4c712ed426104907fffe74c1" name="a8ad22e4d4c712ed426104907fffe74c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad22e4d4c712ed426104907fffe74c1">&#9670;&#160;</a></span>component_size_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_size_set </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set size component from json data. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "width": 0, "height": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to set. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Json data to set component from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if component was successfully set, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a8ad22e4d4c712ed426104907fffe74c1_icgraph.png" border="0" usemap="#acomponents_8h_a8ad22e4d4c712ed426104907fffe74c1_icgraph" alt=""/></div>
+<map name="acomponents_8h_a8ad22e4d4c712ed426104907fffe74c1_icgraph" id="acomponents_8h_a8ad22e4d4c712ed426104907fffe74c1_icgraph">
+<area shape="rect" title="Set size component from json data." alt="" coords="477,13,619,38"/>
+<area shape="rect" href="component__size_8c.html#a98b248dfbf9c4fc81b652cf5ec0f7e05" title="Constructor for size component from json data." alt="" coords="241,13,429,38"/>
+<area shape="rect" href="component__size_8c.html#a467e2127bd701f4032bc27dd545c7b13" title=" " alt="" coords="5,5,193,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3acefc1b7c764affb8b0f6ee21ce03d7" name="a3acefc1b7c764affb8b0f6ee21ce03d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acefc1b7c764affb8b0f6ee21ce03d7">&#9670;&#160;</a></span>component_speed_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_speed_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_cgraph.png" border="0" usemap="#acomponents_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_cgraph" alt=""/></div>
+<map name="acomponents_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_cgraph" id="acomponents_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,31"/>
+<area shape="rect" href="component__speed_8c.html#a2a5ac9a748925a615ae7a700e02f3674" title=" " alt="" coords="253,5,407,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_icgraph.png" border="0" usemap="#acomponents_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_icgraph" alt=""/></div>
+<map name="acomponents_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_icgraph" id="acomponents_8h_a3acefc1b7c764affb8b0f6ee21ce03d7_icgraph">
+<area shape="rect" title=" " alt="" coords="253,13,453,38"/>
+<area shape="rect" href="component__speed_8c.html#a495784d1a3a29ea823423679223b7ca9" title=" " alt="" coords="5,5,205,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a495784d1a3a29ea823423679223b7ca9" name="a495784d1a3a29ea823423679223b7ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495784d1a3a29ea823423679223b7ca9">&#9670;&#160;</a></span>component_speed_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_speed_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a495784d1a3a29ea823423679223b7ca9_cgraph.png" border="0" usemap="#acomponents_8h_a495784d1a3a29ea823423679223b7ca9_cgraph" alt=""/></div>
+<map name="acomponents_8h_a495784d1a3a29ea823423679223b7ca9_cgraph" id="acomponents_8h_a495784d1a3a29ea823423679223b7ca9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,45"/>
+<area shape="rect" href="component__speed_8c.html#a3acefc1b7c764affb8b0f6ee21ce03d7" title=" " alt="" coords="253,13,453,38"/>
+<area shape="rect" href="component__speed_8c.html#a2a5ac9a748925a615ae7a700e02f3674" title=" " alt="" coords="501,13,655,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc2bafcc546b84700dc6e12b995e8108" name="acc2bafcc546b84700dc6e12b995e8108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2bafcc546b84700dc6e12b995e8108">&#9670;&#160;</a></span>component_speed_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_speed_get </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a5ac9a748925a615ae7a700e02f3674" name="a2a5ac9a748925a615ae7a700e02f3674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5ac9a748925a615ae7a700e02f3674">&#9670;&#160;</a></span>component_speed_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_speed_set </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_a2a5ac9a748925a615ae7a700e02f3674_icgraph.png" border="0" usemap="#acomponents_8h_a2a5ac9a748925a615ae7a700e02f3674_icgraph" alt=""/></div>
+<map name="acomponents_8h_a2a5ac9a748925a615ae7a700e02f3674_icgraph" id="acomponents_8h_a2a5ac9a748925a615ae7a700e02f3674_icgraph">
+<area shape="rect" title=" " alt="" coords="501,13,655,38"/>
+<area shape="rect" href="component__speed_8c.html#a3acefc1b7c764affb8b0f6ee21ce03d7" title=" " alt="" coords="253,13,453,38"/>
+<area shape="rect" href="component__speed_8c.html#a495784d1a3a29ea823423679223b7ca9" title=" " alt="" coords="5,5,205,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3561c862a30e567c6b848b616f0fe33" name="af3561c862a30e567c6b848b616f0fe33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3561c862a30e567c6b848b616f0fe33">&#9670;&#160;</a></span>component_velocity_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_velocity_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for velocity component from json data. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "x": 0, "y": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to construct. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Json data to construct component from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if component was successfully constructed, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_af3561c862a30e567c6b848b616f0fe33_cgraph.png" border="0" usemap="#acomponents_8h_af3561c862a30e567c6b848b616f0fe33_cgraph" alt=""/></div>
+<map name="acomponents_8h_af3561c862a30e567c6b848b616f0fe33_cgraph" id="acomponents_8h_af3561c862a30e567c6b848b616f0fe33_cgraph">
+<area shape="rect" title="Constructor for velocity component from json data." alt="" coords="5,5,143,45"/>
+<area shape="rect" href="component__velocity_8c.html#ac6c3075548e045cf91cafbe1dc4df84c" title="Set velocity component from json data." alt="" coords="191,13,353,38"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_af3561c862a30e567c6b848b616f0fe33_icgraph.png" border="0" usemap="#acomponents_8h_af3561c862a30e567c6b848b616f0fe33_icgraph" alt=""/></div>
+<map name="acomponents_8h_af3561c862a30e567c6b848b616f0fe33_icgraph" id="acomponents_8h_af3561c862a30e567c6b848b616f0fe33_icgraph">
+<area shape="rect" title="Constructor for velocity component from json data." alt="" coords="212,5,349,45"/>
+<area shape="rect" href="component__velocity_8c.html#ae1ee158fc34838c8754db2f3e923c5ec" title=" " alt="" coords="5,5,164,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae1ee158fc34838c8754db2f3e923c5ec" name="ae1ee158fc34838c8754db2f3e923c5ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ee158fc34838c8754db2f3e923c5ec">&#9670;&#160;</a></span>component_velocity_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_velocity_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_ae1ee158fc34838c8754db2f3e923c5ec_cgraph.png" border="0" usemap="#acomponents_8h_ae1ee158fc34838c8754db2f3e923c5ec_cgraph" alt=""/></div>
+<map name="acomponents_8h_ae1ee158fc34838c8754db2f3e923c5ec_cgraph" id="acomponents_8h_ae1ee158fc34838c8754db2f3e923c5ec_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,45"/>
+<area shape="rect" href="component__velocity_8c.html#af3561c862a30e567c6b848b616f0fe33" title="Constructor for velocity component from json data." alt="" coords="212,5,349,45"/>
+<area shape="rect" href="component__velocity_8c.html#ac6c3075548e045cf91cafbe1dc4df84c" title="Set velocity component from json data." alt="" coords="397,13,560,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6ef00868074317d203a3a5c5c881100" name="ae6ef00868074317d203a3a5c5c881100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ef00868074317d203a3a5c5c881100">&#9670;&#160;</a></span>component_velocity_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_velocity_get </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the data of a velocity component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to get the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the data of the component if success, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ac6c3075548e045cf91cafbe1dc4df84c" name="ac6c3075548e045cf91cafbe1dc4df84c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c3075548e045cf91cafbe1dc4df84c">&#9670;&#160;</a></span>component_velocity_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_velocity_set </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set velocity component from json data. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "x": 0, "y": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to set. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Json data to set component from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if component was successfully set, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="components_8h_ac6c3075548e045cf91cafbe1dc4df84c_icgraph.png" border="0" usemap="#acomponents_8h_ac6c3075548e045cf91cafbe1dc4df84c_icgraph" alt=""/></div>
+<map name="acomponents_8h_ac6c3075548e045cf91cafbe1dc4df84c_icgraph" id="acomponents_8h_ac6c3075548e045cf91cafbe1dc4df84c_icgraph">
+<area shape="rect" title="Set velocity component from json data." alt="" coords="397,13,560,38"/>
+<area shape="rect" href="component__velocity_8c.html#af3561c862a30e567c6b848b616f0fe33" title="Constructor for velocity component from json data." alt="" coords="212,5,349,45"/>
+<area shape="rect" href="component__velocity_8c.html#ae1ee158fc34838c8754db2f3e923c5ec" title=" " alt="" coords="5,5,164,45"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -13,7 +13,6 @@ add_executable(${TARGET} ${SOURCE})
 target_link_libraries(${TARGET}
     ecs
     json-c
-    raylib
 )
 
 target_include_directories(${TARGET}

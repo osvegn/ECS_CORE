@@ -89,10 +89,22 @@ $(document).ready(function(){initNavTree('position_8h.html',''); initResizable()
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">position.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;component.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for position.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="position_8h__incl.png" border="0" usemap="#aincludes_2components_2position_8h" alt=""/></div>
+<map name="aincludes_2components_2position_8h" id="aincludes_2components_2position_8h">
+<area shape="rect" title=" " alt="" coords="5,5,151,45"/>
+<area shape="rect" title=" " alt="" coords="30,93,126,119"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="position_8h__dep__incl.png" border="0" usemap="#aincludes_2components_2position_8hdep" alt=""/></div>
@@ -116,6 +128,194 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 <p><a href="position_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0445f911508985ab3eae91edb00cc532"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position_8h.html#a0445f911508985ab3eae91edb00cc532">component_position_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a0445f911508985ab3eae91edb00cc532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a position component from a json string.  <a href="position_8h.html#a0445f911508985ab3eae91edb00cc532">More...</a><br /></td></tr>
+<tr class="separator:a0445f911508985ab3eae91edb00cc532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ad0b29f8bb33519c84587041af76d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position_8h.html#a43ad0b29f8bb33519c84587041af76d5">component_position_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a43ad0b29f8bb33519c84587041af76d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310de3e5d2d2c061876c90258d4c4012"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position_8h.html#a310de3e5d2d2c061876c90258d4c4012">component_position_set</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a310de3e5d2d2c061876c90258d4c4012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set position component from json string.  <a href="position_8h.html#a310de3e5d2d2c061876c90258d4c4012">More...</a><br /></td></tr>
+<tr class="separator:a310de3e5d2d2c061876c90258d4c4012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60292d45a25ed775b532666c39f8e6b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position_8h.html#ad60292d45a25ed775b532666c39f8e6b">component_position_get</a> (const component_t *component)</td></tr>
+<tr class="memdesc:ad60292d45a25ed775b532666c39f8e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data of a position component.  <a href="position_8h.html#ad60292d45a25ed775b532666c39f8e6b">More...</a><br /></td></tr>
+<tr class="separator:ad60292d45a25ed775b532666c39f8e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a0445f911508985ab3eae91edb00cc532" name="a0445f911508985ab3eae91edb00cc532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0445f911508985ab3eae91edb00cc532">&#9670;&#160;</a></span>component_position_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_position_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a position component from a json string. </p>
+<p >Filename: <a class="el" href="position_8h.html">position.h</a> Path: include/components Created Date: Thursday, November 30th 2023, 6:23 pm Author: osvegn</p>
+<p >Copyright (c) 2023 our_rpg </p><dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "x": 0, "y": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to initialize. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to initialize the component. It must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="position_8h_a0445f911508985ab3eae91edb00cc532_cgraph.png" border="0" usemap="#aposition_8h_a0445f911508985ab3eae91edb00cc532_cgraph" alt=""/></div>
+<map name="aposition_8h_a0445f911508985ab3eae91edb00cc532_cgraph" id="aposition_8h_a0445f911508985ab3eae91edb00cc532_cgraph">
+<area shape="rect" title="Create a position component from a json string." alt="" coords="5,5,144,45"/>
+<area shape="rect" href="component__position_8c.html#a310de3e5d2d2c061876c90258d4c4012" title="Set position component from json string." alt="" coords="192,13,355,38"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="position_8h_a0445f911508985ab3eae91edb00cc532_icgraph.png" border="0" usemap="#aposition_8h_a0445f911508985ab3eae91edb00cc532_icgraph" alt=""/></div>
+<map name="aposition_8h_a0445f911508985ab3eae91edb00cc532_icgraph" id="aposition_8h_a0445f911508985ab3eae91edb00cc532_icgraph">
+<area shape="rect" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" href="component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5" title=" " alt="" coords="5,5,164,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a43ad0b29f8bb33519c84587041af76d5" name="a43ad0b29f8bb33519c84587041af76d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ad0b29f8bb33519c84587041af76d5">&#9670;&#160;</a></span>component_position_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_position_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="position_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph.png" border="0" usemap="#aposition_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph" alt=""/></div>
+<map name="aposition_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph" id="aposition_8h_a43ad0b29f8bb33519c84587041af76d5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,45"/>
+<area shape="rect" href="component__position_8c.html#a0445f911508985ab3eae91edb00cc532" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" href="component__position_8c.html#a310de3e5d2d2c061876c90258d4c4012" title="Set position component from json string." alt="" coords="399,13,561,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad60292d45a25ed775b532666c39f8e6b" name="ad60292d45a25ed775b532666c39f8e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60292d45a25ed775b532666c39f8e6b">&#9670;&#160;</a></span>component_position_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_position_get </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the data of a position component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to get the data from. It must be a valid position component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the data of the component if success, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a310de3e5d2d2c061876c90258d4c4012" name="a310de3e5d2d2c061876c90258d4c4012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310de3e5d2d2c061876c90258d4c4012">&#9670;&#160;</a></span>component_position_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_position_set </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set position component from json string. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "x": 0, "y": 0 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to set. It must be a valid component. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to set the component with. It must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="position_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph.png" border="0" usemap="#aposition_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph" alt=""/></div>
+<map name="aposition_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph" id="aposition_8h_a310de3e5d2d2c061876c90258d4c4012_icgraph">
+<area shape="rect" title="Set position component from json string." alt="" coords="399,13,561,38"/>
+<area shape="rect" href="component__position_8c.html#a0445f911508985ab3eae91edb00cc532" title="Create a position component from a json string." alt="" coords="212,5,351,45"/>
+<area shape="rect" href="component__position_8c.html#a43ad0b29f8bb33519c84587041af76d5" title=" " alt="" coords="5,5,164,45"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

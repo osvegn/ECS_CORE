@@ -89,10 +89,22 @@ $(document).ready(function(){initNavTree('color_8h.html',''); initResizable(); }
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">color.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;component.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for color.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="color_8h__incl.png" border="0" usemap="#aincludes_2components_2color_8h" alt=""/></div>
+<map name="aincludes_2components_2color_8h" id="aincludes_2components_2color_8h">
+<area shape="rect" title=" " alt="" coords="5,5,151,45"/>
+<area shape="rect" title=" " alt="" coords="30,93,126,119"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="color_8h__dep__incl.png" border="0" usemap="#aincludes_2components_2color_8hdep" alt=""/></div>
@@ -116,6 +128,194 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 <p><a href="color_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a16cea6c0559e54620c7ebaa555169e9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8h.html#a16cea6c0559e54620c7ebaa555169e9d">component_color_constructor</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:a16cea6c0559e54620c7ebaa555169e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a color component from a json string.  <a href="color_8h.html#a16cea6c0559e54620c7ebaa555169e9d">More...</a><br /></td></tr>
+<tr class="separator:a16cea6c0559e54620c7ebaa555169e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d06a6bfdb78a95365518f5cd776df5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8h.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a> (component_t *component, void *data)</td></tr>
+<tr class="separator:a8d06a6bfdb78a95365518f5cd776df5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95e60a1506b4748518778627f7f8d7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8h.html#ae95e60a1506b4748518778627f7f8d7b">component_set_color</a> (component_t *component, void *data)</td></tr>
+<tr class="memdesc:ae95e60a1506b4748518778627f7f8d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color component from json string.  <a href="color_8h.html#ae95e60a1506b4748518778627f7f8d7b">More...</a><br /></td></tr>
+<tr class="separator:ae95e60a1506b4748518778627f7f8d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4a6c736350ac4e1d45cc27408f6f50"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="color_8h.html#adb4a6c736350ac4e1d45cc27408f6f50">component_get_color</a> (const component_t *component)</td></tr>
+<tr class="memdesc:adb4a6c736350ac4e1d45cc27408f6f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the color component data.  <a href="color_8h.html#adb4a6c736350ac4e1d45cc27408f6f50">More...</a><br /></td></tr>
+<tr class="separator:adb4a6c736350ac4e1d45cc27408f6f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a16cea6c0559e54620c7ebaa555169e9d" name="a16cea6c0559e54620c7ebaa555169e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16cea6c0559e54620c7ebaa555169e9d">&#9670;&#160;</a></span>component_color_constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_color_constructor </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a color component from a json string. </p>
+<p >Filename: <a class="el" href="color_8h.html">color.h</a> Path: include/components Created Date: Thursday, November 30th 2023, 6:23 pm Author: osvegn</p>
+<p >Copyright (c) 2023 our_rpg </p><dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "r": 0-255, "g": 0-255, "b": 0-255, "a": 0-255 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to initialize. Must be a valid component_t. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to initialize the component. Must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 if success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="color_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph.png" border="0" usemap="#acolor_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph" alt=""/></div>
+<map name="acolor_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph" id="acolor_8h_a16cea6c0559e54620c7ebaa555169e9d_cgraph">
+<area shape="rect" title="Create a color component from a json string." alt="" coords="5,5,199,31"/>
+<area shape="rect" href="component__color_8c.html#ae95e60a1506b4748518778627f7f8d7b" title="Set color component from json string." alt="" coords="247,5,393,31"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="color_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph.png" border="0" usemap="#acolor_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph" alt=""/></div>
+<map name="acolor_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph" id="acolor_8h_a16cea6c0559e54620c7ebaa555169e9d_icgraph">
+<area shape="rect" title="Create a color component from a json string." alt="" coords="247,13,440,38"/>
+<area shape="rect" href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e" title=" " alt="" coords="5,5,199,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d06a6bfdb78a95365518f5cd776df5e" name="a8d06a6bfdb78a95365518f5cd776df5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d06a6bfdb78a95365518f5cd776df5e">&#9670;&#160;</a></span>component_color_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_color_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="color_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph.png" border="0" usemap="#acolor_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph" alt=""/></div>
+<map name="acolor_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph" id="acolor_8h_a8d06a6bfdb78a95365518f5cd776df5e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,199,45"/>
+<area shape="rect" href="component__color_8c.html#a16cea6c0559e54620c7ebaa555169e9d" title="Create a color component from a json string." alt="" coords="247,13,440,38"/>
+<area shape="rect" href="component__color_8c.html#ae95e60a1506b4748518778627f7f8d7b" title="Set color component from json string." alt="" coords="488,13,635,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb4a6c736350ac4e1d45cc27408f6f50" name="adb4a6c736350ac4e1d45cc27408f6f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4a6c736350ac4e1d45cc27408f6f50">&#9670;&#160;</a></span>component_get_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * component_get_color </td>
+          <td>(</td>
+          <td class="paramtype">const component_t *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to the color component data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to get data from. Must be a valid component_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a pointer to the color component data. 0 if component is not a color component. </dd></dl>
+
+</div>
+</div>
+<a id="ae95e60a1506b4748518778627f7f8d7b" name="ae95e60a1506b4748518778627f7f8d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95e60a1506b4748518778627f7f8d7b">&#9670;&#160;</a></span>component_set_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int component_set_color </td>
+          <td>(</td>
+          <td class="paramtype">component_t *&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set color component from json string. </p>
+<dl class="section note"><dt>Note</dt><dd>The json string must be formatted as follow: { "r": 0-255, "g": 0-255, "b": 0-255, "a": 0-255 } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Component to set. Must be a valid component_t. </td></tr>
+    <tr><td class="paramname">data</td><td>Data to set. Must be a valid json string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return 0 on success, -1 otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="color_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph.png" border="0" usemap="#acolor_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph" alt=""/></div>
+<map name="acolor_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph" id="acolor_8h_ae95e60a1506b4748518778627f7f8d7b_icgraph">
+<area shape="rect" title="Set color component from json string." alt="" coords="488,13,635,38"/>
+<area shape="rect" href="component__color_8c.html#a16cea6c0559e54620c7ebaa555169e9d" title="Create a color component from a json string." alt="" coords="247,13,440,38"/>
+<area shape="rect" href="component__color_8c.html#a8d06a6bfdb78a95365518f5cd776df5e" title=" " alt="" coords="5,5,199,45"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

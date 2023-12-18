@@ -92,14 +92,24 @@ $(document).ready(function(){initNavTree('color_8h_source.html',''); initResizab
   <div class="headertitle"><div class="title">color.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="color_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by osvegn on 11/30/23.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef LANGUAGES_COLOR_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define LANGUAGES_COLOR_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif </span><span class="comment">//LANGUAGES_COLOR_H</span></div>
+<a href="color_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef COLOR_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define COLOR_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;component.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> <a class="code hl_function" href="color_8h.html#a16cea6c0559e54620c7ebaa555169e9d">component_color_constructor</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="color_8h.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">int</span> <a class="code hl_function" href="color_8h.html#ae95e60a1506b4748518778627f7f8d7b">component_set_color</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> *<a class="code hl_function" href="color_8h.html#adb4a6c736350ac4e1d45cc27408f6f50">component_get_color</a>(<span class="keyword">const</span> component_t *component);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// COLOR_H</span></div>
+<div class="ttc" id="acolor_8h_html_a16cea6c0559e54620c7ebaa555169e9d"><div class="ttname"><a href="color_8h.html#a16cea6c0559e54620c7ebaa555169e9d">component_color_constructor</a></div><div class="ttdeci">int component_color_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a color component from a json string.</div><div class="ttdef"><b>Definition:</b> component_color.c:28</div></div>
+<div class="ttc" id="acolor_8h_html_a8d06a6bfdb78a95365518f5cd776df5e"><div class="ttname"><a href="color_8h.html#a8d06a6bfdb78a95365518f5cd776df5e">component_color_constructor_from_json</a></div><div class="ttdeci">int component_color_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_color.c:46</div></div>
+<div class="ttc" id="acolor_8h_html_adb4a6c736350ac4e1d45cc27408f6f50"><div class="ttname"><a href="color_8h.html#adb4a6c736350ac4e1d45cc27408f6f50">component_get_color</a></div><div class="ttdeci">void * component_get_color(const component_t *component)</div><div class="ttdoc">Get a pointer to the color component data.</div><div class="ttdef"><b>Definition:</b> component_color.c:66</div></div>
+<div class="ttc" id="acolor_8h_html_ae95e60a1506b4748518778627f7f8d7b"><div class="ttname"><a href="color_8h.html#ae95e60a1506b4748518778627f7f8d7b">component_set_color</a></div><div class="ttdeci">int component_set_color(component_t *component, void *data)</div><div class="ttdoc">Set color component from json string.</div><div class="ttdef"><b>Definition:</b> component_color.c:58</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

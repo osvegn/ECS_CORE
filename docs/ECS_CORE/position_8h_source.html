@@ -92,14 +92,24 @@ $(document).ready(function(){initNavTree('position_8h_source.html',''); initResi
   <div class="headertitle"><div class="title">position.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="position_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by osvegn on 11/30/23.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef LANGUAGES_POSITION_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define LANGUAGES_POSITION_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif </span><span class="comment">// LANGUAGES_POSITION_H</span></div>
+<a href="position_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef POSITION_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define POSITION_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;component.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> <a class="code hl_function" href="position_8h.html#a0445f911508985ab3eae91edb00cc532">component_position_constructor</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> <a class="code hl_function" href="position_8h.html#a43ad0b29f8bb33519c84587041af76d5">component_position_constructor_from_json</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="position_8h.html#a310de3e5d2d2c061876c90258d4c4012">component_position_set</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> *<a class="code hl_function" href="position_8h.html#ad60292d45a25ed775b532666c39f8e6b">component_position_get</a>(<span class="keyword">const</span> component_t *component);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// POSITION_H</span></div>
+<div class="ttc" id="aposition_8h_html_a0445f911508985ab3eae91edb00cc532"><div class="ttname"><a href="position_8h.html#a0445f911508985ab3eae91edb00cc532">component_position_constructor</a></div><div class="ttdeci">int component_position_constructor(component_t *component, void *data)</div><div class="ttdoc">Create a position component from a json string.</div><div class="ttdef"><b>Definition:</b> component_position.c:28</div></div>
+<div class="ttc" id="aposition_8h_html_a310de3e5d2d2c061876c90258d4c4012"><div class="ttname"><a href="position_8h.html#a310de3e5d2d2c061876c90258d4c4012">component_position_set</a></div><div class="ttdeci">int component_position_set(component_t *component, void *data)</div><div class="ttdoc">Set position component from json string.</div><div class="ttdef"><b>Definition:</b> component_position.c:56</div></div>
+<div class="ttc" id="aposition_8h_html_a43ad0b29f8bb33519c84587041af76d5"><div class="ttname"><a href="position_8h.html#a43ad0b29f8bb33519c84587041af76d5">component_position_constructor_from_json</a></div><div class="ttdeci">int component_position_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_position.c:46</div></div>
+<div class="ttc" id="aposition_8h_html_ad60292d45a25ed775b532666c39f8e6b"><div class="ttname"><a href="position_8h.html#ad60292d45a25ed775b532666c39f8e6b">component_position_get</a></div><div class="ttdeci">void * component_position_get(const component_t *component)</div><div class="ttdoc">Get the data of a position component.</div><div class="ttdef"><b>Definition:</b> component_position.c:64</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

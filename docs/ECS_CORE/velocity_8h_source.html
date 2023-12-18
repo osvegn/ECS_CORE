@@ -92,14 +92,24 @@ $(document).ready(function(){initNavTree('velocity_8h_source.html',''); initResi
   <div class="headertitle"><div class="title">velocity.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="velocity_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by osvegn on 11/30/23.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef LANGUAGES_VELOCITY_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define LANGUAGES_VELOCITY_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif </span><span class="comment">// LANGUAGES_VELOCITY_H</span></div>
+<a href="velocity_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef VELOCITY_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define VELOCITY_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;component.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> <a class="code hl_function" href="velocity_8h.html#af3561c862a30e567c6b848b616f0fe33">component_velocity_constructor</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> <a class="code hl_function" href="velocity_8h.html#ae1ee158fc34838c8754db2f3e923c5ec">component_velocity_constructor_from_json</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="velocity_8h.html#ac6c3075548e045cf91cafbe1dc4df84c">component_velocity_set</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> *<a class="code hl_function" href="velocity_8h.html#ae6ef00868074317d203a3a5c5c881100">component_velocity_get</a>(<span class="keyword">const</span> component_t *component);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif </span><span class="comment">// VELOCITY_H</span></div>
+<div class="ttc" id="avelocity_8h_html_ac6c3075548e045cf91cafbe1dc4df84c"><div class="ttname"><a href="velocity_8h.html#ac6c3075548e045cf91cafbe1dc4df84c">component_velocity_set</a></div><div class="ttdeci">int component_velocity_set(component_t *component, void *data)</div><div class="ttdoc">Set velocity component from json data.</div><div class="ttdef"><b>Definition:</b> component_velocity.c:55</div></div>
+<div class="ttc" id="avelocity_8h_html_ae1ee158fc34838c8754db2f3e923c5ec"><div class="ttname"><a href="velocity_8h.html#ae1ee158fc34838c8754db2f3e923c5ec">component_velocity_constructor_from_json</a></div><div class="ttdeci">int component_velocity_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_velocity.c:45</div></div>
+<div class="ttc" id="avelocity_8h_html_ae6ef00868074317d203a3a5c5c881100"><div class="ttname"><a href="velocity_8h.html#ae6ef00868074317d203a3a5c5c881100">component_velocity_get</a></div><div class="ttdeci">void * component_velocity_get(const component_t *component)</div><div class="ttdoc">Get the data of a velocity component.</div><div class="ttdef"><b>Definition:</b> component_velocity.c:63</div></div>
+<div class="ttc" id="avelocity_8h_html_af3561c862a30e567c6b848b616f0fe33"><div class="ttname"><a href="velocity_8h.html#af3561c862a30e567c6b848b616f0fe33">component_velocity_constructor</a></div><div class="ttdeci">int component_velocity_constructor(component_t *component, void *data)</div><div class="ttdoc">Constructor for velocity component from json data.</div><div class="ttdef"><b>Definition:</b> component_velocity.c:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

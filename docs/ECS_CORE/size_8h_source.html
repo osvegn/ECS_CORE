@@ -92,14 +92,24 @@ $(document).ready(function(){initNavTree('size_8h_source.html',''); initResizabl
   <div class="headertitle"><div class="title">size.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="size_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by osvegn on 11/30/23.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef LANGUAGES_SIZE_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define LANGUAGES_SIZE_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif </span><span class="comment">// LANGUAGES_SIZE_H</span></div>
+<a href="size_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef SIZE_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define SIZE_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;component.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> <a class="code hl_function" href="size_8h.html#a98b248dfbf9c4fc81b652cf5ec0f7e05">component_size_constructor</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> <a class="code hl_function" href="size_8h.html#a467e2127bd701f4032bc27dd545c7b13">component_size_constructor_from_json</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="size_8h.html#a8ad22e4d4c712ed426104907fffe74c1">component_size_set</a>(component_t *component, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> *<a class="code hl_function" href="size_8h.html#a7ff2ae4d82c9f3bbc9d57eadd8d0ad55">component_size_get</a>(<span class="keyword">const</span> component_t *component);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// SIZE_H</span></div>
+<div class="ttc" id="asize_8h_html_a467e2127bd701f4032bc27dd545c7b13"><div class="ttname"><a href="size_8h.html#a467e2127bd701f4032bc27dd545c7b13">component_size_constructor_from_json</a></div><div class="ttdeci">int component_size_constructor_from_json(component_t *component, void *data)</div><div class="ttdef"><b>Definition:</b> component_size.c:45</div></div>
+<div class="ttc" id="asize_8h_html_a7ff2ae4d82c9f3bbc9d57eadd8d0ad55"><div class="ttname"><a href="size_8h.html#a7ff2ae4d82c9f3bbc9d57eadd8d0ad55">component_size_get</a></div><div class="ttdeci">void * component_size_get(const component_t *component)</div><div class="ttdoc">Get size component data.</div><div class="ttdef"><b>Definition:</b> component_size.c:63</div></div>
+<div class="ttc" id="asize_8h_html_a8ad22e4d4c712ed426104907fffe74c1"><div class="ttname"><a href="size_8h.html#a8ad22e4d4c712ed426104907fffe74c1">component_size_set</a></div><div class="ttdeci">int component_size_set(component_t *component, void *data)</div><div class="ttdoc">Set size component from json data.</div><div class="ttdef"><b>Definition:</b> component_size.c:55</div></div>
+<div class="ttc" id="asize_8h_html_a98b248dfbf9c4fc81b652cf5ec0f7e05"><div class="ttname"><a href="size_8h.html#a98b248dfbf9c4fc81b652cf5ec0f7e05">component_size_constructor</a></div><div class="ttdeci">int component_size_constructor(component_t *component, void *data)</div><div class="ttdoc">Constructor for size component from json data.</div><div class="ttdef"><b>Definition:</b> component_size.c:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

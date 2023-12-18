@@ -7,10 +7,7 @@
  * Copyright (c) 2023 our_rpg
  */
 
-#include "components.h"
-#include "raylib.h"
 #include "systems.h"
-#include "world.h"
 
 int system_windows_manager_constructor(system_t *system)
 {
@@ -22,7 +19,5 @@ int system_windows_manager_constructor(system_t *system)
 
 int system_windows_manager(void *ptr)
 {
-    if (WindowShouldClose())
-        return -1;
     return 0;
 }

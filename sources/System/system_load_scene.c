@@ -1,6 +1,6 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/System/system_load_scene
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/System
+ * Filename: system_load_scene
+ * Path: sources/System
  * Created Date: Tuesday, March 21st 2023, 9:40:17 am
  * Author: Thomas
  *
@@ -13,6 +13,7 @@
 #include "world_entity.h"
 #include "world_loader_constructors.h"
 #include "json.h"
+#include <string.h>
 
 int system_load_scene_constructor(system_t *system)
 {
@@ -47,7 +48,6 @@ static int update_resources(world_t *world, json_object *resources)
 {
     resource_t resource = {0};
     json_object *tmp = 0;
-    void *data = 0;
 
     while (world->resource_list.size(&world->resource_list) > 0) {
         (resource_t *){world->resource_list.back(&world->resource_list)}->destructor(world->resource_list.back(&world->resource_list));
@@ -57,7 +57,6 @@ static int update_resources(world_t *world, json_object *resources)
         tmp = json_object_array_get_idx(resources, i);
         for (int j = 0; resources_types[j]; j++) {
             if (strcmp(json_object_get_string(json_object_object_get(tmp, "type")), resources_types[j]) == 0) {
-                char *wooow = json_object_to_json_string(json_object_object_get(tmp, "data"));
                 resources_constructors[j](&resource, json_object_to_json_string(json_object_object_get(tmp, "data")));
                 world_add_resource(world, &resource);
                 break;
@@ -72,7 +71,6 @@ static int update_entities(world_t *world, json_object *entities)
     entity_t entity = {0};
     component_t component = {0};
     json_object *tmp = 0;
-    void *data = 0;
 
     while (world->entity_list.size(&world->entity_list) > 0) {
         entity_t *ptr = world->entity_list.back(&world->entity_list);

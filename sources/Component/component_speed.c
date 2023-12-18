@@ -11,6 +11,7 @@
 #include "components.h"
 #include "world_logger.h"
 #include <stdlib.h>
+#include <string.h>
 
 static int component_is_speed(const component_t *component)
 {

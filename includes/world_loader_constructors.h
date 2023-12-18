@@ -1,6 +1,6 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/sources/System/world_loader_constructors.h
- * Path: /home/thomas/Documents/Perso/our_rpg/sources/System
+ * Filename: world_loader_constructors.h
+ * Path: sources/System
  * Created Date: Wednesday, April 5th 2023, 12:21:01 pm
  * Author: Thomas
  * 
@@ -13,27 +13,17 @@
 
 const char * const systems_types[] = {
     "S_LOAD_SCENE",
-    "S_DISPLAY",
     "S_WINDOW_MANAGER",
-    "S_RELOAD_CONFIG",
     "S_MOVEMENT",
-    "S_MOVE_CONTROLLABLE",
     "S_RESET_GAME_CLOCK",
-    "S_FOLLOW_PLAYER",
-    "S_HANDLE_CLICK",
     0
 };
 
 int (* const systems_constructors[])(system_t *) = {
     &system_load_scene_constructor,
-    &system_display_constructor,
     &system_windows_manager_constructor,
-    &system_reload_config_constructor,
     &system_movement_constructor,
-    &system_move_controllable_constructor,
     &system_reset_game_clock_constructor,
-    &system_follow_player_constructor,
-    &system_handle_click_constructor,
     0
 };
 
@@ -41,7 +31,6 @@ const char * const resources_types[] = {
     "R_WINDOW",
     "R_SCENE_FILENAME",
     "R_GAME_CLOCK",
-    "R_CAMERA",
     0
 };
 
@@ -49,7 +38,6 @@ int (* const resources_constructors[])(resource_t *, void *) = {
     &resource_window_constructor_from_json,
     &resource_scene_filename_constructor_from_json,
     &resource_game_clock_constructor,
-    &resource_camera_constructor_from_json,
     0
 };
 

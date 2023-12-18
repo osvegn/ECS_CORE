@@ -19,10 +19,14 @@ CC		=	cmake
 
 TESTS	=	component_tests resource_tests system_tests
 
-all:
+all: build_submodules
 	${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF
 	${CC} --build ${BUILD}
 	cp -r config ${BUILD}
+
+build_submodules:
+	cd submodules/ECS/submodules/vector && ${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF && ${CC} --build ${BUILD}
+	cd submodules/ECS && ${CC} -B ${BUILD} -DCMAKE_BUILD_TYPE=Release -DTESTING=OFF && ${CC} --build ${BUILD}
 
 clean:
 	${RM} ${TESTS}
@@ -35,12 +39,12 @@ fclean: clean
 
 re: fclean all
 
-debug:
+debug: build_submodules
 	${CC} -B ${BUILD_DEBUG} -DCMAKE_BUILD_TYPE=Debug -DTESTING=OFF
 	${CC} --build ${BUILD_DEBUG}
 	cp -r config ${BUILD_DEBUG}
 
-run_tests:
+run_tests: build_submodules
 	${CC} -B ${BUILD_TESTS} -DCMAKE_BUILD_TYPE=Release -DTESTING=ON
 	${CC} --build ${BUILD_TESTS}
 	cp -r config ${BUILD_TESTS}

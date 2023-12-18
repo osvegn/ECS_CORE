@@ -8,12 +8,9 @@
  */
 
 #include "systems.h"
-#include "raylib.h"
 #include "vector.h"
 #include "world.h"
-#include "world_entity.h"
 #include "world_resource.h"
-#include "components.h"
 #ifdef __linux__
     #include <sys/time.h>
 #endif

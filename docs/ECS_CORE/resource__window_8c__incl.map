@@ -1,12 +1,10 @@
 <map id="sources/Resource/resource_window.c" name="sources/Resource/resource_window.c">
-<area shape="rect" id="node1" title=" " alt="" coords="248,5,429,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="161,5,343,45"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,93,61,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="86,93,149,119"/>
-<area shape="rect" id="node4" href="$resources_8h.html" title=" " alt="" coords="173,93,262,119"/>
-<area shape="rect" id="node7" title=" " alt="" coords="286,93,391,119"/>
-<area shape="rect" id="node8" title=" " alt="" coords="415,93,475,119"/>
-<area shape="rect" id="node9" title=" " alt="" coords="499,93,562,119"/>
-<area shape="rect" id="node10" title=" " alt="" coords="587,93,651,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="124,167,207,192"/>
-<area shape="rect" id="node6" href="$window_8h.html" title=" " alt="" coords="231,167,307,192"/>
+<area shape="rect" id="node3" href="$resources_8h.html" title=" " alt="" coords="86,93,175,119"/>
+<area shape="rect" id="node6" title=" " alt="" coords="199,93,305,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="329,93,391,119"/>
+<area shape="rect" id="node8" title=" " alt="" coords="416,93,480,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="37,167,120,192"/>
+<area shape="rect" id="node5" href="$window_8h.html" title=" " alt="" coords="145,167,221,192"/>
 </map>

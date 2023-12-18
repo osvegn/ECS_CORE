@@ -41,34 +41,27 @@ jobs:
       run: ${GITHUB_WORKSPACE}/.github/workflows/scripts/install_dependencies.sh
 
     - name: Build
-      run: |
-        cd submodules/ECS/submodules/vector
-        cmake -B build && cmake --build build
-        cd ../..
-        cmake -B build && cmake --build build
-        cd ../..
-        cmake -B build
-        cmake --build build
+      run: make
 
-  build-windows:
-    needs: linter
-    runs-on: windows-2019
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Dependencies
-      run: git submodule update --init --recursive
-
-    - name: Build
-      run: |
-        cd submodules/ECS/submodules/vector
-        cmake -B build && cmake --build build
-        cd ../..
-        cmake -B build && cmake --build build
-        cd ../..
-        cmake -B build
-        cmake --build build
+#  build-windows:
+#    needs: linter
+#    runs-on: windows-2019
+#    steps:
+#    - name: Checkout repository
+#      uses: actions/checkout@v3
+#
+#    - name: Dependencies
+#      run: git submodule update --init --recursive
+#
+#    - name: Build
+#      run: |
+#        cd submodules/ECS/submodules/vector
+#        cmake -B build && cmake --build build
+#        cd ../..
+#        cmake -B build && cmake --build build
+#        cd ../..
+#        cmake -B build
+#        cmake --build build
 
   tests_linux:
     needs: build-linux

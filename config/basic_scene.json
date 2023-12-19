@@ -1,6 +1,6 @@
 {
-    "name": "main menu",
-    "description": "main menu",
+    "name": "test",
+    "description": "test scene",
     "world":
     {
         "systems":
@@ -8,17 +8,21 @@
             "S_DISPLAY",
             "S_WINDOW_MANAGER",
             "S_RELOAD_CONFIG",
-            "S_HANDLE_CLICK"
+            "S_MOVEMENT"
         ],
         "resources":
         [
             {
-                "type": "R_WINDOW",
-                "data":{"width":840, "height":600, "title":"main menu", "fps":60}
+                "type":"R_WINDOW",
+                "data":{"width":840, "height":600, "title": "rpg", "fps":60}
             },
             {
-                "type": "R_SCENE_FILENAME",
-                "data":"config/basic_scene.json"
+                "type":"R_CAMERA",
+                "data":null
+            },
+            {
+                "type":"R_SCENE_FILENAME",
+                "data":{"filename":"config/basic_scene.json"}
             }
         ],
         "entities":
@@ -28,23 +32,85 @@
                 [
                     {
                         "type": "C_SIZE",
-                        "data": {"width": 200, "height": 100}
+                        "data": {"width": 100, "height": 100}
                     },
                     {
                         "type": "C_POSITION",
-                        "data": {"x":200, "y": 200}
+                        "data": {"x": 0, "y": 150}
                     },
                     {
                         "type": "C_DISPLAYABLE",
                         "data": null
                     },
                     {
-                        "type": "C_COLOR",
-                        "data": {"r":0, "g":0, "b":255, "a":255}
+                        "type": "C_CONTROLLABLE",
+                        "data": null
                     },
                     {
-                        "type": "C_CLICKABLE",
+                        "type": "C_VELOCITY",
+                        "data": {"x": 0, "y": 0}
+                    },
+                    {
+                        "type": "C_COLLIDABLE",
                         "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r": 255, "g": 0, "b": 0, "a": 255}
+                    }
+                ]
+            },
+            {
+                "components":
+                [
+                    {
+                        "type": "C_SIZE",
+                        "data": {"width": 500, "height": 50}
+                    },
+                    {
+                        "type": "C_POSITION",
+                        "data": {"x":0, "y":0}
+                    },
+                    {
+                        "type": "C_DISPLAYABLE",
+                        "data": null
+                    },
+                    {
+                        "type": "C_COLLIDABLE",
+                        "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r": 255, "g": 0, "b": 0, "a": 255}
+                    }
+                ]
+            },
+            {
+                "components":
+                [
+                    {
+                        "type": "C_SIZE",
+                        "data": {"width": 50, "height": 50}
+                    },
+                    {
+                        "type": "C_POSITION",
+                        "data": {"x": 0, "y": -600}
+                    },
+                    {
+                        "type": "C_DISPLAYABLE",
+                        "data": null
+                    },
+                    {
+                        "type": "C_VELOCITY",
+                        "data": {"x": 0, "y": 0}
+                    },
+                    {
+                        "type": "C_COLLIDABLE",
+                        "data": null
+                    },
+                    {
+                        "type": "C_COLOR",
+                        "data": {"r": 0, "g": 255, "b": 0, "a": 255}
                     }
                 ]
             }

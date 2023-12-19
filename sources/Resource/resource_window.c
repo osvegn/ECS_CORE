@@ -9,6 +9,7 @@
 
 #include "json.h"
 #include "resources.h"
+#include "utils/ecs_window.h"
 #include "world_logger.h"
 #include <stdlib.h>
 #include <string.h>
@@ -30,14 +31,14 @@ int resource_window_constructor(resource_t *resource, void *data)
     int rvalue = 0;
 
     resource->type = R_WINDOW;
-    resource->data = malloc(sizeof(window_t));
+    resource->data = malloc(sizeof(ecs_window_t));
     if (!resource->data) {
         log_fatal("Could not allocate memory for window resource.");
         return -1;
     }
     resource->destructor = &resource_window_destructor;
     if (!data) {
-        data = &(window_t){.fps=60, .height=640, .width=840, .title="Default title"};
+        data = &(ecs_window_t){.fps=60, .height=640, .width=840, .name="Default title"};
     }
     rvalue = resource_window_set(resource, data);
     log_info("Window resource created.");
@@ -46,19 +47,24 @@ int resource_window_constructor(resource_t *resource, void *data)
 
 int resource_window_constructor_from_json(resource_t *resource, void *data)
 {
-    window_t win = {0};
+    ecs_window_t win = {0};
     json_object *obj = json_tokener_parse(data);
 
     win.width = json_object_get_int(json_object_object_get(obj, "width"));
     win.height = json_object_get_int(json_object_object_get(obj, "height"));
     win.fps = json_object_get_int(json_object_object_get(obj, "fps"));
-    strncpy(win.title, json_object_get_string(json_object_object_get(obj, "title")), 255);
+    win.name = malloc(sizeof(char) * 256);
+    if (!win.name) {
+        log_fatal("Could not allocate memory for window title.");
+        return -1;
+    }
+    strncpy(win.name, json_object_get_string(json_object_object_get(obj, "title")), 255);
     return resource_window_constructor(resource, &win);
 }
 
 int resource_window_set(resource_t *resource, void *data)
 {
-    window_t *win = 0;
+    ecs_window_t *win = 0;
 
     if (!resource_is_window(resource) || !resource->data || !data)
         return -1;

@@ -25,7 +25,7 @@ int system_movement_constructor(system_t *system)
     return 0;
 }
 
-static int system_movement(void *world)
+int system_movement(void *world)
 {
     vector_t entities = {0};
     int rvalue = world_join_entities(world, &entities, 2, C_POSITION, C_VELOCITY);

@@ -13,6 +13,7 @@
 #include "world_entity.h"
 #include "systems.h"
 #include "resources.h"
+#include "components.h"
 #include "json.h"
 #include <string.h>
 #include "world_logger.h"

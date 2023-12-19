@@ -11,9 +11,11 @@
 #include "world_system.h"
 #include "world_resource.h"
 #include "world_entity.h"
-#include "world_loader_constructors.h"
+#include "systems.h"
+#include "resources.h"
 #include "json.h"
 #include <string.h>
+#include "world_logger.h"
 
 int system_load_scene_constructor(system_t *system)
 {
@@ -33,9 +35,9 @@ static int update_systems(world_t *world, json_object *systems)
     }
     for (int i = 0; i < json_object_array_length(systems); i++) {
         tmp = json_object_array_get_idx(systems, i);
-        for (int j = 0; systems_types[j]; j++) {
-            if (strcmp(json_object_get_string(tmp), systems_types[j]) == 0) {
-                systems_constructors[j](&system);
+        for (int j = 0; system_def[j].name; j++) {
+            if (strcmp(json_object_get_string(tmp), system_def[j].name) == 0) {
+                system_def[j].constructor(&system);
                 world_add_system(world, &system);
                 break;
             }
@@ -55,9 +57,9 @@ static int update_resources(world_t *world, json_object *resources)
     }
     for (int i = 0; i < json_object_array_length(resources); i++) {
         tmp = json_object_array_get_idx(resources, i);
-        for (int j = 0; resources_types[j]; j++) {
-            if (strcmp(json_object_get_string(json_object_object_get(tmp, "type")), resources_types[j]) == 0) {
-                resources_constructors[j](&resource, json_object_to_json_string(json_object_object_get(tmp, "data")));
+        for (int j = 0; resource_def[j].name; j++) {
+            if (strcmp(json_object_get_string(json_object_object_get(tmp, "type")), resource_def[j].name) == 0) {
+                resource_def[j].constructor(&resource, json_object_to_json_string(json_object_object_get(tmp, "data")));
                 world_add_resource(world, &resource);
                 break;
             }
@@ -84,9 +86,9 @@ static int update_entities(world_t *world, json_object *entities)
         tmp = json_object_object_get(json_object_array_get_idx(entities, i), "components");
         entity_constructor(&entity);
         for (unsigned int j = 0; j < json_object_array_length(tmp); j++) {
-            for (unsigned int k = 0; components_types[k]; k++) {
-                if (strcmp(json_object_get_string(json_object_object_get(json_object_array_get_idx(tmp, j), "type")), components_types[k]) == 0) {
-                    components_constructors[k](&component, json_object_to_json_string(json_object_object_get(json_object_array_get_idx(tmp, j), "data")));
+            for (unsigned int k = 0; components_def[k].name; k++) {
+                if (strcmp(json_object_get_string(json_object_object_get(json_object_array_get_idx(tmp, j), "type")), components_def[k].name) == 0) {
+                    components_def[k].constructor(&component, json_object_to_json_string(json_object_object_get(json_object_array_get_idx(tmp, j), "data")));
                     entity_add_component(&entity, &component);
                     break;
                 }
@@ -103,11 +105,15 @@ int system_load_scene_run(void *ptr)
     resource_t *scene_filename = world_get_resource_by_type(world, R_SCENE_FILENAME);
     json_object *json = 0;
 
-    if (scene_filename == 0)
+    if (scene_filename == 0) {
+        log_error("Scene filename resource not found.");
         return -1;
+    }
     json = json_object_from_file(scene_filename->data);
-    if (json == 0)
+    if (json == 0) {
+        log_error("Could not load scene file. (%s)", scene_filename->data);
         return -2;
+    }
     update_resources(world, json_object_object_get(json_object_object_get(json, "world"), "resources"));
     update_systems(world, json_object_object_get(json_object_object_get(json, "world"), "systems"));
     update_entities(world, json_object_object_get(json_object_object_get(json, "world"), "entities"));

@@ -12,49 +12,33 @@
 
 #include "system.h"
 
+#include "systems/load_scene.h"
+#include "systems/window_manager.h"
+#include "systems/movement.h"
+#include "systems/reset_game_clock.h"
+#include "systems/world_initializer.h"
+
 typedef enum system_type_e {
     S_UNDEFINED,
     S_WORLD_INITIALIZER,
-    S_DISPLAY,
     S_WINDOW_MANAGER,
     S_LOAD_SCENE,
-    S_RELOAD_CONFIG,
-    S_MOVE_CONTROLLABLE,
     S_MOVEMENT,
     S_RESET_GAME_CLOCK,
-    S_FOLLOW_PLAYER,
-    S_HANDLE_CLICK,
     S_MAX_VALUE
 } system_type_t;
 
-int system_world_initializer(void *ptr);
-int system_world_initializer_constructor(system_t *system);
+typedef struct system_def_s {
+    char *name;
+    int (*constructor)(system_t *);
+} system_def_t;
 
-int system_display(void *world);
-int system_display_constructor(system_t *system);
-
-int system_windows_manager(void *ptr);
-int system_windows_manager_constructor(system_t *system);
-
-int system_load_scene_constructor(system_t *system);
-int system_load_scene_run(void *ptr);
-
-int system_reload_config_constructor(system_t *system);
-int system_reload_config_run(void *ptr);
-
-int system_move_controllable_constructor(system_t *system);
-static int system_move_controllable(void *world);
-
-static int system_movement(void *world);
-int system_movement_constructor(system_t *system);
-
-int system_reset_game_clock_constructor(system_t *system);
-int system_reset_game_clock(void *world);
-
-int system_follow_player_constructor(system_t *system);
-int system_follow_player(void *world);
-
-int system_handle_click_constructor(system_t *system);
-int system_handle_click(void *world);
+static const system_def_t system_def[] = {
+    {"S_LOAD_SCENE", &system_load_scene_constructor},
+    {"S_WINDOW_MANAGER", &system_windows_manager_constructor},
+    {"S_MOVEMENT", &system_movement_constructor},
+    {"S_RESET_GAME_CLOCK", &system_reset_game_clock_constructor},
+    {0, 0},
+};
 
 #endif /* !SYSTEMS_H_ */

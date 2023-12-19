@@ -1,7 +1,13 @@
 <map id="sources/main.c" name="sources/main.c">
-<area shape="rect" id="node1" title=" " alt="" coords="93,5,204,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,68,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="93,79,205,104"/>
-<area shape="rect" id="node4" href="$systems_8h.html" title=" " alt="" coords="229,79,311,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="233,152,307,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="273,5,384,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="125,79,188,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="213,79,325,104"/>
+<area shape="rect" id="node4" href="$systems_8h.html" title=" " alt="" coords="349,79,431,104"/>
+<area shape="rect" id="node11" title=" " alt="" coords="455,79,560,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="353,240,427,265"/>
+<area shape="rect" id="node6" href="$load__scene_8h.html" title=" " alt="" coords="27,159,177,185"/>
+<area shape="rect" id="node7" href="$window__manager_8h.html" title=" " alt="" coords="202,159,389,185"/>
+<area shape="rect" id="node8" href="$movement_8h.html" title=" " alt="" coords="413,159,559,185"/>
+<area shape="rect" id="node9" href="$reset__game__clock_8h.html" title=" " alt="" coords="584,152,727,192"/>
+<area shape="rect" id="node10" href="$world__initializer_8h.html" title=" " alt="" coords="751,159,925,185"/>
 </map>

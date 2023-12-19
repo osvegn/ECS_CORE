@@ -1,5 +1,7 @@
 var components_8h =
 [
+    [ "component_def_s", "structcomponent__def__s.html", "structcomponent__def__s" ],
+    [ "component_def_t", "components_8h.html#ab1aad5a2a388fde55e761de15d305fb1", null ],
     [ "component_type_t", "components_8h.html#a196771c32fb4061ee86d185e5b801514", null ],
     [ "component_type_e", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521", [
       [ "C_UNDEFINED", "components_8h.html#af3fba937a41c8eb285dbeddd2df7e521a9ccfedab27026377e73d8f61b80cab3b", null ],

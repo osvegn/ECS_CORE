@@ -1,5 +1,10 @@
 <map id="sources/System/system_windows_manager.c" name="sources/System/system_windows_manager.c">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,45"/>
-<area shape="rect" id="node2" href="$systems_8h.html" title=" " alt="" coords="46,93,127,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="49,167,124,192"/>
+<area shape="rect" id="node1" title=" " alt="" coords="309,5,471,45"/>
+<area shape="rect" id="node2" href="$systems_8h.html" title=" " alt="" coords="349,93,431,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="353,255,427,280"/>
+<area shape="rect" id="node4" href="$load__scene_8h.html" title=" " alt="" coords="27,174,177,199"/>
+<area shape="rect" id="node5" href="$window__manager_8h.html" title=" " alt="" coords="202,174,389,199"/>
+<area shape="rect" id="node6" href="$movement_8h.html" title=" " alt="" coords="413,174,559,199"/>
+<area shape="rect" id="node7" href="$reset__game__clock_8h.html" title=" " alt="" coords="584,167,727,207"/>
+<area shape="rect" id="node8" href="$world__initializer_8h.html" title=" " alt="" coords="751,174,925,199"/>
 </map>

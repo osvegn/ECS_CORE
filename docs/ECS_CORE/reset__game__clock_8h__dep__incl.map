@@ -1,0 +1,10 @@
+<map id="includes/systems/reset_game_clock.h" name="includes/systems/reset_game_clock.h">
+<area shape="rect" id="node1" title=" " alt="" coords="475,5,631,45"/>
+<area shape="rect" id="node2" href="$systems_8h.html" title=" " alt="" coords="487,93,620,119"/>
+<area shape="rect" id="node3" href="$system__load__scene_8c.html" title=" " alt="" coords="5,167,168,207"/>
+<area shape="rect" id="node4" href="$system__movement_8c.html" title=" " alt="" coords="192,167,355,207"/>
+<area shape="rect" id="node5" href="$system__reset__game__clock_8c.html" title=" " alt="" coords="379,167,541,207"/>
+<area shape="rect" id="node6" href="$system__windows__manager_8c.html" title=" " alt="" coords="565,167,728,207"/>
+<area shape="rect" id="node7" href="$system__world__initializer_8c.html" title=" " alt="" coords="752,167,915,207"/>
+<area shape="rect" id="node8" href="$main_8c.html" title=" " alt="" coords="939,174,1050,199"/>
+</map>

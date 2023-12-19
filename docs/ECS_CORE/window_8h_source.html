@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ECS: includes/window.h Source File</title>
+<title>ECS: includes/resources/window.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,37 +93,40 @@ $(document).ready(function(){initNavTree('window_8h_source.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <a href="window_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Filename: /home/thomas/Documents/Perso/our_rpg/includes/window.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Path: /home/thomas/Documents/Perso/our_rpg/includes</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Created Date: Sunday, February 12th 2023, 5:30:29 pm</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Author: Thomas</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Copyright (c) 2023 our_rpg</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* Filename: window.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* Path: includes/resources</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">* Created Date: Monday, December 18th 2023, 5:43 pm</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* Author: osvegn</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">* Copyright (c) 2023 our_rpg</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef WINDOW_H_</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define WINDOW_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef R_WINDOW_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define R_WINDOW_H_</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structwindow__s.html">   13</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structwindow__s.html">window_s</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structwindow__s.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">   14</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structwindow__s.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structwindow__s.html#ab2e78c61905b4419fcc7b4cfc500fe85">   15</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structwindow__s.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structwindow__s.html#a854dc1502ff3e88c42f5536e39197873">   16</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structwindow__s.html#a854dc1502ff3e88c42f5536e39197873">title</a>[256];</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structwindow__s.html#a0256d25b86a9f6d108e63e630fd20cf2">   17</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structwindow__s.html#a0256d25b86a9f6d108e63e630fd20cf2">fps</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="window_8h.html#ac8d38b38102b1db25bd62f290ff310ef">   18</a></span>} <a class="code hl_typedef" href="window_8h.html#ac8d38b38102b1db25bd62f290ff310ef">window_t</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif </span><span class="comment">/* !WINDOW_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astructwindow__s_html"><div class="ttname"><a href="structwindow__s.html">window_s</a></div><div class="ttdef"><b>Definition:</b> window.h:13</div></div>
-<div class="ttc" id="astructwindow__s_html_a0256d25b86a9f6d108e63e630fd20cf2"><div class="ttname"><a href="structwindow__s.html#a0256d25b86a9f6d108e63e630fd20cf2">window_s::fps</a></div><div class="ttdeci">unsigned int fps</div><div class="ttdef"><b>Definition:</b> window.h:17</div></div>
-<div class="ttc" id="astructwindow__s_html_a854dc1502ff3e88c42f5536e39197873"><div class="ttname"><a href="structwindow__s.html#a854dc1502ff3e88c42f5536e39197873">window_s::title</a></div><div class="ttdeci">char title[256]</div><div class="ttdef"><b>Definition:</b> window.h:16</div></div>
-<div class="ttc" id="astructwindow__s_html_ab2e78c61905b4419fcc7b4cfc500fe85"><div class="ttname"><a href="structwindow__s.html#ab2e78c61905b4419fcc7b4cfc500fe85">window_s::height</a></div><div class="ttdeci">unsigned int height</div><div class="ttdef"><b>Definition:</b> window.h:15</div></div>
-<div class="ttc" id="astructwindow__s_html_aca34d28e3d8bcbcadb8edb4e3af24f8c"><div class="ttname"><a href="structwindow__s.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">window_s::width</a></div><div class="ttdeci">unsigned int width</div><div class="ttdef"><b>Definition:</b> window.h:14</div></div>
-<div class="ttc" id="awindow_8h_html_ac8d38b38102b1db25bd62f290ff310ef"><div class="ttname"><a href="window_8h.html#ac8d38b38102b1db25bd62f290ff310ef">window_t</a></div><div class="ttdeci">struct window_s window_t</div></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;resource.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> <a class="code hl_function" href="window_8h.html#a9914c604aba5188d17fd624423ed245f">resource_window_constructor</a>(resource_t *resource, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="window_8h.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a>(resource_t *resource, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">int</span> <a class="code hl_function" href="window_8h.html#ad876b49946297bc77d8d396ed32d719e">resource_window_destructor</a>(resource_t *resource);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">int</span> <a class="code hl_function" href="window_8h.html#a7d332f82fa9ae590561c1f0c5226cd52">resource_window_set</a>(resource_t *resource, <span class="keywordtype">void</span> *data);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> *<a class="code hl_function" href="window_8h.html#af634eb3546b6e451c497fbd9687f2da4">resource_window_get</a>(<span class="keyword">const</span> resource_t *resource);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">// R_WINDOW_H_</span></div>
+<div class="ttc" id="awindow_8h_html_a4d4485e5ca0d124bc9f6ebda593b6654"><div class="ttname"><a href="window_8h.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a></div><div class="ttdeci">int resource_window_constructor_from_json(resource_t *resource, void *data)</div><div class="ttdef"><b>Definition:</b> resource_window.c:48</div></div>
+<div class="ttc" id="awindow_8h_html_a7d332f82fa9ae590561c1f0c5226cd52"><div class="ttname"><a href="window_8h.html#a7d332f82fa9ae590561c1f0c5226cd52">resource_window_set</a></div><div class="ttdeci">int resource_window_set(resource_t *resource, void *data)</div><div class="ttdoc">Set new data for a window resource. It opens a new window.</div><div class="ttdef"><b>Definition:</b> resource_window.c:65</div></div>
+<div class="ttc" id="awindow_8h_html_a9914c604aba5188d17fd624423ed245f"><div class="ttname"><a href="window_8h.html#a9914c604aba5188d17fd624423ed245f">resource_window_constructor</a></div><div class="ttdeci">int resource_window_constructor(resource_t *resource, void *data)</div><div class="ttdoc">Window constructor. It opens a new window.</div><div class="ttdef"><b>Definition:</b> resource_window.c:29</div></div>
+<div class="ttc" id="awindow_8h_html_ad876b49946297bc77d8d396ed32d719e"><div class="ttname"><a href="window_8h.html#ad876b49946297bc77d8d396ed32d719e">resource_window_destructor</a></div><div class="ttdeci">int resource_window_destructor(resource_t *resource)</div><div class="ttdoc">Window destructor.</div><div class="ttdef"><b>Definition:</b> resource_window.c:83</div></div>
+<div class="ttc" id="awindow_8h_html_af634eb3546b6e451c497fbd9687f2da4"><div class="ttname"><a href="window_8h.html#af634eb3546b6e451c497fbd9687f2da4">resource_window_get</a></div><div class="ttdeci">void * resource_window_get(const resource_t *resource)</div><div class="ttdoc">Get a pointer to the window resource data.</div><div class="ttdef"><b>Definition:</b> resource_window.c:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="window_8h.html">window.h</a></li>
+    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_e66b8cc2844492e4ed736a1a49f9eda2.html">resources</a></li><li class="navelem"><a class="el" href="window_8h.html">window.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

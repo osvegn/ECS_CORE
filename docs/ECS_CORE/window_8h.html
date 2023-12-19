@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ECS: includes/window.h File Reference</title>
+<title>ECS: includes/resources/window.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,53 +90,264 @@ $(document).ready(function(){initNavTree('window_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">window.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;resource.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for window.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h__incl.png" border="0" usemap="#aincludes_2resources_2window_8h" alt=""/></div>
+<map name="aincludes_2resources_2window_8h" id="aincludes_2resources_2window_8h">
+<area shape="rect" title=" " alt="" coords="5,5,136,45"/>
+<area shape="rect" title=" " alt="" coords="29,93,112,119"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="window_8h__dep__incl.png" border="0" usemap="#aincludes_2window_8hdep" alt=""/></div>
-<map name="aincludes_2window_8hdep" id="aincludes_2window_8hdep">
-<area shape="rect" title=" " alt="" coords="621,5,749,31"/>
-<area shape="rect" href="resources_8h.html" title=" " alt="" coords="615,79,756,104"/>
-<area shape="rect" href="world__loader__constructors_8h.html" title=" " alt="" coords="13,152,160,192"/>
-<area shape="rect" href="resource__game__clock_8c.html" title=" " alt="" coords="184,152,365,192"/>
-<area shape="rect" href="resource__scene__filename_8c.html" title=" " alt="" coords="389,152,571,192"/>
-<area shape="rect" href="resource__window_8c.html" title=" " alt="" coords="595,152,776,192"/>
-<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="800,152,963,192"/>
-<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="987,152,1149,192"/>
-<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="1173,152,1336,192"/>
-<area shape="rect" href="system__load__scene_8c.html" title=" " alt="" coords="5,240,168,280"/>
+<div class="center"><img src="window_8h__dep__incl.png" border="0" usemap="#aincludes_2resources_2window_8hdep" alt=""/></div>
+<map name="aincludes_2resources_2window_8hdep" id="aincludes_2resources_2window_8hdep">
+<area shape="rect" title=" " alt="" coords="637,5,768,45"/>
+<area shape="rect" href="resources_8h.html" title=" " alt="" coords="632,93,773,119"/>
+<area shape="rect" href="resource__game__clock_8c.html" title=" " alt="" coords="5,167,187,207"/>
+<area shape="rect" href="resource__scene__filename_8c.html" title=" " alt="" coords="211,167,392,207"/>
+<area shape="rect" href="resource__window_8c.html" title=" " alt="" coords="416,167,597,207"/>
+<area shape="rect" href="system__load__scene_8c.html" title=" " alt="" coords="621,167,784,207"/>
+<area shape="rect" href="system__movement_8c.html" title=" " alt="" coords="808,167,971,207"/>
+<area shape="rect" href="system__reset__game__clock_8c.html" title=" " alt="" coords="995,167,1157,207"/>
+<area shape="rect" href="system__world__initializer_8c.html" title=" " alt="" coords="1181,167,1344,207"/>
 </map>
 </div>
 </div>
 <p><a href="window_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwindow__s.html">window_s</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ac8d38b38102b1db25bd62f290ff310ef"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structwindow__s.html">window_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#ac8d38b38102b1db25bd62f290ff310ef">window_t</a></td></tr>
-<tr class="separator:ac8d38b38102b1db25bd62f290ff310ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9914c604aba5188d17fd624423ed245f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a9914c604aba5188d17fd624423ed245f">resource_window_constructor</a> (resource_t *resource, void *data)</td></tr>
+<tr class="memdesc:a9914c604aba5188d17fd624423ed245f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window constructor. It opens a new window.  <a href="window_8h.html#a9914c604aba5188d17fd624423ed245f">More...</a><br /></td></tr>
+<tr class="separator:a9914c604aba5188d17fd624423ed245f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4485e5ca0d124bc9f6ebda593b6654"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a4d4485e5ca0d124bc9f6ebda593b6654">resource_window_constructor_from_json</a> (resource_t *resource, void *data)</td></tr>
+<tr class="separator:a4d4485e5ca0d124bc9f6ebda593b6654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad876b49946297bc77d8d396ed32d719e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#ad876b49946297bc77d8d396ed32d719e">resource_window_destructor</a> (resource_t *resource)</td></tr>
+<tr class="memdesc:ad876b49946297bc77d8d396ed32d719e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window destructor.  <a href="window_8h.html#ad876b49946297bc77d8d396ed32d719e">More...</a><br /></td></tr>
+<tr class="separator:ad876b49946297bc77d8d396ed32d719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d332f82fa9ae590561c1f0c5226cd52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a7d332f82fa9ae590561c1f0c5226cd52">resource_window_set</a> (resource_t *resource, void *data)</td></tr>
+<tr class="memdesc:a7d332f82fa9ae590561c1f0c5226cd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new data for a window resource. It opens a new window.  <a href="window_8h.html#a7d332f82fa9ae590561c1f0c5226cd52">More...</a><br /></td></tr>
+<tr class="separator:a7d332f82fa9ae590561c1f0c5226cd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af634eb3546b6e451c497fbd9687f2da4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#af634eb3546b6e451c497fbd9687f2da4">resource_window_get</a> (const resource_t *resource)</td></tr>
+<tr class="memdesc:af634eb3546b6e451c497fbd9687f2da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the window resource data.  <a href="window_8h.html#af634eb3546b6e451c497fbd9687f2da4">More...</a><br /></td></tr>
+<tr class="separator:af634eb3546b6e451c497fbd9687f2da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ac8d38b38102b1db25bd62f290ff310ef" name="ac8d38b38102b1db25bd62f290ff310ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8d38b38102b1db25bd62f290ff310ef">&#9670;&#160;</a></span>window_t</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9914c604aba5188d17fd624423ed245f" name="a9914c604aba5188d17fd624423ed245f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9914c604aba5188d17fd624423ed245f">&#9670;&#160;</a></span>resource_window_constructor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structwindow__s.html">window_s</a> <a class="el" href="window_8h.html#ac8d38b38102b1db25bd62f290ff310ef">window_t</a></td>
+          <td class="memname">int resource_window_constructor </td>
+          <td>(</td>
+          <td class="paramtype">resource_t *&#160;</td>
+          <td class="paramname"><em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Window constructor. It opens a new window. </p>
+<dl class="section note"><dt>Note</dt><dd>The json format must be formatted like: { "width": int, "height": int, "title": string, "fps": int } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be construct. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to set to the window. It must be a json formatted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if something fail. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h_a9914c604aba5188d17fd624423ed245f_cgraph.png" border="0" usemap="#awindow_8h_a9914c604aba5188d17fd624423ed245f_cgraph" alt=""/></div>
+<map name="awindow_8h_a9914c604aba5188d17fd624423ed245f_cgraph" id="awindow_8h_a9914c604aba5188d17fd624423ed245f_cgraph">
+<area shape="rect" title="Window constructor. It opens a new window." alt="" coords="5,31,200,56"/>
+<area shape="rect" href="resource__window_8c.html#ad876b49946297bc77d8d396ed32d719e" title="Window destructor." alt="" coords="248,5,436,31"/>
+<area shape="rect" href="resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52" title="Set new data for a window resource. It opens a new window." alt="" coords="268,55,416,80"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h_a9914c604aba5188d17fd624423ed245f_icgraph.png" border="0" usemap="#awindow_8h_a9914c604aba5188d17fd624423ed245f_icgraph" alt=""/></div>
+<map name="awindow_8h_a9914c604aba5188d17fd624423ed245f_icgraph" id="awindow_8h_a9914c604aba5188d17fd624423ed245f_icgraph">
+<area shape="rect" title="Window constructor. It opens a new window." alt="" coords="248,13,443,38"/>
+<area shape="rect" href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654" title=" " alt="" coords="5,5,200,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4d4485e5ca0d124bc9f6ebda593b6654" name="a4d4485e5ca0d124bc9f6ebda593b6654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4485e5ca0d124bc9f6ebda593b6654">&#9670;&#160;</a></span>resource_window_constructor_from_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int resource_window_constructor_from_json </td>
+          <td>(</td>
+          <td class="paramtype">resource_t *&#160;</td>
+          <td class="paramname"><em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h_a4d4485e5ca0d124bc9f6ebda593b6654_cgraph.png" border="0" usemap="#awindow_8h_a4d4485e5ca0d124bc9f6ebda593b6654_cgraph" alt=""/></div>
+<map name="awindow_8h_a4d4485e5ca0d124bc9f6ebda593b6654_cgraph" id="awindow_8h_a4d4485e5ca0d124bc9f6ebda593b6654_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,200,63"/>
+<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="248,31,443,56"/>
+<area shape="rect" href="resource__window_8c.html#ad876b49946297bc77d8d396ed32d719e" title="Window destructor." alt="" coords="491,5,679,31"/>
+<area shape="rect" href="resource__window_8c.html#a7d332f82fa9ae590561c1f0c5226cd52" title="Set new data for a window resource. It opens a new window." alt="" coords="511,55,659,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad876b49946297bc77d8d396ed32d719e" name="ad876b49946297bc77d8d396ed32d719e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad876b49946297bc77d8d396ed32d719e">&#9670;&#160;</a></span>resource_window_destructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int resource_window_destructor </td>
+          <td>(</td>
+          <td class="paramtype">resource_t *&#160;</td>
+          <td class="paramname"><em>resource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Window destructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be destroy. It closes the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h_ad876b49946297bc77d8d396ed32d719e_icgraph.png" border="0" usemap="#awindow_8h_ad876b49946297bc77d8d396ed32d719e_icgraph" alt=""/></div>
+<map name="awindow_8h_ad876b49946297bc77d8d396ed32d719e_icgraph" id="awindow_8h_ad876b49946297bc77d8d396ed32d719e_icgraph">
+<area shape="rect" title="Window destructor." alt="" coords="491,13,679,38"/>
+<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="248,13,443,38"/>
+<area shape="rect" href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654" title=" " alt="" coords="5,5,200,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af634eb3546b6e451c497fbd9687f2da4" name="af634eb3546b6e451c497fbd9687f2da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af634eb3546b6e451c497fbd9687f2da4">&#9670;&#160;</a></span>resource_window_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * resource_window_get </td>
+          <td>(</td>
+          <td class="paramtype">const resource_t *&#160;</td>
+          <td class="paramname"><em>resource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to the window resource data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to get the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the data, or 0 if it's not a valid resource. </dd></dl>
+
+</div>
+</div>
+<a id="a7d332f82fa9ae590561c1f0c5226cd52" name="a7d332f82fa9ae590561c1f0c5226cd52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d332f82fa9ae590561c1f0c5226cd52">&#9670;&#160;</a></span>resource_window_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int resource_window_set </td>
+          <td>(</td>
+          <td class="paramtype">resource_t *&#160;</td>
+          <td class="paramname"><em>resource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set new data for a window resource. It opens a new window. </p>
+<dl class="section note"><dt>Note</dt><dd>The json format must be formatted like: { "width": int, "height": int, "title": string, "fps": int } </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to be updated. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to set to the window. It must be a json formatted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if something fail. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="window_8h_a7d332f82fa9ae590561c1f0c5226cd52_icgraph.png" border="0" usemap="#awindow_8h_a7d332f82fa9ae590561c1f0c5226cd52_icgraph" alt=""/></div>
+<map name="awindow_8h_a7d332f82fa9ae590561c1f0c5226cd52_icgraph" id="awindow_8h_a7d332f82fa9ae590561c1f0c5226cd52_icgraph">
+<area shape="rect" title="Set new data for a window resource. It opens a new window." alt="" coords="491,13,639,38"/>
+<area shape="rect" href="resource__window_8c.html#a9914c604aba5188d17fd624423ed245f" title="Window constructor. It opens a new window." alt="" coords="248,13,443,38"/>
+<area shape="rect" href="resource__window_8c.html#a4d4485e5ca0d124bc9f6ebda593b6654" title=" " alt="" coords="5,5,200,45"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -145,7 +356,7 @@ Typedefs</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="window_8h.html">window.h</a></li>
+    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_e66b8cc2844492e4ed736a1a49f9eda2.html">resources</a></li><li class="navelem"><a class="el" href="window_8h.html">window.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

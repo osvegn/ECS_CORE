@@ -1,9 +1,11 @@
 <map id="sources/Resource/resource_game_clock.c" name="sources/Resource/resource_game_clock.c">
-<area shape="rect" id="node1" title=" " alt="" coords="152,5,333,45"/>
-<area shape="rect" id="node2" href="$resources_8h.html" title=" " alt="" coords="54,93,143,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="167,93,230,119"/>
-<area shape="rect" id="node6" title=" " alt="" coords="255,93,319,119"/>
-<area shape="rect" id="node7" title=" " alt="" coords="343,93,449,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,167,88,192"/>
-<area shape="rect" id="node4" href="$window_8h.html" title=" " alt="" coords="113,167,189,192"/>
+<area shape="rect" id="node1" title=" " alt="" coords="247,5,428,45"/>
+<area shape="rect" id="node2" href="$resources_8h.html" title=" " alt="" coords="149,93,238,119"/>
+<area shape="rect" id="node7" title=" " alt="" coords="262,93,325,119"/>
+<area shape="rect" id="node8" title=" " alt="" coords="349,93,413,119"/>
+<area shape="rect" id="node9" title=" " alt="" coords="438,93,543,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="152,240,235,265"/>
+<area shape="rect" id="node4" href="$game__clock_8h.html" title=" " alt="" coords="25,167,188,192"/>
+<area shape="rect" id="node5" href="$window_8h.html" title=" " alt="" coords="213,167,350,192"/>
+<area shape="rect" id="node6" href="$scene__filename_8h.html" title=" " alt="" coords="374,167,557,192"/>
 </map>

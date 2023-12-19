@@ -1,14 +1,15 @@
 <map id="sources/System/system_load_scene.c" name="sources/System/system_load_scene.c">
-<area shape="rect" id="node1" title=" " alt="" coords="624,5,786,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="171,93,234,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="258,93,370,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="394,93,514,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="538,93,640,119"/>
-<area shape="rect" id="node6" href="$systems_8h.html" title=" " alt="" coords="664,93,746,119"/>
-<area shape="rect" id="node13" href="$resources_8h.html" title=" " alt="" coords="868,93,958,119"/>
-<area shape="rect" id="node18" title=" " alt="" coords="982,93,1038,119"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1062,93,1126,119"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1151,93,1256,119"/>
+<area shape="rect" id="node1" title=" " alt="" coords="878,5,1041,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="304,93,367,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="392,93,504,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="528,93,648,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="672,93,773,119"/>
+<area shape="rect" id="node6" href="$systems_8h.html" title=" " alt="" coords="798,93,879,119"/>
+<area shape="rect" id="node13" href="$resources_8h.html" title=" " alt="" coords="1036,93,1126,119"/>
+<area shape="rect" id="node18" href="$components_8h.html" title=" " alt="" coords="2008,93,2111,119"/>
+<area shape="rect" id="node31" title=" " alt="" coords="2136,93,2192,119"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2216,93,2280,119"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2304,93,2410,119"/>
 <area shape="rect" id="node7" title=" " alt="" coords="354,255,429,280"/>
 <area shape="rect" id="node8" href="$load__scene_8h.html" title=" " alt="" coords="27,174,178,199"/>
 <area shape="rect" id="node9" href="$window__manager_8h.html" title=" " alt="" coords="202,174,389,199"/>
@@ -19,4 +20,16 @@
 <area shape="rect" id="node15" href="$game__clock_8h.html" title=" " alt="" coords="1000,174,1162,199"/>
 <area shape="rect" id="node16" href="$window_8h.html" title=" " alt="" coords="1187,174,1324,199"/>
 <area shape="rect" id="node17" href="$scene__filename_8h.html" title=" " alt="" coords="1348,174,1531,199"/>
+<area shape="rect" id="node19" title=" " alt="" coords="2510,255,2606,280"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1607,174,1731,199"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1755,174,1871,199"/>
+<area shape="rect" id="node22" href="$position_8h.html" title=" " alt="" coords="1896,174,2048,199"/>
+<area shape="rect" id="node23" href="$velocity_8h.html" title=" " alt="" coords="2072,174,2223,199"/>
+<area shape="rect" id="node24" href="$size_8h.html" title=" " alt="" coords="2248,174,2378,199"/>
+<area shape="rect" id="node25" href="$color_8h.html" title=" " alt="" coords="2403,174,2538,199"/>
+<area shape="rect" id="node26" href="$displayable_8h.html" title=" " alt="" coords="2562,174,2733,199"/>
+<area shape="rect" id="node27" href="$controllable_8h.html" title=" " alt="" coords="2757,174,2930,199"/>
+<area shape="rect" id="node28" href="$collidable_8h.html" title=" " alt="" coords="2955,174,3116,199"/>
+<area shape="rect" id="node29" href="$speed_8h.html" title=" " alt="" coords="3140,174,3283,199"/>
+<area shape="rect" id="node30" href="$clickable_8h.html" title=" " alt="" coords="3307,174,3466,199"/>
 </map>
